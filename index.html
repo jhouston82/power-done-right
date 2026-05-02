@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Done Right — Lower Your Commercial Energy Bill</title>
+  <meta name="description" content="Power Done Right puts your commercial electricity account in front of 90+ vetted suppliers and lets them compete in real time. The lowest bid wins — and your business pays 12–28% less from day one." />
+  <link rel="canonical" href="https://www.powerdoneright.com" />
+  <meta property="og:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
+  <meta property="og:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
+  <meta property="og:url" content="https://www.powerdoneright.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with the powerdoneright.com GA4 property -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Variables ── */
+    :root {
+      --pdr-bg: #f7f5f0;
+      --pdr-bg-elev: #fdfcf8;
+      --pdr-ink: #0e1b2c;
+      --pdr-ink-2: #2a3a52;
+      --pdr-ink-3: #5a6b82;
+      --pdr-line: rgba(14,27,44,.10);
+      --pdr-line-2: rgba(14,27,44,.18);
+      --pdr-navy: #102341;
+      --pdr-navy-2: #1a3056;
+      --pdr-accent: #E8B43A;
+      --pdr-accent-ink: #5e3f00;
+      --pdr-success: #2c6e4a;
+      --serif: "Instrument Serif","Source Serif Pro","Times New Roman",serif;
+      --sans: "Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+      --mono: "Geist Mono","JetBrains Mono",ui-monospace,monospace;
+    }
+
+    /* ── Reset ── */
+    *,*::before,*::after { box-sizing: border-box; }
+    html,body { margin:0; padding:0; }
+    body {
+      font-family: var(--sans);
+      background: var(--pdr-bg);
+      color: var(--pdr-ink);
+      -webkit-font-smoothing: antialiased;
+      font-feature-settings: "ss01","cv11";
+    }
+    a { color:inherit; text-decoration:none; }
+    button { font-family:inherit; cursor:pointer; }
+    em { font-style:normal; font-family:var(--serif); font-weight:400; color:var(--pdr-ink); }
+
+    /* ── Nav ── */
+    .nav {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:22px 56px;
+      position:relative; z-index:4;
+    }
+    .nav-logo {
+      display:inline-flex; align-items:center; gap:10px;
+      font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:var(--pdr-ink); font-weight:400; line-height:1;
+    }
+    .nav-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .nav-links { display:flex; gap:32px; font-size:13.5px; color:var(--pdr-ink-2); letter-spacing:-.005em; }
+    .nav-links a:hover { color:var(--pdr-ink); }
+    .nav-cta {
+      font-size:13.5px; padding:9px 16px; border-radius:999px;
+      background:var(--pdr-navy); color:#fafaf6;
+      letter-spacing:-.005em;
+      transition:transform .15s ease;
+      border:0;
+    }
+    .nav-cta:hover { transform:translateY(-1px); }
+
+    /* ── Hero ── */
+    .hero {
+      position:relative; padding-bottom:80px;
+      border-bottom:1px solid var(--pdr-line);
+      overflow:hidden;
+    }
+    .hero-grid-bg {
+      position:absolute; inset:0; pointer-events:none; opacity:.5;
+      background-image:
+        linear-gradient(to right, var(--pdr-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--pdr-line) 1px, transparent 1px);
+      background-size:64px 64px;
+      mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
+      -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, black 30%, transparent 75%);
+    }
+    .hero-inner {
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:64px;
+      padding:32px 56px 0;
+      max-width:1320px;
+      margin:0 auto;
+      position:relative; z-index:2;
+      align-items:start;
+    }
+    .hero-eyebrow, .eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      font-family:var(--mono);
+      font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+      color:var(--pdr-ink-3);
+      padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px;
+      background:var(--pdr-bg-elev);
+    }
+    .eyebrow-dot {
+      width:6px; height:6px; border-radius:50%; background:var(--pdr-accent);
+      box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent);
+      flex-shrink:0;
+    }
+    .hero-h {
+      font-family:var(--serif);
+      font-weight:400;
+      font-size:clamp(48px, 6.2vw, 88px);
+      line-height:1.04;
+      letter-spacing:-.025em;
+      margin:24px 0 28px;
+      color:var(--pdr-ink);
+      text-wrap:balance;
+    }
+    .hero-h em { font-style:italic; color:var(--pdr-navy); }
+    .hero-sub {
+      font-size:18px; line-height:1.5; color:var(--pdr-ink-2);
+      max-width:540px; margin:0 0 28px;
+      text-wrap:pretty;
+    }
+    .hero-sub b { color:var(--pdr-ink); font-weight:600; }
+    .hero-bullets { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+    .bullet {
+      display:flex; align-items:center; gap:12px;
+      font-size:14.5px; color:var(--pdr-ink-2);
+    }
+    .bullet-x {
+      width:18px; height:18px; border-radius:50%;
+      background:color-mix(in oklch, var(--pdr-accent) 22%, transparent);
+      position:relative; flex-shrink:0;
+    }
+    .bullet-x::after {
+      content:""; position:absolute; inset:0;
+      background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'><path d='M5 9.5 L8 12 L13 6.5' stroke='%235e3f00' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/contain no-repeat;
+    }
+
+    /* ── Hero photo ── */
+    .hero-photo {
+      position:relative;
+      border-radius:16px;
+      overflow:hidden;
+      margin-bottom:16px;
+      border:1px solid var(--pdr-line-2);
+      aspect-ratio:16/7;
+      background:var(--pdr-navy);
+    }
+    .hero-photo img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      filter:saturate(.9) contrast(1.05);
+      transition:transform 12s linear;
+    }
+    .hero-photo:hover img { transform:scale(1.04); }
+    .hero-photo::after {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(180deg, transparent 40%, rgba(16,35,65,.55) 100%);
+      pointer-events:none;
+    }
+    .hero-photo-caption {
+      position:absolute; left:14px; bottom:12px;
+      display:flex; align-items:center; gap:8px;
+      background:rgba(16,35,65,.7);
+      -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+      padding:6px 12px; border-radius:999px;
+      font-family:var(--mono); font-size:11px; letter-spacing:.04em;
+      color:#f7f5f0; text-transform:uppercase;
+      border:1px solid rgba(255,255,255,.15);
+      z-index:2;
+    }
+    .hpc-dot {
+      width:6px; height:6px; border-radius:50%;
+      background:var(--pdr-accent);
+      box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 30%, transparent);
+      animation:pulse 1.8s ease-in-out infinite;
+    }
+
+    /* ── Lead Form ── */
+    .lead-form {
+      background:var(--pdr-bg-elev);
+      border:1px solid var(--pdr-line-2);
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 24px 64px -32px rgba(14,27,44,.35);
+      position:relative;
+    }
+    .lead-form::before {
+      content:""; position:absolute; top:-1px; left:24px; right:24px; height:2px;
+      background:linear-gradient(to right, transparent, var(--pdr-accent), transparent);
+      border-radius:2px;
+    }
+    .lf-head { margin-bottom:20px; }
+    .lf-eyebrow {
+      font-family:var(--mono); font-size:11px; letter-spacing:.04em;
+      text-transform:uppercase; color:var(--pdr-ink-3);
+      display:flex; align-items:center; gap:8px; margin-bottom:10px;
+    }
+    .lf-dot {
+      width:6px; height:6px; border-radius:50%; background:var(--pdr-accent);
+      animation:pulse 1.8s ease-in-out infinite;
+      flex-shrink:0;
+    }
+    .lf-progress { display:flex; gap:4px; }
+    .lf-bar {
+      height:3px; flex:1; background:var(--pdr-line);
+      border-radius:2px; transition:background .3s ease;
+    }
+    .lf-bar.on { background:var(--pdr-accent); }
+    .lf-step { min-height:200px; }
+    .lf-label {
+      display:block; font-size:13px; font-weight:500;
+      color:var(--pdr-ink-2); margin-bottom:8px;
+    }
+    .lf-input {
+      width:100%; padding:14px 16px;
+      border:1px solid var(--pdr-line-2);
+      border-radius:10px; background:var(--pdr-bg);
+      font-family:var(--sans); font-size:16px; color:var(--pdr-ink);
+      transition:border .15s ease, box-shadow .15s ease;
+    }
+    .lf-input:focus {
+      outline:none; border-color:var(--pdr-navy);
+      box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-navy) 12%, transparent);
+    }
+    .lf-money {
+      display:flex; align-items:center;
+      border:1px solid var(--pdr-line-2);
+      border-radius:10px; background:var(--pdr-bg);
+      padding:0 16px; transition:border .15s ease, box-shadow .15s ease;
+    }
+    .lf-money:focus-within {
+      border-color:var(--pdr-navy);
+      box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-navy) 12%, transparent);
+    }
+    .lf-money > span:first-child {
+      font-family:var(--serif); font-size:28px; color:var(--pdr-ink-3); margin-right:4px;
+    }
+    .lf-money input {
+      width:100%; border:0; padding:14px 0; background:transparent;
+      font-family:var(--serif); font-size:32px; letter-spacing:-.01em;
+      color:var(--pdr-ink); outline:none;
+    }
+    .lf-money-suffix {
+      font-family:var(--mono); font-size:12px; color:var(--pdr-ink-3);
+      text-transform:uppercase; letter-spacing:.05em; white-space:nowrap;
+    }
+    .lf-estimate {
+      margin-top:18px; padding:14px 16px;
+      background:color-mix(in oklch, var(--pdr-accent) 14%, transparent);
+      border-radius:10px;
+      border:1px solid color-mix(in oklch, var(--pdr-accent) 30%, transparent);
+    }
+    .lf-estimate-label {
+      font-family:var(--mono); font-size:10.5px; letter-spacing:.06em;
+      text-transform:uppercase; color:var(--pdr-accent-ink); margin-bottom:6px;
+    }
+    .lf-estimate-value {
+      font-family:var(--serif); font-size:30px; line-height:1.1;
+      color:var(--pdr-ink); letter-spacing:-.01em;
+    }
+    .lf-dash { margin:0 6px; color:var(--pdr-ink-3); }
+    .lf-estimate-foot {
+      font-size:11.5px; color:var(--pdr-ink-3); margin-top:6px; line-height:1.4;
+    }
+    .lf-help, .lf-fine {
+      font-size:12px; color:var(--pdr-ink-3); margin-top:10px; line-height:1.4;
+    }
+    .lf-fine { font-size:11px; margin-top:14px; }
+    .lf-actions {
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; margin-top:22px;
+    }
+    .lf-back {
+      background:transparent; border:0; color:var(--pdr-ink-3);
+      font-size:13px; padding:8px 4px;
+    }
+    .lf-back:hover { color:var(--pdr-ink); }
+    .lf-cta {
+      margin-left:auto;
+      display:inline-flex; align-items:center; gap:10px;
+      background:var(--pdr-navy); color:#fafaf6;
+      border:0; border-radius:10px;
+      padding:14px 22px; font-size:14.5px; font-weight:500;
+      letter-spacing:-.005em;
+      transition:transform .12s ease, box-shadow .15s ease;
+      box-shadow:0 1px 0 rgba(255,255,255,.15) inset, 0 8px 20px -8px rgba(14,27,44,.5);
+    }
+    .lf-cta:hover { transform:translateY(-1px); }
+    .lf-cta:disabled { opacity:.7; transform:none; cursor:not-allowed; }
+    .lf-success { text-align:center; padding:12px 4px; }
+    .lf-check {
+      width:56px; height:56px; margin:0 auto 16px;
+      color:var(--pdr-success);
+    }
+    .lf-success h3 {
+      font-family:var(--serif); font-size:28px; font-weight:400;
+      margin:0 0 8px; letter-spacing:-.01em;
+    }
+    .lf-success p {
+      font-size:14px; color:var(--pdr-ink-2); line-height:1.5;
+      margin:0 auto 20px; max-width:360px;
+    }
+    .lf-receipt {
+      border:1px solid var(--pdr-line-2); border-radius:10px;
+      padding:8px 14px; background:var(--pdr-bg); text-align:left;
+    }
+    .lf-receipt-row {
+      display:flex; justify-content:space-between; padding:8px 0;
+      font-size:12.5px; border-bottom:1px solid var(--pdr-line);
+    }
+    .lf-receipt-row:last-child { border-bottom:0; }
+    .lf-receipt-row span { color:var(--pdr-ink-3); }
+    .lf-receipt-row b { color:var(--pdr-ink); font-weight:600; font-family:var(--mono); }
+
+    /* ── Sections shared ── */
+    .section { padding:96px 56px; max-width:1320px; margin:0 auto; }
+    .section-head { max-width:760px; margin-bottom:56px; }
+    .section-h {
+      font-family:var(--serif); font-weight:400;
+      font-size:clamp(36px, 4.4vw, 60px);
+      line-height:1.05; letter-spacing:-.02em;
+      margin:18px 0 0; text-wrap:balance;
+    }
+    .section-sub {
+      font-size:17px; line-height:1.5; color:var(--pdr-ink-2);
+      margin:18px 0 0; text-wrap:pretty; max-width:620px;
+    }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      display:grid; grid-template-columns:repeat(4, 1fr);
+      border-top:1px solid var(--pdr-line);
+      border-bottom:1px solid var(--pdr-line);
+      background:var(--pdr-bg-elev);
+    }
+    .stat {
+      padding:28px 32px; border-right:1px solid var(--pdr-line);
+      display:flex; flex-direction:column; gap:4px;
+    }
+    .stat:last-child { border-right:0; }
+    .stat-v {
+      font-family:var(--serif); font-size:44px; line-height:1;
+      letter-spacing:-.02em;
+    }
+    .stat-l {
+      font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+      text-transform:uppercase; color:var(--pdr-ink-3);
+    }
+
+    /* ── How It Works ── */
+    .how-photo-row {
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:48px;
+      align-items:center;
+      margin-bottom:56px;
+    }
+    .how-photo {
+      height:240px;
+      border-radius:14px;
+      background-size:cover;
+      background-position:center;
+      filter:saturate(.85) contrast(1.05);
+      border:1px solid var(--pdr-line-2);
+    }
+    .section-head--inrow { margin-bottom:0; }
+    .how-grid {
+      display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;
+    }
+    .how-step {
+      padding:32px 28px 36px;
+      border-top:1px solid var(--pdr-ink);
+      position:relative;
+      transition:transform 280ms cubic-bezier(.2,.7,.2,1), border-color 280ms;
+    }
+    .how-step:hover { transform:translateY(-3px); border-color:rgba(0,0,0,.18); }
+    .how-n {
+      font-family:var(--mono); font-size:12px;
+      color:var(--pdr-ink-3); letter-spacing:.04em;
+      margin-bottom:16px;
+      transition:color 280ms;
+    }
+    .how-step:hover .how-n { color:var(--pdr-accent); }
+    .how-t {
+      font-family:var(--serif); font-weight:400; font-size:28px;
+      margin:0 0 12px; letter-spacing:-.015em;
+    }
+    .how-d { font-size:15px; line-height:1.55; color:var(--pdr-ink-2); margin:0; text-wrap:pretty; }
+
+    /* ── Suppliers ── */
+    .suppliers-photo-strip {
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1.4fr;
+      gap:4px;
+      height:200px;
+      margin-bottom:56px;
+      border-radius:14px;
+      overflow:hidden;
+    }
+    .sps-img {
+      background-size:cover; background-position:center;
+      filter:saturate(.85) contrast(1.05);
+      position:relative;
+      transition:transform .4s ease;
+    }
+    .sps-img:hover { transform:scale(1.03); }
+    .sps-img::after {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(180deg, transparent 50%, rgba(16,35,65,.4) 100%);
+    }
+    .supplier-grid {
+      display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;
+    }
+    .supplier-card {
+      display:flex; align-items:center; gap:14px;
+      padding:18px 20px;
+      border:1px solid var(--pdr-line-2);
+      border-radius:12px;
+      background:var(--pdr-bg-elev);
+      transition:transform .15s ease, border-color .15s ease;
+    }
+    .supplier-card:hover { transform:translateY(-2px); border-color:var(--pdr-ink-3); }
+    .supplier-mark {
+      width:36px; height:36px; border-radius:8px;
+      background:var(--pdr-bg);
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; border:1px solid var(--pdr-line);
+    }
+    .supplier-name { font-size:14px; font-weight:500; color:var(--pdr-ink); line-height:1.2; }
+    .supplier-sub {
+      font-family:var(--mono); font-size:10.5px; letter-spacing:.03em;
+      color:var(--pdr-ink-3); font-weight:400; margin-top:4px;
+    }
+    .supplier-foot {
+      margin-top:28px; padding:18px 20px;
+      border:1px dashed var(--pdr-line-2); border-radius:12px;
+      display:flex; flex-direction:column; gap:6px;
+      font-size:13px; color:var(--pdr-ink-2);
+    }
+    .supplier-states {
+      font-family:var(--mono); font-size:12px; color:var(--pdr-ink-3);
+      letter-spacing:.02em;
+    }
+
+    /* ── Calculator ── */
+    .calc-section {
+      background:var(--pdr-navy);
+      color:#f7f5f0;
+      padding:96px 56px;
+      position:relative; overflow:hidden;
+    }
+    .calc-section::before {
+      content:""; position:absolute; inset:0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size:80px 80px;
+      pointer-events:none;
+    }
+    .calc-inner {
+      display:grid; grid-template-columns:1fr 1fr; gap:64px;
+      max-width:1208px; margin:0 auto;
+      position:relative; z-index:2;
+      align-items:center;
+    }
+    .eyebrow--inv {
+      background:rgba(255,255,255,.05); color:rgba(247,245,240,.7);
+      border-color:rgba(255,255,255,.12);
+    }
+    .section-h--inv { color:#f7f5f0; }
+    .section-h--inv em { color:var(--pdr-accent); }
+    .section-sub--inv { color:rgba(247,245,240,.75); }
+    .calc-label {
+      display:block; margin-top:32px;
+      font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+      text-transform:uppercase; color:rgba(247,245,240,.6);
+    }
+    .calc-value {
+      font-family:var(--serif); font-size:64px; line-height:1;
+      letter-spacing:-.02em; margin:8px 0 16px;
+    }
+    .calc-value span {
+      font-family:var(--mono); font-size:14px; color:rgba(247,245,240,.5);
+      letter-spacing:.02em; margin-left:8px;
+    }
+    .calc-slider {
+      -webkit-appearance:none; appearance:none;
+      width:100%; height:4px; background:rgba(255,255,255,.15);
+      border-radius:2px; outline:none; cursor:pointer;
+    }
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance:none; appearance:none;
+      width:22px; height:22px; border-radius:50%;
+      background:var(--pdr-accent);
+      border:3px solid #f7f5f0;
+      box-shadow:0 4px 12px rgba(0,0,0,.3);
+    }
+    .calc-slider::-moz-range-thumb {
+      width:22px; height:22px; border-radius:50%;
+      background:var(--pdr-accent);
+      border:3px solid #f7f5f0;
+    }
+    .calc-scale {
+      display:flex; justify-content:space-between; margin-top:10px;
+      font-family:var(--mono); font-size:10.5px; color:rgba(247,245,240,.45);
+    }
+    .calc-card {
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      overflow:hidden;
+      backdrop-filter:blur(8px);
+    }
+    .calc-photo-mini {
+      height:160px;
+      background-size:cover; background-position:center;
+      filter:saturate(.85);
+      border-bottom:1px solid rgba(255,255,255,.08);
+      position:relative;
+    }
+    .calc-photo-mini::after {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(180deg, transparent 0%, rgba(16,35,65,.65) 100%);
+    }
+    .calc-card-top {
+      padding:32px 32px 28px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      position:relative;
+    }
+    .calc-card-top::after {
+      content:""; position:absolute; top:0; left:32px; right:32px; height:2px;
+      background:var(--pdr-accent); border-radius:2px;
+    }
+    .calc-card-eyebrow {
+      font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+      text-transform:uppercase; color:rgba(247,245,240,.6);
+    }
+    .calc-card-big {
+      font-family:var(--serif); font-size:72px; line-height:1;
+      letter-spacing:-.025em; color:var(--pdr-accent);
+      margin:12px 0 6px;
+    }
+    .calc-card-sub { font-size:13px; color:rgba(247,245,240,.65); }
+    .calc-card-rows { padding:8px 32px 24px; }
+    .calc-row {
+      display:flex; justify-content:space-between; align-items:baseline;
+      padding:14px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      font-size:14px;
+    }
+    .calc-row:last-child { border-bottom:0; }
+    .calc-row span { color:rgba(247,245,240,.7); }
+    .calc-row b {
+      font-family:var(--mono); font-weight:500; font-size:15px; color:#f7f5f0;
+    }
+    .calc-row--accent b { color:var(--pdr-accent); font-size:18px; }
+
+    /* ── Testimonials ── */
+    .testi-banner {
+      height:220px;
+      border-radius:14px;
+      background-size:cover; background-position:center;
+      margin-bottom:32px;
+      position:relative; overflow:hidden;
+      filter:saturate(.85) contrast(1.05);
+    }
+    .testi-banner-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(135deg, rgba(16,35,65,.92) 0%, rgba(16,35,65,.65) 60%, rgba(16,35,65,.4) 100%);
+      padding:36px 40px;
+      display:flex; flex-direction:column; justify-content:center;
+      max-width:720px;
+    }
+    .testi-banner-overlay .eyebrow--inv {
+      align-self:flex-start;
+      background:rgba(255,255,255,.08);
+      border-color:rgba(255,255,255,.15);
+      color:rgba(247,245,240,.85);
+      margin-bottom:14px;
+    }
+    .testi-banner-overlay .section-h {
+      font-size:clamp(28px, 3.6vw, 44px);
+      margin:0;
+    }
+    .testi-grid {
+      display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;
+    }
+    .testi {
+      margin:0; padding:28px 26px 26px;
+      border:1px solid var(--pdr-line-2);
+      border-radius:14px;
+      background:var(--pdr-bg-elev);
+      display:flex; flex-direction:column; gap:18px;
+    }
+    .testi-quote { color:var(--pdr-accent); }
+    .testi-q {
+      margin:0; font-family:var(--serif); font-size:22px;
+      line-height:1.3; letter-spacing:-.01em; color:var(--pdr-ink);
+      text-wrap:pretty;
+    }
+    .testi-cap {
+      margin-top:auto; padding-top:18px;
+      border-top:1px solid var(--pdr-line);
+    }
+    .testi-who { font-size:14px; font-weight:600; color:var(--pdr-ink); }
+    .testi-role { font-size:13px; color:var(--pdr-ink-2); margin-top:2px; }
+    .testi-loc {
+      font-family:var(--mono); font-size:11px; letter-spacing:.04em;
+      color:var(--pdr-ink-3); text-transform:uppercase; margin-top:6px;
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      padding:120px 56px;
+      text-align:center;
+      border-top:1px solid var(--pdr-line);
+      position:relative; overflow:hidden;
+    }
+    .final-cta-bg {
+      position:absolute; inset:0;
+      background-size:cover; background-position:center;
+      opacity:.12; filter:saturate(.6) contrast(1.1);
+    }
+    .final-cta-bg-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(180deg, var(--pdr-bg) 0%, transparent 30%, transparent 70%, var(--pdr-bg) 100%);
+    }
+    .final-cta::before {
+      content:""; position:absolute; left:50%; top:50%;
+      width:800px; height:800px; transform:translate(-50%,-50%);
+      background:radial-gradient(circle, color-mix(in oklch, var(--pdr-accent) 14%, transparent) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    .final-cta-inner { position:relative; max-width:760px; margin:0 auto; }
+    .final-cta-eyebrow {
+      display:inline-flex; align-items:center; gap:8px;
+      font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+      text-transform:uppercase; color:var(--pdr-ink-3); margin-bottom:24px;
+    }
+    .final-cta-h {
+      font-family:var(--serif); font-weight:400;
+      font-size:clamp(40px, 5.4vw, 72px); line-height:1.05;
+      letter-spacing:-.025em; margin:0 0 36px;
+      text-wrap:balance;
+    }
+    .final-cta-btn {
+      display:inline-flex; align-items:center; gap:12px;
+      background:var(--pdr-navy); color:#fafaf6;
+      padding:18px 32px; border-radius:999px;
+      font-size:16px; font-weight:500; letter-spacing:-.005em;
+      transition:transform .15s ease, box-shadow .15s ease;
+      box-shadow:0 10px 30px -10px rgba(14,27,44,.6);
+      position:relative; overflow:hidden;
+      border:0;
+    }
+    .final-cta-btn::before {
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,.35) 50%, transparent 70%);
+      transform:translateX(-120%);
+      transition:transform 700ms cubic-bezier(.2,.7,.2,1);
+      pointer-events:none;
+    }
+    .final-cta-btn:hover { transform:translateY(-2px); }
+    .final-cta-btn:hover::before { transform:translateX(120%); }
+    .final-cta-foot {
+      margin-top:24px; font-family:var(--mono); font-size:11px;
+      letter-spacing:.04em; color:var(--pdr-ink-3); text-transform:uppercase;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background:var(--pdr-navy);
+      color:#c8d3e3;
+      padding:64px 56px 32px;
+    }
+    .footer-logo {
+      display:inline-flex; align-items:center; gap:10px;
+      font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:#fafaf6; font-weight:400; line-height:1;
+    }
+    .footer-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .footer-top {
+      max-width:1208px; margin:0 auto;
+      display:grid; grid-template-columns:1fr 2fr; gap:64px;
+      padding-bottom:48px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .footer-cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+    .footer-h {
+      font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+      text-transform:uppercase; color:rgba(247,245,240,.5); margin-bottom:14px;
+    }
+    .footer ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; }
+    .footer-bot {
+      max-width:1208px; margin:32px auto 0;
+      display:flex; justify-content:space-between;
+      font-size:12px; color:rgba(247,245,240,.4);
+    }
+
+    /* ── Bid Ticker ── */
+    .bid-ticker {
+      margin-top:4px;
+      background:var(--pdr-bg-elev);
+      border:1px solid var(--pdr-line);
+      border-radius:10px;
+      padding:14px 16px 12px;
+      max-width:520px;
+      font-feature-settings:"tnum" 1;
+      box-shadow:0 1px 0 rgba(16,35,65,.04);
+    }
+    .bt-head {
+      display:flex; align-items:center; justify-content:space-between;
+      padding-bottom:10px;
+      border-bottom:1px dashed var(--pdr-line);
+      margin-bottom:8px;
+    }
+    .bt-head-l { display:inline-flex; align-items:center; gap:8px; }
+    .bt-pulse {
+      width:8px; height:8px; border-radius:50%;
+      background:#d63b3b; position:relative; flex-shrink:0;
+    }
+    .bt-pulse::after {
+      content:""; position:absolute; inset:-4px;
+      border-radius:50%; border:1px solid #d63b3b;
+      animation:pdr-pulse 1.6s ease-out infinite;
+    }
+    .bt-eyebrow {
+      font:600 11px/1 var(--mono);
+      letter-spacing:.12em; text-transform:uppercase;
+      color:var(--pdr-ink-2);
+    }
+    .bt-low { display:inline-flex; align-items:baseline; gap:8px; }
+    .bt-low-l {
+      font:500 10px/1 var(--mono);
+      letter-spacing:.1em; text-transform:uppercase; color:var(--pdr-ink-2);
+    }
+    .bt-low-v { font:700 14px/1 var(--serif); color:var(--pdr-accent); }
+    .bt-rows { display:flex; flex-direction:column; gap:6px; }
+    .bt-row {
+      display:grid;
+      grid-template-columns:1fr auto auto;
+      gap:12px;
+      align-items:baseline;
+      padding:6px 2px;
+      font-size:13px;
+      color:var(--pdr-ink);
+    }
+    .bt-supplier { font-weight:500; }
+    .bt-term {
+      font:500 11px/1 var(--mono);
+      letter-spacing:.06em; color:var(--pdr-ink-2);
+      padding:3px 6px;
+      border:1px solid var(--pdr-line);
+      border-radius:3px;
+    }
+    .bt-rate { font:600 13px/1 var(--mono); font-feature-settings:"tnum" 1; }
+
+    /* ── Reveal ── */
+    .reveal {
+      opacity:0; transform:translateY(14px);
+      transition:opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1);
+      will-change:opacity, transform;
+    }
+    .reveal.is-visible { opacity:1; transform:translateY(0); }
+
+    /* ── Stats entry ── */
+    @keyframes pdr-stat-in {
+      from { opacity:0; transform:translateY(10px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    .stats-bar .stat { opacity:0; animation:pdr-stat-in 600ms cubic-bezier(.2,.7,.2,1) forwards; }
+
+    /* ── Hero stagger ── */
+    @keyframes pdr-fade-up {
+      from { opacity:0; transform:translateY(12px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    .hero-eyebrow, .hero-h, .hero-sub {
+      opacity:0; animation:pdr-fade-up 800ms cubic-bezier(.2,.7,.2,1) forwards;
+    }
+    .hero-eyebrow { animation-delay:60ms; }
+    .hero-h { animation-delay:140ms; }
+    .hero-sub { animation-delay:220ms; }
+
+    @keyframes pdr-bullet-in {
+      from { opacity:0; transform:translateX(-6px); }
+      to { opacity:1; transform:translateX(0); }
+    }
+    .hero-bullets .bullet { opacity:0; animation:pdr-bullet-in 600ms cubic-bezier(.2,.7,.2,1) forwards; }
+    .hero-bullets .bullet:nth-child(1) { animation-delay:240ms; }
+    .hero-bullets .bullet:nth-child(2) { animation-delay:340ms; }
+    .hero-bullets .bullet:nth-child(3) { animation-delay:440ms; }
+
+    .bid-ticker { opacity:0; animation:pdr-fade-up 700ms cubic-bezier(.2,.7,.2,1) 540ms forwards; }
+
+    @keyframes pdr-photo-in {
+      from { opacity:0; transform:scale(1.04); }
+      to { opacity:1; transform:scale(1); }
+    }
+    .hero-photo { animation:pdr-photo-in 1200ms cubic-bezier(.2,.7,.2,1) 120ms both; }
+
+    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:.4; } }
+    @keyframes pdr-pulse {
+      0% { transform:scale(.6); opacity:.9; }
+      100% { transform:scale(1.8); opacity:0; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width:980px) {
+      .hero-inner, .calc-inner { grid-template-columns:1fr; gap:48px; }
+      .nav { padding:16px 24px; }
+      .nav-links { display:none; }
+      .section, .calc-section, .final-cta { padding:64px 24px; }
+      .how-grid, .testi-grid { grid-template-columns:1fr; }
+      .how-photo-row { grid-template-columns:1fr; }
+      .how-photo { height:200px; }
+      .supplier-grid { grid-template-columns:repeat(2, 1fr); }
+      .suppliers-photo-strip { grid-template-columns:1fr 1fr; height:auto; }
+      .sps-img { height:160px; }
+      .stats-bar { grid-template-columns:repeat(2, 1fr); }
+      .stat { border-bottom:1px solid var(--pdr-line); }
+      .stat:nth-child(2) { border-right:0; }
+      .footer-top { grid-template-columns:1fr; gap:32px; }
+      .footer-bot { flex-direction:column; gap:8px; }
+      .testi-banner { height:180px; }
+      .testi-banner-overlay { padding:24px; }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .reveal, .reveal.is-visible,
+      .stats-bar .stat,
+      .hero-bullets .bullet,
+      .hero-eyebrow, .hero-h, .hero-sub,
+      .hero-photo, .bid-ticker {
+        animation:none !important; transition:none !important;
+        opacity:1 !important; transform:none !important;
+      }
+      .bt-pulse::after { animation:none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero" id="top">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="#top" class="nav-logo" aria-label="Power Done Right">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+        <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+      </svg>
+      Power<em>Done</em>Right
+    </a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#suppliers">Suppliers</a>
+      <a href="#calc">Calculator</a>
+      <a href="#testimonials">Customers</a>
+    </div>
+    <a class="nav-cta" href="#lead">Get rates →</a>
+  </nav>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <svg viewBox="0 0 24 16" width="20" height="14" aria-hidden="true" style="border-radius:2px;margin-right:2px">
+          <rect width="24" height="16" fill="#bf2c2c"/>
+          <rect y="1.23" width="24" height="1.23" fill="#fafaf6"/>
+          <rect y="3.69" width="24" height="1.23" fill="#fafaf6"/>
+          <rect y="6.15" width="24" height="1.23" fill="#fafaf6"/>
+          <rect y="8.62" width="24" height="1.23" fill="#fafaf6"/>
+          <rect y="11.08" width="24" height="1.23" fill="#fafaf6"/>
+          <rect y="13.54" width="24" height="1.23" fill="#fafaf6"/>
+          <rect width="10" height="8.62" fill="#102341"/>
+        </svg>
+        For commercial customers · 17 deregulated markets
+      </div>
+
+      <h1 class="hero-h">Stop overpaying for <em>commercial electricity.</em></h1>
+
+      <p class="hero-sub">
+        We put your account in front of <b>90+ vetted energy suppliers</b> and let them compete in real time. The lowest bid wins your contract — and your business pays 12–28% less from day one.
+      </p>
+
+      <div class="hero-bullets">
+        <div class="bullet"><span class="bullet-x"></span>No fees to your business — suppliers pay us</div>
+        <div class="bullet"><span class="bullet-x"></span>No credit pull, no service interruption</div>
+        <div class="bullet"><span class="bullet-x"></span>First quote in as little as 24 hours, signed contract in 14 days</div>
+      </div>
+
+      <div class="bid-ticker">
+        <div class="bt-head">
+          <div class="bt-head-l">
+            <span class="bt-pulse"></span>
+            <span class="bt-eyebrow">Live supplier bids</span>
+          </div>
+          <div class="bt-low">
+            <span class="bt-low-l">Lowest</span>
+            <span class="bt-low-v" id="bt-lowest">$0.0796/kWh</span>
+          </div>
+        </div>
+        <div class="bt-rows" id="bt-rows"></div>
+      </div>
+    </div>
+
+    <div class="hero-right" id="lead">
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=900&auto=format&fit=crop&q=70" alt="High-voltage transmission lines at sunset" loading="lazy" />
+        <div class="hero-photo-caption">
+          <span class="hpc-dot"></span>
+          <span>Live grid · ERCOT · Texas</span>
+        </div>
+      </div>
+
+      <div class="lead-form" id="lead-form-wrap">
+        <div class="lf-head">
+          <div class="lf-eyebrow">
+            <span class="lf-dot"></span>
+            <span id="lf-step-label">Step 1 of 3 — Your usage</span>
+          </div>
+          <div class="lf-progress">
+            <div class="lf-bar on" id="lf-bar-0"></div>
+            <div class="lf-bar" id="lf-bar-1"></div>
+            <div class="lf-bar" id="lf-bar-2"></div>
+          </div>
+        </div>
+
+        <div class="lf-step" id="lf-step-0">
+          <label class="lf-label" for="lf-bill">What's your average monthly electric bill?</label>
+          <div class="lf-money">
+            <span>$</span>
+            <input id="lf-bill" type="number" inputmode="decimal" placeholder="2400" min="0" />
+            <span class="lf-money-suffix">/mo</span>
+          </div>
+          <div id="lf-estimate" style="display:none" class="lf-estimate">
+            <div class="lf-estimate-label">Estimated annual savings range</div>
+            <div class="lf-estimate-value">
+              <span id="lf-est-low">$0</span><span class="lf-dash">–</span><span id="lf-est-high">$0</span>
+            </div>
+            <div class="lf-estimate-foot">Based on 12–28% reduction across our network. Final rate depends on usage profile and contract length.</div>
+          </div>
+        </div>
+
+        <div class="lf-step" id="lf-step-1" style="display:none">
+          <label class="lf-label" for="lf-business">Business name</label>
+          <input id="lf-business" class="lf-input" type="text" placeholder="Acme Manufacturing" />
+          <label class="lf-label" style="margin-top:14px" for="lf-zip">Service ZIP code</label>
+          <input id="lf-zip" class="lf-input" type="text" placeholder="60601" maxlength="5" inputmode="numeric" />
+          <div class="lf-help">We'll match you with suppliers licensed in your deregulated market.</div>
+        </div>
+
+        <div class="lf-step" id="lf-step-2" style="display:none">
+          <label class="lf-label" for="lf-name">Full name</label>
+          <input id="lf-name" class="lf-input" type="text" placeholder="Jordan Reyes" />
+          <label class="lf-label" style="margin-top:12px" for="lf-email">Work email</label>
+          <input id="lf-email" class="lf-input" type="email" placeholder="jordan@acme.com" />
+          <label class="lf-label" style="margin-top:12px" for="lf-phone">Phone</label>
+          <input id="lf-phone" class="lf-input" type="tel" placeholder="(312) 555-0119" />
+          <div class="lf-fine">By submitting you agree to be contacted by Power Done Right. No obligation. We never sell your data.</div>
+        </div>
+
+        <div class="lf-actions">
+          <button class="lf-back" id="lf-back" style="display:none" type="button">← Back</button>
+          <button class="lf-cta" id="lf-next" type="button">
+            Continue
+            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="square"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="lead-form" id="lead-success" style="display:none">
+        <div class="lf-success">
+          <div class="lf-check" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="56" height="56"><circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 16.5 L14.5 21 L23 11.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Quote request received.</h3>
+          <p>A licensed energy advisor will reach out within <b>one business day</b> with rates from our 90+ supplier network — no obligation.</p>
+          <div class="lf-receipt">
+            <div class="lf-receipt-row"><span>Reference</span><b id="success-ref">PDR-000000</b></div>
+            <div class="lf-receipt-row"><span>Est. annual savings</span><b id="success-savings">—</b></div>
+            <div class="lf-receipt-row"><span>Advisor</span><b>M. Castellanos</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats-bar">
+  <div class="stat" style="animation-delay:0ms">
+    <div class="stat-v"><span class="count-up" data-end="90" data-suffix="+">90+</span></div>
+    <div class="stat-l">Energy suppliers</div>
+  </div>
+  <div class="stat" style="animation-delay:80ms">
+    <div class="stat-v"><span class="count-up" data-end="23" data-suffix="%">23%</span></div>
+    <div class="stat-l">Avg. rate reduction</div>
+  </div>
+  <div class="stat" style="animation-delay:160ms">
+    <div class="stat-v"><span class="count-up" data-end="17" data-suffix="">17</span></div>
+    <div class="stat-l">Deregulated markets</div>
+  </div>
+  <div class="stat" style="animation-delay:240ms">
+    <div class="stat-v"><span class="count-up" data-end="24" data-suffix="h">24h</span></div>
+    <div class="stat-l">To first quote</div>
+  </div>
+</div>
+
+<!-- ── HOW IT WORKS ── -->
+<div id="how">
+  <section class="section how">
+    <div class="how-photo-row">
+      <div class="how-photo" style="background-image:url('https://images.unsplash.com/photo-1473308822086-710304d7d30c?w=900&auto=format&fit=crop&q=70')" aria-label="Transmission tower"></div>
+      <div class="section-head section-head--inrow">
+        <div class="eyebrow"><span class="eyebrow-dot"></span>How it works</div>
+        <h2 class="section-h">Three steps. <em>Two signatures.</em><br>One lower bill from next month forward.</h2>
+      </div>
+    </div>
+    <div class="how-grid">
+      <div class="how-step reveal" data-delay="0">
+        <div class="how-n">01</div>
+        <h3 class="how-t">Share a recent bill</h3>
+        <p class="how-d">We get authorization to read your kWh usage, demand profile, current rate, and contract end date. A 30-second snapshot is all we need to start.</p>
+      </div>
+      <div class="how-step reveal" data-delay="80">
+        <div class="how-n">02</div>
+        <h3 class="how-t">Suppliers compete live</h3>
+        <p class="how-d">We post your account to our 90+ supplier network. They submit bids in real time — and bid against each other to win your contract.</p>
+      </div>
+      <div class="how-step reveal" data-delay="160">
+        <div class="how-n">03</div>
+        <h3 class="how-t">You pick the winner</h3>
+        <p class="how-d">We hand you the top three offers in plain English. Term, rate, green content, exit fees. You sign once. We handle the switch.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── SUPPLIERS ── -->
+<div id="suppliers">
+  <section class="section suppliers">
+    <div class="suppliers-photo-strip">
+      <div class="sps-img" style="background-image:url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&auto=format&fit=crop&q=70')" aria-label="Power substation"></div>
+      <div class="sps-img" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&auto=format&fit=crop&q=70')" aria-label="Wind turbines"></div>
+      <div class="sps-img" style="background-image:url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&auto=format&fit=crop&q=70')" aria-label="Solar farm"></div>
+      <div class="sps-img" style="background-image:url('https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=600&auto=format&fit=crop&q=70')" aria-label="Transmission lines"></div>
+    </div>
+    <div class="section-head">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Supplier network · United States</div>
+      <h2 class="section-h">90+ vetted suppliers. <em>One unbiased advisor.</em></h2>
+      <p class="section-sub">We hold active broker licenses in every deregulated electricity and gas market in the United States. We don't favor any supplier — we surface whichever one quotes you the best deal today.</p>
+    </div>
+    <div class="supplier-grid">
+      <div class="supplier-card reveal"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="3" fill="#1f3a5f"/></svg></div><div><div class="supplier-name">AEP Energy</div><div class="supplier-sub">Multi-state retail</div></div></div>
+      <div class="supplier-card reveal" data-delay="40"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9" fill="#0a4d8c"/></svg></div><div><div class="supplier-name">Constellation</div><div class="supplier-sub">National supplier</div></div></div>
+      <div class="supplier-card reveal" data-delay="80"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="6" y="6" width="12" height="12" rx="1" transform="rotate(45 12 12)" fill="#c43d2a"/></svg></div><div><div class="supplier-name">Direct Energy</div><div class="supplier-sub">Fixed-rate plans</div></div></div>
+      <div class="supplier-card reveal" data-delay="120"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="8" fill="none" stroke="#1a4d2e" stroke-width="3"/></svg></div><div><div class="supplier-name">NRG Energy</div><div class="supplier-sub">Industrial focus</div></div></div>
+      <div class="supplier-card reveal"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="4" y="6" width="3" height="12" fill="#2b6cb0"/><rect x="10.5" y="3" width="3" height="18" fill="#2b6cb0"/><rect x="17" y="9" width="3" height="9" fill="#2b6cb0"/></svg></div><div><div class="supplier-name">Engie Resources</div><div class="supplier-sub">Sustainability</div></div></div>
+      <div class="supplier-card reveal" data-delay="40"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3 L20 7.5 V16.5 L12 21 L4 16.5 V7.5 Z" fill="#7a4e1a"/></svg></div><div><div class="supplier-name">Shell Energy</div><div class="supplier-sub">Commercial gas</div></div></div>
+      <div class="supplier-card reveal" data-delay="80"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 4 L21 20 H3 Z" fill="#3d2e8a"/></svg></div><div><div class="supplier-name">Mansfield Energy</div><div class="supplier-sub">Multi-site</div></div></div>
+      <div class="supplier-card reveal" data-delay="120"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="10" width="18" height="4" fill="#1a6e4a"/><rect x="10" y="3" width="4" height="18" fill="#1a6e4a"/></svg></div><div><div class="supplier-name">SFE Energy</div><div class="supplier-sub">Price certainty</div></div></div>
+      <div class="supplier-card reveal"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="8" cy="12" r="4" fill="#5a3d8a"/><circle cx="17" cy="12" r="3" fill="#5a3d8a" opacity=".6"/></svg></div><div><div class="supplier-name">National Gas &amp; Electric</div><div class="supplier-sub">3-yr fixed</div></div></div>
+      <div class="supplier-card reveal" data-delay="40"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 12 H17 M12 6 L19 12 L12 18" stroke="#b8541f" stroke-width="3" fill="none" stroke-linecap="square"/></svg></div><div><div class="supplier-name">Spark Energy</div><div class="supplier-sub">Multi-market</div></div></div>
+      <div class="supplier-card reveal" data-delay="80"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="3" fill="#0d4f7a"/></svg></div><div><div class="supplier-name">Champion Energy</div><div class="supplier-sub">Texas focus</div></div></div>
+      <div class="supplier-card reveal" data-delay="120"><div class="supplier-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="9" fill="#1f6e3d"/></svg></div><div><div class="supplier-name">Just Energy</div><div class="supplier-sub">Green plans</div></div></div>
+    </div>
+    <div class="supplier-foot">
+      <span>+ 78 more suppliers across deregulated markets in</span>
+      <span class="supplier-states">IL · OH · PA · TX · NY · NJ · MD · DC · MA · CT · ME · NH · RI · DE · VA · CA · MI · IN · KY · GA · FL · CO</span>
+    </div>
+  </section>
+</div>
+
+<!-- ── CALCULATOR ── -->
+<div id="calc">
+  <section class="calc-section">
+    <div class="calc-inner">
+      <div class="calc-left">
+        <div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>Savings estimator</div>
+        <h2 class="section-h section-h--inv">What 23% off your <em>commercial bill</em> looks like.</h2>
+        <p class="section-sub section-sub--inv">Move the slider to your typical monthly electric spend. We'll estimate your annual savings using the network-average rate reduction of 23%.</p>
+        <label class="calc-label" for="calc-slider">Monthly electric bill</label>
+        <div class="calc-value" id="calc-value">$2,400<span>/month</span></div>
+        <input type="range" id="calc-slider" class="calc-slider" min="500" max="25000" step="100" value="2400" />
+        <div class="calc-scale"><span>$500</span><span>$5K</span><span>$10K</span><span>$15K</span><span>$25K</span></div>
+      </div>
+      <div class="calc-right">
+        <div class="calc-card">
+          <div class="calc-photo-mini" style="background-image:url('https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&auto=format&fit=crop&q=70')" aria-label="Power lines"></div>
+          <div class="calc-card-top">
+            <span class="calc-card-eyebrow">Estimated annual savings</span>
+            <div class="calc-card-big" id="calc-saved">$6,624</div>
+            <div class="calc-card-sub">at 23% network-average rate reduction</div>
+          </div>
+          <div class="calc-card-rows">
+            <div class="calc-row"><span>Current annual spend</span><b id="calc-annual-now">$28,800</b></div>
+            <div class="calc-row"><span>Estimated new spend</span><b id="calc-annual-new">$22,176</b></div>
+            <div class="calc-row calc-row--accent"><span>5-year savings</span><b id="calc-five-yr">$33,120</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ── TESTIMONIALS ── -->
+<div id="testimonials">
+  <section class="section testimonials">
+    <div class="testi-banner" style="background-image:url('https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1600&auto=format&fit=crop&q=70')" aria-label="Power infrastructure">
+      <div class="testi-banner-overlay">
+        <div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>From our customers</div>
+        <h2 class="section-h section-h--inv">Saved across <em>1,400+</em> US commercial sites.</h2>
+      </div>
+    </div>
+    <div class="testi-grid">
+      <figure class="testi reveal" data-delay="0">
+        <svg class="testi-quote" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 18 V12 C6 9 8 7 11 7 V10 C9.5 10 9 10.5 9 12 H11 V18 Z M14 18 V12 C14 9 16 7 19 7 V10 C17.5 10 17 10.5 17 12 H19 V18 Z" fill="currentColor"/></svg>
+        <blockquote class="testi-q">We were paying $0.107/kWh. PDR brought it to $0.082 with a 36-month fixed. Saved us $61K the first year — across nine restaurant locations.</blockquote>
+        <figcaption class="testi-cap"><div class="testi-who">M. Whitfield</div><div class="testi-role">CFO, Multi-Location Franchisee</div><div class="testi-loc">Columbus, OH</div></figcaption>
+      </figure>
+      <figure class="testi reveal" data-delay="100">
+        <svg class="testi-quote" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 18 V12 C6 9 8 7 11 7 V10 C9.5 10 9 10.5 9 12 H11 V18 Z M14 18 V12 C14 9 16 7 19 7 V10 C17.5 10 17 10.5 17 12 H19 V18 Z" fill="currentColor"/></svg>
+        <blockquote class="testi-q">Our broker was 'shopping' rates once a year. PDR set up live monitoring and renegotiated mid-contract when the market dropped. That's the difference.</blockquote>
+        <figcaption class="testi-cap"><div class="testi-who">K. Patel</div><div class="testi-role">Operations Director</div><div class="testi-loc">Houston, TX</div></figcaption>
+      </figure>
+      <figure class="testi reveal" data-delay="200">
+        <svg class="testi-quote" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 18 V12 C6 9 8 7 11 7 V10 C9.5 10 9 10.5 9 12 H11 V18 Z M14 18 V12 C14 9 16 7 19 7 V10 C17.5 10 17 10.5 17 12 H19 V18 Z" fill="currentColor"/></svg>
+        <blockquote class="testi-q">Straightforward — no markups buried in the rate, no surprise fees. We got three offers, picked one, signed. Two weeks later we were on the new rate.</blockquote>
+        <figcaption class="testi-cap"><div class="testi-who">D. Larkin</div><div class="testi-role">Owner, CNC Fabrication Shop</div><div class="testi-loc">Allentown, PA</div></figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-cta">
+  <div class="final-cta-bg" style="background-image:url('https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1600&auto=format&fit=crop&q=70')" aria-hidden="true"></div>
+  <div class="final-cta-bg-overlay" aria-hidden="true"></div>
+  <div class="final-cta-inner">
+    <div class="final-cta-eyebrow"><span class="eyebrow-dot"></span>Ready to start?</div>
+    <h2 class="final-cta-h">Get your no-obligation rate sheet.<br><em>One business day. No credit pull. No switch fees.</em></h2>
+    <button class="final-cta-btn" onclick="document.getElementById('lead').scrollIntoView({behavior:'smooth'})">
+      Get my rates
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="square"/></svg>
+    </button>
+    <div class="final-cta-foot">Licensed in all 17 US deregulated markets · 90+ suppliers · No fees to customer</div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="#fafaf6"/>
+          <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+        </svg>
+        Power<em>Done</em>Right
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <div class="footer-h">Markets</div>
+        <ul><li>Electricity</li><li>Natural gas</li><li>Renewable plans</li><li>Demand management</li></ul>
+      </div>
+      <div>
+        <div class="footer-h">Company</div>
+        <ul><li>About</li><li><a href="mailto:contact@powerdoneright.com">Contact</a></li><li>Careers</li></ul>
+      </div>
+      <div>
+        <div class="footer-h">Resources</div>
+        <ul><li>Bill analysis</li><li>Market intel</li><li>Renewal guide</li><li>FAQ</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>© <span id="footer-year"></span> Power Done Right LLC · Licensed energy broker in 17 deregulated markets</span>
+    <span>Privacy · Terms · Disclosures</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  const SUPABASE_URL = 'https://lhwfbectnrmrvwhkftun.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxod2ZiZWN0bnJtcnZ3aGtmdHVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4NzE1MzEsImV4cCI6MjA4OTQ0NzUzMX0.zmPRPeILtFNgGMp66JzhD44QUamXr0GFQAQq7y2WyoU';
+
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // ── Bid Ticker ────────────────────────────────────────────────────────────
+  const BIDS = [
+    { s: 'NRG Energy',              rate: 0.0921, term: '24mo' },
+    { s: 'Constellation',           rate: 0.0894, term: '36mo' },
+    { s: 'Direct Energy',           rate: 0.0879, term: '24mo' },
+    { s: 'Engie Resources',         rate: 0.0867, term: '36mo' },
+    { s: 'AEP Energy',              rate: 0.0853, term: '36mo' },
+    { s: 'Shell Energy',            rate: 0.0841, term: '36mo' },
+    { s: 'SFE Energy',              rate: 0.0829, term: '24mo' },
+    { s: 'Champion Energy',         rate: 0.0822, term: '36mo' },
+    { s: 'Spark Energy',            rate: 0.0814, term: '24mo' },
+    { s: 'Mansfield Energy',        rate: 0.0808, term: '36mo' },
+    { s: 'National Gas & Electric', rate: 0.0801, term: '36mo' },
+    { s: 'Just Energy',             rate: 0.0796, term: '36mo' },
+  ];
+  const fmt = r => '$' + r.toFixed(4) + '/kWh';
+  let tickerIdx = 0;
+  let tickerLow = BIDS[0].rate;
+
+  function renderTicker() {
+    const rows = document.getElementById('bt-rows');
+    const opacities = [0.55, 0.78, 1];
+    const visible = [2, 1, 0].map(k => BIDS[(tickerIdx - k + BIDS.length) % BIDS.length]);
+    rows.innerHTML = visible.map((b, i) => `
+      <div class="bt-row" style="opacity:${opacities[i]}">
+        <span class="bt-supplier">${b.s}</span>
+        <span class="bt-term">${b.term}</span>
+        <span class="bt-rate" style="${i === 2 ? 'color:var(--pdr-accent)' : ''}">${fmt(b.rate)}</span>
+      </div>`).join('');
+    document.getElementById('bt-lowest').textContent = fmt(tickerLow);
+  }
+  renderTicker();
+  setInterval(() => {
+    tickerIdx = (tickerIdx + 1) % BIDS.length;
+    tickerLow = Math.min(tickerLow, BIDS[tickerIdx].rate);
+    renderTicker();
+  }, 1700);
+
+  // ── Count-up ──────────────────────────────────────────────────────────────
+  function countUp(el, end, suffix, dur) {
+    const t0 = performance.now();
+    const tick = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(end * e) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = end + suffix;
+    };
+    requestAnimationFrame(tick);
+  }
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      countUp(e.target, +e.target.dataset.end, e.target.dataset.suffix || '', 1200);
+    }), { threshold: 0.5 });
+    document.querySelectorAll('.count-up').forEach(el => io.observe(el));
+  }
+
+  // ── Reveal ────────────────────────────────────────────────────────────────
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      setTimeout(() => e.target.classList.add('is-visible'), +(e.target.dataset.delay || 0));
+    }), { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+
+  // ── Calculator ────────────────────────────────────────────────────────────
+  const slider = document.getElementById('calc-slider');
+  function updateCalc() {
+    const bill = +slider.value;
+    const now = bill * 12, nw = Math.round(now * 0.77), sv = now - nw;
+    document.getElementById('calc-value').innerHTML = '$' + bill.toLocaleString() + '<span>/month</span>';
+    document.getElementById('calc-saved').textContent = '$' + sv.toLocaleString();
+    document.getElementById('calc-annual-now').textContent = '$' + now.toLocaleString();
+    document.getElementById('calc-annual-new').textContent = '$' + nw.toLocaleString();
+    document.getElementById('calc-five-yr').textContent = '$' + (sv * 5).toLocaleString();
+  }
+  slider.addEventListener('input', updateCalc);
+
+  // ── Multi-step form ───────────────────────────────────────────────────────
+  let step = 0;
+  const labels = ['Step 1 of 3 — Your usage', 'Step 2 of 3 — Your business', 'Step 3 of 3 — How to reach you'];
+
+  function goStep(n) {
+    for (let i = 0; i < 3; i++) document.getElementById('lf-step-' + i).style.display = i === n ? '' : 'none';
+    document.getElementById('lf-step-label').textContent = labels[n];
+    for (let i = 0; i < 3; i++) document.getElementById('lf-bar-' + i).classList.toggle('on', i <= n);
+    document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
+    const btn = document.getElementById('lf-next');
+    btn.innerHTML = (n < 2 ? 'Continue' : 'Get my rates') + ' <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="square"/></svg>';
+    step = n;
+    requestAnimationFrame(() => { const f = document.getElementById('lf-step-' + n).querySelector('input'); if (f) f.focus(); });
+  }
+
+  document.getElementById('lf-bill').addEventListener('input', () => {
+    const bill = +document.getElementById('lf-bill').value || 0;
+    const el = document.getElementById('lf-estimate');
+    if (bill > 100) {
+      document.getElementById('lf-est-low').textContent = '$' + Math.round(bill * 0.12 * 12).toLocaleString();
+      document.getElementById('lf-est-high').textContent = '$' + Math.round(bill * 0.28 * 12).toLocaleString();
+      el.style.display = '';
+    } else { el.style.display = 'none'; }
+  });
+
+  document.getElementById('lf-zip').addEventListener('input', e => { e.target.value = e.target.value.replace(/\D/g, '').slice(0, 5); });
+
+  function advance() {
+    if (step === 0 && !document.getElementById('lf-bill').value) return;
+    if (step === 1 && (!document.getElementById('lf-business').value || !document.getElementById('lf-zip').value)) return;
+    if (step === 2) { submitForm(); return; }
+    goStep(step + 1);
+  }
+
+  document.getElementById('lf-next').addEventListener('click', advance);
+  document.getElementById('lf-back').addEventListener('click', () => goStep(step - 1));
+  ['lf-bill', 'lf-zip', 'lf-phone'].forEach(id => {
+    document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') advance(); });
+  });
+
+  // ── Submit ────────────────────────────────────────────────────────────────
+  async function submitForm() {
+    const name  = document.getElementById('lf-name').value.trim();
+    const email = document.getElementById('lf-email').value.trim();
+    const phone = document.getElementById('lf-phone').value.trim();
+    if (!name || !email || !phone) return;
+
+    const btn = document.getElementById('lf-next');
+    btn.disabled = true;
+    btn.innerHTML = 'Sending…';
+
+    const bill = parseFloat(document.getElementById('lf-bill').value) || null;
+    const ref  = 'PDR-' + Math.floor(100000 + Math.random() * 900000);
+
+    const payload = {
+      name, email,
+      phone: phone || null,
+      property_name: document.getElementById('lf-business').value.trim() || null,
+      monthly_bill_estimate: bill,
+      service_zip: document.getElementById('lf-zip').value.trim() || null,
+      source: 'power-done-right',
+      status: 'new',
+    };
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/electricity_leads`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=representation',
+        },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('insert failed');
+      const [inserted] = await res.json();
+
+      fetch(`${SUPABASE_URL}/functions/v1/send-notification`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
+        body: JSON.stringify({ type: 'ELECTRICITY_LEAD', record: inserted || payload }),
+      }).catch(() => {});
+
+      document.getElementById('lead-form-wrap').style.display = 'none';
+      document.getElementById('lead-success').style.display = '';
+      document.getElementById('success-ref').textContent = ref;
+      document.getElementById('success-savings').textContent = bill
+        ? '$' + Math.round(bill * 0.12 * 12).toLocaleString() + ' – $' + Math.round(bill * 0.28 * 12).toLocaleString()
+        : '—';
+
+      if (typeof gtag !== 'undefined') gtag('event', 'pdr_lead_submit', { event_category: 'lead', event_label: payload.property_name });
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = 'Get my rates <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="square"/></svg>';
+    }
+  }
+
+})();
+</script>
+</body>
+</html>
