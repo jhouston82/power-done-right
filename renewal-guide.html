@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Energy Contract Renewal Guide — Power Done Right</title>
+  <meta name="description" content="Everything multi-site businesses need to know about renewing commercial electricity and gas contracts. Timelines, pitfalls, rate benchmarks, and how to avoid auto-renewal penalties." />
+  <link rel="canonical" href="https://www.powerdoneright.com/renewal-guide" />
+  <meta property="og:title" content="Commercial Energy Contract Renewal Guide — Power Done Right" />
+  <meta property="og:description" content="Your renewal window is shorter than you think. 90-day playbook, common mistakes, and a deadline calculator for commercial energy contracts." />
+  <meta property="og:url" content="https://www.powerdoneright.com/renewal-guide" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pdr-bg: #f7f5f0; --pdr-bg-elev: #fdfcf8; --pdr-ink: #0e1b2c; --pdr-ink-2: #2a3a52; --pdr-ink-3: #5a6b82;
+      --pdr-line: rgba(14,27,44,.10); --pdr-line-2: rgba(14,27,44,.18);
+      --pdr-navy: #102341; --pdr-navy-2: #1a3056; --pdr-accent: #E8B43A; --pdr-accent-ink: #5e3f00;
+      --serif: "Instrument Serif","Source Serif Pro","Times New Roman",serif;
+      --sans: "Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+      --mono: "Geist Mono","JetBrains Mono",ui-monospace,monospace;
+    }
+    *,*::before,*::after { box-sizing: border-box; }
+    html,body { margin:0; padding:0; }
+    body { font-family:var(--sans); background:var(--pdr-bg); color:var(--pdr-ink); -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button { font-family:inherit; cursor:pointer; }
+    em { font-style:normal; font-family:var(--serif); font-weight:400; color:var(--pdr-ink); }
+
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:22px 56px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg); }
+    .nav-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:var(--pdr-ink); font-weight:400; line-height:1; }
+    .nav-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .nav-cta { font-size:13.5px; padding:9px 16px; border-radius:999px; background:var(--pdr-navy); color:#fafaf6; letter-spacing:-.005em; transition:transform .15s ease; border:0; }
+    .nav-cta:hover { transform:translateY(-1px); }
+
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
+    .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent); flex-shrink:0; }
+    .eyebrow--inv { background:rgba(255,255,255,.05); color:rgba(247,245,240,.7); border-color:rgba(255,255,255,.12); }
+
+    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg-elev); }
+    .page-hero-inner { max-width:760px; margin:0 auto; }
+    .hero-h { font-family:var(--serif); font-weight:400; font-size:clamp(48px, 6.2vw, 80px); line-height:1.04; letter-spacing:-.025em; margin:24px 0 28px; color:var(--pdr-ink); text-wrap:balance; }
+    .hero-h em { font-style:italic; color:var(--pdr-navy); }
+    .hero-sub { font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:580px; margin:0; text-wrap:pretty; }
+
+    .section-wrap { border-bottom:1px solid var(--pdr-line); }
+    .section-wrap--alt { background:var(--pdr-bg-elev); }
+    .section { padding:80px 56px; max-width:1208px; margin:0 auto; }
+    .section-head { max-width:680px; margin-bottom:48px; }
+    .section-h { font-family:var(--serif); font-weight:400; font-size:clamp(32px, 4vw, 54px); line-height:1.05; letter-spacing:-.02em; margin:16px 0 0; text-wrap:balance; }
+    .section-sub { font-size:17px; line-height:1.5; color:var(--pdr-ink-2); margin:16px 0 0; text-wrap:pretty; max-width:600px; }
+
+    /* Timeline */
+    .timeline { position:relative; padding-left:40px; }
+    .timeline::before { content:""; position:absolute; left:14px; top:8px; bottom:8px; width:2px; background:var(--pdr-line-2); }
+    .timeline-item { position:relative; margin-bottom:40px; }
+    .timeline-item:last-child { margin-bottom:0; }
+    .timeline-dot { position:absolute; left:-40px; top:4px; width:28px; height:28px; border-radius:50%; background:var(--pdr-bg-elev); border:2px solid var(--pdr-line-2); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:10px; font-weight:600; color:var(--pdr-ink-3); }
+    .timeline-dot--active { background:var(--pdr-navy); border-color:var(--pdr-navy); color:#fafaf6; }
+    .timeline-dot--warn { background:var(--pdr-accent); border-color:var(--pdr-accent); color:var(--pdr-accent-ink); }
+    .timeline-dot--danger { background:#c53030; border-color:#c53030; color:#fff; }
+    .timeline-label { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); margin-bottom:8px; }
+    .timeline-t { font-family:var(--serif); font-size:22px; font-weight:400; margin:0 0 8px; letter-spacing:-.01em; }
+    .timeline-d { font-size:14px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
+
+    /* Mistakes list */
+    .mistake-list { display:flex; flex-direction:column; gap:16px; }
+    .mistake { padding:20px 24px; border-left:3px solid var(--pdr-accent); border-radius:0 12px 12px 0; background:var(--pdr-bg-elev); border:1px solid var(--pdr-line-2); border-left-width:3px; border-left-color:#c53030; }
+    .mistake-t { font-weight:600; color:var(--pdr-ink); margin-bottom:6px; font-size:15px; }
+    .mistake-d { font-size:14px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
+
+    /* Term table */
+    .term-table { width:100%; border-collapse:collapse; font-size:14px; }
+    .term-table th { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:12px 16px; text-align:left; border-bottom:2px solid var(--pdr-line-2); }
+    .term-table td { padding:14px 16px; border-bottom:1px solid var(--pdr-line); color:var(--pdr-ink-2); vertical-align:top; line-height:1.4; }
+    .term-table tr:last-child td { border-bottom:0; }
+    .term-table td:first-child { font-weight:600; color:var(--pdr-ink); white-space:nowrap; }
+    .term-table-wrap { border:1px solid var(--pdr-line-2); border-radius:14px; overflow:hidden; background:var(--pdr-bg-elev); }
+
+    /* Checklist */
+    .check-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+    .check-list li { display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--pdr-ink-2); line-height:1.5; }
+    .check-list li::before { content:""; width:18px; height:18px; border-radius:50%; background:color-mix(in oklch,var(--pdr-accent) 22%,transparent); background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'><path d='M5 9.5 L8 12 L13 6.5' stroke='%235e3f00' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>"); background-size:contain; flex-shrink:0; margin-top:1px; }
+
+    /* Calculator */
+    .calc-card { background:var(--pdr-bg-elev); border:1px solid var(--pdr-line-2); border-radius:16px; padding:32px; box-shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 12px 32px -16px rgba(14,27,44,.2); }
+    .calc-card::before { content:""; display:block; height:2px; background:linear-gradient(to right,transparent,var(--pdr-accent),transparent); border-radius:2px; margin:-32px -32px 28px; }
+    .calc-card-t { font-family:var(--serif); font-size:24px; font-weight:400; margin:0 0 8px; letter-spacing:-.01em; }
+    .calc-card-sub { font-size:14px; color:var(--pdr-ink-3); margin:0 0 24px; }
+    .calc-row { display:flex; flex-direction:column; gap:6px; margin-bottom:20px; }
+    .calc-label { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); }
+    .calc-input { width:100%; padding:12px 16px; border:1px solid var(--pdr-line-2); border-radius:10px; background:var(--pdr-bg); font-family:var(--sans); font-size:16px; color:var(--pdr-ink); outline:none; transition:border .15s ease, box-shadow .15s ease; }
+    .calc-input:focus { border-color:var(--pdr-navy); box-shadow:0 0 0 3px color-mix(in oklch,var(--pdr-navy) 12%,transparent); }
+    .calc-result { margin-top:24px; padding:20px; border:1px solid var(--pdr-line-2); border-radius:12px; display:none; }
+    .calc-result.show { display:block; }
+    .calc-result-row { display:flex; justify-content:space-between; align-items:baseline; padding:10px 0; border-bottom:1px solid var(--pdr-line); font-size:14px; color:var(--pdr-ink-2); gap:16px; }
+    .calc-result-row:last-child { border-bottom:0; }
+    .calc-result-label { flex:1; }
+    .calc-result-val { font-family:var(--mono); font-weight:600; color:var(--pdr-ink); white-space:nowrap; }
+    .calc-result-val--green { color:#2c6e4a; }
+    .calc-result-val--yellow { color:#a06000; }
+    .calc-result-val--red { color:#c53030; }
+    .calc-urgency-label { display:inline-flex; align-items:center; gap:6px; font-family:var(--mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; padding:4px 10px; border-radius:999px; margin-left:8px; }
+    .urgency-green { background:color-mix(in oklch,#2c6e4a 12%,transparent); color:#2c6e4a; }
+    .urgency-yellow { background:color-mix(in oklch,#E8B43A 20%,transparent); color:#a06000; }
+    .urgency-red { background:color-mix(in oklch,#c53030 12%,transparent); color:#c53030; }
+
+    .cta-band { background:var(--pdr-navy); padding:96px 56px; text-align:center; position:relative; overflow:hidden; }
+    .cta-band::before { content:""; position:absolute; inset:0; background-image:linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px); background-size:80px 80px; pointer-events:none; }
+    .cta-band-inner { position:relative; max-width:680px; margin:0 auto; }
+    .cta-band-h { font-family:var(--serif); font-weight:400; font-size:clamp(36px, 4.8vw, 64px); line-height:1.05; letter-spacing:-.025em; color:#f7f5f0; margin:20px 0 36px; text-wrap:balance; }
+    .cta-band-h em { font-style:italic; color:var(--pdr-accent); }
+    .cta-btn { display:inline-flex; align-items:center; gap:12px; background:var(--pdr-accent); color:var(--pdr-accent-ink); padding:18px 32px; border-radius:999px; font-size:15.5px; font-weight:600; letter-spacing:-.005em; transition:transform .15s ease; box-shadow:0 10px 30px -10px rgba(232,180,58,.5); border:0; }
+    .cta-btn:hover { transform:translateY(-2px); }
+    .cta-foot { margin-top:20px; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(247,245,240,.4); text-transform:uppercase; }
+
+    .footer { background:var(--pdr-navy); color:#c8d3e3; padding:64px 56px 32px; }
+    .footer-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:#fafaf6; font-weight:400; line-height:1; }
+    .footer-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .footer-top { max-width:1208px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:64px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+    .footer-h { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(247,245,240,.5); margin-bottom:14px; }
+    .footer ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; }
+    .footer ul a { color:#c8d3e3; transition:color .15s; }
+    .footer ul a:hover { color:#fafaf6; }
+    .footer-bot { max-width:1208px; margin:32px auto 0; display:flex; justify-content:space-between; font-size:12px; color:rgba(247,245,240,.4); }
+
+    .reveal { opacity:0; transform:translateY(14px); transition:opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); will-change:opacity, transform; }
+    .reveal.is-visible { opacity:1; transform:translateY(0); }
+
+    @media (max-width:980px) {
+      .nav { padding:16px 24px; }
+      .page-hero { padding:56px 24px 48px; }
+      .section { padding:56px 24px; }
+      .two-col { grid-template-columns:1fr !important; }
+      .footer { padding:48px 24px 24px; }
+      .footer-top { grid-template-columns:1fr; gap:32px; }
+      .footer-bot { flex-direction:column; gap:8px; }
+      .cta-band { padding:64px 24px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .reveal, .reveal.is-visible { opacity:1 !important; transform:none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo" aria-label="Power Done Right home">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+      <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+    </svg>
+    Power<em>Done</em>Right
+  </a>
+  <a class="nav-cta" href="/">Get rates →</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>Resources · Renewal Guide</div>
+    <h1 class="hero-h">Your renewal window is <em>shorter than you think.</em></h1>
+    <p class="hero-sub">Most commercial energy contracts auto-renew at unfavorable holdover or month-to-month rates if you don't act 60–90 days before expiration. Here's the full playbook — and a deadline calculator to make sure you're not caught off guard.</p>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<div class="section-wrap">
+  <div class="section" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start" class="two-col">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>The 90-day window</div>
+      <h2 class="section-h" style="margin-top:16px;font-size:clamp(28px,3.5vw,46px)">What to do and when to do it.</h2>
+      <div class="timeline" style="margin-top:40px">
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--active">90</div>
+          <div class="timeline-label">90 days before expiration</div>
+          <div class="timeline-t">Begin market survey</div>
+          <p class="timeline-d">Contact PDR. We submit your account to the full supplier market, request competitive bids, and pull current forward curve data to advise on timing and term length.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--active">75</div>
+          <div class="timeline-label">75 days out</div>
+          <div class="timeline-t">Review competitive bids</div>
+          <p class="timeline-d">Bids arrive. PDR presents a comparison of all offers — rate structure, term, ETF terms, and all-in price. You evaluate with time to negotiate or request re-bids if market conditions warrant.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--active">60</div>
+          <div class="timeline-label">60 days out</div>
+          <div class="timeline-t">Select supplier and sign</div>
+          <p class="timeline-d">Confirm your selection. PDR manages enrollment paperwork, utility notification, and supplier onboarding. Most markets require 30–45 days to process a supplier switch.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--warn">30</div>
+          <div class="timeline-label">30 days out</div>
+          <div class="timeline-t">Confirm enrollment</div>
+          <p class="timeline-d">Verify the switch is confirmed with the utility and new supplier. Identify your new billing format and expected first bill under the new contract.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot--danger">0</div>
+          <div class="timeline-label">Contract end date</div>
+          <div class="timeline-t">New contract begins</div>
+          <p class="timeline-d">Service continues uninterrupted at your new rate. If you missed the window, you may enter holdover at a penalty rate. PDR will work to exit this as quickly as possible.</p>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" data-delay="80">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Renewal deadline calculator</div>
+      <div class="calc-card" style="margin-top:20px">
+        <div class="calc-card-t">When do I need to act?</div>
+        <p class="calc-card-sub">Enter your contract end date to see your action deadlines.</p>
+        <div class="calc-row">
+          <label class="calc-label" for="contract-end">Contract end date</label>
+          <input class="calc-input" type="date" id="contract-end" />
+        </div>
+        <div class="calc-result" id="renewal-result">
+          <div class="calc-result-row">
+            <span class="calc-result-label">Start market survey</span>
+            <span class="calc-result-val" id="r-90">—</span>
+          </div>
+          <div class="calc-result-row">
+            <span class="calc-result-label">Sign new contract by</span>
+            <span class="calc-result-val" id="r-60">—</span>
+          </div>
+          <div class="calc-result-row">
+            <span class="calc-result-label">Contract expires</span>
+            <span class="calc-result-val" id="r-end">—</span>
+          </div>
+          <div class="calc-result-row" style="border-bottom:0;padding-top:16px">
+            <span class="calc-result-label" style="font-weight:600;color:var(--pdr-ink)">Time to start your survey</span>
+            <span class="calc-result-val" id="r-urgency">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMON MISTAKES -->
+<div class="section-wrap section-wrap--alt">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>What to avoid</div>
+      <h2 class="section-h">Five renewal mistakes that cost commercial buyers the most.</h2>
+    </div>
+    <div class="mistake-list reveal">
+      <div class="mistake">
+        <div class="mistake-t">Auto-renewing at holdover rates</div>
+        <p class="mistake-d">Most supply contracts include an auto-renewal clause that rolls you into a month-to-month or "holdover" rate if you don't provide written notice within a specified window. Holdover rates are often 20–40% above market and expose you to month-to-month volatility. This is the single most expensive renewal mistake.</p>
+      </div>
+      <div class="mistake">
+        <div class="mistake-t">Renewing at market peak</div>
+        <p class="mistake-d">Signing a multi-year fixed contract when forward prices are at a seasonal or structural high locks in above-market costs for the entire term. PDR monitors market conditions and advises on timing — sometimes a short-term bridge contract while you wait for the market to correct is the right call.</p>
+      </div>
+      <div class="mistake">
+        <div class="mistake-t">Choosing the wrong term length</div>
+        <p class="mistake-d">A 36-month fixed contract in a falling-rate environment commits you to above-market pricing as the market drops. A 12-month contract in a rising-rate environment leaves you re-bidding into a more expensive market every year. Match term to market outlook, not just budget preference.</p>
+      </div>
+      <div class="mistake">
+        <div class="mistake-t">Accepting the incumbent supplier's first offer</div>
+        <p class="mistake-d">Incumbent suppliers know you're already enrolled and often submit renewal offers with higher margins, betting that inertia keeps you from shopping the market. Even if you ultimately renew with the same supplier, the process of getting competitive bids typically results in a lower incumbent offer.</p>
+      </div>
+      <div class="mistake">
+        <div class="mistake-t">Missing the exit window on an existing contract</div>
+        <p class="mistake-d">Some contracts include a narrow "election window" during which the customer can elect to extend, modify, or exit — typically 30–60 days before a price-reset or term-end date. Missing this window may restrict your options or trigger automatic renewal provisions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT TO BRING -->
+<div class="section-wrap">
+  <div class="section" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;" class="two-col">
+    <div class="reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>What to have ready</div>
+      <h2 class="section-h" style="font-size:clamp(28px,3.5vw,46px);margin-top:16px">Information PDR needs to re-bid your account.</h2>
+      <ul class="check-list" style="margin-top:32px">
+        <li>Current contract expiration date (from your supply agreement)</li>
+        <li>Current contracted rate per kWh or MMBtu</li>
+        <li>Contract type (fixed, index, hybrid)</li>
+        <li>Any early termination fee or exit clause language</li>
+        <li>12 months of usage history (from bills or utility portal)</li>
+        <li>Service account number(s)</li>
+        <li>Planned changes to load or locations in the contract period</li>
+      </ul>
+    </div>
+    <div class="reveal" data-delay="80">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Term length guidance</div>
+      <h2 class="section-h" style="font-size:clamp(28px,3.5vw,46px);margin-top:16px">Matching contract term to market conditions.</h2>
+      <div class="term-table-wrap" style="margin-top:32px">
+        <table class="term-table">
+          <thead>
+            <tr>
+              <th>Term</th>
+              <th>When it makes sense</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12 months</td>
+              <td>Forward prices are elevated. You want to re-bid when the market corrects. Maximum flexibility for operations in transition.</td>
+            </tr>
+            <tr>
+              <td>24–36 months</td>
+              <td>Market prices are at or below historical averages. Budget certainty is a priority. Most common structure for mid-market commercial accounts.</td>
+            </tr>
+            <tr>
+              <td>48–60 months</td>
+              <td>Forward curve is significantly below long-run average. Buyer has high risk aversion and multi-year budget commitments (e.g., manufacturing cost structures, long-term leases).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>Don't miss your window</div>
+    <h2 class="cta-band-h">Renewal coming up? Let PDR <em>run the process</em> for you.</h2>
+    <a href="/" class="cta-btn">Get my rates →</a>
+    <p class="cta-foot">Licensed in all 17 US deregulated markets · 90+ suppliers · No fees to your business</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="#fafaf6"/>
+          <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+        </svg>
+        Power<em>Done</em>Right
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <div class="footer-h">Markets</div>
+        <ul>
+          <li><a href="electricity">Electricity</a></li>
+          <li><a href="natural-gas">Natural gas</a></li>
+          <li><a href="renewable-plans">Renewable plans</a></li>
+          <li><a href="demand-management">Demand management</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Company</div>
+        <ul>
+          <li><a href="about">About</a></li>
+          <li><a href="mailto:contact@powerdoneright.com">Contact</a></li>
+          <li><a href="careers">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Resources</div>
+        <ul>
+          <li><a href="bill-analysis">Bill analysis</a></li>
+          <li><a href="market-intel">Market intel</a></li>
+          <li><a href="renewal-guide">Renewal guide</a></li>
+          <li><a href="faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>© <span id="footer-year"></span> Power Done Right LLC · Licensed energy broker in 17 deregulated markets</span>
+    <span>Privacy · Terms · Disclosures</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      setTimeout(() => e.target.classList.add('is-visible'), +(e.target.dataset.delay || 0));
+    }), { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Renewal Deadline Calculator
+  const fmt = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  document.getElementById('contract-end').addEventListener('input', function () {
+    const result = document.getElementById('renewal-result');
+    if (!this.value) { result.style.display = 'none'; return; }
+    const end = new Date(this.value + 'T00:00:00');
+    if (isNaN(end)) { result.style.display = 'none'; return; }
+
+    const d90 = new Date(end); d90.setDate(d90.getDate() - 90);
+    const d60 = new Date(end); d60.setDate(d60.getDate() - 60);
+
+    document.getElementById('r-90').textContent = fmt(d90);
+    document.getElementById('r-60').textContent = fmt(d60);
+    document.getElementById('r-end').textContent = fmt(end);
+
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    const daysTo90 = Math.round((d90 - today) / 86400000);
+    const urgEl = document.getElementById('r-urgency');
+
+    if (daysTo90 > 30) {
+      urgEl.innerHTML = daysTo90 + ' days <span class="calc-urgency-label urgency-green">On track</span>';
+    } else if (daysTo90 > 0) {
+      urgEl.innerHTML = daysTo90 + ' days <span class="calc-urgency-label urgency-yellow">Act soon</span>';
+    } else if (daysTo90 > -60) {
+      urgEl.innerHTML = 'Overdue by ' + Math.abs(daysTo90) + ' days <span class="calc-urgency-label urgency-red">Urgent</span>';
+    } else {
+      urgEl.innerHTML = 'Window likely closed <span class="calc-urgency-label urgency-red">Contact PDR</span>';
+    }
+
+    result.style.display = 'block';
+  });
+})();
+</script>
+</body>
+</html>

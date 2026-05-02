@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Electricity Rates — Power Done Right</title>
+  <meta name="description" content="Lock in a lower commercial electricity rate in deregulated US markets. Power Done Right puts 90+ vetted suppliers in competition for your account. Fixed and index rates, 12–60 month terms." />
+  <link rel="canonical" href="https://www.powerdoneright.com/electricity" />
+  <meta property="og:title" content="Commercial Electricity Rates — Power Done Right" />
+  <meta property="og:description" content="90+ vetted suppliers compete for your commercial electricity account. Fixed, index, and hybrid rates. First quote in 24 hours." />
+  <meta property="og:url" content="https://www.powerdoneright.com/electricity" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Variables ── */
+    :root {
+      --pdr-bg: #f7f5f0;
+      --pdr-bg-elev: #fdfcf8;
+      --pdr-ink: #0e1b2c;
+      --pdr-ink-2: #2a3a52;
+      --pdr-ink-3: #5a6b82;
+      --pdr-line: rgba(14,27,44,.10);
+      --pdr-line-2: rgba(14,27,44,.18);
+      --pdr-navy: #102341;
+      --pdr-navy-2: #1a3056;
+      --pdr-accent: #E8B43A;
+      --pdr-accent-ink: #5e3f00;
+      --serif: "Instrument Serif","Source Serif Pro","Times New Roman",serif;
+      --sans: "Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+      --mono: "Geist Mono","JetBrains Mono",ui-monospace,monospace;
+    }
+    *,*::before,*::after { box-sizing: border-box; }
+    html,body { margin:0; padding:0; }
+    body { font-family:var(--sans); background:var(--pdr-bg); color:var(--pdr-ink); -webkit-font-smoothing:antialiased; font-feature-settings:"ss01","cv11"; }
+    a { color:inherit; text-decoration:none; }
+    button { font-family:inherit; cursor:pointer; }
+    em { font-style:normal; font-family:var(--serif); font-weight:400; color:var(--pdr-ink); }
+
+    /* ── Nav ── */
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:22px 56px; position:relative; z-index:4; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg); }
+    .nav-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:var(--pdr-ink); font-weight:400; line-height:1; }
+    .nav-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .nav-cta { font-size:13.5px; padding:9px 16px; border-radius:999px; background:var(--pdr-navy); color:#fafaf6; letter-spacing:-.005em; transition:transform .15s ease; border:0; }
+    .nav-cta:hover { transform:translateY(-1px); }
+
+    /* ── Eyebrow ── */
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
+    .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent); flex-shrink:0; }
+    .eyebrow--inv { background:rgba(255,255,255,.05); color:rgba(247,245,240,.7); border-color:rgba(255,255,255,.12); }
+
+    /* ── Page hero ── */
+    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg-elev); }
+    .page-hero-inner { max-width:760px; margin:0 auto; }
+    .hero-h { font-family:var(--serif); font-weight:400; font-size:clamp(48px, 6.2vw, 80px); line-height:1.04; letter-spacing:-.025em; margin:24px 0 28px; color:var(--pdr-ink); text-wrap:balance; }
+    .hero-h em { font-style:italic; color:var(--pdr-navy); }
+    .hero-sub { font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:580px; margin:0; text-wrap:pretty; }
+
+    /* ── Sections ── */
+    .section-wrap { border-bottom:1px solid var(--pdr-line); }
+    .section-wrap--alt { background:var(--pdr-bg-elev); }
+    .section { padding:80px 56px; max-width:1208px; margin:0 auto; }
+    .section-head { max-width:680px; margin-bottom:48px; }
+    .section-h { font-family:var(--serif); font-weight:400; font-size:clamp(32px, 4vw, 54px); line-height:1.05; letter-spacing:-.02em; margin:16px 0 0; text-wrap:balance; }
+    .section-h--inv { color:#f7f5f0; }
+    .section-h--inv em { color:var(--pdr-accent); }
+    .section-sub { font-size:17px; line-height:1.5; color:var(--pdr-ink-2); margin:16px 0 0; text-wrap:pretty; max-width:600px; }
+    .section-sub--inv { color:rgba(247,245,240,.75); }
+
+    /* ── How-step cards ── */
+    .how-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+    .how-grid--4 { grid-template-columns:repeat(4, 1fr); }
+    .how-step { padding:32px 28px 36px; border-top:1px solid var(--pdr-ink); position:relative; transition:transform 280ms cubic-bezier(.2,.7,.2,1), border-color 280ms; }
+    .how-step:hover { transform:translateY(-3px); border-color:rgba(0,0,0,.18); }
+    .how-n { font-family:var(--mono); font-size:12px; color:var(--pdr-ink-3); letter-spacing:.04em; margin-bottom:16px; transition:color 280ms; }
+    .how-step:hover .how-n { color:var(--pdr-accent); }
+    .how-t { font-family:var(--serif); font-weight:400; font-size:26px; margin:0 0 12px; letter-spacing:-.015em; }
+    .how-d { font-size:15px; line-height:1.55; color:var(--pdr-ink-2); margin:0; text-wrap:pretty; }
+    .how-d b { color:var(--pdr-ink); font-weight:600; }
+
+    /* ── Feature cards (elevated) ── */
+    .feat-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
+    .feat-grid--3 { grid-template-columns:repeat(3, 1fr); }
+    .feat-card { padding:24px 22px; border:1px solid var(--pdr-line-2); border-radius:14px; background:var(--pdr-bg-elev); transition:transform .15s ease, border-color .15s ease; }
+    .feat-card:hover { transform:translateY(-2px); border-color:var(--pdr-ink-3); }
+    .feat-card-label { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-accent-ink); background:color-mix(in oklch,var(--pdr-accent) 15%,transparent); padding:4px 10px; border-radius:999px; display:inline-block; margin-bottom:16px; }
+    .feat-card-t { font-family:var(--serif); font-size:22px; font-weight:400; margin:0 0 10px; letter-spacing:-.01em; }
+    .feat-card-d { font-size:14px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
+    .feat-card-pro { margin-top:14px; padding-top:14px; border-top:1px solid var(--pdr-line); font-size:13px; color:var(--pdr-ink-2); }
+    .feat-card-pro b { display:block; font-size:11px; font-family:var(--mono); letter-spacing:.05em; text-transform:uppercase; color:var(--pdr-ink-3); margin-bottom:4px; font-weight:500; }
+
+    /* ── State pills ── */
+    .state-pills { display:flex; flex-wrap:wrap; gap:8px; }
+    .state-pill { font-family:var(--mono); font-size:12px; letter-spacing:.04em; padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); color:var(--pdr-ink-2); }
+
+    /* ── Accordion ── */
+    .accordion { border-top:1px solid var(--pdr-line-2); }
+    .accordion-item { border-bottom:1px solid var(--pdr-line-2); }
+    .accordion-btn { width:100%; background:none; border:0; padding:20px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; text-align:left; font-size:16px; font-weight:500; color:var(--pdr-ink); cursor:pointer; }
+    .accordion-btn:hover { color:var(--pdr-navy); }
+    .accordion-icon { width:20px; height:20px; border-radius:50%; border:1.5px solid var(--pdr-line-2); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background .15s, border-color .15s, transform .25s; }
+    .accordion-icon svg { transition:transform .25s; }
+    .accordion-btn[aria-expanded="true"] .accordion-icon { background:var(--pdr-navy); border-color:var(--pdr-navy); }
+    .accordion-btn[aria-expanded="true"] .accordion-icon svg { transform:rotate(45deg); stroke:#fafaf6; }
+    .accordion-body { max-height:0; overflow:hidden; transition:max-height .35s cubic-bezier(.2,.7,.2,1); }
+    .accordion-body-inner { padding:0 0 20px; font-size:15px; line-height:1.6; color:var(--pdr-ink-2); }
+    .accordion-body-inner b { color:var(--pdr-ink); font-weight:600; }
+
+    /* ── CTA band ── */
+    .cta-band { background:var(--pdr-navy); padding:96px 56px; text-align:center; position:relative; overflow:hidden; }
+    .cta-band::before { content:""; position:absolute; inset:0; background-image:linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px); background-size:80px 80px; pointer-events:none; }
+    .cta-band-inner { position:relative; max-width:680px; margin:0 auto; }
+    .cta-band-h { font-family:var(--serif); font-weight:400; font-size:clamp(36px, 4.8vw, 64px); line-height:1.05; letter-spacing:-.025em; color:#f7f5f0; margin:20px 0 36px; text-wrap:balance; }
+    .cta-band-h em { font-style:italic; color:var(--pdr-accent); }
+    .cta-btn { display:inline-flex; align-items:center; gap:12px; background:var(--pdr-accent); color:var(--pdr-accent-ink); padding:18px 32px; border-radius:999px; font-size:15.5px; font-weight:600; letter-spacing:-.005em; transition:transform .15s ease, box-shadow .15s ease; box-shadow:0 10px 30px -10px rgba(232,180,58,.5); position:relative; overflow:hidden; border:0; }
+    .cta-btn:hover { transform:translateY(-2px); }
+    .cta-foot { margin-top:20px; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(247,245,240,.4); text-transform:uppercase; }
+
+    /* ── Footer ── */
+    .footer { background:var(--pdr-navy); color:#c8d3e3; padding:64px 56px 32px; }
+    .footer-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:#fafaf6; font-weight:400; line-height:1; }
+    .footer-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .footer-top { max-width:1208px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:64px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+    .footer-h { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(247,245,240,.5); margin-bottom:14px; }
+    .footer ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; }
+    .footer ul a { color:#c8d3e3; transition:color .15s; }
+    .footer ul a:hover { color:#fafaf6; }
+    .footer-bot { max-width:1208px; margin:32px auto 0; display:flex; justify-content:space-between; font-size:12px; color:rgba(247,245,240,.4); }
+
+    /* ── Reveal ── */
+    .reveal { opacity:0; transform:translateY(14px); transition:opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); will-change:opacity, transform; }
+    .reveal.is-visible { opacity:1; transform:translateY(0); }
+
+    /* ── Responsive ── */
+    @media (max-width:980px) {
+      .nav { padding:16px 24px; }
+      .page-hero { padding:56px 24px 48px; }
+      .section { padding:56px 24px; }
+      .how-grid, .how-grid--4, .feat-grid, .feat-grid--3 { grid-template-columns:1fr; }
+      .footer { padding:48px 24px 24px; }
+      .footer-top { grid-template-columns:1fr; gap:32px; }
+      .footer-bot { flex-direction:column; gap:8px; }
+      .cta-band { padding:64px 24px; }
+    }
+    @media (max-width:600px) {
+      .feat-grid { grid-template-columns:1fr; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .reveal, .reveal.is-visible { animation:none !important; transition:none !important; opacity:1 !important; transform:none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <a href="/" class="nav-logo" aria-label="Power Done Right home">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+      <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+    </svg>
+    Power<em>Done</em>Right
+  </a>
+  <a class="nav-cta" href="/">Get rates →</a>
+</nav>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>Markets · Electricity</div>
+    <h1 class="hero-h">Lower your commercial electricity rate. <em>Guaranteed competitive bids.</em></h1>
+    <p class="hero-sub">We serve manufacturing, multi-site retail, commercial real estate, and hospitality businesses spending $2,000–$500K/month on electricity across all 17 deregulated US markets.</p>
+  </div>
+</section>
+
+<!-- ── HOW DEREGULATION WORKS ── -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>How it works</div>
+      <h2 class="section-h">Deregulation means you can choose your supplier. <em>We make them compete.</em></h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="how-n">01</div>
+        <div class="how-t">Utility still delivers</div>
+        <p class="how-d">Your local utility (ComEd, PECO, ConEd, etc.) continues to maintain the wires and deliver power to your building. That relationship doesn't change. Your reliability is unaffected.</p>
+      </div>
+      <div class="how-step reveal" data-delay="80">
+        <div class="how-n">02</div>
+        <div class="how-t">You choose the generator</div>
+        <p class="how-d">In a deregulated state, the <b>energy supply</b> portion of your bill is open to competition. You pick which company generates and sells the electricity — and at what rate.</p>
+      </div>
+      <div class="how-step reveal" data-delay="160">
+        <div class="how-n">03</div>
+        <div class="how-t">PDR makes suppliers compete</div>
+        <p class="how-d">We submit your load profile to 90+ vetted suppliers simultaneously. They bid against each other in real time. The lowest bid wins your contract — and we charge <b>no fees to your business.</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── RATE STRUCTURES ── -->
+<div class="section-wrap section-wrap--alt">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Rate structures</div>
+      <h2 class="section-h">The right contract structure depends on your risk tolerance and load profile.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="feat-card-label">Fixed rate</div>
+        <div class="feat-card-t">Locked price per kWh</div>
+        <p class="feat-card-d">You pay one price per kWh for the entire contract term — regardless of what markets do. Ideal for businesses that need budget certainty.</p>
+        <div class="feat-card-pro"><b>Best for</b>Retail, hospitality, multi-family. Any business where energy is a fixed cost in the P&amp;L.</div>
+      </div>
+      <div class="feat-card reveal" data-delay="40">
+        <div class="feat-card-label">Index / passthrough</div>
+        <div class="feat-card-t">Market rate, no markup</div>
+        <p class="feat-card-d">Your rate floats with the daily or monthly ISO settlement price. You take market risk but capture downside pricing when wholesale rates fall.</p>
+        <div class="feat-card-pro"><b>Best for</b>Industrial buyers with flexible load, active risk managers, or businesses during favorable market conditions.</div>
+      </div>
+      <div class="feat-card reveal" data-delay="80">
+        <div class="feat-card-label">Hybrid</div>
+        <div class="feat-card-t">Fixed base + float index</div>
+        <p class="how-d">Lock a portion of your load at a fixed rate and leave the rest on index. Balances certainty against upside — common for larger commercial accounts.</p>
+        <div class="feat-card-pro"><b>Best for</b>Multi-site operators with variable usage across locations. Allows strategic layering over time.</div>
+      </div>
+      <div class="feat-card reveal" data-delay="120">
+        <div class="feat-card-label">Block &amp; index</div>
+        <div class="feat-card-t">Shape your baseload</div>
+        <p class="feat-card-d">Purchase fixed-price blocks for your predictable baseload; remaining volume floats at index. Common in PJM and MISO markets.</p>
+        <div class="feat-card-pro"><b>Best for</b>Manufacturing with predictable shift schedules. Separates commodity risk from load-shape risk.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MARKETS SERVED ── -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Coverage</div>
+      <h2 class="section-h">Licensed in all 17 US deregulated electricity markets.</h2>
+      <p class="section-sub">We hold active broker licenses in every state where commercial electricity procurement is open to competition.</p>
+    </div>
+    <div class="state-pills reveal">
+      <span class="state-pill">Texas (ERCOT)</span>
+      <span class="state-pill">Illinois (MISO/ComEd)</span>
+      <span class="state-pill">Ohio (PJM)</span>
+      <span class="state-pill">Pennsylvania (PJM)</span>
+      <span class="state-pill">New Jersey (PJM)</span>
+      <span class="state-pill">New York (NYISO)</span>
+      <span class="state-pill">Maryland (PJM)</span>
+      <span class="state-pill">DC (PJM)</span>
+      <span class="state-pill">Connecticut (ISO-NE)</span>
+      <span class="state-pill">Massachusetts (ISO-NE)</span>
+      <span class="state-pill">Maine (ISO-NE)</span>
+      <span class="state-pill">New Hampshire (ISO-NE)</span>
+      <span class="state-pill">Rhode Island (ISO-NE)</span>
+      <span class="state-pill">Delaware (PJM)</span>
+      <span class="state-pill">Virginia (PJM)</span>
+      <span class="state-pill">Michigan (MISO)</span>
+      <span class="state-pill">Indiana (MISO/PJM)</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── WHAT'S ON YOUR BILL ── -->
+<div class="section-wrap section-wrap--alt">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Bill anatomy</div>
+      <h2 class="section-h">Five line items on every commercial electric bill. Only one is negotiable — most people focus on the wrong one.</h2>
+    </div>
+    <div class="accordion reveal" id="bill-accordion">
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" data-target="bill-1">
+          <span>Energy / Generation charge <span style="font-family:var(--mono);font-size:12px;color:var(--pdr-ink-3);margin-left:8px">✓ Negotiable</span></span>
+          <span class="accordion-icon"><svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span>
+        </button>
+        <div class="accordion-body" id="bill-1">
+          <div class="accordion-body-inner"><b>This is the supply charge — and it's the one we negotiate.</b> Priced in cents per kWh or $/MWh. It represents the wholesale cost of the electrons plus the supplier's margin. This is where 12–28% savings come from when you switch from default utility supply to a competitive supplier.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" data-target="bill-2">
+          Transmission charge
+          <span class="accordion-icon"><svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span>
+        </button>
+        <div class="accordion-body" id="bill-2">
+          <div class="accordion-body-inner">Covers the high-voltage interstate grid (the big transmission lines managed by PJM, ERCOT, NYISO, etc.). Regulated by FERC — not negotiable. Some suppliers passthrough transmission at cost; others bundle it into their all-in rate. Ask which structure you're being quoted.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" data-target="bill-3">
+          Distribution / Delivery charge
+          <span class="accordion-icon"><svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span>
+        </button>
+        <div class="accordion-body" id="bill-3">
+          <div class="accordion-body-inner">This is what you pay the local utility for the last-mile wires, poles, transformers, and meters that bring power to your building. It's regulated, set by the state Public Utilities Commission, and <b>cannot be negotiated</b>. You'll always pay this to your local utility regardless of who supplies your energy.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" data-target="bill-4">
+          Capacity charge
+          <span class="accordion-icon"><svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span>
+        </button>
+        <div class="accordion-body" id="bill-4">
+          <div class="accordion-body-inner">Capacity costs are set by annual ISO auctions (PJM RPM, ISO-NE ICAP) and reflect the charge for having generation standing by during peak demand periods. Suppliers pass these costs through at cost or bundle them. High-demand businesses with flexible load can reduce capacity costs through demand response enrollment.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-btn" aria-expanded="false" data-target="bill-5">
+          Taxes &amp; riders
+          <span class="accordion-icon"><svg viewBox="0 0 14 14" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 2v10M2 7h10"/></svg></span>
+        </button>
+        <div class="accordion-body" id="bill-5">
+          <div class="accordion-body-inner">State and local taxes, renewable portfolio standard surcharges, energy efficiency program fees, and utility-specific riders. These vary by state and utility. Not negotiable with suppliers — but misclassification (wrong rate tariff, wrong tax category) can result in overcharges. A PDR bill analysis identifies these.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>Start saving</div>
+    <h2 class="cta-band-h">Ready to see what competitive electricity rates look like for your account?</h2>
+    <a href="/" class="cta-btn">Get my rates →</a>
+    <p class="cta-foot">Licensed in all 17 US deregulated markets · 90+ suppliers · No fees to your business</p>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="#fafaf6"/>
+          <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+        </svg>
+        Power<em>Done</em>Right
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <div class="footer-h">Markets</div>
+        <ul>
+          <li><a href="electricity">Electricity</a></li>
+          <li><a href="natural-gas">Natural gas</a></li>
+          <li><a href="renewable-plans">Renewable plans</a></li>
+          <li><a href="demand-management">Demand management</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Company</div>
+        <ul>
+          <li><a href="about">About</a></li>
+          <li><a href="mailto:contact@powerdoneright.com">Contact</a></li>
+          <li><a href="careers">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Resources</div>
+        <ul>
+          <li><a href="bill-analysis">Bill analysis</a></li>
+          <li><a href="market-intel">Market intel</a></li>
+          <li><a href="renewal-guide">Renewal guide</a></li>
+          <li><a href="faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>© <span id="footer-year"></span> Power Done Right LLC · Licensed energy broker in 17 deregulated markets</span>
+    <span>Privacy · Terms · Disclosures</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      setTimeout(() => e.target.classList.add('is-visible'), +(e.target.dataset.delay || 0));
+    }), { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Accordion
+  document.querySelectorAll('.accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      // Close all
+      document.querySelectorAll('.accordion-btn').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        document.getElementById(b.dataset.target).style.maxHeight = null;
+      });
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        const body = document.getElementById(btn.dataset.target);
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Natural Gas Procurement — Power Done Right</title>
+  <meta name="description" content="Competitive commercial natural gas rates for manufacturers, property managers, and multi-site businesses. Fixed, index, and basis-only contracts sourced from 90+ suppliers." />
+  <link rel="canonical" href="https://www.powerdoneright.com/natural-gas" />
+  <meta property="og:title" content="Commercial Natural Gas Procurement — Power Done Right" />
+  <meta property="og:description" content="Fixed, index, and basis-only natural gas contracts for commercial buyers. 90+ suppliers. First quote in 24 hours." />
+  <meta property="og:url" content="https://www.powerdoneright.com/natural-gas" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pdr-bg: #f7f5f0; --pdr-bg-elev: #fdfcf8; --pdr-ink: #0e1b2c; --pdr-ink-2: #2a3a52; --pdr-ink-3: #5a6b82;
+      --pdr-line: rgba(14,27,44,.10); --pdr-line-2: rgba(14,27,44,.18);
+      --pdr-navy: #102341; --pdr-navy-2: #1a3056; --pdr-accent: #E8B43A; --pdr-accent-ink: #5e3f00;
+      --serif: "Instrument Serif","Source Serif Pro","Times New Roman",serif;
+      --sans: "Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+      --mono: "Geist Mono","JetBrains Mono",ui-monospace,monospace;
+    }
+    *,*::before,*::after { box-sizing: border-box; }
+    html,body { margin:0; padding:0; }
+    body { font-family:var(--sans); background:var(--pdr-bg); color:var(--pdr-ink); -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    button { font-family:inherit; cursor:pointer; }
+    em { font-style:normal; font-family:var(--serif); font-weight:400; color:var(--pdr-ink); }
+
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:22px 56px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg); }
+    .nav-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:var(--pdr-ink); font-weight:400; line-height:1; }
+    .nav-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .nav-cta { font-size:13.5px; padding:9px 16px; border-radius:999px; background:var(--pdr-navy); color:#fafaf6; letter-spacing:-.005em; transition:transform .15s ease; border:0; }
+    .nav-cta:hover { transform:translateY(-1px); }
+
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
+    .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent); flex-shrink:0; }
+    .eyebrow--inv { background:rgba(255,255,255,.05); color:rgba(247,245,240,.7); border-color:rgba(255,255,255,.12); }
+
+    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg-elev); }
+    .page-hero-inner { max-width:760px; margin:0 auto; }
+    .hero-h { font-family:var(--serif); font-weight:400; font-size:clamp(48px, 6.2vw, 80px); line-height:1.04; letter-spacing:-.025em; margin:24px 0 28px; color:var(--pdr-ink); text-wrap:balance; }
+    .hero-h em { font-style:italic; color:var(--pdr-navy); }
+    .hero-sub { font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:580px; margin:0; text-wrap:pretty; }
+
+    .section-wrap { border-bottom:1px solid var(--pdr-line); }
+    .section-wrap--alt { background:var(--pdr-bg-elev); }
+    .section { padding:80px 56px; max-width:1208px; margin:0 auto; }
+    .section-head { max-width:680px; margin-bottom:48px; }
+    .section-h { font-family:var(--serif); font-weight:400; font-size:clamp(32px, 4vw, 54px); line-height:1.05; letter-spacing:-.02em; margin:16px 0 0; text-wrap:balance; }
+    .section-sub { font-size:17px; line-height:1.5; color:var(--pdr-ink-2); margin:16px 0 0; text-wrap:pretty; max-width:600px; }
+
+    .how-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+    .how-step { padding:32px 28px 36px; border-top:1px solid var(--pdr-ink); position:relative; transition:transform 280ms cubic-bezier(.2,.7,.2,1), border-color 280ms; }
+    .how-step:hover { transform:translateY(-3px); border-color:rgba(0,0,0,.18); }
+    .how-n { font-family:var(--mono); font-size:12px; color:var(--pdr-ink-3); letter-spacing:.04em; margin-bottom:16px; transition:color 280ms; }
+    .how-step:hover .how-n { color:var(--pdr-accent); }
+    .how-t { font-family:var(--serif); font-weight:400; font-size:26px; margin:0 0 12px; letter-spacing:-.015em; }
+    .how-d { font-size:15px; line-height:1.55; color:var(--pdr-ink-2); margin:0; text-wrap:pretty; }
+    .how-d b { color:var(--pdr-ink); font-weight:600; }
+
+    .feat-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+    .feat-card { padding:28px 24px; border:1px solid var(--pdr-line-2); border-radius:14px; background:var(--pdr-bg-elev); transition:transform .15s ease, border-color .15s ease; }
+    .feat-card:hover { transform:translateY(-2px); border-color:var(--pdr-ink-3); }
+    .feat-card-label { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-accent-ink); background:color-mix(in oklch,var(--pdr-accent) 15%,transparent); padding:4px 10px; border-radius:999px; display:inline-block; margin-bottom:16px; }
+    .feat-card-t { font-family:var(--serif); font-size:22px; font-weight:400; margin:0 0 10px; letter-spacing:-.01em; }
+    .feat-card-d { font-size:14px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
+    .feat-card-pro { margin-top:14px; padding-top:14px; border-top:1px solid var(--pdr-line); font-size:13px; color:var(--pdr-ink-2); }
+    .feat-card-pro b { display:block; font-size:11px; font-family:var(--mono); letter-spacing:.05em; text-transform:uppercase; color:var(--pdr-ink-3); margin-bottom:4px; font-weight:500; }
+
+    /* Scenario spotlight */
+    .scenario-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .scenario { padding:28px 24px; border-radius:14px; border:1px solid var(--pdr-line-2); background:var(--pdr-bg); }
+    .scenario-icon { font-family:var(--mono); font-size:24px; margin-bottom:14px; }
+    .scenario-t { font-family:var(--serif); font-size:20px; font-weight:400; margin:0 0 8px; letter-spacing:-.01em; }
+    .scenario-d { font-size:14px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
+
+    /* LDC list */
+    .ldc-cols { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+    .ldc-col h4 { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); margin:0 0 16px; }
+    .ldc-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+    .ldc-list li { font-size:14px; color:var(--pdr-ink-2); padding-left:14px; position:relative; }
+    .ldc-list li::before { content:"–"; position:absolute; left:0; color:var(--pdr-accent); }
+
+    .cta-band { background:var(--pdr-navy); padding:96px 56px; text-align:center; position:relative; overflow:hidden; }
+    .cta-band::before { content:""; position:absolute; inset:0; background-image:linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px); background-size:80px 80px; pointer-events:none; }
+    .cta-band-inner { position:relative; max-width:680px; margin:0 auto; }
+    .cta-band-h { font-family:var(--serif); font-weight:400; font-size:clamp(36px, 4.8vw, 64px); line-height:1.05; letter-spacing:-.025em; color:#f7f5f0; margin:20px 0 36px; text-wrap:balance; }
+    .cta-band-h em { font-style:italic; color:var(--pdr-accent); }
+    .cta-btn { display:inline-flex; align-items:center; gap:12px; background:var(--pdr-accent); color:var(--pdr-accent-ink); padding:18px 32px; border-radius:999px; font-size:15.5px; font-weight:600; letter-spacing:-.005em; transition:transform .15s ease; box-shadow:0 10px 30px -10px rgba(232,180,58,.5); border:0; }
+    .cta-btn:hover { transform:translateY(-2px); }
+    .cta-foot { margin-top:20px; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(247,245,240,.4); text-transform:uppercase; }
+
+    .footer { background:var(--pdr-navy); color:#c8d3e3; padding:64px 56px 32px; }
+    .footer-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:#fafaf6; font-weight:400; line-height:1; }
+    .footer-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+    .footer-top { max-width:1208px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:64px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.08); }
+    .footer-cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
+    .footer-h { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(247,245,240,.5); margin-bottom:14px; }
+    .footer ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; }
+    .footer ul a { color:#c8d3e3; transition:color .15s; }
+    .footer ul a:hover { color:#fafaf6; }
+    .footer-bot { max-width:1208px; margin:32px auto 0; display:flex; justify-content:space-between; font-size:12px; color:rgba(247,245,240,.4); }
+
+    .reveal { opacity:0; transform:translateY(14px); transition:opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); will-change:opacity, transform; }
+    .reveal.is-visible { opacity:1; transform:translateY(0); }
+
+    @media (max-width:980px) {
+      .nav { padding:16px 24px; }
+      .page-hero { padding:56px 24px 48px; }
+      .section { padding:56px 24px; }
+      .how-grid, .feat-grid, .scenario-grid, .ldc-cols { grid-template-columns:1fr; }
+      .footer { padding:48px 24px 24px; }
+      .footer-top { grid-template-columns:1fr; gap:32px; }
+      .footer-bot { flex-direction:column; gap:8px; }
+      .cta-band { padding:64px 24px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      .reveal, .reveal.is-visible { opacity:1 !important; transform:none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo" aria-label="Power Done Right home">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+      <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+    </svg>
+    Power<em>Done</em>Right
+  </a>
+  <a class="nav-cta" href="/">Get rates →</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow"><span class="eyebrow-dot"></span>Markets · Natural Gas</div>
+    <h1 class="hero-h">Commercial natural gas at the rate you <em>deserve to pay.</em></h1>
+    <p class="hero-sub">We source fixed, index, and basis-only natural gas contracts for manufacturers, large commercial properties, multi-family portfolios, and restaurant chains across 14 deregulated gas markets.</p>
+  </div>
+</section>
+
+<!-- WHAT MAKES GAS DIFFERENT -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Gas vs. electricity procurement</div>
+      <h2 class="section-h">Natural gas procurement has its own set of variables. Here's what matters.</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="how-n">Basis risk</div>
+        <div class="how-t">NYMEX + local spread</div>
+        <p class="how-d">The NYMEX Henry Hub price is the national benchmark, but you pay NYMEX <b>plus a basis differential</b> — the local pipeline transport and delivery cost. Basis can swing dramatically, especially in winter. We quote you the all-in delivered price.</p>
+      </div>
+      <div class="how-step reveal" data-delay="80">
+        <div class="how-n">Pipeline tariffs</div>
+        <div class="how-t">Interstate transport</div>
+        <p class="how-d">Moving gas from the wellhead to your LDC city gate requires interstate pipeline capacity. Suppliers arrange transportation; some pass it through at cost, others bundle it. Understanding what's bundled vs. unbundled is critical to apples-to-apples comparison.</p>
+      </div>
+      <div class="how-step reveal" data-delay="160">
+        <div class="how-n">Balancing &amp; storage</div>
+        <div class="how-t">Swing tolerance matters</div>
+        <p class="how-d">Gas is consumed as a flow commodity. If your usage deviates from the nominated volume, you incur <b>balancing charges</b>. Fixed-price contracts often include some swing tolerance; indexed contracts may expose you to cash-out penalties. We match contract structure to your load profile.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTRACT TYPES -->
+<div class="section-wrap section-wrap--alt">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Contract structures</div>
+      <h2 class="section-h">Three ways to buy commercial natural gas.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="feat-card-label">Fixed price</div>
+        <div class="feat-card-t">Locked $/MMBtu delivered</div>
+        <p class="feat-card-d">A single all-in price per MMBtu for your nominated volume over the contract term. Includes commodity, basis, transport, and supplier margin. No surprises.</p>
+        <div class="feat-card-pro"><b>Best for</b>Budget-constrained buyers, winter-heavy loads, businesses entering a new budget cycle. Hedge 100% of your volume or a portion.</div>
+      </div>
+      <div class="feat-card reveal" data-delay="60">
+        <div class="feat-card-label">Index / NYMEX-based</div>
+        <div class="feat-card-t">Float with the market</div>
+        <p class="feat-card-d">Monthly settlement at NYMEX prompt-month plus a fixed basis and supplier adder. You participate in price downturns but are exposed to market spikes.</p>
+        <div class="feat-card-pro"><b>Best for</b>Industrial buyers with flexible processes who can reduce consumption during price spikes. Strong choice in storage-long markets.</div>
+      </div>
+      <div class="feat-card reveal" data-delay="120">
+        <div class="feat-card-label">Basis-only</div>
+        <div class="feat-card-t">Lock the spread, float NYMEX</div>
+        <p class="feat-card-d">Fix only the local transport and basis differential while leaving the NYMEX commodity portion floating. Eliminates local pipeline risk while preserving exposure to Henry Hub.</p>
+        <div class="feat-card-pro"><b>Best for</b>Sophisticated buyers who self-manage NYMEX exposure via NYMEX futures or options, or who have natural hedges in their business.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- USE CASE SPOTLIGHTS -->
+<div class="section-wrap">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Who we serve</div>
+      <h2 class="section-h">Natural gas procurement for every commercial load profile.</h2>
+    </div>
+    <div class="scenario-grid">
+      <div class="scenario reveal">
+        <div class="scenario-icon">🏢</div>
+        <div class="scenario-t">Multi-family properties</div>
+        <p class="scenario-d">200+ unit apartment communities with central boilers and domestic hot water loads. Winter-peaked, predictable volumes. Fixed-price contracts aligned to lease renewal cycles.</p>
+      </div>
+      <div class="scenario reveal" data-delay="60">
+        <div class="scenario-icon">🏭</div>
+        <div class="scenario-t">Food manufacturing</div>
+        <p class="scenario-d">Process heat, steam generation, and drying loads with high BTU intensity. Year-round baseload with summer process peaks. Basis-only or layered fixed positions.</p>
+      </div>
+      <div class="scenario reveal" data-delay="120">
+        <div class="scenario-icon">🍽️</div>
+        <div class="scenario-t">Restaurant chains</div>
+        <p class="scenario-d">Multi-location franchise operators with gas kitchen equipment. Aggregate purchasing across all locations for volume leverage. Fixed rate simplifies accounting across locations.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LDC COVERAGE -->
+<div class="section-wrap section-wrap--alt">
+  <div class="section">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>Distribution coverage</div>
+      <h2 class="section-h">We work across the major LDC service territories where commercial gas choice is available.</h2>
+    </div>
+    <div class="ldc-cols reveal">
+      <div class="ldc-col">
+        <h4>Midwest &amp; Great Lakes</h4>
+        <ul class="ldc-list">
+          <li>Nicor Gas (Illinois)</li>
+          <li>Peoples Gas (Illinois)</li>
+          <li>Columbia Gas of Ohio</li>
+          <li>Consumers Energy (Michigan)</li>
+          <li>DTE Energy (Michigan)</li>
+          <li>NIPSCO (Indiana)</li>
+          <li>CenterPoint Energy (Minnesota)</li>
+        </ul>
+      </div>
+      <div class="ldc-col">
+        <h4>Northeast &amp; Mid-Atlantic</h4>
+        <ul class="ldc-list">
+          <li>National Grid (NY/MA)</li>
+          <li>Con Edison (New York)</li>
+          <li>Elizabethtown Gas (NJ)</li>
+          <li>South Jersey Industries</li>
+          <li>Columbia Gas of PA</li>
+          <li>Peoples Natural Gas (PA)</li>
+          <li>Washington Gas (DC/MD/VA)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>Start saving</div>
+    <h2 class="cta-band-h">Ready to see what competitive gas rates look like for your business?</h2>
+    <a href="/" class="cta-btn">Get my rates →</a>
+    <p class="cta-foot">Licensed broker · 90+ suppliers · No fees to your business</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-logo">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="7" fill="#fafaf6"/>
+          <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
+        </svg>
+        Power<em>Done</em>Right
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <div class="footer-h">Markets</div>
+        <ul>
+          <li><a href="electricity">Electricity</a></li>
+          <li><a href="natural-gas">Natural gas</a></li>
+          <li><a href="renewable-plans">Renewable plans</a></li>
+          <li><a href="demand-management">Demand management</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Company</div>
+        <ul>
+          <li><a href="about">About</a></li>
+          <li><a href="mailto:contact@powerdoneright.com">Contact</a></li>
+          <li><a href="careers">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-h">Resources</div>
+        <ul>
+          <li><a href="bill-analysis">Bill analysis</a></li>
+          <li><a href="market-intel">Market intel</a></li>
+          <li><a href="renewal-guide">Renewal guide</a></li>
+          <li><a href="faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>© <span id="footer-year"></span> Power Done Right LLC · Licensed energy broker in 17 deregulated markets</span>
+    <span>Privacy · Terms · Disclosures</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      setTimeout(() => e.target.classList.add('is-visible'), +(e.target.dataset.delay || 0));
+    }), { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+  }
+})();
+</script>
+</body>
+</html>
