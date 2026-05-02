@@ -10,6 +10,15 @@
   <meta property="og:description" content="We're on your side of the table. Independent, licensed, and focused on getting commercial businesses the lowest possible energy rates." />
   <meta property="og:url" content="https://www.powerdoneright.com/about" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Power Done Right — Commercial Energy Brokerage" />
+  <meta name="twitter:description" content="We're on your side of the table. Independent, licensed, and focused on getting commercial businesses the lowest possible energy rates." />
+  <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -34,6 +43,9 @@
     .nav-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
     .nav-cta { font-size:13.5px; padding:9px 16px; border-radius:999px; background:var(--pdr-navy); color:#fafaf6; letter-spacing:-.005em; transition:transform .15s ease; border:0; }
     .nav-cta:hover { transform:translateY(-1px); }
+    .nav-right { display:flex; align-items:center; gap:16px; }
+    .nav-phone { display:flex; align-items:center; gap:6px; font-size:13.5px; color:var(--pdr-ink-3); letter-spacing:-.005em; white-space:nowrap; }
+    .nav-phone:hover { color:var(--pdr-ink); }
 
     .eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
     .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent); flex-shrink:0; }
@@ -136,6 +148,7 @@
 
     @media (max-width:980px) {
       .nav { padding:16px 24px; }
+      .nav-phone-text { display:none; }
       .page-hero { padding:56px 24px 48px; }
       .section { padding:56px 24px; }
       .how-grid, .compare-grid { grid-template-columns:1fr; }
@@ -145,10 +158,40 @@
       .footer-bot { flex-direction:column; gap:8px; }
       .cta-band { padding:64px 24px; }
     }
+    @media (max-width:768px) {
+      .section { padding:48px 20px; }
+      .nav { padding:14px 20px; }
+      .page-hero { padding:48px 20px 40px; }
+      .compare-grid { grid-template-columns:1fr; }
+    }
+
     @media (prefers-reduced-motion:reduce) {
       .reveal, .reveal.is-visible { opacity:1 !important; transform:none !important; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.powerdoneright.com"},
+          {"@type": "ListItem", "position": 2, "name": "About", "item": "https://www.powerdoneright.com/about"}
+        ]
+      },
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "Power Done Right",
+        "url": "https://www.powerdoneright.com",
+        "telephone": "+12146591543",
+        "description": "Commercial energy procurement specialist helping businesses in 17 US deregulated markets secure lower electricity and natural gas rates through competitive supplier bidding.",
+        "serviceArea": {"@type": "Country", "name": "United States"},
+        "knowsAbout": ["Commercial electricity procurement", "Natural gas procurement", "Energy cost reduction", "Deregulated energy markets"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -160,7 +203,13 @@
     </svg>
     Power<em>Done</em>Right
   </a>
-  <a class="nav-cta" href="/">Get rates →</a>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+12146591543">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2.5A.5.5 0 012.5 2H5l1 3-1.75 1.25C5.33 8.9 7.1 10.67 9 11.75L10.25 10l3 1v2.5a.5.5 0 01-.5.5C5.5 14 2 10.5 2 6V2.5z"/></svg>
+      <span class="nav-phone-text">(214) 659-1543</span>
+    </a>
+    <a class="nav-cta" href="/">Get rates →</a>
+  </div>
 </nav>
 
 <section class="page-hero">

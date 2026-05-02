@@ -10,15 +10,21 @@
   <meta property="og:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
   <meta property="og:url" content="https://www.powerdoneright.com" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
+  <meta name="twitter:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
+  <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with the powerdoneright.com GA4 property -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
-  </script> -->
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,6 +85,9 @@
       border:0;
     }
     .nav-cta:hover { transform:translateY(-1px); }
+    .nav-right { display:flex; align-items:center; gap:16px; }
+    .nav-phone { display:flex; align-items:center; gap:6px; font-size:13.5px; color:var(--pdr-ink-3); letter-spacing:-.005em; white-space:nowrap; }
+    .nav-phone:hover { color:var(--pdr-ink); }
 
     /* ── Hero ── */
     .hero {
@@ -837,6 +846,7 @@
       .hero-inner, .calc-inner { grid-template-columns:1fr; gap:48px; }
       .nav { padding:16px 24px; }
       .nav-links { display:none; }
+      .nav-phone-text { display:none; }
       .section, .calc-section, .final-cta { padding:64px 24px; }
       .how-grid, .testi-grid { grid-template-columns:1fr; }
       .how-photo-row { grid-template-columns:1fr; }
@@ -853,6 +863,15 @@
       .testi-banner-overlay { padding:24px; }
     }
 
+    @media (max-width:768px) {
+      .hero-inner { gap:32px; }
+      .stats-bar { grid-template-columns:1fr 1fr; }
+      .how-grid, .testi-grid { grid-template-columns:1fr; }
+      .supplier-grid { grid-template-columns:1fr 1fr; }
+      .section, .calc-section, .final-cta { padding:48px 20px; }
+      .nav { padding:14px 20px; }
+    }
+
     @media (prefers-reduced-motion:reduce) {
       .reveal, .reveal.is-visible,
       .stats-bar .stat,
@@ -865,6 +884,19 @@
       .bt-pulse::after { animation:none !important; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "name": "Power Done Right",
+    "url": "https://www.powerdoneright.com",
+    "telephone": "+12146591543",
+    "description": "Commercial energy procurement specialist helping businesses in 17 US deregulated markets secure lower electricity and natural gas rates through competitive supplier bidding. Average savings: 12–28%.",
+    "serviceArea": {"@type": "Country", "name": "United States"},
+    "knowsAbout": ["Commercial electricity procurement", "Natural gas procurement", "Energy cost reduction", "Deregulated energy markets", "Commercial energy contracts", "Energy broker services"],
+    "sameAs": ["https://www.powerdoneright.com"]
+  }
+  </script>
 </head>
 <body>
 
@@ -886,7 +918,13 @@
       <a href="#calc">Calculator</a>
       <a href="#testimonials">Success Stories</a>
     </div>
-    <a class="nav-cta" href="#lead">Get rates →</a>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:+12146591543">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2.5A.5.5 0 012.5 2H5l1 3-1.75 1.25C5.33 8.9 7.1 10.67 9 11.75L10.25 10l3 1v2.5a.5.5 0 01-.5.5C5.5 14 2 10.5 2 6V2.5z"/></svg>
+        <span class="nav-phone-text">(214) 659-1543</span>
+      </a>
+      <a class="nav-cta" href="#lead">Get rates →</a>
+    </div>
   </nav>
 
   <div class="hero-inner">

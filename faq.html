@@ -10,6 +10,15 @@
   <meta property="og:description" content="How does PDR make money? Which states do you serve? Will switching interrupt my service? All your questions answered." />
   <meta property="og:url" content="https://www.powerdoneright.com/faq" />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Commercial Energy Broker FAQ — Power Done Right" />
+  <meta name="twitter:description" content="How does PDR make money? Which states do you serve? Will switching interrupt my service? All your questions answered." />
+  <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -34,6 +43,9 @@
     .nav-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
     .nav-cta { font-size:13.5px; padding:9px 16px; border-radius:999px; background:var(--pdr-navy); color:#fafaf6; letter-spacing:-.005em; transition:transform .15s ease; border:0; }
     .nav-cta:hover { transform:translateY(-1px); }
+    .nav-right { display:flex; align-items:center; gap:16px; }
+    .nav-phone { display:flex; align-items:center; gap:6px; font-size:13.5px; color:var(--pdr-ink-3); letter-spacing:-.005em; white-space:nowrap; }
+    .nav-phone:hover { color:var(--pdr-ink); }
 
     .eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
     .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent); flex-shrink:0; }
@@ -116,6 +128,7 @@
 
     @media (max-width:980px) {
       .nav { padding:16px 24px; }
+      .nav-phone-text { display:none; }
       .page-hero { padding:56px 24px 48px; }
       .faq-wrap { padding:48px 24px; }
       .faq-search-wrap { padding:24px 24px 0; }
@@ -124,7 +137,49 @@
       .footer-top { grid-template-columns:1fr; gap:32px; }
       .footer-bot { flex-direction:column; gap:8px; }
     }
+    @media (max-width:768px) {
+      .faq-wrap { padding:32px 20px; }
+      .faq-search-wrap { padding:20px 20px 0; }
+      .nav { padding:14px 20px; }
+      .page-hero { padding:48px 20px 40px; }
+      .faq-cta { margin:24px 20px 40px; padding:24px; }
+    }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.powerdoneright.com"},
+          {"@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.powerdoneright.com/faq"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "How does Power Done Right make money?", "acceptedAnswer": {"@type": "Answer", "text": "PDR is compensated by the energy supplier, not your business. When a supplier wins your contract, they pay PDR a small per-unit fee built into their bid — the same way a real estate buyer's agent is paid by the seller. Your rate is fully disclosed and you never write PDR a check."}},
+          {"@type": "Question", "name": "Are you a licensed energy broker?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Power Done Right holds active retail energy broker licenses issued by the state Public Utilities Commissions and applicable regulatory bodies in all 17 deregulated electricity markets and 14 deregulated natural gas markets we serve."}},
+          {"@type": "Question", "name": "Which states do you serve?", "acceptedAnswer": {"@type": "Answer", "text": "For electricity: Texas, Illinois, Ohio, Pennsylvania, New Jersey, New York, Maryland, DC, Connecticut, Massachusetts, Maine, New Hampshire, Rhode Island, Delaware, Virginia, Michigan, and Indiana. For natural gas, we cover 14 markets including most of the above plus additional states where gas choice is available."}},
+          {"@type": "Question", "name": "Do you work with residential accounts?", "acceptedAnswer": {"@type": "Answer", "text": "No. PDR works exclusively with commercial, industrial, and institutional accounts. Our supplier network and contract structures are designed for business-grade loads — typically $2,000/month and above in electricity spend."}},
+          {"@type": "Question", "name": "What information do I need to provide to get started?", "acceptedAnswer": {"@type": "Answer", "text": "At minimum: your business name, service address (or ZIP code), and a recent utility bill or 12-month usage history. For multi-location accounts, a spreadsheet with service addresses and account numbers speeds up the process."}},
+          {"@type": "Question", "name": "How long does the procurement process take?", "acceptedAnswer": {"@type": "Answer", "text": "First competitive bids typically arrive within one business day of submitting your information. Once you select a supplier, the enrollment and contract execution process takes 5–14 days depending on the market."}},
+          {"@type": "Question", "name": "Will switching suppliers interrupt my service?", "acceptedAnswer": {"@type": "Answer", "text": "No. The physical delivery of electricity and gas to your building is handled by your local utility (the distribution company), which doesn't change. Switching suppliers only changes the supply/generation portion of your bill. From an operational standpoint, the switch is invisible."}},
+          {"@type": "Question", "name": "Can you handle multiple locations?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — multi-site procurement is one of our core strengths. Aggregating multiple locations increases your total load and leverage with suppliers. We routinely handle 5–500+ location portfolios for franchise operators, commercial real estate managers, and national manufacturers."}},
+          {"@type": "Question", "name": "What rate structures are available?", "acceptedAnswer": {"@type": "Answer", "text": "For electricity: fixed-rate (locked $/kWh), index/passthrough (market-settled), hybrid (portion fixed, portion indexed), and block-and-index. For natural gas: fixed price ($/MMBtu), NYMEX-based index, and basis-only."}},
+          {"@type": "Question", "name": "What's a typical contract term length?", "acceptedAnswer": {"@type": "Answer", "text": "Most commercial contracts run 12–36 months. 12-month terms offer flexibility to re-bid at renewal; 24–36 month terms provide longer price certainty."}},
+          {"@type": "Question", "name": "Is there an early termination fee?", "acceptedAnswer": {"@type": "Answer", "text": "Most fixed-price supply contracts include an early termination provision. ETF terms vary by supplier — some charge a flat fee, others calculate a market-value loss. PDR reviews ETF language before recommending any contract."}},
+          {"@type": "Question", "name": "What happens when my contract ends?", "acceptedAnswer": {"@type": "Answer", "text": "PDR monitors all active contracts and contacts you 90 days before expiration. We re-bid the account to the full supplier market, present your options, and manage enrollment into your new contract. You never auto-renew into a holdover rate."}},
+          {"@type": "Question", "name": "Who do I call if I have an outage?", "acceptedAnswer": {"@type": "Answer", "text": "Always call your local utility. Outages, downed lines, equipment failures, and emergency response are handled by the distribution company — not the competitive supplier."}},
+          {"@type": "Question", "name": "Does my utility bill change?", "acceptedAnswer": {"@type": "Answer", "text": "Your bill format depends on the market and utility. In most states, you'll receive a consolidated bill from your utility that includes both the distribution charges and the new supplier's supply charge."}},
+          {"@type": "Question", "name": "How are savings verified?", "acceptedAnswer": {"@type": "Answer", "text": "PDR provides a rate comparison at the time of contract showing your prior rate vs. your new contracted rate. Most clients save 12–28% on the supply portion of their bill."}},
+          {"@type": "Question", "name": "What if I want to cancel my engagement with PDR?", "acceptedAnswer": {"@type": "Answer", "text": "PDR has no lock-in agreement with clients. You can stop using our services at any time. We earn your business at every renewal cycle."}}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -136,7 +191,13 @@
     </svg>
     Power<em>Done</em>Right
   </a>
-  <a class="nav-cta" href="/">Get rates →</a>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+12146591543">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2.5A.5.5 0 012.5 2H5l1 3-1.75 1.25C5.33 8.9 7.1 10.67 9 11.75L10.25 10l3 1v2.5a.5.5 0 01-.5.5C5.5 14 2 10.5 2 6V2.5z"/></svg>
+      <span class="nav-phone-text">(214) 659-1543</span>
+    </a>
+    <a class="nav-cta" href="/">Get rates →</a>
+  </div>
 </nav>
 
 <section class="page-hero">

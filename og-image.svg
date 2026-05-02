@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="g" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="rgba(255,255,255,0.045)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#102341"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+
+  <!-- Radial glow right -->
+  <radialGradient id="glow" cx="78%" cy="48%" r="40%">
+    <stop offset="0%" stop-color="#E8B43A" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="#102341" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Left gold accent bar -->
+  <rect x="0" y="0" width="7" height="630" fill="#E8B43A"/>
+
+  <!-- Logo icon -->
+  <rect x="80" y="185" width="84" height="84" rx="16" fill="#1a3056"/>
+  <path d="M149 193 L130 233 H142 L140 269 L161 229 H149 L151 193 Z" fill="#E8B43A"/>
+
+  <!-- Brand wordmark -->
+  <text x="80" y="338" font-family="Georgia,'Times New Roman',serif" font-size="64" font-weight="400" fill="#fafaf6" letter-spacing="-2">Power</text>
+  <text x="80" y="408" font-family="Georgia,'Times New Roman',serif" font-size="64" font-weight="400" fill="#E8B43A" letter-spacing="-2" font-style="italic">Done</text>
+  <text x="230" y="408" font-family="Georgia,'Times New Roman',serif" font-size="64" font-weight="400" fill="#fafaf6" letter-spacing="-2"> Right</text>
+
+  <!-- Tagline -->
+  <text x="80" y="470" font-family="Helvetica Neue,Arial,sans-serif" font-size="22" fill="rgba(247,245,240,0.58)" letter-spacing="0">Stop overpaying for commercial electricity.</text>
+
+  <!-- Bottom strip -->
+  <rect x="0" y="548" width="1200" height="82" fill="rgba(0,0,0,0.22)"/>
+  <text x="80" y="578" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="rgba(247,245,240,0.45)" letter-spacing="2.5">90+ VETTED SUPPLIERS · NO FEES · FIRST QUOTE IN 24 HRS</text>
+  <text x="80" y="608" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="600" fill="#fafaf6">Average savings: 12–28% on your commercial energy bill</text>
+  <text x="1120" y="608" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" fill="rgba(247,245,240,0.38)" text-anchor="end">powerdoneright.com</text>
+
+  <!-- Decorative right circles -->
+  <circle cx="960" cy="290" r="220" fill="none" stroke="rgba(232,180,58,0.08)" stroke-width="1.5"/>
+  <circle cx="960" cy="290" r="155" fill="none" stroke="rgba(232,180,58,0.06)" stroke-width="1"/>
+  <circle cx="960" cy="290" r="88" fill="rgba(232,180,58,0.04)"/>
+</svg>
