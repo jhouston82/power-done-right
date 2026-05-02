@@ -83,9 +83,33 @@
     .how-t { font-family:var(--serif); font-weight:400; font-size:22px; margin:0 0 10px; letter-spacing:-.015em; }
     .how-d { font-size:14px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
 
-    /* State pills */
+    /* Coverage display */
+    .coverage-wrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+    .coverage-map-box {
+      background:var(--pdr-navy); border-radius:14px; padding:32px;
+      position:relative; overflow:hidden;
+    }
+    .coverage-map-box::before {
+      content:""; position:absolute; inset:0;
+      background-image:linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:40px 40px; pointer-events:none;
+    }
+    .coverage-map-label {
+      font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase;
+      color:rgba(247,245,240,.65); margin-bottom:16px; position:relative;
+    }
+    .coverage-legend { display:flex; gap:20px; margin-top:16px; position:relative; }
+    .coverage-legend-item { display:flex; align-items:center; gap:6px; font-family:var(--mono); font-size:10px; letter-spacing:.04em; color:rgba(247,245,240,.6); }
+    .coverage-legend-dot { width:10px; height:10px; border-radius:2px; flex-shrink:0; }
     .state-pills { display:flex; flex-wrap:wrap; gap:8px; }
     .state-pill { font-family:var(--mono); font-size:12px; letter-spacing:.04em; padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); color:var(--pdr-ink-2); }
+    .state-pill--active { background:color-mix(in oklch, var(--pdr-accent) 18%, transparent); border-color:color-mix(in oklch, var(--pdr-accent) 40%, transparent); color:var(--pdr-accent-ink); font-weight:500; }
+    .coverage-count { font-family:var(--serif); font-size:48px; line-height:1; letter-spacing:-.02em; color:var(--pdr-accent); position:relative; }
+    .coverage-count-label { font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:rgba(247,245,240,.55); margin-top:4px; position:relative; }
+    .coverage-stats { display:flex; gap:32px; margin-top:24px; position:relative; }
+    .coverage-stat { }
+    @media (max-width:980px) { .coverage-wrap { grid-template-columns:1fr; } }
 
     .cta-band { background:var(--pdr-navy); padding:96px 56px; text-align:center; position:relative; overflow:hidden; }
     .cta-band::before { content:""; position:absolute; inset:0; background-image:linear-gradient(to right, rgba(255,255,255,.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px); background-size:80px 80px; pointer-events:none; }
@@ -94,18 +118,18 @@
     .cta-band-h em { font-style:italic; color:var(--pdr-accent); }
     .cta-btn { display:inline-flex; align-items:center; gap:12px; background:var(--pdr-accent); color:var(--pdr-accent-ink); padding:18px 32px; border-radius:999px; font-size:15.5px; font-weight:600; letter-spacing:-.005em; transition:transform .15s ease; box-shadow:0 10px 30px -10px rgba(232,180,58,.5); border:0; }
     .cta-btn:hover { transform:translateY(-2px); }
-    .cta-foot { margin-top:20px; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(247,245,240,.4); text-transform:uppercase; }
+    .cta-foot { margin-top:20px; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(247,245,240,.65); text-transform:uppercase; }
 
     .footer { background:var(--pdr-navy); color:#c8d3e3; padding:64px 56px 32px; }
     .footer-logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:#fafaf6; font-weight:400; line-height:1; }
     .footer-logo em { font-style:italic; color:var(--pdr-accent); margin:0 1px; }
     .footer-top { max-width:1208px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:64px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.08); }
     .footer-cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
-    .footer-h { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(247,245,240,.5); margin-bottom:14px; }
+    .footer-h { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(247,245,240,.7); margin-bottom:14px; }
     .footer ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; }
     .footer ul a { color:#c8d3e3; transition:color .15s; }
     .footer ul a:hover { color:#fafaf6; }
-    .footer-bot { max-width:1208px; margin:32px auto 0; display:flex; justify-content:space-between; font-size:12px; color:rgba(247,245,240,.4); }
+    .footer-bot { max-width:1208px; margin:32px auto 0; display:flex; justify-content:space-between; font-size:12px; color:rgba(247,245,240,.65); }
 
     .reveal { opacity:0; transform:translateY(14px); transition:opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); will-change:opacity, transform; }
     .reveal.is-visible { opacity:1; transform:translateY(0); }
@@ -209,24 +233,47 @@
       <h2 class="section-h">Licensed in every US deregulated electricity and natural gas market.</h2>
       <p class="section-sub">We hold active broker licenses in all 17 deregulated electricity states and 14 deregulated natural gas states. No partner hand-offs, no subbrokers.</p>
     </div>
-    <div class="state-pills reveal">
-      <span class="state-pill">Texas</span>
-      <span class="state-pill">Illinois</span>
-      <span class="state-pill">Ohio</span>
-      <span class="state-pill">Pennsylvania</span>
-      <span class="state-pill">New Jersey</span>
-      <span class="state-pill">New York</span>
-      <span class="state-pill">Maryland</span>
-      <span class="state-pill">DC</span>
-      <span class="state-pill">Connecticut</span>
-      <span class="state-pill">Massachusetts</span>
-      <span class="state-pill">Maine</span>
-      <span class="state-pill">New Hampshire</span>
-      <span class="state-pill">Rhode Island</span>
-      <span class="state-pill">Delaware</span>
-      <span class="state-pill">Virginia</span>
-      <span class="state-pill">Michigan</span>
-      <span class="state-pill">Indiana</span>
+    <div class="coverage-wrap reveal">
+      <div class="coverage-map-box">
+        <div class="coverage-map-label">Licensed deregulated markets</div>
+        <div class="coverage-stats">
+          <div class="coverage-stat">
+            <div class="coverage-count">17</div>
+            <div class="coverage-count-label">Electricity states</div>
+          </div>
+          <div class="coverage-stat">
+            <div class="coverage-count">14</div>
+            <div class="coverage-count-label">Natural gas states</div>
+          </div>
+        </div>
+        <div class="coverage-legend">
+          <div class="coverage-legend-item"><span class="coverage-legend-dot" style="background:#E8B43A"></span>Electricity</div>
+          <div class="coverage-legend-item"><span class="coverage-legend-dot" style="background:#4e9cd1"></span>Gas</div>
+          <div class="coverage-legend-item"><span class="coverage-legend-dot" style="background:#7dc98f"></span>Both</div>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:15px;line-height:1.6;color:var(--pdr-ink-2);margin:0 0 20px;">We hold active broker licenses with no partner hand-offs or subbrokers — your account is handled by our team in every market.</p>
+        <div class="state-pills">
+          <span class="state-pill state-pill--active">Texas</span>
+          <span class="state-pill state-pill--active">Illinois</span>
+          <span class="state-pill state-pill--active">Ohio</span>
+          <span class="state-pill state-pill--active">Pennsylvania</span>
+          <span class="state-pill state-pill--active">New Jersey</span>
+          <span class="state-pill state-pill--active">New York</span>
+          <span class="state-pill state-pill--active">Maryland</span>
+          <span class="state-pill state-pill--active">DC</span>
+          <span class="state-pill state-pill--active">Connecticut</span>
+          <span class="state-pill state-pill--active">Massachusetts</span>
+          <span class="state-pill state-pill--active">Maine</span>
+          <span class="state-pill state-pill--active">New Hampshire</span>
+          <span class="state-pill state-pill--active">Rhode Island</span>
+          <span class="state-pill state-pill--active">Delaware</span>
+          <span class="state-pill state-pill--active">Virginia</span>
+          <span class="state-pill state-pill--active">Michigan</span>
+          <span class="state-pill state-pill--active">Indiana</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -297,7 +344,7 @@
         <div class="footer-h">Company</div>
         <ul>
           <li><a href="about">About</a></li>
-          <li><a href="mailto:contact@powerdoneright.com">Contact</a></li>
+          <li><a href="contact">Contact</a></li>
           <li><a href="careers">Careers</a></li>
         </ul>
       </div>

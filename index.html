@@ -352,6 +352,7 @@
       display:flex; flex-direction:column; gap:4px;
     }
     .stat:last-child { border-right:0; }
+    .stat-icon { color:var(--pdr-accent); margin-bottom:8px; display:block; }
     .stat-v {
       font-family:var(--serif); font-size:44px; line-height:1;
       letter-spacing:-.02em;
@@ -379,7 +380,7 @@
     }
     .section-head--inrow { margin-bottom:0; }
     .how-grid {
-      display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;
+      display:grid; grid-template-columns:repeat(3, 1fr); gap:48px;
     }
     .how-step {
       padding:32px 28px 36px;
@@ -494,7 +495,7 @@
       letter-spacing:-.02em; margin:8px 0 16px;
     }
     .calc-value span {
-      font-family:var(--mono); font-size:14px; color:rgba(247,245,240,.5);
+      font-family:var(--mono); font-size:14px; color:rgba(247,245,240,.65);
       letter-spacing:.02em; margin-left:8px;
     }
     .calc-slider {
@@ -616,7 +617,18 @@
       margin-top:auto; padding-top:18px;
       border-top:1px solid var(--pdr-line);
     }
+    .testi-cap-top { display:flex; align-items:center; gap:12px; }
+    .testi-avatar {
+      width:40px; height:40px; border-radius:50%; flex-shrink:0;
+      background:var(--pdr-navy); color:#fafaf6;
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--serif); font-size:16px; font-weight:400;
+      letter-spacing:-.01em;
+    }
+    .testi-avatar-info { flex:1; min-width:0; }
+    .testi-who-row { display:flex; align-items:center; gap:6px; }
     .testi-who { font-size:14px; font-weight:600; color:var(--pdr-ink); }
+    .testi-verified { color:var(--pdr-accent); flex-shrink:0; }
     .testi-role { font-size:13px; color:var(--pdr-ink-2); margin-top:2px; }
     .testi-loc {
       font-family:var(--mono); font-size:11px; letter-spacing:.04em;
@@ -701,7 +713,7 @@
     .footer-cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
     .footer-h {
       font-family:var(--mono); font-size:11px; letter-spacing:.06em;
-      text-transform:uppercase; color:rgba(247,245,240,.5); margin-bottom:14px;
+      text-transform:uppercase; color:rgba(247,245,240,.7); margin-bottom:14px;
     }
     .footer ul { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; }
     .footer ul a { color:#c8d3e3; transition:color .15s; }
@@ -709,7 +721,7 @@
     .footer-bot {
       max-width:1208px; margin:32px auto 0;
       display:flex; justify-content:space-between;
-      font-size:12px; color:rgba(247,245,240,.4);
+      font-size:12px; color:rgba(247,245,240,.65);
     }
 
     /* ── Bid Ticker ── */
@@ -872,7 +884,7 @@
       <a href="#how">How it works</a>
       <a href="#suppliers">Suppliers</a>
       <a href="#calc">Calculator</a>
-      <a href="#testimonials">Customers</a>
+      <a href="#testimonials">Success Stories</a>
     </div>
     <a class="nav-cta" href="#lead">Get rates →</a>
   </nav>
@@ -923,7 +935,7 @@
 
     <div class="hero-right" id="lead">
       <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=900&auto=format&fit=crop&q=70" alt="High-voltage transmission lines at sunset" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&auto=format&fit=crop&q=70" alt="Modern commercial office building" loading="lazy" />
         <div class="hero-photo-caption">
           <span class="hpc-dot"></span>
           <span>Live grid · ERCOT · Texas</span>
@@ -984,6 +996,7 @@
             <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M2 8 H13 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="square"/></svg>
           </button>
         </div>
+        <p style="font-size:12px;color:var(--pdr-ink-3);text-align:center;margin:12px 0 0;line-height:1.4;">No commitment. No credit check. Takes 2 minutes.</p>
       </div>
 
       <div class="lead-form" id="lead-success" style="display:none">
@@ -1007,18 +1020,22 @@
 <!-- ── STATS ── -->
 <div class="stats-bar">
   <div class="stat" style="animation-delay:0ms">
+    <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M13 2 L4.5 13.5 H11 L10 22 L20 10.5 H13.5 L15 2 Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/></svg></span>
     <div class="stat-v"><span class="count-up" data-end="90" data-suffix="+">90+</span></div>
     <div class="stat-l">Energy suppliers</div>
   </div>
   <div class="stat" style="animation-delay:80ms">
+    <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 8.5 L8.5 15.5M9 9.5 a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M14 14.5 a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
     <div class="stat-v"><span class="count-up" data-end="23" data-suffix="%">23%</span></div>
     <div class="stat-l">Avg. rate reduction</div>
   </div>
   <div class="stat" style="animation-delay:160ms">
+    <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M12 2 C8.13 2 5 5.13 5 9 c0 5.25 7 13 7 13 s7-7.75 7-13 c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg></span>
     <div class="stat-v"><span class="count-up" data-end="17" data-suffix="">17</span></div>
     <div class="stat-l">Deregulated markets</div>
   </div>
   <div class="stat" style="animation-delay:240ms">
+    <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7 v5 l3.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     <div class="stat-v"><span class="count-up" data-end="24" data-suffix="h">24h</span></div>
     <div class="stat-l">To first quote</div>
   </div>
@@ -1028,7 +1045,7 @@
 <div id="how">
   <section class="section how">
     <div class="how-photo-row">
-      <div class="how-photo" style="background-image:url('https://images.unsplash.com/photo-1473308822086-710304d7d30c?w=900&auto=format&fit=crop&q=70')" aria-label="Transmission tower"></div>
+      <div class="how-photo" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=900&auto=format&fit=crop&q=70')" aria-label="Business team meeting"></div>
       <div class="section-head section-head--inrow">
         <div class="eyebrow"><span class="eyebrow-dot"></span>How it works</div>
         <h2 class="section-h">Three steps. <em>Two signatures.</em><br>One lower bill from next month forward.</h2>
@@ -1104,7 +1121,7 @@
       </div>
       <div class="calc-right">
         <div class="calc-card">
-          <div class="calc-photo-mini" style="background-image:url('https://images.unsplash.com/photo-1548337138-e87d889cc369?w=600&auto=format&fit=crop&q=70')" aria-label="Power lines"></div>
+          <div class="calc-photo-mini" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=70')" aria-label="Business financial analysis"></div>
           <div class="calc-card-top">
             <span class="calc-card-eyebrow">Estimated annual savings</span>
             <div class="calc-card-big" id="calc-saved">$6,624</div>
@@ -1114,6 +1131,7 @@
             <div class="calc-row"><span>Current annual spend</span><b id="calc-annual-now">$28,800</b></div>
             <div class="calc-row"><span>Estimated new spend</span><b id="calc-annual-new">$22,176</b></div>
             <div class="calc-row calc-row--accent"><span>5-year savings</span><b id="calc-five-yr">$33,120</b></div>
+            <div class="calc-row"><span>10-year savings</span><b id="calc-ten-yr" style="font-family:var(--mono);font-size:15px;color:rgba(247,245,240,.85)">$66,240</b></div>
           </div>
         </div>
       </div>
@@ -1124,7 +1142,7 @@
 <!-- ── TESTIMONIALS ── -->
 <div id="testimonials">
   <section class="section testimonials">
-    <div class="testi-banner" style="background-image:url('https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1600&auto=format&fit=crop&q=70')" aria-label="Power infrastructure">
+    <div class="testi-banner" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&auto=format&fit=crop&q=70')" aria-label="Modern business office">
       <div class="testi-banner-overlay">
         <div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>From our customers</div>
         <h2 class="section-h section-h--inv">Saved across <em>1,400+</em> US commercial sites.</h2>
@@ -1134,17 +1152,44 @@
       <figure class="testi reveal" data-delay="0">
         <svg class="testi-quote" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 18 V12 C6 9 8 7 11 7 V10 C9.5 10 9 10.5 9 12 H11 V18 Z M14 18 V12 C14 9 16 7 19 7 V10 C17.5 10 17 10.5 17 12 H19 V18 Z" fill="currentColor"/></svg>
         <blockquote class="testi-q">We were paying $0.107/kWh. PDR brought it to $0.082 with a 36-month fixed. Saved us $61K the first year — across nine restaurant locations.</blockquote>
-        <figcaption class="testi-cap"><div class="testi-who">M. Whitfield</div><div class="testi-role">CFO, Multi-Location Franchisee</div><div class="testi-loc">Columbus, OH</div></figcaption>
+        <figcaption class="testi-cap">
+          <div class="testi-cap-top">
+            <div class="testi-avatar">MW</div>
+            <div class="testi-avatar-info">
+              <div class="testi-who-row"><span class="testi-who">M. Whitfield</span><svg class="testi-verified" viewBox="0 0 16 16" width="14" height="14" aria-label="Verified customer"><path d="M8 1.5 L9.8 5.2 L14 5.8 L11 8.7 L11.6 13 L8 11 L4.4 13 L5 8.7 L2 5.8 L6.2 5.2 Z" fill="currentColor"/></svg></div>
+              <div class="testi-role">CFO, Multi-Location Franchisee</div>
+              <div class="testi-loc">Columbus, OH · Restaurant group</div>
+            </div>
+          </div>
+        </figcaption>
       </figure>
       <figure class="testi reveal" data-delay="100">
         <svg class="testi-quote" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 18 V12 C6 9 8 7 11 7 V10 C9.5 10 9 10.5 9 12 H11 V18 Z M14 18 V12 C14 9 16 7 19 7 V10 C17.5 10 17 10.5 17 12 H19 V18 Z" fill="currentColor"/></svg>
         <blockquote class="testi-q">Our broker was 'shopping' rates once a year. PDR set up live monitoring and renegotiated mid-contract when the market dropped. That's the difference.</blockquote>
-        <figcaption class="testi-cap"><div class="testi-who">K. Patel</div><div class="testi-role">Operations Director</div><div class="testi-loc">Houston, TX</div></figcaption>
+        <figcaption class="testi-cap">
+          <div class="testi-cap-top">
+            <div class="testi-avatar">KP</div>
+            <div class="testi-avatar-info">
+              <div class="testi-who-row"><span class="testi-who">K. Patel</span><svg class="testi-verified" viewBox="0 0 16 16" width="14" height="14" aria-label="Verified customer"><path d="M8 1.5 L9.8 5.2 L14 5.8 L11 8.7 L11.6 13 L8 11 L4.4 13 L5 8.7 L2 5.8 L6.2 5.2 Z" fill="currentColor"/></svg></div>
+              <div class="testi-role">Operations Director</div>
+              <div class="testi-loc">Houston, TX · Manufacturing</div>
+            </div>
+          </div>
+        </figcaption>
       </figure>
       <figure class="testi reveal" data-delay="200">
         <svg class="testi-quote" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 18 V12 C6 9 8 7 11 7 V10 C9.5 10 9 10.5 9 12 H11 V18 Z M14 18 V12 C14 9 16 7 19 7 V10 C17.5 10 17 10.5 17 12 H19 V18 Z" fill="currentColor"/></svg>
         <blockquote class="testi-q">Straightforward — no markups buried in the rate, no surprise fees. We got three offers, picked one, signed. Two weeks later we were on the new rate.</blockquote>
-        <figcaption class="testi-cap"><div class="testi-who">D. Larkin</div><div class="testi-role">Owner, CNC Fabrication Shop</div><div class="testi-loc">Allentown, PA</div></figcaption>
+        <figcaption class="testi-cap">
+          <div class="testi-cap-top">
+            <div class="testi-avatar">DL</div>
+            <div class="testi-avatar-info">
+              <div class="testi-who-row"><span class="testi-who">D. Larkin</span><svg class="testi-verified" viewBox="0 0 16 16" width="14" height="14" aria-label="Verified customer"><path d="M8 1.5 L9.8 5.2 L14 5.8 L11 8.7 L11.6 13 L8 11 L4.4 13 L5 8.7 L2 5.8 L6.2 5.2 Z" fill="currentColor"/></svg></div>
+              <div class="testi-role">Owner, CNC Fabrication Shop</div>
+              <div class="testi-loc">Allentown, PA · Manufacturing</div>
+            </div>
+          </div>
+        </figcaption>
       </figure>
     </div>
   </section>
@@ -1191,7 +1236,7 @@
         <div class="footer-h">Company</div>
         <ul>
           <li><a href="about">About</a></li>
-          <li><a href="mailto:contact@powerdoneright.com">Contact</a></li>
+          <li><a href="contact">Contact</a></li>
           <li><a href="careers">Careers</a></li>
         </ul>
       </div>
@@ -1302,6 +1347,7 @@
     document.getElementById('calc-annual-now').textContent = '$' + now.toLocaleString();
     document.getElementById('calc-annual-new').textContent = '$' + nw.toLocaleString();
     document.getElementById('calc-five-yr').textContent = '$' + (sv * 5).toLocaleString();
+    document.getElementById('calc-ten-yr').textContent = '$' + (sv * 10).toLocaleString();
   }
   slider.addEventListener('input', updateCalc);
 
