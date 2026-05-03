@@ -317,8 +317,11 @@
               </div>
             </div>
 
+            <!-- Error banner -->
+            <div id="lf-error" style="display:none;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35)" class="rounded-lg px-4 py-3 text-sm text-red-300 mt-4"></div>
+
             <!-- Actions -->
-            <div class="flex gap-3 mt-6">
+            <div class="flex gap-3 mt-4">
               <button id="lf-back" type="button" style="display:none"
                       class="flex-none px-5 py-3.5 text-sm text-white/60 rounded-lg transition-colors hover:bg-white/10" style="border:1px solid rgba(255,255,255,0.12)">
                 ← Back
@@ -1170,7 +1173,14 @@
       const name  = document.getElementById('lf-name').value.trim();
       const email = document.getElementById('lf-email').value.trim();
       const phone = document.getElementById('lf-phone').value.trim();
-      if (!name || !email || !phone) return;
+      const errEl = document.getElementById('lf-error');
+
+      if (!name || !email || !phone) {
+        errEl.textContent = 'Please fill in your name, email, and phone number.';
+        errEl.style.display = '';
+        return;
+      }
+      errEl.style.display = 'none';
 
       const btn = document.getElementById('lf-next');
       btn.disabled = true;
@@ -1219,9 +1229,13 @@
         if (typeof gtag !== 'undefined') {
           gtag('event', 'pdr_lead_submit', { event_category: 'lead', event_label: payload.property_name });
         }
-      } catch {
+      } catch (err) {
         btn.disabled = false;
         btn.innerHTML = 'Get my rates <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
+        const errEl = document.getElementById('lf-error');
+        errEl.textContent = 'Submission failed — please try again or call us directly.';
+        errEl.style.display = '';
+        console.error('Form submit error:', err);
       }
     }
 
