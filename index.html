@@ -329,7 +329,7 @@
                 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 8H13M9 4l4 4-4 4"/></svg>
               </button>
             </div>
-            <p class="text-xs text-white/30 text-center mt-3.5">No commitment · No credit check · Takes 2 minutes</p>
+            <p class="text-xs text-white/30 text-center mt-3.5">No commitment · No credit check · Bill + 2 signatures</p>
           </div>
 
           <!-- Success state -->
@@ -489,7 +489,7 @@
         <a href="#lead-desktop" class="w-full block bg-pdr-teal hover:bg-pdr-teal-d text-white rounded-lg px-6 py-3.5 text-sm font-medium transition-colors text-center">
           Start My Free Comparison →
         </a>
-        <p class="text-xs text-white/30 text-center mt-3">No commitment · No credit check · Takes 2 minutes</p>
+        <p class="text-xs text-white/30 text-center mt-3">No commitment · No credit check · Bill + 2 signatures</p>
       </div>
     </div>
   </section>
@@ -536,7 +536,7 @@
           The process
         </div>
         <h2 class="font-serif text-4xl lg:text-5xl text-white mb-4">Simple. Fast. Free.</h2>
-        <p class="text-white/50 text-lg max-w-lg mx-auto">Three steps to a lower energy bill. No learning curve, no paperwork headaches.</p>
+        <p class="text-white/50 text-lg max-w-lg mx-auto">Three steps to a lower energy bill. Two signatures. Zero downtime.</p>
       </div>
 
       <!-- Power infrastructure illustration -->
@@ -622,9 +622,9 @@
           </div>
           <div>
             <h3 class="font-serif text-2xl text-white mb-3">Share your bill</h3>
-            <p class="text-white/50 text-sm leading-relaxed">Takes under 2 minutes. Tell us your monthly spend and ZIP code — that's all we need to open the auction for your account.</p>
+            <p class="text-white/50 text-sm leading-relaxed">Snap a photo of your most recent utility bill and enter your ZIP. We use your actual usage data — not guesswork — to generate accurate, binding bids from 90+ suppliers.</p>
           </div>
-          <div class="font-mono text-xs text-white/25 border-t border-white/8 pt-4">Avg. time: 2 min</div>
+          <div class="font-mono text-xs text-white/25 border-t border-white/8 pt-4">Bill photo + ZIP · 5 minutes</div>
         </div>
 
         <!-- Step 2 -->
@@ -635,8 +635,8 @@
             </div>
           </div>
           <div>
-            <h3 class="font-serif text-2xl text-white mb-3">Suppliers compete</h3>
-            <p class="text-white/50 text-sm leading-relaxed">90+ vetted suppliers bid for your account in real time. You see every offer ranked lowest to highest — full transparency, zero conflict of interest.</p>
+            <h3 class="font-serif text-2xl text-white mb-3">You authorize. They compete.</h3>
+            <p class="text-white/50 text-sm leading-relaxed">Sign a brief Letter of Authorization — two minutes, no commitment. We open your account to 90+ vetted suppliers who bid in real time. Every offer ranked lowest to highest, full transparency.</p>
           </div>
           <div class="font-mono text-xs text-white/25 border-t border-white/8 pt-4">First quote within 24 hrs</div>
         </div>
@@ -650,7 +650,7 @@
           </div>
           <div>
             <h3 class="font-serif text-2xl text-white mb-3">Lock in savings</h3>
-            <p class="text-white/50 text-sm leading-relaxed">Pick your rate. We handle the switch. Your lights stay on — no new meters, no downtime, no paperwork on your end. Savings start on the next billing cycle.</p>
+            <p class="text-white/50 text-sm leading-relaxed">Pick your rate and sign one pricing contract. We coordinate the switch — same meter, no downtime, no service interruption. Savings start on your next billing cycle.</p>
           </div>
           <div class="font-mono text-xs text-white/25 border-t border-white/8 pt-4">Seamless switch, same meter</div>
         </div>
@@ -947,7 +947,7 @@
             <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===2?'rotate-45':''">+</span>
           </button>
           <div x-show="open===2" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">You spend about 2 minutes filling out our form. First competitive bids arrive within 24 hours. Once you choose, the contract is executed same day and the switch happens on your next billing cycle — typically 2–4 weeks.</p>
+            <p class="text-white/50 text-sm leading-relaxed">You spend about 5 minutes submitting your info and sharing a recent bill. First competitive bids arrive within 24 hours. When you pick a rate, you'll sign a Letter of Authorization and a one-page pricing contract — both take under 10 minutes total. The switch happens on your next billing cycle, typically 2–4 weeks later.</p>
           </div>
         </div>
 
@@ -978,6 +978,16 @@
           </button>
           <div x-show="open===5" x-transition class="px-6 pb-5">
             <p class="text-white/50 text-sm leading-relaxed">Because you see every bid, ranked lowest to highest. No cherry-picking, no kickback from a preferred supplier. We show you the full competitive landscape — the same transparency we'd want if it were our own bill.</p>
+          </div>
+        </div>
+
+        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
+          <button @click="open = open===6 ? null : 6" class="w-full flex items-center justify-between px-6 py-5 text-left">
+            <span class="text-sm font-medium text-white">What documents will I need to sign?</span>
+            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===6?'rotate-45':''">+</span>
+          </button>
+          <div x-show="open===6" x-transition class="px-6 pb-5">
+            <p class="text-white/50 text-sm leading-relaxed">Just two: a Letter of Authorization (LOA) that gives us permission to shop rates on your behalf, and a standard pricing contract once you select a supplier. Both are straightforward, one-page documents. You can review each before signing — no pressure, no fine print surprises.</p>
           </div>
         </div>
       </div>
