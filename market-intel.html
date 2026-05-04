@@ -138,6 +138,8 @@
     @media (prefers-reduced-motion:reduce) {
       .reveal, .reveal.is-visible { opacity:1 !important; transform:none !important; }
     }
+    .page-illus { text-align:center; padding:2rem 1rem 0; line-height:0; }
+    .page-illus svg { max-width:100%; height:auto; }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.powerdoneright.com"},{"@type":"ListItem","position":2,"name":"Market Intelligence","item":"https://www.powerdoneright.com/market-intel"}]}</script>
 </head>
@@ -167,6 +169,37 @@
     <p class="hero-sub">PDR monitors forward curves across all 17 deregulated electricity markets and natural gas pipelines daily. Our market intelligence informs every procurement recommendation we make — and we share it directly with clients.</p>
   </div>
 </section>
+
+<!-- ── PAGE ILLUSTRATION ── -->
+<div class="page-illus">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 150" width="640" height="150" aria-hidden="true">
+    <!-- Chart frame -->
+    <line x1="80" y1="20" x2="80" y2="125" stroke="#102341" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round"/>
+    <line x1="80" y1="125" x2="560" y2="125" stroke="#102341" stroke-width="1.5" stroke-opacity="0.3" stroke-linecap="round"/>
+    <!-- Grid lines -->
+    <line x1="80" y1="90" x2="560" y2="90" stroke="#102341" stroke-width="1" stroke-opacity="0.1" stroke-dasharray="4,4"/>
+    <line x1="80" y1="57" x2="560" y2="57" stroke="#102341" stroke-width="1" stroke-opacity="0.1" stroke-dasharray="4,4"/>
+    <!-- Y-axis labels -->
+    <text x="68" y="128" font-family="monospace" font-size="10" fill="#102341" opacity="0.35" text-anchor="end">$0</text>
+    <text x="68" y="94" font-family="monospace" font-size="10" fill="#102341" opacity="0.35" text-anchor="end">$50</text>
+    <text x="68" y="61" font-family="monospace" font-size="10" fill="#102341" opacity="0.35" text-anchor="end">$100</text>
+    <!-- X-axis labels -->
+    <text x="130" y="140" font-family="monospace" font-size="9" fill="#102341" opacity="0.3" text-anchor="middle">Jan</text>
+    <text x="250" y="140" font-family="monospace" font-size="9" fill="#102341" opacity="0.3" text-anchor="middle">Apr</text>
+    <text x="370" y="140" font-family="monospace" font-size="9" fill="#102341" opacity="0.3" text-anchor="middle">Jul</text>
+    <text x="490" y="140" font-family="monospace" font-size="9" fill="#102341" opacity="0.3" text-anchor="middle">Oct</text>
+    <!-- Forward curve (rises, then flattens) -->
+    <path d="M90,112 C130,108 160,88 200,72 C240,56 280,46 340,42 C400,38 440,40 490,41 C520,42 540,42 555,42" fill="none" stroke="#E8B43A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Shaded area under curve -->
+    <path d="M90,112 C130,108 160,88 200,72 C240,56 280,46 340,42 C400,38 440,40 490,41 C520,42 540,42 555,42 L555,125 L90,125 Z" fill="#E8B43A" fill-opacity="0.07"/>
+    <!-- "Lock" zone vertical line with label -->
+    <line x1="250" y1="24" x2="250" y2="125" stroke="#102341" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="3,3"/>
+    <text x="252" y="32" font-family="monospace" font-size="9" fill="#102341" opacity="0.45">LOCK ZONE</text>
+    <!-- Dot on curve at lock zone -->
+    <circle cx="250" cy="62" r="4" fill="#E8B43A" opacity="0.9"/>
+    <circle cx="250" cy="62" r="7" fill="none" stroke="#E8B43A" stroke-width="1.5" stroke-opacity="0.4"/>
+  </svg>
+</div>
 
 <!-- WHAT WE TRACK -->
 <div class="section-wrap">

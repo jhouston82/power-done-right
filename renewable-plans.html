@@ -129,6 +129,8 @@
     @media (prefers-reduced-motion:reduce) {
       .reveal, .reveal.is-visible { opacity:1 !important; transform:none !important; }
     }
+    .page-illus { text-align:center; padding:2rem 1rem 0; line-height:0; }
+    .page-illus svg { max-width:100%; height:auto; }
   </style>
   <script type="application/ld+json">
   {
@@ -179,6 +181,49 @@
     <p class="hero-sub">Competitive sourcing keeps renewable rates close to standard rates. We find you the most cost-effective path to 100% renewable electricity — with documentation your sustainability team can actually use.</p>
   </div>
 </section>
+
+<!-- ── PAGE ILLUSTRATION ── -->
+<div class="page-illus">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160" aria-hidden="true">
+    <!-- Rolling hills -->
+    <path d="M0,140 Q160,100 320,120 Q480,140 640,110 L640,160 L0,160 Z" fill="#102341" opacity="0.07"/>
+    <!-- Sun rays -->
+    <circle cx="320" cy="38" r="18" fill="#E8B43A" opacity="0.25"/>
+    <circle cx="320" cy="38" r="10" fill="#E8B43A" opacity="0.6"/>
+    <line x1="320" y1="12" x2="320" y2="20" stroke="#E8B43A" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="344" y1="16" x2="339" y2="23" stroke="#E8B43A" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="360" y1="32" x2="353" y2="35" stroke="#E8B43A" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="296" y1="16" x2="301" y2="23" stroke="#E8B43A" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="280" y1="32" x2="287" y2="35" stroke="#E8B43A" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+    <!-- Wind turbine left (x=140) -->
+    <line x1="140" y1="150" x2="140" y2="55" stroke="#102341" stroke-width="2.5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <circle cx="140" cy="55" r="4" fill="#102341" opacity="0.5"/>
+    <line x1="140" y1="55" x2="140" y2="20" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <line x1="140" y1="55" x2="108" y2="72" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <line x1="140" y1="55" x2="172" y2="72" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <!-- Wind turbine center (x=320) -->
+    <line x1="320" y1="160" x2="320" y2="68" stroke="#102341" stroke-width="2.5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <circle cx="320" cy="68" r="4" fill="#102341" opacity="0.5"/>
+    <line x1="320" y1="68" x2="320" y2="33" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <line x1="320" y1="68" x2="289" y2="85" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <line x1="320" y1="68" x2="351" y2="85" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <!-- Wind turbine right (x=500) -->
+    <line x1="500" y1="148" x2="500" y2="60" stroke="#102341" stroke-width="2.5" stroke-opacity="0.6" stroke-linecap="round"/>
+    <circle cx="500" cy="60" r="4" fill="#102341" opacity="0.5"/>
+    <line x1="500" y1="60" x2="500" y2="25" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <line x1="500" y1="60" x2="469" y2="77" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <line x1="500" y1="60" x2="531" y2="77" stroke="#102341" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round"/>
+    <!-- Solar panels foreground -->
+    <g opacity="0.6">
+      <rect x="44" y="128" width="36" height="20" rx="2" fill="none" stroke="#102341" stroke-width="1.5"/>
+      <line x1="62" y1="128" x2="62" y2="148" stroke="#102341" stroke-width="1" stroke-opacity="0.5"/>
+      <line x1="44" y1="138" x2="80" y2="138" stroke="#102341" stroke-width="1" stroke-opacity="0.5"/>
+      <rect x="560" y="125" width="36" height="20" rx="2" fill="none" stroke="#102341" stroke-width="1.5"/>
+      <line x1="578" y1="125" x2="578" y2="145" stroke="#102341" stroke-width="1" stroke-opacity="0.5"/>
+      <line x1="560" y1="135" x2="596" y2="135" stroke="#102341" stroke-width="1" stroke-opacity="0.5"/>
+    </g>
+  </svg>
+</div>
 
 <!-- THREE PATHS TO GREEN -->
 <div class="section-wrap">
@@ -274,28 +319,28 @@
     </div>
     <div class="doc-grid reveal">
       <div class="doc-item">
-        <div class="doc-icon">📄</div>
+        <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#102341" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div>
         <div>
           <div class="doc-t">REC retirement certificate</div>
           <p class="doc-d">Official certificate of retirement from the applicable registry (PJM-GATS, NEPOOL-GIS, M-RETS, or WREGIS). Includes serial numbers, generation period, and project details.</p>
         </div>
       </div>
       <div class="doc-item">
-        <div class="doc-icon">📊</div>
+        <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#102341" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
         <div>
           <div class="doc-t">Scope 2 GHG accounting export</div>
           <p class="doc-d">Annual summary formatted for GHG Protocol market-based Scope 2 reporting, including zero emission factor documentation and consumption match verification.</p>
         </div>
       </div>
       <div class="doc-item">
-        <div class="doc-icon">🌱</div>
+        <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#102341" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21c0-5 4-9 9-9s9 4 9 9"/><path d="M14 12C14 7 10 3 5 3c0 5 4 9 9 9z"/></svg></div>
         <div>
           <div class="doc-t">Project origin documentation</div>
           <p class="doc-d">Generation facility name, technology type (wind/solar/hydro), state, commissioning date, and ISO/RTO registration details — all required for CDP and ESG disclosure.</p>
         </div>
       </div>
       <div class="doc-item">
-        <div class="doc-icon">📅</div>
+        <div class="doc-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#102341" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
         <div>
           <div class="doc-t">Annual reporting summary</div>
           <p class="doc-d">Year-end report covering MWh consumed, RECs matched, contract periods, and supplier information — ready to attach to your sustainability report or investor disclosure.</p>
