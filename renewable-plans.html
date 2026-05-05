@@ -126,6 +126,10 @@
       .footer-bot { flex-direction:column; gap:8px; }
       .cta-band { padding:64px 24px; }
     }
+    @media (max-width:640px) {
+      .footer-cols { grid-template-columns:1fr; }
+      .two-col-grid { grid-template-columns:1fr !important; gap:32px !important; }
+    }
     @media (prefers-reduced-motion:reduce) {
       .reveal, .reveal.is-visible { opacity:1 !important; transform:none !important; }
     }
@@ -255,7 +259,7 @@
 <!-- COST CALLOUT -->
 <div class="section-wrap section-wrap--alt">
   <div class="section">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div class="two-col-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
       <div class="reveal">
         <div class="eyebrow"><span class="eyebrow-dot"></span>Cost perspective</div>
         <h2 class="section-h" style="margin-top:16px">Going green adds less than most buyers expect.</h2>
@@ -290,7 +294,7 @@
       <div class="eyebrow"><span class="eyebrow-dot"></span>REC explainer</div>
       <h2 class="section-h">What RECs are — and what they aren't.</h2>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+    <div class="two-col-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
       <div class="reveal">
         <p style="font-size:16px;line-height:1.65;color:var(--pdr-ink-2);margin:0 0 16px">A <strong>Renewable Energy Certificate (REC)</strong> is a tradeable instrument representing 1 MWh of electricity generated from a qualifying renewable source. When you retire RECs matched to your consumption, you can claim that your electricity use is "100% renewable."</p>
         <p style="font-size:16px;line-height:1.65;color:var(--pdr-ink-2);margin:0 0 16px">RECs are tracked in state and national registries (PJM-GATS, NEPOOL-GIS, WREGIS, M-RETS) and each MWh of renewable generation is issued exactly one REC. Retirement is permanent and publicly verifiable.</p>

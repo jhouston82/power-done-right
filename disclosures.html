@@ -108,6 +108,10 @@
       .footer-cols { grid-template-columns:1fr 1fr; }
       .market-table { font-size:13px; }
     }
+    @media (max-width:640px) {
+      .footer-cols { grid-template-columns:1fr; }
+      .disclosure-box { padding:24px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -174,6 +178,7 @@
     <h2>5. Licensing and Registration</h2>
     <p>PDR holds active retail energy broker registrations or licenses in the following deregulated markets. Licensing is maintained in good standing and renewed as required by each jurisdiction's regulatory authority.</p>
 
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
     <table class="market-table">
       <thead>
         <tr>
@@ -202,6 +207,7 @@
         <tr><td>Virginia</td><td>State Corporation Commission</td><td><span class="badge">Electricity</span></td></tr>
       </tbody>
     </table>
+    </div>
 
     <h2>6. Regulatory Notices by State</h2>
     <p>Certain deregulated states require specific disclosures to commercial customers. The following notices apply where mandated:</p>

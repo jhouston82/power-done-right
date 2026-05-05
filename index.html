@@ -93,7 +93,7 @@
       border-radius: 8px;
       padding: 12px 16px;
       width: 100%;
-      font-size: 14px;
+      font-size: 16px;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
     .dark-input::placeholder { color: rgba(255,255,255,0.3); }
@@ -262,10 +262,10 @@
                 What's your average monthly electric bill?
               </label>
               <div class="flex items-center rounded-lg overflow-hidden" style="border:1px solid rgba(255,255,255,0.12)">
-                <span class="px-3.5 py-3.5 text-white/35 text-sm select-none" style="border-right:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)">$</span>
+                <span class="px-3.5 py-3.5 text-white/35 text-base select-none" style="border-right:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)">$</span>
                 <input id="lf-bill" type="number" inputmode="decimal" placeholder="2,400" min="0"
-                       class="flex-1 px-4 py-3.5 text-sm text-white focus:outline-none" style="background:transparent" />
-                <span class="px-3.5 text-white/35 text-sm select-none">/mo</span>
+                       class="flex-1 px-4 py-3.5 text-base text-white focus:outline-none" style="background:transparent" />
+                <span class="px-3.5 text-white/35 text-base select-none">/mo</span>
               </div>
               <div id="lf-estimate" style="display:none" class="mt-4 rounded-xl p-4" style="background:rgba(10,122,94,0.15);border:1px solid rgba(10,122,94,0.3)">
                 <div class="text-xs font-mono text-pdr-teal mb-1.5">Estimated annual savings range</div>
@@ -373,7 +373,7 @@
           <!-- Column headers -->
           <div class="px-6 py-2.5 flex items-center gap-3 border-b border-white/5" style="background:rgba(0,0,0,0.2)">
             <div class="w-7 shrink-0"></div>
-            <div class="flex-1 text-[11px] font-mono text-white/25 uppercase tracking-wider">Supplier</div>
+            <div class="flex-1 min-w-0 text-[11px] font-mono text-white/25 uppercase tracking-wider">Supplier</div>
             <div class="text-[11px] font-mono text-white/25 uppercase tracking-wider w-28 text-right">Rate / kWh</div>
             <div class="text-[11px] font-mono text-white/25 uppercase tracking-wider w-20 text-right">vs. Market</div>
           </div>

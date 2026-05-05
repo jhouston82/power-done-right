@@ -151,6 +151,11 @@
       .footer-bot { flex-direction:column; gap:8px; }
       .cta-band { padding:64px 24px; }
     }
+    @media (max-width:640px) {
+      .footer-cols { grid-template-columns:1fr; }
+      .two-col { gap:32px !important; }
+      .term-table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    }
     @media (prefers-reduced-motion:reduce) {
       .reveal, .reveal.is-visible { opacity:1 !important; transform:none !important; }
     }
