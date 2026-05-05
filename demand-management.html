@@ -22,9 +22,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --pdr-bg: #f7f5f0; --pdr-bg-elev: #fdfcf8; --pdr-ink: #0e1b2c; --pdr-ink-2: #2a3a52; --pdr-ink-3: #5a6b82;
-      --pdr-line: rgba(14,27,44,.10); --pdr-line-2: rgba(14,27,44,.18);
-      --pdr-navy: #102341; --pdr-navy-2: #1a3056; --pdr-accent: #E8B43A; --pdr-accent-ink: #5e3f00;
+      --pdr-bg: #05111f; --pdr-bg-elev: #0a2240; --pdr-ink: #f0ece3; --pdr-ink-2: rgba(240,236,227,0.70); --pdr-ink-3: rgba(240,236,227,0.42);
+      --pdr-line: rgba(255,255,255,0.07); --pdr-line-2: rgba(255,255,255,0.12);
+      --pdr-navy: #0a2240; --pdr-navy-2: #1a3056; --pdr-accent: #E8B43A; --pdr-accent-ink: #5e3f00;
       --serif: "Instrument Serif","Source Serif Pro","Times New Roman",serif;
       --sans: "Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
       --mono: "Geist Mono","JetBrains Mono",ui-monospace,monospace;
@@ -49,10 +49,10 @@
     .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent); flex-shrink:0; }
     .eyebrow--inv { background:rgba(255,255,255,.05); color:rgba(247,245,240,.7); border-color:rgba(255,255,255,.12); }
 
-    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg-elev); }
+    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:radial-gradient(ellipse 130% 90% at 50% -10%, #0d2e55 0%, #05111f 65%); }
     .page-hero-inner { max-width:760px; margin:0 auto; }
     .hero-h { font-family:var(--serif); font-weight:400; font-size:clamp(48px, 6.2vw, 80px); line-height:1.04; letter-spacing:-.025em; margin:24px 0 28px; color:var(--pdr-ink); text-wrap:balance; }
-    .hero-h em { font-style:italic; color:var(--pdr-navy); }
+    .hero-h em { font-style:italic; color:var(--pdr-accent); }
     .hero-sub { font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:580px; margin:0; text-wrap:pretty; }
 
     .section-wrap { border-bottom:1px solid var(--pdr-line); }
@@ -64,7 +64,7 @@
 
     .how-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:24px; }
     .how-step { padding:28px 24px 32px; border-top:1px solid var(--pdr-ink); transition:transform 280ms cubic-bezier(.2,.7,.2,1), border-color 280ms; }
-    .how-step:hover { transform:translateY(-3px); border-color:rgba(0,0,0,.18); }
+    .how-step:hover { transform:translateY(-3px); border-color:rgba(255,255,255,0.22); }
     .how-n { font-family:var(--mono); font-size:12px; color:var(--pdr-ink-3); letter-spacing:.04em; margin-bottom:16px; transition:color 280ms; }
     .how-step:hover .how-n { color:var(--pdr-accent); }
     .how-t { font-family:var(--serif); font-weight:400; font-size:24px; margin:0 0 10px; letter-spacing:-.015em; }
@@ -149,7 +149,7 @@
 <nav class="nav">
   <a href="/" class="nav-logo" aria-label="Power Done Right home">
     <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+      <rect x="1" y="1" width="30" height="30" rx="7" fill="#0a2240"/>
       <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
     </svg>
     Power<em>Done</em>Right
@@ -175,32 +175,32 @@
 <div class="page-illus">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160" aria-hidden="true">
     <!-- Meter gauge arc (semi-circle) -->
-    <path d="M220,130 A110,110 0 0,1 420,130" fill="none" stroke="#102341" stroke-width="3" stroke-opacity="0.15" stroke-linecap="round"/>
+    <path d="M220,130 A110,110 0 0,1 420,130" fill="none" stroke="#c8d3e3" stroke-width="3" stroke-opacity="0.15" stroke-linecap="round"/>
     <!-- Color zones: green, yellow, red -->
     <path d="M220,130 A110,110 0 0,1 280,55" fill="none" stroke="#0a7a5e" stroke-width="8" stroke-opacity="0.3" stroke-linecap="round"/>
     <path d="M280,55 A110,110 0 0,1 360,38" fill="none" stroke="#E8B43A" stroke-width="8" stroke-opacity="0.45" stroke-linecap="round"/>
     <path d="M360,38 A110,110 0 0,1 420,130" fill="none" stroke="#c0392b" stroke-width="8" stroke-opacity="0.3" stroke-linecap="round"/>
     <!-- Tick marks -->
-    <line x1="220" y1="130" x2="228" y2="124" stroke="#102341" stroke-width="1.5" stroke-opacity="0.4"/>
-    <line x1="244" y1="76" x2="250" y2="82" stroke="#102341" stroke-width="1.5" stroke-opacity="0.4"/>
-    <line x1="320" y1="22" x2="320" y2="30" stroke="#102341" stroke-width="1.5" stroke-opacity="0.4"/>
-    <line x1="396" y1="76" x2="390" y2="82" stroke="#102341" stroke-width="1.5" stroke-opacity="0.4"/>
-    <line x1="420" y1="130" x2="412" y2="124" stroke="#102341" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="220" y1="130" x2="228" y2="124" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="244" y1="76" x2="250" y2="82" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="320" y1="22" x2="320" y2="30" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="396" y1="76" x2="390" y2="82" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="420" y1="130" x2="412" y2="124" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.4"/>
     <!-- Needle pointing to peak zone (~70% = right-ish) -->
-    <line x1="320" y1="130" x2="388" y2="58" stroke="#102341" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.8"/>
-    <circle cx="320" cy="130" r="7" fill="#102341" opacity="0.65"/>
+    <line x1="320" y1="130" x2="388" y2="58" stroke="#c8d3e3" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.8"/>
+    <circle cx="320" cy="130" r="7" fill="#c8d3e3" opacity="0.65"/>
     <circle cx="320" cy="130" r="3" fill="#E8B43A"/>
     <!-- Labels -->
-    <text x="206" y="148" font-family="monospace" font-size="11" fill="#102341" opacity="0.5" text-anchor="middle">LOW</text>
-    <text x="320" y="18" font-family="monospace" font-size="11" fill="#102341" opacity="0.5" text-anchor="middle">MID</text>
-    <text x="435" y="148" font-family="monospace" font-size="11" fill="#102341" opacity="0.5" text-anchor="middle">PEAK</text>
+    <text x="206" y="148" font-family="monospace" font-size="11" fill="#c8d3e3" opacity="0.5" text-anchor="middle">LOW</text>
+    <text x="320" y="18" font-family="monospace" font-size="11" fill="#c8d3e3" opacity="0.5" text-anchor="middle">MID</text>
+    <text x="435" y="148" font-family="monospace" font-size="11" fill="#c8d3e3" opacity="0.5" text-anchor="middle">PEAK</text>
     <!-- Bar chart right side -->
-    <rect x="478" y="100" width="18" height="50" rx="3" fill="#102341" opacity="0.12"/>
-    <rect x="500" y="80" width="18" height="70" rx="3" fill="#102341" opacity="0.18"/>
+    <rect x="478" y="100" width="18" height="50" rx="3" fill="#c8d3e3" opacity="0.12"/>
+    <rect x="500" y="80" width="18" height="70" rx="3" fill="#c8d3e3" opacity="0.18"/>
     <rect x="522" y="55" width="18" height="95" rx="3" fill="#E8B43A" opacity="0.6"/>
-    <rect x="544" y="75" width="18" height="75" rx="3" fill="#102341" opacity="0.14"/>
-    <rect x="566" y="90" width="18" height="60" rx="3" fill="#102341" opacity="0.12"/>
-    <line x1="472" y1="150" x2="590" y2="150" stroke="#102341" stroke-width="1.5" stroke-opacity="0.3"/>
+    <rect x="544" y="75" width="18" height="75" rx="3" fill="#c8d3e3" opacity="0.14"/>
+    <rect x="566" y="90" width="18" height="60" rx="3" fill="#c8d3e3" opacity="0.12"/>
+    <line x1="472" y1="150" x2="590" y2="150" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.3"/>
     <text x="531" y="48" font-family="monospace" font-size="9" fill="#E8B43A" opacity="0.9" text-anchor="middle">PEAK</text>
   </svg>
 </div>

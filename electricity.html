@@ -23,14 +23,14 @@
   <style>
     /* ── Variables ── */
     :root {
-      --pdr-bg: #f7f5f0;
-      --pdr-bg-elev: #fdfcf8;
-      --pdr-ink: #0e1b2c;
-      --pdr-ink-2: #2a3a52;
-      --pdr-ink-3: #5a6b82;
-      --pdr-line: rgba(14,27,44,.10);
-      --pdr-line-2: rgba(14,27,44,.18);
-      --pdr-navy: #102341;
+      --pdr-bg: #05111f;
+      --pdr-bg-elev: #0a2240;
+      --pdr-ink: #f0ece3;
+      --pdr-ink-2: rgba(240,236,227,0.70);
+      --pdr-ink-3: rgba(240,236,227,0.42);
+      --pdr-line: rgba(255,255,255,0.07);
+      --pdr-line-2: rgba(255,255,255,0.12);
+      --pdr-navy: #0a2240;
       --pdr-navy-2: #1a3056;
       --pdr-accent: #E8B43A;
       --pdr-accent-ink: #5e3f00;
@@ -61,10 +61,10 @@
     .eyebrow--inv { background:rgba(255,255,255,.05); color:rgba(247,245,240,.7); border-color:rgba(255,255,255,.12); }
 
     /* ── Page hero ── */
-    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg-elev); }
+    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:radial-gradient(ellipse 130% 90% at 50% -10%, #0d2e55 0%, #05111f 65%); }
     .page-hero-inner { max-width:760px; margin:0 auto; }
     .hero-h { font-family:var(--serif); font-weight:400; font-size:clamp(48px, 6.2vw, 80px); line-height:1.04; letter-spacing:-.025em; margin:24px 0 28px; color:var(--pdr-ink); text-wrap:balance; }
-    .hero-h em { font-style:italic; color:var(--pdr-navy); }
+    .hero-h em { font-style:italic; color:var(--pdr-accent); }
     .hero-sub { font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:580px; margin:0; text-wrap:pretty; }
 
     /* ── Sections ── */
@@ -82,7 +82,7 @@
     .how-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:32px; }
     .how-grid--4 { grid-template-columns:repeat(4, 1fr); }
     .how-step { padding:32px 28px 36px; border-top:1px solid var(--pdr-ink); position:relative; transition:transform 280ms cubic-bezier(.2,.7,.2,1), border-color 280ms; }
-    .how-step:hover { transform:translateY(-3px); border-color:rgba(0,0,0,.18); }
+    .how-step:hover { transform:translateY(-3px); border-color:rgba(255,255,255,0.22); }
     .how-n { font-family:var(--mono); font-size:12px; color:var(--pdr-ink-3); letter-spacing:.04em; margin-bottom:16px; transition:color 280ms; }
     .how-step:hover .how-n { color:var(--pdr-accent); }
     .how-t { font-family:var(--serif); font-weight:400; font-size:26px; margin:0 0 12px; letter-spacing:-.015em; }
@@ -108,7 +108,7 @@
     .accordion { border-top:1px solid var(--pdr-line-2); }
     .accordion-item { border-bottom:1px solid var(--pdr-line-2); }
     .accordion-btn { width:100%; background:none; border:0; padding:20px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; text-align:left; font-size:16px; font-weight:500; color:var(--pdr-ink); cursor:pointer; }
-    .accordion-btn:hover { color:var(--pdr-navy); }
+    .accordion-btn:hover { color:var(--pdr-accent); }
     .accordion-icon { width:20px; height:20px; border-radius:50%; border:1.5px solid var(--pdr-line-2); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:background .15s, border-color .15s, transform .25s; }
     .accordion-icon svg { transition:transform .25s; }
     .accordion-btn[aria-expanded="true"] .accordion-icon { background:var(--pdr-navy); border-color:var(--pdr-navy); }
@@ -193,7 +193,7 @@
 <nav class="nav">
   <a href="/" class="nav-logo" aria-label="Power Done Right home">
     <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+      <rect x="1" y="1" width="30" height="30" rx="7" fill="#0a2240"/>
       <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
     </svg>
     Power<em>Done</em>Right
@@ -220,41 +220,41 @@
 <div class="page-illus">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160" aria-hidden="true">
     <!-- Cityscape silhouette -->
-    <rect x="20" y="115" width="22" height="45" fill="#102341" opacity="0.07"/>
-    <rect x="46" y="103" width="16" height="57" fill="#102341" opacity="0.07"/>
-    <rect x="66" y="120" width="28" height="40" fill="#102341" opacity="0.07"/>
-    <rect x="542" y="108" width="20" height="52" fill="#102341" opacity="0.07"/>
-    <rect x="566" y="95" width="24" height="65" fill="#102341" opacity="0.07"/>
-    <rect x="594" y="116" width="18" height="44" fill="#102341" opacity="0.07"/>
-    <rect x="616" y="122" width="14" height="38" fill="#102341" opacity="0.07"/>
+    <rect x="20" y="115" width="22" height="45" fill="#c8d3e3" opacity="0.07"/>
+    <rect x="46" y="103" width="16" height="57" fill="#c8d3e3" opacity="0.07"/>
+    <rect x="66" y="120" width="28" height="40" fill="#c8d3e3" opacity="0.07"/>
+    <rect x="542" y="108" width="20" height="52" fill="#c8d3e3" opacity="0.07"/>
+    <rect x="566" y="95" width="24" height="65" fill="#c8d3e3" opacity="0.07"/>
+    <rect x="594" y="116" width="18" height="44" fill="#c8d3e3" opacity="0.07"/>
+    <rect x="616" y="122" width="14" height="38" fill="#c8d3e3" opacity="0.07"/>
     <!-- Left tower -->
-    <line x1="190" y1="20" x2="168" y2="155" stroke="#102341" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
-    <line x1="190" y1="20" x2="212" y2="155" stroke="#102341" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
-    <line x1="174" y1="75" x2="206" y2="75" stroke="#102341" stroke-width="1.5" stroke-opacity="0.45"/>
-    <line x1="170" y1="105" x2="210" y2="105" stroke="#102341" stroke-width="1.5" stroke-opacity="0.45"/>
-    <line x1="174" y1="75" x2="190" y2="105" stroke="#102341" stroke-width="1" stroke-opacity="0.28"/>
-    <line x1="206" y1="75" x2="190" y2="105" stroke="#102341" stroke-width="1" stroke-opacity="0.28"/>
-    <line x1="148" y1="32" x2="232" y2="32" stroke="#102341" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
-    <line x1="156" y1="48" x2="224" y2="48" stroke="#102341" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="190" y1="20" x2="168" y2="155" stroke="#c8d3e3" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
+    <line x1="190" y1="20" x2="212" y2="155" stroke="#c8d3e3" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
+    <line x1="174" y1="75" x2="206" y2="75" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.45"/>
+    <line x1="170" y1="105" x2="210" y2="105" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.45"/>
+    <line x1="174" y1="75" x2="190" y2="105" stroke="#c8d3e3" stroke-width="1" stroke-opacity="0.28"/>
+    <line x1="206" y1="75" x2="190" y2="105" stroke="#c8d3e3" stroke-width="1" stroke-opacity="0.28"/>
+    <line x1="148" y1="32" x2="232" y2="32" stroke="#c8d3e3" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
+    <line x1="156" y1="48" x2="224" y2="48" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
     <circle cx="148" cy="32" r="3" fill="#E8B43A"/>
     <circle cx="232" cy="32" r="3" fill="#E8B43A"/>
     <circle cx="156" cy="48" r="3" fill="#E8B43A"/>
     <circle cx="224" cy="48" r="3" fill="#E8B43A"/>
-    <circle cx="190" cy="18" r="4" fill="#102341" opacity="0.55"/>
+    <circle cx="190" cy="18" r="4" fill="#c8d3e3" opacity="0.55"/>
     <!-- Right tower -->
-    <line x1="450" y1="20" x2="428" y2="155" stroke="#102341" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
-    <line x1="450" y1="20" x2="472" y2="155" stroke="#102341" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
-    <line x1="434" y1="75" x2="466" y2="75" stroke="#102341" stroke-width="1.5" stroke-opacity="0.45"/>
-    <line x1="430" y1="105" x2="470" y2="105" stroke="#102341" stroke-width="1.5" stroke-opacity="0.45"/>
-    <line x1="434" y1="75" x2="450" y2="105" stroke="#102341" stroke-width="1" stroke-opacity="0.28"/>
-    <line x1="466" y1="75" x2="450" y2="105" stroke="#102341" stroke-width="1" stroke-opacity="0.28"/>
-    <line x1="408" y1="32" x2="492" y2="32" stroke="#102341" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
-    <line x1="416" y1="48" x2="484" y2="48" stroke="#102341" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="450" y1="20" x2="428" y2="155" stroke="#c8d3e3" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
+    <line x1="450" y1="20" x2="472" y2="155" stroke="#c8d3e3" stroke-width="2.2" stroke-opacity="0.65" stroke-linecap="round"/>
+    <line x1="434" y1="75" x2="466" y2="75" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.45"/>
+    <line x1="430" y1="105" x2="470" y2="105" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.45"/>
+    <line x1="434" y1="75" x2="450" y2="105" stroke="#c8d3e3" stroke-width="1" stroke-opacity="0.28"/>
+    <line x1="466" y1="75" x2="450" y2="105" stroke="#c8d3e3" stroke-width="1" stroke-opacity="0.28"/>
+    <line x1="408" y1="32" x2="492" y2="32" stroke="#c8d3e3" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
+    <line x1="416" y1="48" x2="484" y2="48" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
     <circle cx="408" cy="32" r="3" fill="#E8B43A"/>
     <circle cx="492" cy="32" r="3" fill="#E8B43A"/>
     <circle cx="416" cy="48" r="3" fill="#E8B43A"/>
     <circle cx="484" cy="48" r="3" fill="#E8B43A"/>
-    <circle cx="450" cy="18" r="4" fill="#102341" opacity="0.55"/>
+    <circle cx="450" cy="18" r="4" fill="#c8d3e3" opacity="0.55"/>
     <!-- Power cables -->
     <path d="M148,32 Q320,92 408,32" fill="none" stroke="#E8B43A" stroke-width="1.8" stroke-opacity="0.8"/>
     <path d="M232,32 Q320,80 492,32" fill="none" stroke="#E8B43A" stroke-width="1.8" stroke-opacity="0.8"/>

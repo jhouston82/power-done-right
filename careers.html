@@ -22,9 +22,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --pdr-bg: #f7f5f0; --pdr-bg-elev: #fdfcf8; --pdr-ink: #0e1b2c; --pdr-ink-2: #2a3a52; --pdr-ink-3: #5a6b82;
-      --pdr-line: rgba(14,27,44,.10); --pdr-line-2: rgba(14,27,44,.18);
-      --pdr-navy: #102341; --pdr-navy-2: #1a3056; --pdr-accent: #E8B43A; --pdr-accent-ink: #5e3f00;
+      --pdr-bg: #05111f; --pdr-bg-elev: #0a2240; --pdr-ink: #f0ece3; --pdr-ink-2: rgba(240,236,227,0.70); --pdr-ink-3: rgba(240,236,227,0.42);
+      --pdr-line: rgba(255,255,255,0.07); --pdr-line-2: rgba(255,255,255,0.12);
+      --pdr-navy: #0a2240; --pdr-navy-2: #1a3056; --pdr-accent: #E8B43A; --pdr-accent-ink: #5e3f00;
       --serif: "Instrument Serif","Source Serif Pro","Times New Roman",serif;
       --sans: "Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
       --mono: "Geist Mono","JetBrains Mono",ui-monospace,monospace;
@@ -48,10 +48,10 @@
     .eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
     .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); box-shadow:0 0 0 3px color-mix(in oklch, var(--pdr-accent) 25%, transparent); flex-shrink:0; }
 
-    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg-elev); }
+    .page-hero { padding:80px 56px 72px; border-bottom:1px solid var(--pdr-line); background:radial-gradient(ellipse 130% 90% at 50% -10%, #0d2e55 0%, #05111f 65%); }
     .page-hero-inner { max-width:760px; margin:0 auto; }
     .hero-h { font-family:var(--serif); font-weight:400; font-size:clamp(48px, 6.2vw, 80px); line-height:1.04; letter-spacing:-.025em; margin:24px 0 28px; color:var(--pdr-ink); text-wrap:balance; }
-    .hero-h em { font-style:italic; color:var(--pdr-navy); }
+    .hero-h em { font-style:italic; color:var(--pdr-accent); }
     .hero-sub { font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:580px; margin:0; text-wrap:pretty; }
 
     .section-wrap { border-bottom:1px solid var(--pdr-line); }
@@ -73,13 +73,13 @@
     .role-bullets { list-style:none; margin:0 0 24px; padding:0; display:flex; flex-direction:column; gap:8px; }
     .role-bullets li { font-size:14px; line-height:1.45; color:var(--pdr-ink-2); padding-left:16px; position:relative; }
     .role-bullets li::before { content:"–"; position:absolute; left:0; color:var(--pdr-accent); font-weight:600; }
-    .role-apply { margin-top:auto; display:inline-flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--pdr-navy); padding:10px 0; border-bottom:1.5px solid var(--pdr-navy); transition:gap .15s; }
+    .role-apply { margin-top:auto; display:inline-flex; align-items:center; gap:8px; font-size:13.5px; font-weight:500; color:var(--pdr-accent); padding:10px 0; border-bottom:1.5px solid var(--pdr-accent); transition:gap .15s; }
     .role-apply:hover { gap:12px; }
 
     /* Work explainer */
     .how-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:24px; }
     .how-step { padding:28px 24px 32px; border-top:1px solid var(--pdr-ink); transition:transform 280ms cubic-bezier(.2,.7,.2,1), border-color 280ms; }
-    .how-step:hover { transform:translateY(-3px); border-color:rgba(0,0,0,.18); }
+    .how-step:hover { transform:translateY(-3px); border-color:rgba(255,255,255,0.22); }
     .how-n { font-family:var(--mono); font-size:12px; color:var(--pdr-ink-3); letter-spacing:.04em; margin-bottom:16px; transition:color 280ms; }
     .how-step:hover .how-n { color:var(--pdr-accent); }
     .how-t { font-family:var(--serif); font-weight:400; font-size:22px; margin:0 0 10px; letter-spacing:-.015em; }
@@ -137,7 +137,7 @@
 <nav class="nav">
   <a href="/" class="nav-logo" aria-label="Power Done Right home">
     <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <rect x="1" y="1" width="30" height="30" rx="7" fill="currentColor"/>
+      <rect x="1" y="1" width="30" height="30" rx="7" fill="#0a2240"/>
       <path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/>
     </svg>
     Power<em>Done</em>Right
@@ -163,29 +163,29 @@
 <div class="page-illus">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 140" width="640" height="140" aria-hidden="true">
     <!-- Connection lines -->
-    <line x1="320" y1="70" x2="200" y2="105" stroke="#102341" stroke-width="1.5" stroke-opacity="0.2"/>
-    <line x1="320" y1="70" x2="440" y2="105" stroke="#102341" stroke-width="1.5" stroke-opacity="0.2"/>
-    <line x1="200" y1="105" x2="440" y2="105" stroke="#102341" stroke-width="1.5" stroke-opacity="0.15" stroke-dasharray="5,4"/>
+    <line x1="320" y1="70" x2="200" y2="105" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.2"/>
+    <line x1="320" y1="70" x2="440" y2="105" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.2"/>
+    <line x1="200" y1="105" x2="440" y2="105" stroke="#c8d3e3" stroke-width="1.5" stroke-opacity="0.15" stroke-dasharray="5,4"/>
     <line x1="320" y1="70" x2="320" y2="30" stroke="#E8B43A" stroke-width="1.5" stroke-opacity="0.4"/>
     <!-- Central hub -->
     <circle cx="320" cy="70" r="10" fill="#E8B43A" opacity="0.25"/>
     <circle cx="320" cy="70" r="5" fill="#E8B43A" opacity="0.7"/>
     <!-- Top person (center) -->
-    <circle cx="320" cy="22" r="12" fill="none" stroke="#102341" stroke-width="2" stroke-opacity="0.5"/>
-    <path d="M296,52 Q320,40 344,52" fill="none" stroke="#102341" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+    <circle cx="320" cy="22" r="12" fill="none" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.5"/>
+    <path d="M296,52 Q320,40 344,52" fill="none" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
     <!-- Left person -->
-    <circle cx="200" cy="92" r="12" fill="none" stroke="#102341" stroke-width="2" stroke-opacity="0.5"/>
-    <path d="M176,122 Q200,110 224,122" fill="none" stroke="#102341" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+    <circle cx="200" cy="92" r="12" fill="none" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.5"/>
+    <path d="M176,122 Q200,110 224,122" fill="none" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
     <!-- Right person -->
-    <circle cx="440" cy="92" r="12" fill="none" stroke="#102341" stroke-width="2" stroke-opacity="0.5"/>
-    <path d="M416,122 Q440,110 464,122" fill="none" stroke="#102341" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
+    <circle cx="440" cy="92" r="12" fill="none" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.5"/>
+    <path d="M416,122 Q440,110 464,122" fill="none" stroke="#c8d3e3" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round"/>
     <!-- Outer faint dots suggesting wider network -->
-    <circle cx="140" cy="70" r="4" fill="#102341" opacity="0.12"/>
-    <circle cx="500" cy="70" r="4" fill="#102341" opacity="0.12"/>
-    <circle cx="160" cy="125" r="3" fill="#102341" opacity="0.1"/>
-    <circle cx="480" cy="125" r="3" fill="#102341" opacity="0.1"/>
-    <line x1="200" y1="105" x2="140" y2="70" stroke="#102341" stroke-width="1" stroke-opacity="0.1"/>
-    <line x1="440" y1="105" x2="500" y2="70" stroke="#102341" stroke-width="1" stroke-opacity="0.1"/>
+    <circle cx="140" cy="70" r="4" fill="#c8d3e3" opacity="0.12"/>
+    <circle cx="500" cy="70" r="4" fill="#c8d3e3" opacity="0.12"/>
+    <circle cx="160" cy="125" r="3" fill="#c8d3e3" opacity="0.1"/>
+    <circle cx="480" cy="125" r="3" fill="#c8d3e3" opacity="0.1"/>
+    <line x1="200" y1="105" x2="140" y2="70" stroke="#c8d3e3" stroke-width="1" stroke-opacity="0.1"/>
+    <line x1="440" y1="105" x2="500" y2="70" stroke="#c8d3e3" stroke-width="1" stroke-opacity="0.1"/>
   </svg>
 </div>
 
