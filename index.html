@@ -1,1341 +1,1561 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Power Done Right — Lower Your Commercial Energy Bill</title>
-  <meta name="description" content="Power Done Right puts your commercial electricity account in front of 90+ vetted suppliers and lets them compete in real time. The lowest bid wins — and your business pays 12–28% less from day one." />
-  <link rel="canonical" href="https://www.powerdoneright.com" />
-  <meta property="og:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
-  <meta property="og:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
-  <meta property="og:url" content="https://www.powerdoneright.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
-  <meta name="twitter:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
-  <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Power Done Right — Commercial electricity, done right.</title>
+<meta name="description" content="Power Done Right puts your commercial electricity account in front of 90+ vetted suppliers and lets them compete in real time. The lowest bid wins — and your business pays 12–28% less from day one." />
+<link rel="canonical" href="https://www.powerdoneright.com" />
+<meta property="og:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
+<meta property="og:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
+<meta property="og:url" content="https://www.powerdoneright.com" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
+<meta name="twitter:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
+<meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KG0X9SXT4Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-KG0X9SXT4Q');
-  </script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KG0X9SXT4Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KG0X9SXT4Q');
+</script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "name": "Power Done Right",
+  "url": "https://www.powerdoneright.com",
+  "telephone": "+18778173744",
+  "description": "Commercial energy procurement specialist helping businesses in 17 US deregulated markets secure lower electricity and natural gas rates through competitive supplier bidding. Average savings: 12–28%.",
+  "serviceArea": {"@type": "Country", "name": "United States"},
+  "knowsAbout": ["Commercial electricity procurement", "Natural gas procurement", "Energy cost reduction", "Deregulated energy markets", "Commercial energy contracts", "Energy broker services"],
+  "sameAs": ["https://www.powerdoneright.com"]
+}
+</script>
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            pdr: {
-              ink:      '#05111f',
-              navy:     '#0a2240',
-              teal:     '#0a7a5e',
-              'teal-d': '#086347',
-              gold:     '#d4920c',
-              'gold-l': '#f5c842',
-              cream:    '#f5f2eb',
-              paper:    '#fdfcfa',
-            }
-          },
-          fontFamily: {
-            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
-            sans:  ['"Geist"', '"Inter"', '-apple-system', 'sans-serif'],
-            mono:  ['"Geist Mono"', '"JetBrains Mono"', 'monospace'],
-          }
-        }
-      }
-    }
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
-
-  <style>
-    [x-cloak] { display: none !important; }
-    html { scroll-behavior: smooth; }
-    body { -webkit-font-smoothing: antialiased; font-feature-settings: "ss01","cv11"; }
-
-    .hero-bg {
-      background: radial-gradient(ellipse 130% 90% at 70% -5%, #0d2e55 0%, #05111f 60%);
-    }
-    .hero-grid {
-      background-image:
-        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-      background-size: 56px 56px;
-    }
-    .teal-cta-bg { background: linear-gradient(135deg, #064e3b 0%, #0a7a5e 100%); }
-    .gold-glow { box-shadow: 0 0 0 1px rgba(212,146,12,0.3), 0 4px 24px rgba(212,146,12,0.08); }
-
-    @keyframes bidIn {
-      from { opacity: 0; transform: translateX(-10px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-    .bid-row { animation: bidIn 0.35s ease; }
-
-    @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-    .live-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
-
-    .lf-bar { height: 2px; flex: 1; border-radius: 999px; background: rgba(255,255,255,0.1); transition: background 0.3s; }
-    .lf-bar.active { background: #d4920c; }
-
-    .dark-input {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: white;
-      border-radius: 8px;
-      padding: 12px 16px;
-      width: 100%;
-      font-size: 16px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .dark-input::placeholder { color: rgba(255,255,255,0.3); }
-    .dark-input:focus { outline: none; border-color: #0a7a5e; box-shadow: 0 0 0 3px rgba(10,122,94,0.2); }
-
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1.visible { transition-delay: 0.1s; }
-    .reveal-delay-2.visible { transition-delay: 0.2s; }
-
-    /* ── Custom pdr color utilities (CDN fallback) ── */
-    .bg-pdr-ink    { background-color: #05111f; }
-    .bg-pdr-navy   { background-color: #0a2240; }
-    .bg-pdr-teal   { background-color: #0a7a5e; }
-    .bg-pdr-teal-d { background-color: #086347; }
-    .bg-pdr-gold   { background-color: #d4920c; }
-    .bg-pdr-cream  { background-color: #f5f2eb; }
-    .bg-pdr-paper  { background-color: #fdfcfa; }
-
-    .text-pdr-ink    { color: #05111f; }
-    .text-pdr-navy   { color: #0a2240; }
-    .text-pdr-teal   { color: #0a7a5e; }
-    .text-pdr-gold   { color: #d4920c; }
-    .text-pdr-gold-l { color: #f5c842; }
-
-    .border-pdr-teal { border-color: #0a7a5e; }
-    .border-pdr-gold { border-color: #d4920c; }
-    .border-pdr-ink  { border-color: #05111f; }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    "name": "Power Done Right",
-    "url": "https://www.powerdoneright.com",
-    "telephone": "+18778173744",
-    "description": "Commercial energy procurement specialist helping businesses in 17 US deregulated markets secure lower electricity and natural gas rates through competitive supplier bidding. Average savings: 12–28%.",
-    "serviceArea": {"@type": "Country", "name": "United States"},
-    "knowsAbout": ["Commercial electricity procurement", "Natural gas procurement", "Energy cost reduction", "Deregulated energy markets", "Commercial energy contracts", "Energy broker services"],
-    "sameAs": ["https://www.powerdoneright.com"]
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:        #0b1220;
+    --navy-2:      #131c2e;
+    --ink:         #0b1220;
+    --paper:       #fbfaf7;
+    --paper-2:     #f1ede4;
+    --line:        #e3dfd5;
+    --line-2:      #1c2740;
+    --muted:       #5b6373;
+    --muted-on:    #9aa3b2;
+    --amber:       #f5b400;
+    --amber-2:     #ffcb45;
+    --green:       #1e8a5f;
+    --green-soft:  #e6f3ec;
+    --red:         #c84a31;
+    --r:           14px;
+    --ui:   'Manrope', system-ui, -apple-system, sans-serif;
+    --ed:   'Instrument Serif', Georgia, serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
   }
-  </script>
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0; background: var(--paper); color: var(--ink);
+    font-family: var(--ui); font-size: 16px; line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a{ color: inherit; text-decoration: none; }
+  button{ font: inherit; cursor: pointer; border: none; background: none; color: inherit;}
+  img{ display:block; max-width: 100%; }
+
+  /* ---------- Layout ---------- */
+  .wrap{ width:100%; max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
+  .section{ padding: clamp(60px, 8vw, 110px) 0; }
+  .section.tight{ padding: clamp(40px, 5vw, 70px) 0; }
+
+  .eyebrow{
+    font-family: var(--mono); font-size: 11px; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  }
+  .eyebrow.on-dark{ color: var(--amber); }
+
+  h1, h2, h3{ margin: 0; font-weight: 700; letter-spacing: -.02em; line-height: 1.05; }
+  h1{ font-size: clamp(40px, 6vw, 76px); }
+  h2{ font-size: clamp(30px, 4.2vw, 52px); letter-spacing: -.025em; }
+  h3{ font-size: clamp(20px, 2vw, 24px); letter-spacing: -.015em; }
+  .ed{ font-family: var(--ed); font-weight: 400; letter-spacing: -.01em; font-style: italic; }
+  .num{ font-family: var(--ed); font-weight: 400; font-style: normal; letter-spacing: -.02em; }
+
+  p{ margin: 0; color: var(--muted); }
+  .lede{ font-size: clamp(17px, 1.4vw, 19px); color: #2a3042; max-width: 60ch; }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap: 10px;
+    padding: 12px 18px; border-radius: 999px;
+    font-weight: 600; font-size: 15px; line-height: 1;
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    white-space: nowrap;
+  }
+  .btn .arrow{ transition: transform .2s ease; }
+  .btn:hover .arrow{ transform: translateX(3px); }
+  .btn-primary{ background: var(--amber); color: var(--navy); box-shadow: 0 6px 0 -2px rgba(245,180,0,.45); }
+  .btn-primary:hover{ background: var(--amber-2); }
+  .btn-dark{ background: var(--navy); color: #fff; }
+  .btn-dark:hover{ background: #1a253b; }
+  .btn-ghost{ background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .btn-ghost.on-dark{ color: #fff; border-color: rgba(255,255,255,.18); }
+  .btn-ghost:hover{ background: var(--paper-2); }
+  .btn-ghost.on-dark:hover{ background: rgba(255,255,255,.06); }
+  .btn-sm{ padding: 9px 14px; font-size: 14px; }
+
+  /* ---------- Header ---------- */
+  .topnav{
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(251,250,247,.85);
+    backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topnav .row{
+    display:flex; align-items:center; gap: 24px; height: 68px;
+  }
+  .brand{ display:inline-flex; align-items:center; gap: 10px; font-weight: 800; letter-spacing: -.01em; white-space: nowrap; }
+  .brand .mark{
+    width: 28px; height: 28px; border-radius: 8px; background: var(--navy);
+    display:inline-flex; align-items:center; justify-content:center; color: var(--amber);
+  }
+  .brand .mark svg{ width: 14px; height: 14px; }
+  .nav-links{ display:flex; gap: 22px; margin-left: 8px; }
+  .nav-links a{ font-size: 14px; color: var(--muted); font-weight: 500; }
+  .nav-links a:hover{ color: var(--ink); }
+  .topnav .grow{ flex:1; }
+  .topnav .actions{ display:flex; gap: 8px; align-items:center; }
+  .pill-state{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family: var(--mono); font-size: 11px; font-weight: 700;
+    color: var(--green); background: var(--green-soft);
+    padding: 5px 9px; border-radius: 999px; letter-spacing: .04em;
+    white-space: nowrap;
+  }
+  @media (max-width: 1100px){ .pill-state{ display: none; } }
+  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); animation: pulse 1.6s infinite; }
+  @keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.35 } }
+
+  /* Mobile nav */
+  .nav-ham{ display:none; padding: 8px; border-radius: 8px; color: var(--muted); }
+  .nav-ham:hover{ background: var(--paper-2); }
+  @media (max-width: 880px){
+    .nav-links{ display:none; }
+    .topnav .actions .btn-ghost{ display:none; }
+    .nav-ham{ display:flex; align-items:center; justify-content:center; }
+  }
+  .mob-menu{
+    display:none; flex-direction:column;
+    background: var(--paper); border-bottom: 1px solid var(--line);
+    padding: 12px clamp(20px, 4vw, 40px) 16px;
+  }
+  .mob-menu.open{ display:flex; }
+  .mob-menu a{ padding: 12px 0; font-size: 15px; color: var(--muted); border-bottom: 1px solid var(--line); font-weight: 500; }
+  .mob-menu a:last-child{ border-bottom: 0; }
+  .mob-menu a:hover{ color: var(--ink); }
+  .mob-menu .mob-cta{ margin-top: 12px; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background: var(--paper);
+    position: relative;
+    padding-top: clamp(50px, 7vw, 90px);
+    padding-bottom: clamp(40px, 5vw, 60px);
+    overflow: hidden;
+  }
+  .hero-grid{
+    display: grid; gap: clamp(28px, 4vw, 56px);
+    grid-template-columns: 1.1fr 1fr;
+    align-items: end;
+  }
+  @media (max-width: 980px){ .hero-grid{ grid-template-columns: 1fr; } }
+
+  .hero h1 .stroke{ color: var(--ink); }
+  .hero h1 .em{
+    background: linear-gradient(180deg, transparent 62%, rgba(245,180,0,.55) 62%);
+    padding: 0 4px; border-radius: 2px;
+  }
+  .hero h1 .ed{ color: #2a3042; }
+
+  .hero-sub{ margin-top: 24px; }
+  .hero-actions{ display:flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .hero-trust{
+    display:flex; gap: 18px; flex-wrap: wrap; margin-top: 26px;
+    color: var(--muted); font-size: 13px;
+  }
+  .hero-trust .it{ display:inline-flex; align-items:center; gap: 6px; }
+  .hero-trust svg{ width: 14px; height: 14px; color: var(--green); }
+
+  /* ----- Drop card ----- */
+  .drop-card{
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 30px 40px -28px rgba(11,18,32,.18);
+  }
+  .drop-card .head{
+    display:flex; align-items:center; justify-content:space-between;
+    font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .drop-zone{
+    margin-top: 12px;
+    border: 1.5px dashed #c8c0a8;
+    border-radius: 14px; padding: 22px;
+    background: var(--paper-2);
+    text-align: center;
+    transition: border-color .2s ease, background .2s ease;
+    cursor: pointer;
+    display: block;
+  }
+  .drop-zone:hover, .drop-zone.drag{
+    border-color: var(--amber); background: #fff8e5;
+  }
+  .drop-zone .icon{
+    width: 56px; height: 56px; border-radius: 16px;
+    background: var(--navy); color: var(--amber);
+    display:inline-flex; align-items:center; justify-content:center; margin-bottom: 10px;
+  }
+  .drop-zone .icon svg{ width: 26px; height: 26px; }
+  .drop-zone .ttl{ font-weight: 700; font-size: 17px; color: var(--ink); }
+  .drop-zone .meta{ font-size: 13px; color: var(--muted); margin-top: 4px; font-family: var(--mono); }
+  .drop-or{
+    display:flex; align-items:center; gap: 10px; margin: 14px 4px 12px;
+    color: var(--muted); font-size: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .12em;
+  }
+  .drop-or::before, .drop-or::after{ content:""; flex:1; height: 1px; background: var(--line); }
+
+  .read-out{
+    display: grid; gap: 8px;
+    background: var(--navy); color: #fff;
+    border-radius: 14px; padding: 16px 16px 18px;
+  }
+  .read-out .row{
+    display:flex; justify-content:space-between; align-items: baseline;
+    padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+    font-size: 14px;
+  }
+  .read-out .row:last-child{ border-bottom: 0; }
+  .read-out .lbl{ color: var(--muted-on); font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;}
+  .read-out .val{ font-family: var(--ed); font-size: clamp(17px, 2vw, 22px); white-space: nowrap; }
+  .read-out .val.green{ color: #74e7b0; }
+
+  /* ---------- Lead form section ---------- */
+  .lead-section{
+    background: var(--paper-2);
+    padding: clamp(50px, 7vw, 80px) 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .form-card{
+    max-width: 680px; margin: 0 auto;
+    background: #fff; border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: clamp(28px, 4vw, 48px);
+    box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 20px 40px -20px rgba(11,18,32,.12);
+  }
+  .form-card .head{
+    display:flex; align-items:center; gap: 10px; margin-bottom: 20px;
+  }
+  .form-card .head .dot{
+    width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 1.6s infinite; flex-shrink: 0;
+  }
+  .step-label{ font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
+  .step-bars{ display:flex; gap: 4px; margin-top: 10px; margin-bottom: 24px; }
+  .lf-bar{ height: 3px; flex: 1; border-radius: 999px; background: var(--line); transition: background 0.3s; }
+  .lf-bar.active{ background: var(--amber); }
+  .form-label{ display:block; font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+  .form-input{
+    width: 100%; font-size: 16px; font-family: var(--ui);
+    padding: 12px 16px;
+    border: 1px solid var(--line); border-radius: 10px;
+    background: var(--paper); color: var(--ink);
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .form-input:focus{
+    outline: none; border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(11,18,32,.08);
+  }
+  .form-input::placeholder{ color: var(--muted-on); }
+  .bill-input-wrap{
+    display:flex; align-items:center;
+    border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+    background: var(--paper);
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .bill-input-wrap:focus-within{
+    border-color: var(--navy); box-shadow: 0 0 0 3px rgba(11,18,32,.08);
+  }
+  .bill-input-wrap .pfx, .bill-input-wrap .sfx{
+    padding: 12px 14px; color: var(--muted-on);
+    font-size: 15px; background: var(--paper-2); white-space: nowrap;
+  }
+  .bill-input-wrap .pfx{ border-right: 1px solid var(--line); }
+  .bill-input-wrap .sfx{ border-left: 1px solid var(--line); }
+  .bill-input-wrap input{
+    flex:1; padding: 12px 14px; font-size: 16px; font-family: var(--ui);
+    background: transparent; border: none; outline: none; color: var(--ink); min-width: 0;
+  }
+  .bill-input-wrap input::placeholder{ color: var(--muted-on); }
+  .savings-preview{
+    display: none; margin-top: 14px;
+    background: var(--green-soft); border: 1px solid rgba(30,138,95,.25);
+    border-radius: 12px; padding: 14px 16px;
+  }
+  .savings-preview .lbl{ font-family: var(--mono); font-size: 11px; color: var(--green); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 4px; }
+  .savings-preview .amt{ font-family: var(--ed); font-size: 26px; color: var(--ink); }
+  .savings-preview .note{ font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .form-hint{ font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .form-row{ display:flex; flex-direction:column; gap: 16px; }
+  .form-actions{ display:flex; gap: 10px; margin-top: 20px; }
+  .form-actions .btn-back{
+    flex-shrink:0; padding: 12px 18px; border-radius: 999px;
+    font-weight: 600; font-size: 15px; color: var(--muted);
+    border: 1px solid var(--line); background: transparent;
+    transition: background .15s ease;
+  }
+  .form-actions .btn-back:hover{ background: var(--paper-2); }
+  .form-actions .btn-submit{
+    flex:1; padding: 14px 20px; border-radius: 999px;
+    font-weight: 700; font-size: 15px;
+    background: var(--amber); color: var(--navy);
+    box-shadow: 0 6px 0 -2px rgba(245,180,0,.4);
+    transition: background .15s ease;
+    display:flex; align-items:center; justify-content:center; gap: 8px;
+  }
+  .form-actions .btn-submit:hover{ background: var(--amber-2); }
+  .form-actions .btn-submit:disabled{ opacity: .6; cursor: not-allowed; }
+  .form-privacy{ font-size: 11px; color: var(--muted-on); text-align:center; margin-top: 14px; }
+  .form-error{
+    display:none; margin-top: 14px;
+    background: rgba(200,74,49,.08); border: 1px solid rgba(200,74,49,.3);
+    border-radius: 10px; padding: 12px 16px;
+    font-size: 14px; color: var(--red);
+  }
+  /* Success state */
+  .lead-success{
+    display:none; text-align:center; padding: 8px 0;
+  }
+  .lead-success .check{
+    width: 64px; height: 64px; border-radius: 50%;
+    background: var(--green-soft); border: 1px solid rgba(30,138,95,.35);
+    display:inline-flex; align-items:center; justify-content:center; margin-bottom: 16px;
+  }
+  .lead-success h3{ font-size: 26px; margin-bottom: 8px; }
+  .lead-success p{ max-width: 40ch; margin: 0 auto; }
+  .success-detail{
+    margin-top: 18px; background: var(--paper-2);
+    border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px;
+    text-align: left;
+  }
+  .success-detail .lbl{ font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 4px; }
+  .success-detail .val{ font-family: var(--ed); font-size: 22px; }
+
+  /* ---------- Logo strip ---------- */
+  .logos{
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+  }
+  .logos-row{
+    display: grid; grid-template-columns: repeat(6, 1fr);
+    align-items: center; gap: 18px;
+    padding: 22px 0; opacity: .8;
+  }
+  @media (max-width: 880px){ .logos-row{ grid-template-columns: repeat(3, 1fr); } }
+  .supplier-logo{
+    text-align: center; font-weight: 700; letter-spacing: -.01em;
+    color: #44495a; font-size: 16px;
+    border-left: 1px solid var(--line); padding: 6px 8px;
+  }
+  .supplier-logo:first-child{ border-left: 0; }
+  .supplier-logo small{ display:block; font-weight: 500; font-size: 10px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-top: 2px; }
+
+  /* ---------- Dashboard section ---------- */
+  .dash{
+    background: var(--navy);
+    color: #fff;
+    border-radius: 28px;
+    margin: 0 auto;
+    padding: clamp(36px, 5vw, 64px);
+    position: relative; overflow: hidden;
+  }
+  .dash::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(600px 280px at 90% -10%, rgba(245,180,0,.18), transparent 60%),
+      radial-gradient(500px 240px at -10% 110%, rgba(30,138,95,.18), transparent 60%);
+    pointer-events: none;
+  }
+  .dash .head{
+    display:flex; flex-wrap: wrap; gap: 22px; align-items: end; justify-content: space-between;
+    position: relative; z-index: 1;
+  }
+  .dash h2{ color: #fff; max-width: 22ch; }
+  .dash .lede{ color: #c4ccdb; max-width: 50ch; }
+
+  .dash .grid{
+    margin-top: clamp(28px, 3vw, 40px);
+    display: grid; gap: 14px;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative; z-index: 1;
+  }
+  .card{
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    padding: 18px;
+  }
+  .card .lbl{
+    font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--muted-on);
+  }
+  .kpi{ font-family: var(--ed); font-size: clamp(38px, 4vw, 56px); line-height: 1; margin-top: 6px; }
+  .kpi small{ font-size: 18px; color: var(--muted-on); margin-left: 4px; }
+  .kpi.green{ color: #74e7b0; }
+  .kpi.amber{ color: var(--amber); }
+
+  .card-portfolio{ grid-column: span 5; }
+  .card-savings{ grid-column: span 4; background: var(--green); border-color: transparent; }
+  .card-savings .kpi{ color: #fff; }
+  .card-savings .lbl{ color: rgba(255,255,255,.78); }
+  .card-renewals{ grid-column: span 3; }
+
+  .card-chart{ grid-column: span 8; }
+  .card-side{ grid-column: span 4; display:flex; flex-direction: column; gap: 14px; }
+  .card-side .item{
+    display:flex; justify-content: space-between; align-items: center;
+    padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+    font-size: 14px;
+  }
+  .card-side .item:last-child{ border-bottom: 0; }
+  .card-side .item .name{ color: #e7eaf2; }
+  .card-side .item .v{ color: var(--amber); font-family: var(--mono); font-size: 13px; font-weight: 700;}
+
+  @media (max-width: 980px){
+    .card-portfolio, .card-savings, .card-renewals, .card-chart, .card-side{ grid-column: span 12; }
+  }
+
+  /* SVG chart */
+  .chart{ width: 100%; height: 220px; }
+  .chart .grid-l{ stroke: rgba(255,255,255,.08); stroke-width: 1; }
+  .chart .axis{ fill: var(--muted-on); font-family: var(--mono); font-size: 10px; letter-spacing: .1em; }
+  .chart .bar-bg{ fill: rgba(255,255,255,.06); }
+  .chart .bar-cur{ fill: rgba(255,255,255,.45); }
+  .chart .bar-pdr{ fill: var(--amber); }
+  .chart .bar-saved{ fill: var(--green); }
+
+  .legend{ display:flex; gap: 18px; margin-top: 14px; font-size: 12px; color: var(--muted-on); flex-wrap: wrap; }
+  .legend .sw{ display:inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: -1px; margin-right: 6px;}
+
+  /* ---------- How it works ---------- */
+  .steps{
+    display:grid; gap: 18px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+  }
+  @media (max-width: 980px){ .steps{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px){ .steps{ grid-template-columns: 1fr; } }
+  .step{
+    background: #fff; border: 1px solid var(--line); border-radius: 20px;
+    padding: 22px;
+    position: relative;
+  }
+  .step .n{
+    font-family: var(--ed); font-size: 38px; color: var(--amber);
+    line-height: 1; display: block; margin-bottom: 10px;
+  }
+  .step h3{ margin-bottom: 6px; }
+  .step p{ font-size: 14px; }
+
+  /* ---------- Industries ---------- */
+  .industries{
+    display:grid; gap: 18px; grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+  }
+  @media (max-width: 980px){ .industries{ grid-template-columns: 1fr; } }
+  .industry-card{
+    background: var(--paper-2); border-radius: 24px; padding: clamp(28px, 3vw, 40px);
+    display: flex; flex-direction: column; gap: 14px;
+    position: relative; overflow: hidden;
+  }
+  .industry-card.dark{ background: var(--navy-2); color: #fff; }
+  .industry-card.dark p{ color: #c4ccdb; }
+  .industry-card .tag{
+    align-self: flex-start;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    background: rgba(11,18,32,.06); color: var(--ink); padding: 6px 10px; border-radius: 999px;
+  }
+  .industry-card.dark .tag{ background: rgba(255,255,255,.08); color: #fff; }
+  .industry-card h3{ font-size: 28px; max-width: 22ch; }
+  .industry-card .ststats{ display:flex; gap: 24px; flex-wrap: wrap; margin-top: auto; }
+  .industry-card .ststats .k{ font-family: var(--ed); font-size: 30px; line-height: 1; }
+  .industry-card .ststats .l{ font-size: 12px; color: var(--muted); font-family: var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+  .industry-card.dark .ststats .l{ color: var(--muted-on); }
+
+  .photo-slot{
+    width: 100%; aspect-ratio: 5/4; border-radius: 18px; overflow: hidden;
+    background: linear-gradient(135deg, var(--paper-2) 0%, #e4ddd2 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ---------- US map ---------- */
+  .map-section{
+    background: var(--paper-2);
+    border-radius: 28px; padding: clamp(36px, 5vw, 64px);
+  }
+  .map-grid{ display: grid; gap: 28px; grid-template-columns: 1fr 1.3fr; align-items: center;}
+  @media (max-width: 980px){ .map-grid{ grid-template-columns: 1fr; } }
+  .us-map{ width: 100%; height: auto; }
+  .us-map .state{ fill: #e7e1d2; stroke: #c8c0a8; stroke-width: .5; transition: fill .2s ease; }
+  .us-map .state.elec{ fill: #ffd766; }
+  .us-map .state.both{ fill: var(--amber); }
+  .us-map .state:hover{ filter: brightness(.95); }
+  .us-map .label{ fill: var(--ink); font-family: var(--mono); font-size: 9px; font-weight: 700; pointer-events: none; }
+
+  /* ---------- Calculator preview ---------- */
+  .calc-preview{
+    background: #fff; border: 1px solid var(--line); border-radius: 24px;
+    padding: clamp(28px, 3vw, 40px);
+    display:grid; gap: 28px; grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 880px){ .calc-preview{ grid-template-columns: 1fr; } }
+  .calc-preview .right{
+    background: var(--green); color: #fff; border-radius: 18px; padding: 24px;
+    display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
+  }
+  .calc-preview .right .big{ font-family: var(--ed); font-size: clamp(48px, 7vw, 84px); line-height: .95; }
+  .slider-mock{ display:flex; flex-direction: column; gap: 14px; }
+  .slider-row{
+    display:flex; align-items: center; gap: 14px;
+  }
+  .slider-row .label{ width: 130px; font-size: 13px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em; }
+  .slider-row .val{ width: 80px; text-align: right; font-family: var(--ed); font-size: 20px; }
+  .slider-row .track{
+    flex: 1; height: 6px; background: var(--paper-2); border-radius: 3px; position: relative;
+  }
+  .slider-row .fill{ position:absolute; left:0; top:0; bottom: 0; background: var(--amber); border-radius: 3px; }
+  .slider-row .knob{
+    position: absolute; top: 50%; width: 20px; height: 20px; border-radius: 50%;
+    background: #fff; border: 2px solid var(--navy); transform: translate(-50%, -50%);
+    cursor: ew-resize;
+  }
+
+  /* ---------- Testimonial ---------- */
+  .quote-section{
+    background: var(--navy); color:#fff; border-radius: 28px;
+    padding: clamp(36px, 5vw, 64px);
+    display:grid; gap: 36px; grid-template-columns: 1.2fr 1fr; align-items: center;
+  }
+  @media (max-width: 980px){ .quote-section{ grid-template-columns: 1fr; } }
+  .quote-section blockquote{
+    margin: 0; font-family: var(--ed); font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.2; color: #fff;
+  }
+  .quote-section .source{ margin-top: 22px; display:flex; align-items:center; gap: 12px; color: var(--muted-on); font-size: 14px;}
+  .quote-section .source .av{
+    width: 44px; height: 44px; border-radius: 50%; background: var(--paper-2); flex: 0 0 44px;
+    overflow: hidden;
+  }
+  .quote-section .stat-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .quote-section .stat-grid .stat{
+    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px; padding: 18px;
+  }
+  .quote-section .stat .k{ font-family: var(--ed); font-size: 38px; line-height: 1; color: var(--amber); }
+  .quote-section .stat .l{ font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-on); margin-top: 6px;}
+
+  /* ---------- FAQ ---------- */
+  .faq{ display: grid; gap: 12px; max-width: 880px; margin: 32px auto 0; }
+  .faq details{
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 22px; transition: border-color .2s ease;
+  }
+  .faq details[open]{ border-color: var(--ink); }
+  .faq summary{
+    cursor: pointer; font-weight: 600; font-size: 17px;
+    list-style: none; display:flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .faq summary::-webkit-details-marker{ display: none; }
+  .faq summary::after{
+    content: "+"; font-family: var(--ed); font-size: 28px; color: var(--amber); line-height: 1;
+  }
+  .faq details[open] summary::after{ content: "–"; }
+  .faq p{ margin-top: 10px; color: var(--muted); }
+
+  /* ---------- Final CTA ---------- */
+  .final-cta{
+    background: var(--amber);
+    border-radius: 28px;
+    padding: clamp(40px, 6vw, 80px);
+    display: grid; gap: 28px; grid-template-columns: 1.4fr 1fr; align-items: center;
+    color: var(--ink);
+  }
+  @media (max-width: 980px){ .final-cta{ grid-template-columns: 1fr; } }
+  .final-cta h2{ max-width: 16ch; }
+  .final-cta .actions{ display:flex; gap: 12px; flex-wrap: wrap; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background: var(--navy); color: var(--muted-on);
+    padding: 60px 0 30px; font-size: 14px; margin-top: 24px;
+  }
+  footer h4{ color: #fff; font-size: 13px; font-family: var(--mono); letter-spacing: .12em; text-transform: uppercase; margin: 0 0 14px; font-weight: 700; }
+  footer ul{ list-style: none; padding: 0; margin: 0; display:flex; flex-direction: column; gap: 8px;}
+  footer a:hover{ color: #fff; }
+  .foot-grid{ display:grid; gap: 28px; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; }
+  @media (max-width: 880px){ .foot-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px){ .foot-grid{ grid-template-columns: 1fr; } }
+  .foot-bottom{ border-top: 1px solid rgba(255,255,255,.08); margin-top: 50px; padding-top: 22px; display:flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 12px; }
+
+  /* utility */
+  .center-text{ text-align:center; }
+  .max-72{ max-width: 72ch; margin: 0 auto; }
+
+  /* dot grid bg accent */
+  .dotbg{
+    background-image: radial-gradient(circle at 1px 1px, rgba(11,18,32,.1) 1px, transparent 1.4px);
+    background-size: 22px 22px;
+  }
+</style>
 </head>
-<body class="font-sans bg-pdr-ink text-white">
+<body>
 
-  <!-- ── NAV ── -->
-  <nav x-data="{ scrolled: false, open: false }"
-       @scroll.window="scrolled = (window.scrollY > 60)"
-       :class="scrolled ? 'bg-pdr-ink/95 backdrop-blur-md shadow-xl shadow-black/30' : 'bg-transparent'"
-       class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 flex items-center justify-between h-16">
-
-      <a href="#top" class="flex items-center gap-2.5 font-serif text-[20px] text-white leading-none">
-        <svg viewBox="0 0 28 28" width="26" height="26" fill="none" aria-hidden="true">
-          <rect x="1" y="1" width="26" height="26" rx="6" fill="#0a2240"/>
-          <path d="M15 4.5 L8 15.5 H13 L12 23.5 L20.5 12 H15.5 L17 4.5 Z" fill="#0a7a5e"/>
-        </svg>
-        Power Done Right
-      </a>
-
-      <div class="hidden lg:flex items-center gap-7 text-sm text-white/60">
-        <a href="#how"          class="hover:text-white transition-colors">How it works</a>
-        <a href="#suppliers"    class="hover:text-white transition-colors">Suppliers</a>
-        <a href="#calc"         class="hover:text-white transition-colors">Calculator</a>
-        <a href="#testimonials" class="hover:text-white transition-colors">Success Stories</a>
-        <a href="faq"           class="hover:text-white transition-colors">FAQ</a>
-      </div>
-
-      <div class="hidden lg:flex items-center gap-5">
-        <a href="tel:+18778173744" class="flex items-center gap-1.5 text-sm text-white/55 hover:text-white transition-colors">
-          <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 2.5A.5.5 0 012.5 2H5l1 3-1.75 1.25C5.33 8.9 7.1 10.67 9 11.75L10.25 10l3 1v2.5a.5.5 0 01-.5.5C5.5 14 2 10.5 2 6V2.5z"/></svg>
-          (877) 817-3744
-        </a>
-        <a href="#lead" class="bg-pdr-teal hover:bg-pdr-teal-d text-white rounded-full px-5 py-2.5 text-sm font-medium transition-colors">
-          Get Free Rates →
-        </a>
-      </div>
-
-      <button @click="open = !open" class="lg:hidden p-2.5 -mr-1 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-colors" aria-label="Toggle menu">
-        <svg x-show="!open" viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path fill-rule="evenodd" d="M3 5h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2z" clip-rule="evenodd"/></svg>
-        <svg x-show="open" x-cloak viewBox="0 0 20 20" width="20" height="20" fill="currentColor"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-      </button>
+<!-- ============ TOP NAV ============ -->
+<header class="topnav">
+  <div class="wrap row">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+      </span>
+      Power Done Right
+    </a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#dash">Portfolio platform</a>
+      <a href="#industries">Industries</a>
+      <a href="#suppliers">Suppliers</a>
+      <a href="#calc-preview">Calculator</a>
+    </nav>
+    <div class="grow"></div>
+    <span class="pill-state" title="Live market"><span class="dot"></span> ERCOT 7.32¢ · PJM 8.61¢</span>
+    <div class="actions">
+      <a class="btn btn-ghost btn-sm" href="tel:+18778173744">(877) 817-3744</a>
+      <a class="btn btn-primary btn-sm" href="#lead">Get a quote <span class="arrow">→</span></a>
     </div>
+    <button class="nav-ham" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg id="hamIcon" viewBox="0 0 20 20" width="22" height="22" fill="currentColor"><path fill-rule="evenodd" d="M3 5h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      <svg id="closeIcon" viewBox="0 0 20 20" width="22" height="22" fill="currentColor" style="display:none"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    </button>
+  </div>
+</header>
 
-    <div x-show="open" x-cloak
-         x-transition:enter="transition ease-out duration-150"
-         x-transition:enter-start="opacity-0 -translate-y-2"
-         x-transition:enter-end="opacity-100 translate-y-0"
-         class="lg:hidden bg-pdr-ink border-t border-white/10 px-5 py-4 flex flex-col gap-1">
-      <a href="#how"          @click="open=false" class="py-3 text-sm text-white/70 hover:text-white">How it works</a>
-      <a href="#suppliers"    @click="open=false" class="py-3 text-sm text-white/70 hover:text-white">Suppliers</a>
-      <a href="#calc"         @click="open=false" class="py-3 text-sm text-white/70 hover:text-white">Calculator</a>
-      <a href="#testimonials" @click="open=false" class="py-3 text-sm text-white/70 hover:text-white">Success Stories</a>
-      <a href="faq"           @click="open=false" class="py-3 text-sm text-white/70 hover:text-white">FAQ</a>
-      <div class="border-t border-white/10 mt-2 pt-4 flex flex-col gap-3">
-        <a href="tel:+18778173744" class="text-sm text-pdr-gold font-medium">(877) 817-3744</a>
-        <a href="#lead" @click="open=false" class="bg-pdr-teal text-white rounded-full px-5 py-3 text-sm font-medium text-center">Get Free Rates →</a>
-      </div>
-    </div>
-  </nav>
+<!-- Mobile menu (injected below header) -->
+<nav class="mob-menu" id="mobMenu">
+  <a href="#how"          onclick="closeMobMenu()">How it works</a>
+  <a href="#dash"         onclick="closeMobMenu()">Portfolio platform</a>
+  <a href="#industries"   onclick="closeMobMenu()">Industries</a>
+  <a href="#suppliers"    onclick="closeMobMenu()">Suppliers</a>
+  <a href="#calc-preview" onclick="closeMobMenu()">Calculator</a>
+  <a href="tel:+18778173744">(877) 817-3744</a>
+  <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Get a quote →</a>
+</nav>
 
-  <!-- ── HERO ── -->
-  <section id="top" class="hero-bg relative overflow-hidden min-h-screen flex flex-col">
-    <div class="hero-grid absolute inset-0 pointer-events-none"></div>
-    <!-- Radial accent -->
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none" style="background:radial-gradient(circle at 70% 20%, rgba(10,122,94,0.12) 0%, transparent 60%)"></div>
-
-    <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-24 lg:pt-32 pb-20 lg:pb-28 flex-1 grid lg:grid-cols-2 gap-14 lg:gap-16 items-start">
-
-      <!-- LEFT: Copy + Form -->
-      <div class="flex flex-col gap-8">
-        <!-- Eyebrow -->
-        <div class="inline-flex items-center gap-2.5 border border-pdr-teal/40 bg-pdr-teal/10 rounded-full px-4 py-2 w-fit">
-          <span class="live-dot w-2 h-2 rounded-full bg-pdr-teal shrink-0"></span>
-          <span class="text-white/80 text-xs font-mono tracking-wide">LIVE · 90+ Suppliers Bidding Right Now</span>
-        </div>
-
-        <!-- H1 -->
-        <h1 class="font-serif leading-[1.06] tracking-tight text-white" style="font-size: clamp(2.4rem, 5vw, 4.25rem)">
-          We make 90+ suppliers<br>
-          compete for your<br>
-          <em class="italic" style="color:#f5c842">electricity rate.</em>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Commercial electricity · CFO-grade procurement</span>
+        <h1 style="margin-top: 18px;">
+          <span class="stroke">Cut your <span class="em">commercial electricity</span> spend —</span>
+          <span class="ed">without changing a thing on-site.</span>
         </h1>
-
-        <!-- Sub -->
-        <p class="text-white/65 text-lg leading-relaxed max-w-[440px]">
-          Commercial businesses in 17 deregulated states pay 12–28% less — without a single minute of downtime. We surface your best available rate. You approve it.
+        <p class="lede hero-sub" data-industry-copy="lede">
+          Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market and send back a written savings analysis in 24 hours. No fee to you — suppliers pay us.
         </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#lead">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
+            Drop your bill — get an audit
+          </a>
+          <a class="btn btn-ghost" href="#dash">See the platform <span class="arrow">→</span></a>
+        </div>
+        <div class="hero-trust">
+          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No fee to you</span>
+          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> SOC-2 handled documents</span>
+          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> All US deregulated markets</span>
+        </div>
+      </div>
 
-        <!-- Trust bullets -->
-        <ul class="flex flex-col gap-3">
-          <li class="flex items-center gap-3 text-white/75 text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="4" fill="rgba(212,146,12,0.2)"/><path d="M4 8l2.5 2.5L12 5" stroke="#d4920c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            First competitive quote in 24 hours, binding rate same week
-          </li>
-          <li class="flex items-center gap-3 text-white/75 text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="4" fill="rgba(212,146,12,0.2)"/><path d="M4 8l2.5 2.5L12 5" stroke="#d4920c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            No fees, ever — we earn only when you save
-          </li>
-          <li class="flex items-center gap-3 text-white/75 text-sm">
-            <svg class="w-4 h-4 shrink-0" viewBox="0 0 16 16" fill="none"><rect width="16" height="16" rx="4" fill="rgba(212,146,12,0.2)"/><path d="M4 8l2.5 2.5L12 5" stroke="#d4920c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            No service interruption · Same meter · No credit pull
-          </li>
+      <div>
+        <div class="drop-card" id="dropCard">
+          <div class="head">
+            <span>Bill audit · 24h turnaround</span>
+            <span style="color: var(--green); display:inline-flex; align-items:center; gap:6px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;display:inline-block;"></span> ready</span>
+          </div>
+          <label class="drop-zone" id="dropZone" for="dropInput">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+            </span>
+            <div class="ttl">Drag your latest utility bill here</div>
+            <div class="meta">PDF or JPG · we read kWh, rate &amp; contract end</div>
+            <input type="file" id="dropInput" accept="application/pdf,image/*" hidden>
+          </label>
+
+          <div class="drop-or">— or paste your account # —</div>
+
+          <div class="read-out" aria-live="polite">
+            <div class="row"><span class="lbl">Current rate</span><span class="val" data-industry-copy="rate">$0.1182 / kWh</span></div>
+            <div class="row"><span class="lbl">Annual usage</span><span class="val" data-industry-copy="usage">2.4M kWh</span></div>
+            <div class="row"><span class="lbl">Contract ends</span><span class="val" data-industry-copy="ends">Aug 2026</span></div>
+            <div class="row"><span class="lbl">Estimated savings</span><span class="val green" data-industry-copy="save">$54,300 / yr</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM ============ -->
+<section class="lead-section" id="lead">
+  <div class="wrap">
+    <div style="text-align:center; margin-bottom: 32px;">
+      <span class="eyebrow">Get started · free, no obligation</span>
+      <h2 style="margin-top: 14px;">Get your written savings analysis. <span class="ed">In 24 hours.</span></h2>
+    </div>
+
+    <div class="form-card">
+      <!-- Form wrap -->
+      <div id="lead-form-wrap">
+        <div class="form-card-head">
+          <div style="display:flex; align-items:center; gap: 8px; margin-bottom: 8px;">
+            <span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite;flex-shrink:0;display:inline-block;"></span>
+            <span class="step-label" id="lf-step-label">Step 1 of 3 — Your usage</span>
+          </div>
+          <div class="step-bars">
+            <div class="lf-bar active" id="lf-bar-0"></div>
+            <div class="lf-bar" id="lf-bar-1"></div>
+            <div class="lf-bar" id="lf-bar-2"></div>
+          </div>
+        </div>
+
+        <!-- Step 0: Usage -->
+        <div id="lf-step-0">
+          <label class="form-label" for="lf-bill">What's your average monthly electric bill?</label>
+          <div class="bill-input-wrap">
+            <span class="pfx">$</span>
+            <input id="lf-bill" type="number" inputmode="decimal" placeholder="2,400" min="0" />
+            <span class="sfx">/mo</span>
+          </div>
+          <div id="lf-estimate" class="savings-preview">
+            <div class="lbl">Estimated annual savings range</div>
+            <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
+            <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
+          </div>
+        </div>
+
+        <!-- Step 1: Business -->
+        <div id="lf-step-1" style="display:none">
+          <div class="form-row">
+            <div>
+              <label class="form-label" for="lf-business">Business name</label>
+              <input id="lf-business" class="form-input" type="text" placeholder="Acme Manufacturing" />
+            </div>
+            <div>
+              <label class="form-label" for="lf-zip">Service ZIP code</label>
+              <input id="lf-zip" class="form-input" type="text" placeholder="60601" maxlength="5" inputmode="numeric" />
+              <p class="form-hint">We'll match you with suppliers licensed in your deregulated market.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Contact -->
+        <div id="lf-step-2" style="display:none">
+          <div class="form-row">
+            <div>
+              <label class="form-label" for="lf-name">Full name</label>
+              <input id="lf-name" class="form-input" type="text" placeholder="Jordan Reyes" />
+            </div>
+            <div>
+              <label class="form-label" for="lf-email">Work email</label>
+              <input id="lf-email" class="form-input" type="email" placeholder="jordan@acme.com" />
+            </div>
+            <div>
+              <label class="form-label" for="lf-phone">Phone</label>
+              <input id="lf-phone" class="form-input" type="tel" placeholder="(312) 555-0119" />
+            </div>
+            <p style="font-size:12px; color:var(--muted);">By submitting you agree to be contacted by Power Done Right. No obligation. We never sell your data.</p>
+          </div>
+        </div>
+
+        <!-- Error -->
+        <div id="lf-error" class="form-error"></div>
+
+        <!-- Actions -->
+        <div class="form-actions">
+          <button id="lf-back" class="btn-back" type="button" style="display:none;">← Back</button>
+          <button id="lf-next" class="btn-submit" type="button">
+            Continue
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 8H13M9 4l4 4-4 4"/></svg>
+          </button>
+        </div>
+        <p class="form-privacy">No commitment · No credit check · Bill + 2 signatures</p>
+      </div>
+
+      <!-- Success state -->
+      <div id="lead-success" class="lead-success">
+        <div class="check">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>You're in the queue!</h3>
+        <p style="color:var(--muted);">Expect your first competitive quote within 24 hours. We'll reach out by email and phone.</p>
+        <div class="success-detail" style="margin-top:16px;">
+          <div class="lbl">Reference</div>
+          <div class="val" id="success-ref" style="font-size:18px; color:var(--muted);">PDR-000000</div>
+        </div>
+        <div class="success-detail" style="margin-top:10px; background:var(--green-soft); border-color:rgba(30,138,95,.25);">
+          <div class="lbl" style="color:var(--green);">Estimated annual savings</div>
+          <div class="val" id="success-savings">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGO STRIP ============ -->
+<section class="logos">
+  <div class="wrap">
+    <div style="display:flex; justify-content:center; padding-top: 24px;">
+      <span class="eyebrow">Powered by the BOX network · 90+ suppliers · 100,000+ contracts closed</span>
+    </div>
+    <div class="logos-row">
+      <div class="supplier-logo">Constellation<small>Fortune-200</small></div>
+      <div class="supplier-logo">NRG / Direct Energy<small>Reliant · Green Mtn</small></div>
+      <div class="supplier-logo">AEP Energy<small>Columbus, OH</small></div>
+      <div class="supplier-logo">Engie Resources<small>Fixed · Block+Index</small></div>
+      <div class="supplier-logo">Shell Energy<small>National</small></div>
+      <div class="supplier-logo">TXU Energy<small>ERCOT</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DASHBOARD SECTION ============ -->
+<section class="section" id="dash">
+  <div class="wrap">
+    <div class="dash">
+      <div class="head">
+        <div>
+          <span class="eyebrow on-dark">Section 02 · Built for CFOs &amp; Procurement</span>
+          <h2 style="margin-top: 14px;">A standing audit of <span class="ed" style="color: var(--amber);">every kWh you buy.</span></h2>
+        </div>
+        <p class="lede">
+          Connect a portfolio. We benchmark spend across all your meters, flag contracts inside their renewal window, and surface the rate you <em>should</em> be paying — daily.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card card-portfolio">
+          <div style="display:flex; justify-content: space-between; align-items: baseline;">
+            <span class="lbl">Portfolio · Q2 2026</span>
+            <span class="lbl" style="color: #74e7b0;">● synced 4m ago</span>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px;">
+            <div>
+              <span class="lbl">Annual kWh</span>
+              <div class="kpi" data-industry-copy="kwh-total">42.7M</div>
+            </div>
+            <div>
+              <span class="lbl">Sites</span>
+              <div class="kpi" data-industry-copy="sites-total">128</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-savings">
+          <span class="lbl">YTD savings vs benchmark</span>
+          <div class="kpi" data-industry-copy="ytd">$612k</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,.85);">
+            <span data-industry-copy="ytd-pct">11.4%</span> below incumbent suppliers
+          </div>
+        </div>
+
+        <div class="card card-renewals">
+          <span class="lbl">Renewing &lt; 90d</span>
+          <div class="kpi amber">7</div>
+          <div style="font-size: 13px; color: var(--muted-on);">contracts auto-flagged</div>
+        </div>
+
+        <div class="card card-chart">
+          <div style="display:flex; justify-content: space-between; align-items: baseline;">
+            <span class="lbl">Spend vs benchmark — last 12 months</span>
+            <span class="lbl" style="color: var(--amber);">▲ trending below benchmark</span>
+          </div>
+          <svg class="chart" id="chart" viewBox="0 0 720 220" preserveAspectRatio="none" aria-hidden="true">
+            <g class="grid-l">
+              <line x1="40" y1="40"  x2="720" y2="40"/>
+              <line x1="40" y1="90"  x2="720" y2="90"/>
+              <line x1="40" y1="140" x2="720" y2="140"/>
+              <line x1="40" y1="190" x2="720" y2="190"/>
+            </g>
+            <g class="axis">
+              <text x="0" y="44">120k</text>
+              <text x="0" y="94">90k</text>
+              <text x="0" y="144">60k</text>
+              <text x="0" y="194">30k</text>
+            </g>
+            <g id="bars"></g>
+            <path id="benchmark" d="" stroke="#ffcb45" stroke-dasharray="4 4" stroke-width="1.5" fill="none" opacity=".7"/>
+          </svg>
+          <div class="legend">
+            <span><span class="sw" style="background: rgba(255,255,255,.45);"></span> Incumbent supplier</span>
+            <span><span class="sw" style="background: var(--amber);"></span> Power Done Right rate</span>
+            <span><span class="sw" style="background: var(--green);"></span> Savings captured</span>
+            <span><span class="sw" style="background:transparent; border-bottom: 2px dashed var(--amber);"></span> Market benchmark</span>
+          </div>
+        </div>
+
+        <div class="card card-side">
+          <div>
+            <span class="lbl">Renewals up next</span>
+          </div>
+          <div class="item"><span class="name">Store #014 · PA · PECO</span><span class="v">42 days</span></div>
+          <div class="item"><span class="name">HQ · TX · Oncor</span><span class="v">61 days</span></div>
+          <div class="item"><span class="name">Warehouse · NJ · PSE&amp;G</span><span class="v">73 days</span></div>
+          <div class="item"><span class="name">Store #221 · OH · AEP</span><span class="v">88 days</span></div>
+          <a class="btn btn-ghost btn-sm on-dark" href="#lead" style="align-self: flex-start; margin-top: 6px;">Get portfolio audit <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div style="display:flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap;">
+      <div>
+        <span class="eyebrow">Section 03 · How we work</span>
+        <h2 style="margin-top: 14px;">Four steps. <span class="ed">No surprises.</span></h2>
+      </div>
+      <p class="lede" style="max-width: 44ch;">We're an independent broker — not tied to any supplier. Our recommendation is based solely on what's best for your bottom line.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="n">01</span>
+        <h3>Upload one bill</h3>
+        <p>Drag a recent utility statement. We auto-extract usage, rate, capacity tags &amp; contract end date.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3>e-Sign an LOA</h3>
+        <p>One DocuSign so we can pull historical usage from your utility — no commitment to switch suppliers.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3>We run a reverse auction</h3>
+        <p>8–12 suppliers from the BOX network bid against each other for your load. You watch them compete.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h3>You sign once</h3>
+        <p>Pick the winning offer. We handle the supplier switch and renewal alerts for the life of the contract.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES ============ -->
+<section class="section tight" id="industries">
+  <div class="wrap">
+    <div style="display:flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
+      <div>
+        <span class="eyebrow">Section 04 · Built for chains &amp; portfolios</span>
+        <h2 style="margin-top: 14px;">When every site has a different utility — <span class="ed">we still ship one contract.</span></h2>
+      </div>
+    </div>
+
+    <div class="industries">
+      <div class="industry-card dark">
+        <span class="tag">Multi-site retail &amp; restaurants</span>
+        <h3>38 stores. 6 utilities. One signature.</h3>
+        <p>Drop a CSV of your locations and we map each meter to the right supplier in each deregulated market — Constellation in Texas, AEP in Ohio, Direct Energy in PA — under one consolidated agreement.</p>
+        <div class="ststats">
+          <div><div class="k" style="color: var(--amber);">11.4%</div><div class="l">avg savings</div></div>
+          <div><div class="k" style="color: var(--amber);">5 days</div><div class="l">to written quote</div></div>
+          <div><div class="k" style="color: var(--amber);">90+</div><div class="l">suppliers in network</div></div>
+        </div>
+        <a class="btn btn-ghost on-dark" href="#lead" style="align-self:flex-start;">Upload site list <span class="arrow">→</span></a>
+      </div>
+
+      <div class="industry-card">
+        <span class="tag">Real estate &amp; property mgmt</span>
+        <div class="photo-slot" aria-hidden="true">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c8c0a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <h3>Pass-through energy, captured at the portfolio level.</h3>
+        <p>Lower NOI for triple-net buildings. Standing audits across REIT portfolios. Renewal alerts so a CAM line never gets caught flat-footed by a market spike.</p>
+        <a class="btn btn-dark btn-sm" href="#lead" style="align-self:flex-start;">Get REIT audit <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUPPLIERS / MAP ============ -->
+<section class="section" id="suppliers">
+  <div class="wrap">
+    <div class="map-section">
+      <div class="map-grid">
+        <div>
+          <span class="eyebrow">Section 05 · Coverage</span>
+          <h2 style="margin-top: 14px;">Every deregulated market. <span class="ed">All 50.</span></h2>
+          <p class="lede" style="margin-top: 16px;">We hold an active broker license in every deregulated electricity and gas market in North America — giving you access to competitive rates wherever your sites are.</p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; max-width: 460px;">
+            <div>
+              <span class="eyebrow">Electricity</span>
+              <p style="font-size: 14px; color: var(--ink); margin-top: 6px;">CT, DC, DE, IL, MA, MD, ME, NH, NJ, NY, OH, PA, RI, VA, TX, CA</p>
+            </div>
+            <div>
+              <span class="eyebrow">Gas</span>
+              <p style="font-size: 14px; color: var(--ink); margin-top: 6px;">+ CO, FL, GA, IN, KY, MI &amp; more</p>
+            </div>
+          </div>
+
+          <a class="btn btn-dark" href="#lead" style="margin-top: 28px;">See rates in your state <span class="arrow">→</span></a>
+        </div>
+
+        <div>
+          <svg class="us-map" viewBox="0 0 600 360" aria-label="US deregulated states map">
+            <path class="state" d="M40 200 C 40 130, 120 80, 220 90 C 300 60, 380 70, 460 100 C 530 120, 560 160, 555 210 C 545 260, 480 290, 400 295 C 320 305, 220 305, 150 285 C 90 270, 40 250, 40 200 Z" fill="#efe7d4" stroke="#c8c0a8" stroke-width="1"/>
+            <path class="state both" d="M260 235 L 295 235 L 305 280 L 280 305 L 245 295 Z"/>
+            <text class="label" x="270" y="270">TX</text>
+            <path class="state elec" d="M55 175 L 90 165 L 100 215 L 75 240 L 50 220 Z"/>
+            <text class="label" x="68" y="205">CA</text>
+            <path class="state both" d="M295 165 L 325 160 L 330 200 L 305 210 L 295 195 Z"/>
+            <text class="label" x="305" y="190">IL</text>
+            <path class="state both" d="M380 160 L 420 158 L 425 195 L 395 210 L 378 195 Z"/>
+            <text class="label" x="392" y="185">OH</text>
+            <path class="state both" d="M425 150 L 475 148 L 478 175 L 440 188 L 425 175 Z"/>
+            <text class="label" x="445" y="170">PA</text>
+            <path class="state both" d="M478 158 L 495 158 L 498 185 L 482 188 Z"/>
+            <text class="label" x="481" y="178">NJ</text>
+            <path class="state both" d="M450 130 L 500 122 L 510 152 L 478 152 L 460 145 Z"/>
+            <text class="label" x="475" y="142">NY</text>
+            <path class="state both" d="M505 122 L 535 118 L 538 138 L 510 142 Z"/>
+            <text class="label" x="515" y="135">MA</text>
+            <path class="state both" d="M440 188 L 478 188 L 480 205 L 442 205 Z"/>
+            <text class="label" x="453" y="200">MD</text>
+            <path class="state elec" d="M420 205 L 478 205 L 478 230 L 420 230 Z"/>
+            <text class="label" x="440" y="223">VA</text>
+            <path class="state elec" d="M538 110 L 555 105 L 558 130 L 540 132 Z"/>
+            <text class="label" x="544" y="124">ME</text>
+            <path class="state elec" d="M520 110 L 538 108 L 538 122 L 522 125 Z"/>
+            <text class="label" x="525" y="120">NH</text>
+          </svg>
+          <div style="display:flex; gap: 18px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em;">
+            <span><span style="display:inline-block;width:10px;height:10px;background:var(--amber);border-radius:2px;vertical-align:-1px;margin-right:6px;"></span>Electricity &amp; gas</span>
+            <span><span style="display:inline-block;width:10px;height:10px;background:#ffd766;border-radius:2px;vertical-align:-1px;margin-right:6px;"></span>Electricity only</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR PREVIEW ============ -->
+<section class="section" id="calc-preview">
+  <div class="wrap">
+    <div style="display:flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
+      <div>
+        <span class="eyebrow">Section 06 · Try it live</span>
+        <h2 style="margin-top: 14px;">How much could you save? <span class="ed">Move the sliders.</span></h2>
+      </div>
+      <p class="lede" style="max-width: 44ch;">Indicative numbers — based on average spreads from our last 1,200 multi-site contracts.</p>
+    </div>
+
+    <div class="calc-preview">
+      <div>
+        <div class="slider-mock" id="sliderMock">
+          <div class="slider-row" data-key="sites" data-min="1" data-max="200">
+            <span class="label">Sites</span>
+            <div class="track"><div class="fill" style="width: 38%;"></div><div class="knob" style="left: 38%;"></div></div>
+            <span class="val">38</span>
+          </div>
+          <div class="slider-row" data-key="kwh" data-min="100000" data-max="50000000">
+            <span class="label">Annual kWh</span>
+            <div class="track"><div class="fill" style="width: 28%;"></div><div class="knob" style="left: 28%;"></div></div>
+            <span class="val">14.2M</span>
+          </div>
+          <div class="slider-row" data-key="rate" data-min="6" data-max="20">
+            <span class="label">Current ¢/kWh</span>
+            <div class="track"><div class="fill" style="width: 50%;"></div><div class="knob" style="left: 50%;"></div></div>
+            <span class="val">11.8</span>
+          </div>
+          <div style="display:flex; gap: 6px; flex-wrap: wrap; margin-top: 10px;">
+            <span class="eyebrow" style="width: 100%;">Term</span>
+            <button class="btn btn-ghost btn-sm" data-term="12">12 mo</button>
+            <button class="btn btn-ghost btn-sm" data-term="24">24 mo</button>
+            <button class="btn btn-dark btn-sm" data-term="36">36 mo</button>
+            <button class="btn btn-ghost btn-sm" data-term="48">48 mo</button>
+          </div>
+        </div>
+        <div style="margin-top: 22px;">
+          <a class="btn btn-primary" href="#lead">Lock in a real quote <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="right">
+        <div>
+          <span class="eyebrow on-dark" style="color: rgba(255,255,255,.85);">Estimated annual savings</span>
+          <div class="big" id="savingsBig">$184,600</div>
+          <div style="font-size: 13px; opacity: .9;"><span id="savingsPct">11.4%</span> · 36-mo fixed · suppliers in your market</div>
+        </div>
+        <a class="btn btn-primary" href="#lead">Lock in real quote <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL ============ -->
+<section class="section tight">
+  <div class="wrap">
+    <div class="quote-section">
+      <div>
+        <span class="eyebrow on-dark">Section 07 · CFO outcome</span>
+        <blockquote style="margin-top: 18px;">
+          "We thought we were on a 'great' rate. They benchmarked us against five other suppliers, ran an auction, and we re-signed at a rate <span style="color: var(--amber);">14% lower</span> for three years."
+        </blockquote>
+        <div class="source">
+          <div class="av" aria-hidden="true">
+            <svg viewBox="0 0 44 44" width="44" height="44"><rect width="44" height="44" fill="#1a253b"/><circle cx="22" cy="17" r="7" fill="#ffd766"/><path d="M6 44c2-9 9-13 16-13s14 4 16 13z" fill="#ffd766"/></svg>
+          </div>
+          <div>
+            <div style="color:#fff; font-weight: 600;">Margaret Chen</div>
+            <div>VP Procurement · 38-location restaurant group</div>
+          </div>
+        </div>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><div class="k">$284k</div><div class="l">first-year savings</div></div>
+        <div class="stat"><div class="k">5 days</div><div class="l">audit to recommendation</div></div>
+        <div class="stat"><div class="k">38</div><div class="l">sites · one signature</div></div>
+        <div class="stat"><div class="k">3 yrs</div><div class="l">price certainty</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-text">
+      <span class="eyebrow">Section 08 · FAQ</span>
+      <h2 style="margin-top: 14px;" class="max-72">Questions <span class="ed">CFOs ask us first.</span></h2>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary>How do you get paid?</summary>
+        <p>The supplier you choose pays us a per-kWh fee out of their margin — disclosed in your contract. You pay nothing out of pocket, and our recommendation is the same regardless of which supplier you pick. We're independent.</p>
+      </details>
+      <details>
+        <summary>Are you a supplier or a broker?</summary>
+        <p>A broker. We don't generate or sell electricity ourselves. We run reverse auctions across 90+ retail energy suppliers in the BOX network — including Constellation, NRG/Direct Energy, AEP Energy, Engie, Shell Energy, and TXU — and bring you the winning offer.</p>
+      </details>
+      <details>
+        <summary>Will my service be interrupted when I switch?</summary>
+        <p>No. Your local utility still delivers the power and reads your meter. We're swapping the supplier behind the meter, which happens at your next billing cycle with zero on-site change.</p>
+      </details>
+      <details>
+        <summary>What if I'm mid-contract?</summary>
+        <p>We'll still audit you. About 70% of the contracts we look at have a renewal window inside the next 12 months — we flag yours, lock in tomorrow's rate today (a "blend &amp; extend"), and queue the switch for your contract end date.</p>
+      </details>
+      <details>
+        <summary>Which states do you cover?</summary>
+        <p>Every US deregulated market — including TX, PA, NJ, NY, OH, IL, MD, MA, CT, DC, DE, ME, NH, RI, VA, and CA — plus deregulated gas markets across the country. If your business has sites in multiple states, we consolidate them under one agreement.</p>
+      </details>
+      <details>
+        <summary>How long does the process take?</summary>
+        <p>You spend about 5 minutes submitting your info. First competitive bids arrive within 24 hours. When you pick a rate, you'll sign a Letter of Authorization and a one-page pricing contract — both take under 10 minutes. The switch happens on your next billing cycle, typically 2–4 weeks later.</p>
+      </details>
+    </div>
+
+    <div class="center-text" style="margin-top: 28px;">
+      <p style="color: var(--muted);">More questions? <a href="tel:+18778173744" style="color: var(--green); font-weight: 600;">(877) 817-3744</a> or <a href="faq" style="color: var(--ink); font-weight: 600;">view all FAQs →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="final-cta">
+      <div>
+        <span class="eyebrow">Final step</span>
+        <h2 style="margin-top: 14px;">Power, done <span class="ed">right.</span> Start with one bill.</h2>
+        <p style="color: rgba(11,18,32,.78); margin-top: 12px;">Drop your latest utility bill. Get a written savings analysis in 24 hours. No fee, no obligation.</p>
+        <div class="actions" style="margin-top: 22px;">
+          <a class="btn btn-dark" href="#lead">Drop a bill — get an audit</a>
+          <a class="btn btn-ghost" href="#calc-preview">Run the calculator <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="dotbg" style="aspect-ratio: 4/3; border-radius: 18px; background-color: var(--navy); display:flex; flex-direction: column; justify-content: center; padding: 28px; color: #fff;">
+        <span class="eyebrow on-dark">Tomorrow's market · ERCOT</span>
+        <div style="font-family: var(--ed); font-size: 64px; line-height: 1; margin-top: 8px;">7.32¢</div>
+        <div style="font-size: 14px; color: var(--muted-on); margin-top: 6px;">36-mo fixed · best of 8 suppliers · 6.4M kWh load</div>
+        <div style="display:flex; gap: 8px; margin-top: 16px; flex-wrap: wrap;">
+          <span style="font-family: var(--mono); font-size: 11px; padding: 4px 8px; background: rgba(255,255,255,.08); border-radius: 999px;">Constellation 7.32</span>
+          <span style="font-family: var(--mono); font-size: 11px; padding: 4px 8px; background: rgba(255,255,255,.08); border-radius: 999px;">TXU 7.41</span>
+          <span style="font-family: var(--mono); font-size: 11px; padding: 4px 8px; background: rgba(255,255,255,.08); border-radius: 999px;">Engie 7.49</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="color: #fff;">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+          Power Done Right
+        </a>
+        <p style="color: var(--muted-on); margin-top: 14px; max-width: 30ch;">Independent commercial electricity broker. Fulfilled via the BOX network. All US deregulated markets.</p>
+        <a href="tel:+18778173744" style="color: var(--amber); font-family: var(--mono); font-size: 14px; font-weight: 700; margin-top: 12px; display:block;">(877) 817-3744</a>
+      </div>
+      <div><h4>Product</h4>
+        <ul>
+          <li><a href="#dash">Portfolio platform</a></li>
+          <li><a href="#calc-preview">Savings calculator</a></li>
+          <li><a href="#lead">Get a quote</a></li>
+          <li><a href="#how">How it works</a></li>
         </ul>
-
-        <!-- Form Card -->
-        <div id="lead">
-          <div id="lead-form-wrap" class="bg-pdr-navy rounded-2xl p-7 border border-white/10" style="box-shadow: 0 24px 64px rgba(0,0,0,0.5)">
-            <!-- Header -->
-            <div class="mb-5">
-              <div class="flex items-center gap-2 mb-3">
-                <span class="w-2 h-2 rounded-full bg-pdr-teal live-dot shrink-0"></span>
-                <span id="lf-step-label" class="text-xs font-mono text-white/40">Step 1 of 3 — Your usage</span>
-              </div>
-              <div class="flex gap-1">
-                <div class="lf-bar active" id="lf-bar-0"></div>
-                <div class="lf-bar" id="lf-bar-1"></div>
-                <div class="lf-bar" id="lf-bar-2"></div>
-              </div>
-            </div>
-
-            <!-- Step 0: Usage -->
-            <div id="lf-step-0">
-              <label class="block text-sm font-medium text-white/70 mb-2" for="lf-bill">
-                What's your average monthly electric bill?
-              </label>
-              <div class="flex items-center rounded-lg overflow-hidden" style="border:1px solid rgba(255,255,255,0.12)">
-                <span class="px-3.5 py-3.5 text-white/35 text-base select-none" style="border-right:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04)">$</span>
-                <input id="lf-bill" type="number" inputmode="decimal" placeholder="2,400" min="0"
-                       class="flex-1 px-4 py-3.5 text-base text-white focus:outline-none" style="background:transparent" />
-                <span class="px-3.5 text-white/35 text-base select-none">/mo</span>
-              </div>
-              <div id="lf-estimate" style="display:none" class="mt-4 rounded-xl p-4" style="background:rgba(10,122,94,0.15);border:1px solid rgba(10,122,94,0.3)">
-                <div class="text-xs font-mono text-pdr-teal mb-1.5">Estimated annual savings range</div>
-                <div class="font-serif text-2xl text-pdr-gold-l">
-                  <span id="lf-est-low">$0</span>
-                  <span class="text-white/30 mx-2 font-sans text-lg">–</span>
-                  <span id="lf-est-high">$0</span>
-                </div>
-                <div class="text-xs text-white/40 mt-1.5 leading-relaxed">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
-              </div>
-            </div>
-
-            <!-- Step 1: Business -->
-            <div id="lf-step-1" style="display:none">
-              <div class="flex flex-col gap-4">
-                <div>
-                  <label class="block text-sm font-medium text-white/70 mb-2" for="lf-business">Business name</label>
-                  <input id="lf-business" class="dark-input" type="text" placeholder="Acme Manufacturing" />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-white/70 mb-2" for="lf-zip">Service ZIP code</label>
-                  <input id="lf-zip" class="dark-input" type="text" placeholder="60601" maxlength="5" inputmode="numeric" />
-                  <p class="text-xs text-white/35 mt-1.5 leading-relaxed">We'll match you with suppliers licensed in your deregulated market.</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Step 2: Contact -->
-            <div id="lf-step-2" style="display:none">
-              <div class="flex flex-col gap-4">
-                <div>
-                  <label class="block text-sm font-medium text-white/70 mb-2" for="lf-name">Full name</label>
-                  <input id="lf-name" class="dark-input" type="text" placeholder="Jordan Reyes" />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-white/70 mb-2" for="lf-email">Work email</label>
-                  <input id="lf-email" class="dark-input" type="email" placeholder="jordan@acme.com" />
-                </div>
-                <div>
-                  <label class="block text-sm font-medium text-white/70 mb-2" for="lf-phone">Phone</label>
-                  <input id="lf-phone" class="dark-input" type="tel" placeholder="(312) 555-0119" />
-                </div>
-                <p class="text-xs text-white/30 leading-relaxed">By submitting you agree to be contacted by Power Done Right. No obligation. We never sell your data.</p>
-              </div>
-            </div>
-
-            <!-- Error banner -->
-            <div id="lf-error" style="display:none;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.35)" class="rounded-lg px-4 py-3 text-sm text-red-300 mt-4"></div>
-
-            <!-- Actions -->
-            <div class="flex gap-3 mt-4">
-              <button id="lf-back" type="button" style="display:none"
-                      class="flex-none px-5 py-3.5 text-sm text-white/60 rounded-lg transition-colors hover:bg-white/10" style="border:1px solid rgba(255,255,255,0.12)">
-                ← Back
-              </button>
-              <button id="lf-next" type="button"
-                      class="flex-1 bg-pdr-teal hover:bg-pdr-teal-d text-white rounded-lg px-6 py-3.5 text-sm font-medium transition-colors flex items-center justify-center gap-2 disabled:opacity-50">
-                Continue
-                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 8H13M9 4l4 4-4 4"/></svg>
-              </button>
-            </div>
-            <p class="text-xs text-white/30 text-center mt-3.5">No commitment · No credit check · Bill + 2 signatures</p>
-          </div>
-
-          <!-- Success state -->
-          <div id="lead-success" style="display:none" class="bg-pdr-navy rounded-2xl p-7 border border-white/10 text-center">
-            <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(10,122,94,0.2);border:1px solid rgba(10,122,94,0.4)">
-              <svg class="w-8 h-8 text-pdr-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-            </div>
-            <h3 class="font-serif text-2xl text-white mb-2">You're in the queue!</h3>
-            <p class="text-white/50 text-sm mb-5">Expect your first competitive quote within 24 hours.</p>
-            <div class="rounded-xl p-4 text-left mb-3" style="background:rgba(255,255,255,0.05)">
-              <div class="text-xs font-mono text-white/35 mb-1">Reference</div>
-              <div class="font-mono text-sm text-white/80" id="success-ref">PDR-000000</div>
-            </div>
-            <div class="rounded-xl p-4 text-left" style="background:rgba(10,122,94,0.15);border:1px solid rgba(10,122,94,0.3)">
-              <div class="text-xs font-mono text-pdr-teal mb-1">Estimated annual savings</div>
-              <div class="font-serif text-xl text-pdr-gold" id="success-savings">—</div>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <!-- RIGHT: Premium Bid Terminal -->
-      <div class="lg:sticky lg:top-24 flex flex-col gap-6">
-        <div x-data="bidTicker()" x-init="start()"
-             class="rounded-2xl overflow-hidden border border-white/10"
-             style="background:rgba(0,0,0,0.35);backdrop-filter:blur(16px);box-shadow:0 32px 80px rgba(0,0,0,0.5)">
-
-          <!-- Terminal header -->
-          <div class="px-6 py-5 border-b border-white/8" style="background:rgba(255,255,255,0.03)">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2.5">
-                <span class="live-dot w-2.5 h-2.5 rounded-full bg-pdr-teal shrink-0"></span>
-                <span class="text-xs font-mono text-white/60 uppercase tracking-wider">Live Auction</span>
-                <span class="text-xs font-mono text-white/30 border border-white/15 rounded px-2 py-0.5">17 markets</span>
-              </div>
-              <div class="text-right">
-                <div class="text-xs font-mono text-white/40 mb-0.5">Lowest bid today</div>
-                <div class="font-mono text-pdr-gold font-medium" x-text="lowest"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Column headers -->
-          <div class="px-6 py-2.5 flex items-center gap-3 border-b border-white/5" style="background:rgba(0,0,0,0.2)">
-            <div class="w-7 shrink-0"></div>
-            <div class="flex-1 min-w-0 text-[11px] font-mono text-white/25 uppercase tracking-wider">Supplier</div>
-            <div class="text-[11px] font-mono text-white/25 uppercase tracking-wider w-28 text-right">Rate / kWh</div>
-            <div class="text-[11px] font-mono text-white/25 uppercase tracking-wider w-20 text-right">vs. Market</div>
-          </div>
-
-          <!-- Bid rows -->
-          <div class="divide-y divide-white/5">
-            <template x-for="(row, i) in rows" :key="row.id">
-              <div class="bid-row px-6 py-4 flex items-center gap-3 hover:bg-white/[0.03] transition-colors">
-                <!-- Rank -->
-                <div class="w-7 shrink-0">
-                  <span class="text-xs font-mono"
-                        :class="i === 0 ? 'text-pdr-gold font-medium' : 'text-white/30'"
-                        x-text="'#' + (i+1)"></span>
-                </div>
-                <!-- Supplier -->
-                <div class="flex-1 min-w-0">
-                  <div class="text-sm font-mono text-white/80 truncate" x-text="row.name"></div>
-                </div>
-                <!-- Rate -->
-                <div class="w-28 text-right">
-                  <span class="text-sm font-mono"
-                        :class="i === 0 ? 'text-white font-medium' : 'text-white/60'"
-                        x-text="'$' + row.rate + '/kWh'"></span>
-                </div>
-                <!-- Delta -->
-                <div class="w-20 text-right">
-                  <span class="inline-block text-xs font-mono px-2 py-1 rounded-md"
-                        :class="i === 0 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-500/10 text-emerald-500/70'"
-                        x-text="'↓ ' + row.pct + '%'"></span>
-                </div>
-              </div>
-            </template>
-          </div>
-
-          <!-- Terminal footer -->
-          <div class="px-6 py-4 border-t border-white/8" style="background:rgba(0,0,0,0.2)">
-            <div class="flex items-center justify-between">
-              <span class="text-xs font-mono text-white/30">Bids update every 3s · 90+ suppliers active</span>
-              <a href="#lead" class="text-xs font-mono text-pdr-teal hover:text-pdr-gold transition-colors">Join auction →</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Below terminal: call CTA -->
-        <div class="hidden lg:flex items-center justify-between rounded-xl px-5 py-4 border border-white/10" style="background:rgba(212,146,12,0.08)">
-          <div>
-            <div class="text-xs font-mono text-pdr-gold mb-0.5">Ready to see your quotes?</div>
-            <div class="text-sm text-white/60">Fill out the form — takes 2 minutes</div>
-          </div>
-          <a href="#lead" class="text-sm font-medium text-pdr-gold hover:text-pdr-gold-l transition-colors whitespace-nowrap ml-4">Start now →</a>
-        </div>
-
-        <!-- Energy grid city illustration -->
-        <div class="hidden lg:block rounded-2xl overflow-hidden" aria-hidden="true">
-          <svg viewBox="0 0 640 120" width="100%" height="120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <radialGradient id="hg-glow" cx="50%" cy="100%" r="60%"><stop offset="0%" stop-color="#0a7a5e" stop-opacity="0.45"/><stop offset="100%" stop-color="#05111f" stop-opacity="0"/></radialGradient>
-              <radialGradient id="hg-gold" cx="30%" cy="100%" r="45%"><stop offset="0%" stop-color="#d4920c" stop-opacity="0.2"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-            </defs>
-            <rect width="640" height="120" fill="#05111f"/>
-            <!-- Grid lines -->
-            <line x1="0" y1="30" x2="640" y2="30" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="0" y1="60" x2="640" y2="60" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="0" y1="90" x2="640" y2="90" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="80" y1="0" x2="80" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="160" y1="0" x2="160" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="240" y1="0" x2="240" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="320" y1="0" x2="320" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="400" y1="0" x2="400" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="480" y1="0" x2="480" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <line x1="560" y1="0" x2="560" y2="120" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-            <!-- Glows -->
-            <rect width="640" height="120" fill="url(#hg-glow)"/>
-            <rect width="640" height="120" fill="url(#hg-gold)"/>
-            <!-- Buildings -->
-            <rect x="0" y="74" width="14" height="46" fill="#0a2240"/><rect x="16" y="60" width="18" height="60" fill="#071828"/><rect x="36" y="50" width="22" height="70" fill="#0a2240"/><rect x="60" y="64" width="16" height="56" fill="#071828"/><rect x="78" y="44" width="20" height="76" fill="#0a2240"/><rect x="100" y="56" width="24" height="64" fill="#0d2e55"/><rect x="126" y="38" width="18" height="82" fill="#0a2240"/><rect x="146" y="52" width="22" height="68" fill="#071828"/><rect x="170" y="46" width="20" height="74" fill="#0d2e55"/><rect x="192" y="62" width="16" height="58" fill="#0a2240"/>
-            <rect x="240" y="30" width="26" height="90" fill="#0a2240"/><rect x="268" y="42" width="20" height="78" fill="#0d2e55"/><rect x="290" y="36" width="28" height="84" fill="#0a2240"/><rect x="320" y="24" width="24" height="96" fill="#0d2e55"/><rect x="346" y="40" width="20" height="80" fill="#0a2240"/><rect x="368" y="52" width="26" height="68" fill="#071828"/>
-            <rect x="430" y="58" width="18" height="62" fill="#0a2240"/><rect x="450" y="46" width="22" height="74" fill="#071828"/><rect x="474" y="36" width="20" height="84" fill="#0d2e55"/><rect x="496" y="52" width="24" height="68" fill="#0a2240"/><rect x="522" y="42" width="18" height="78" fill="#071828"/><rect x="542" y="60" width="22" height="60" fill="#0a2240"/><rect x="566" y="48" width="16" height="72" fill="#0d2e55"/><rect x="584" y="56" width="20" height="64" fill="#0a2240"/><rect x="606" y="66" width="18" height="54" fill="#071828"/><rect x="626" y="58" width="14" height="62" fill="#0a2240"/>
-            <!-- Windows -->
-            <rect x="40" y="56" width="3" height="3" fill="#d4920c" opacity="0.7"/><rect x="44" y="56" width="3" height="3" fill="#0a7a5e" opacity="0.8"/><rect x="82" y="50" width="3" height="3" fill="#d4920c" opacity="0.8"/><rect x="82" y="57" width="3" height="3" fill="#0a7a5e" opacity="0.6"/><rect x="130" y="44" width="3" height="3" fill="#d4920c" opacity="0.9"/><rect x="134" y="44" width="3" height="3" fill="#0a7a5e" opacity="0.7"/><rect x="130" y="51" width="3" height="3" fill="#0a7a5e" opacity="0.5"/><rect x="174" y="52" width="3" height="3" fill="#d4920c" opacity="0.7"/>
-            <rect x="244" y="36" width="3" height="3" fill="#d4920c" opacity="0.9"/><rect x="248" y="36" width="3" height="3" fill="#0a7a5e" opacity="0.7"/><rect x="252" y="36" width="3" height="3" fill="#d4920c" opacity="0.6"/><rect x="244" y="43" width="3" height="3" fill="#0a7a5e" opacity="0.8"/><rect x="294" y="42" width="3" height="3" fill="#d4920c" opacity="0.8"/><rect x="298" y="42" width="3" height="3" fill="#0a7a5e" opacity="0.9"/><rect x="294" y="49" width="3" height="3" fill="#d4920c" opacity="0.6"/><rect x="324" y="30" width="3" height="3" fill="#d4920c" opacity="1"/><rect x="328" y="30" width="3" height="3" fill="#0a7a5e" opacity="0.8"/><rect x="332" y="30" width="3" height="3" fill="#d4920c" opacity="0.7"/><rect x="324" y="37" width="3" height="3" fill="#0a7a5e" opacity="0.9"/>
-            <rect x="478" y="42" width="3" height="3" fill="#d4920c" opacity="0.8"/><rect x="482" y="42" width="3" height="3" fill="#0a7a5e" opacity="0.7"/><rect x="478" y="49" width="3" height="3" fill="#0a7a5e" opacity="0.6"/><rect x="526" y="48" width="3" height="3" fill="#d4920c" opacity="0.7"/><rect x="530" y="48" width="3" height="3" fill="#d4920c" opacity="0.5"/>
-            <!-- Horizon glow -->
-            <rect x="0" y="90" width="640" height="1" fill="rgba(10,122,94,0.18)"/>
-            <!-- Ground -->
-            <rect x="0" y="91" width="640" height="29" fill="#03090f"/>
-            <!-- Road reflections -->
-            <line x1="320" y1="91" x2="320" y2="120" stroke="rgba(10,122,94,0.2)" stroke-width="1.5"/>
-            <line x1="240" y1="91" x2="240" y2="120" stroke="rgba(212,146,12,0.1)" stroke-width="1"/>
-          </svg>
-        </div>
+      <div><h4>Industries</h4>
+        <ul>
+          <li><a href="#industries">Multi-site retail</a></li>
+          <li><a href="#industries">Restaurants</a></li>
+          <li><a href="#industries">Real estate &amp; REIT</a></li>
+          <li><a href="#industries">Property management</a></li>
+        </ul>
+      </div>
+      <div><h4>Markets</h4>
+        <ul>
+          <li><a href="electricity">Electricity</a></li>
+          <li><a href="natural-gas">Natural gas</a></li>
+          <li><a href="renewable-plans">Renewable plans</a></li>
+          <li><a href="demand-management">Demand mgmt</a></li>
+        </ul>
+      </div>
+      <div><h4>Company</h4>
+        <ul>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="careers">Careers</a></li>
+          <li><a href="faq">FAQ</a></li>
+          <li><a href="renewal-guide">Renewal guide</a></li>
+          <li><a href="market-intel">Market intel</a></li>
+        </ul>
       </div>
     </div>
-
-  </section>
-
-  <!-- ── TRUST BAR ── -->
-  <section class="bg-pdr-cream border-b border-stone-200"
-           x-data="statsCounter()" x-init="init()">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-10">
-      <div class="flex flex-wrap justify-center lg:justify-between gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-stone-300/50">
-        <div class="text-center lg:px-10 first:pl-0 last:pr-0">
-          <div class="font-serif text-3xl lg:text-4xl text-pdr-gold mb-1" x-text="counts.sites.toLocaleString() + '+'">1,400+</div>
-          <div class="text-xs font-mono text-slate-500 uppercase tracking-wider">Sites Served</div>
-        </div>
-        <div class="text-center lg:px-10">
-          <div class="font-serif text-3xl lg:text-4xl text-pdr-gold mb-1" x-text="counts.markets + ''">17</div>
-          <div class="text-xs font-mono text-slate-500 uppercase tracking-wider">Deregulated Markets</div>
-        </div>
-        <div class="text-center lg:px-10">
-          <div class="font-serif text-3xl lg:text-4xl text-pdr-gold mb-1" x-text="counts.suppliers + '+'">90+</div>
-          <div class="text-xs font-mono text-slate-500 uppercase tracking-wider">Vetted Suppliers</div>
-        </div>
-        <div class="text-center lg:px-10">
-          <div class="font-serif text-3xl lg:text-4xl text-pdr-gold mb-1">12–28%</div>
-          <div class="text-xs font-mono text-slate-500 uppercase tracking-wider">Average Savings</div>
-        </div>
-        <div class="text-center lg:px-10 first:pl-0 last:pr-0">
-          <div class="font-serif text-3xl lg:text-4xl text-pdr-teal mb-1">$0</div>
-          <div class="text-xs font-mono text-slate-500 uppercase tracking-wider">Fees, Ever</div>
-        </div>
-      </div>
+    <div class="foot-bottom">
+      <span>© 2026 Power Done Right LLC · Fulfillment partner: Broker Online Exchange (BOX)</span>
+      <span><a href="privacy">Privacy</a> · <a href="terms">Terms</a> · <a href="disclosures">Disclosures</a></span>
     </div>
-  </section>
+  </div>
+</footer>
 
-  <!-- ── HOW IT WORKS ── -->
-  <section id="how" class="bg-pdr-ink py-28 relative overflow-hidden">
-    <!-- Decorative -->
-    <div class="absolute right-0 top-0 bottom-0 flex items-center pointer-events-none select-none" aria-hidden="true">
-      <span class="font-mono text-[280px] leading-none text-white/[0.02] font-bold">01</span>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 relative">
-      <div class="text-center mb-16 reveal">
-        <div class="inline-flex items-center gap-2 border border-pdr-teal/30 rounded-full px-4 py-1.5 text-xs font-mono text-pdr-teal mb-5">
-          The process
-        </div>
-        <h2 class="font-serif text-4xl lg:text-5xl text-white mb-4">Simple. Fast. Free.</h2>
-        <p class="text-white/50 text-lg max-w-lg mx-auto">Three steps to a lower energy bill. Two signatures. Zero downtime.</p>
-      </div>
-
-      <!-- Power infrastructure illustration -->
-      <div class="hidden md:block rounded-2xl overflow-hidden mb-14 reveal" aria-hidden="true">
-        <svg viewBox="0 0 1200 180" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="htw-glow1" cx="20%" cy="100%" r="50%"><stop offset="0%" stop-color="#0a7a5e" stop-opacity="0.35"/><stop offset="100%" stop-color="#05111f" stop-opacity="0"/></radialGradient>
-            <radialGradient id="htw-glow2" cx="50%" cy="100%" r="45%"><stop offset="0%" stop-color="#d4920c" stop-opacity="0.2"/><stop offset="100%" stop-color="#05111f" stop-opacity="0"/></radialGradient>
-            <radialGradient id="htw-glow3" cx="80%" cy="100%" r="50%"><stop offset="0%" stop-color="#0a7a5e" stop-opacity="0.3"/><stop offset="100%" stop-color="#05111f" stop-opacity="0"/></radialGradient>
-          </defs>
-          <!-- Background -->
-          <rect width="1200" height="180" fill="#05111f"/>
-          <!-- Glow pools -->
-          <rect width="1200" height="180" fill="url(#htw-glow1)"/>
-          <rect width="1200" height="180" fill="url(#htw-glow2)"/>
-          <rect width="1200" height="180" fill="url(#htw-glow3)"/>
-          <!-- Horizon glow line -->
-          <rect x="0" y="128" width="1200" height="1" fill="rgba(10,122,94,0.25)"/>
-          <!-- City silhouette (left cluster) -->
-          <rect x="20" y="105" width="18" height="23" fill="#0a2240"/><rect x="40" y="90" width="14" height="38" fill="#0a2240"/><rect x="56" y="98" width="20" height="30" fill="#0d2e55"/><rect x="78" y="80" width="16" height="48" fill="#0a2240"/><rect x="96" y="94" width="12" height="34" fill="#0d2e55"/><rect x="110" y="70" width="22" height="58" fill="#0a2240"/><rect x="134" y="85" width="15" height="43" fill="#0d2e55"/><rect x="151" y="100" width="18" height="28" fill="#0a2240"/>
-          <!-- Lit windows left cluster -->
-          <rect x="83" y="88" width="3" height="3" fill="#d4920c" opacity="0.7"/><rect x="83" y="95" width="3" height="3" fill="#d4920c" opacity="0.5"/><rect x="116" y="76" width="3" height="3" fill="#0a7a5e" opacity="0.8"/><rect x="122" y="82" width="3" height="3" fill="#0a7a5e" opacity="0.6"/><rect x="116" y="89" width="3" height="3" fill="#d4920c" opacity="0.5"/><rect x="43" y="97" width="3" height="3" fill="#0a7a5e" opacity="0.6"/>
-          <!-- Power tower 1 (left) -->
-          <g transform="translate(230,30)">
-            <line x1="0" y1="0" x2="-20" y2="98" stroke="#0a2240" stroke-width="2.5"/>
-            <line x1="0" y1="0" x2="20" y2="98" stroke="#0a2240" stroke-width="2.5"/>
-            <line x1="-8" y1="30" x2="8" y2="30" stroke="#0a2240" stroke-width="2"/>
-            <line x1="-14" y1="55" x2="14" y2="55" stroke="#0a2240" stroke-width="2"/>
-            <line x1="-18" y1="78" x2="18" y2="78" stroke="#0a2240" stroke-width="2"/>
-            <circle cx="-8" cy="30" r="3" fill="#0a7a5e"/><circle cx="8" cy="30" r="3" fill="#0a7a5e"/>
-            <circle cx="-14" cy="55" r="3" fill="#0a7a5e"/><circle cx="14" cy="55" r="3" fill="#0a7a5e"/>
-          </g>
-          <!-- Transmission lines L→C -->
-          <path d="M196,60 Q370,120 580,58" stroke="rgba(10,122,94,0.5)" stroke-width="1.5" fill="none"/>
-          <path d="M192,85 Q370,130 578,83" stroke="rgba(10,122,94,0.3)" stroke-width="1" fill="none"/>
-          <!-- Power tower 2 (center) -->
-          <g transform="translate(600,28)">
-            <line x1="0" y1="0" x2="-22" y2="100" stroke="#0a2240" stroke-width="2.5"/>
-            <line x1="0" y1="0" x2="22" y2="100" stroke="#0a2240" stroke-width="2.5"/>
-            <line x1="-9" y1="28" x2="9" y2="28" stroke="#0a2240" stroke-width="2"/>
-            <line x1="-15" y1="54" x2="15" y2="54" stroke="#0a2240" stroke-width="2"/>
-            <line x1="-19" y1="76" x2="19" y2="76" stroke="#0a2240" stroke-width="2"/>
-            <circle cx="-9" cy="28" r="3.5" fill="#d4920c" opacity="0.9"/><circle cx="9" cy="28" r="3.5" fill="#d4920c" opacity="0.9"/>
-            <circle cx="-15" cy="54" r="3" fill="#0a7a5e"/><circle cx="15" cy="54" r="3" fill="#0a7a5e"/>
-          </g>
-          <!-- Transmission lines C→R -->
-          <path d="M622,56 Q820,125 970,62" stroke="rgba(10,122,94,0.5)" stroke-width="1.5" fill="none"/>
-          <path d="M620,82 Q820,135 968,86" stroke="rgba(10,122,94,0.3)" stroke-width="1" fill="none"/>
-          <!-- Power tower 3 (right) -->
-          <g transform="translate(990,32)">
-            <line x1="0" y1="0" x2="-20" y2="96" stroke="#0a2240" stroke-width="2.5"/>
-            <line x1="0" y1="0" x2="20" y2="96" stroke="#0a2240" stroke-width="2.5"/>
-            <line x1="-8" y1="30" x2="8" y2="30" stroke="#0a2240" stroke-width="2"/>
-            <line x1="-14" y1="56" x2="14" y2="56" stroke="#0a2240" stroke-width="2"/>
-            <line x1="-18" y1="78" x2="18" y2="78" stroke="#0a2240" stroke-width="2"/>
-            <circle cx="-8" cy="30" r="3" fill="#0a7a5e"/><circle cx="8" cy="30" r="3" fill="#0a7a5e"/>
-            <circle cx="-14" cy="56" r="3" fill="#0a7a5e"/><circle cx="14" cy="56" r="3" fill="#0a7a5e"/>
-          </g>
-          <!-- City silhouette (right cluster) -->
-          <rect x="1050" y="102" width="16" height="26" fill="#0a2240"/><rect x="1068" y="88" width="20" height="40" fill="#0d2e55"/><rect x="1090" y="78" width="14" height="50" fill="#0a2240"/><rect x="1106" y="92" width="18" height="36" fill="#0d2e55"/><rect x="1126" y="84" width="22" height="44" fill="#0a2240"/><rect x="1150" y="100" width="14" height="28" fill="#0d2e55"/><rect x="1166" y="110" width="18" height="18" fill="#0a2240"/>
-          <!-- Lit windows right cluster -->
-          <rect x="1094" y="84" width="3" height="3" fill="#d4920c" opacity="0.7"/><rect x="1094" y="91" width="3" height="3" fill="#0a7a5e" opacity="0.8"/><rect x="1130" y="90" width="3" height="3" fill="#d4920c" opacity="0.6"/><rect x="1072" y="95" width="3" height="3" fill="#0a7a5e" opacity="0.6"/>
-          <!-- Ground line -->
-          <rect x="0" y="128" width="1200" height="52" fill="#03090f"/>
-          <!-- Ground grid -->
-          <line x1="0" y1="140" x2="1200" y2="140" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-          <line x1="0" y1="155" x2="1200" y2="155" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-        </svg>
-      </div>
-
-      <!-- Steps grid -->
-      <div class="grid md:grid-cols-3 gap-8 relative">
-        <!-- Connector lines (desktop only) -->
-        <div class="hidden md:block absolute top-12 left-[calc(33.333%+16px)] right-[calc(33.333%+16px)] h-px bg-white/10"></div>
-
-        <!-- Step 1 -->
-        <div class="reveal flex flex-col gap-5">
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full border-2 border-pdr-gold/50 bg-pdr-gold/10 flex items-center justify-center shrink-0">
-              <span class="font-mono text-pdr-gold text-sm font-medium">01</span>
-            </div>
-            <div class="h-px flex-1 bg-white/8 md:hidden"></div>
-          </div>
-          <div>
-            <h3 class="font-serif text-2xl text-white mb-3">Share your bill</h3>
-            <p class="text-white/50 text-sm leading-relaxed">Snap a photo of your most recent utility bill and enter your ZIP. We use your actual usage data — not guesswork — to generate accurate, binding bids from 90+ suppliers.</p>
-          </div>
-          <div class="font-mono text-xs text-white/25 border-t border-white/8 pt-4">Bill photo + ZIP · 5 minutes</div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="reveal reveal-delay-1 flex flex-col gap-5">
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full border-2 border-pdr-gold/50 bg-pdr-gold/10 flex items-center justify-center shrink-0">
-              <span class="font-mono text-pdr-gold text-sm font-medium">02</span>
-            </div>
-          </div>
-          <div>
-            <h3 class="font-serif text-2xl text-white mb-3">You authorize. They compete.</h3>
-            <p class="text-white/50 text-sm leading-relaxed">Sign a brief Letter of Authorization — two minutes, no commitment. We open your account to 90+ vetted suppliers who bid in real time. The most competitive rate rises to the top — you review the winner and lock it in.</p>
-          </div>
-          <div class="font-mono text-xs text-white/25 border-t border-white/8 pt-4">First quote within 24 hrs</div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="reveal reveal-delay-2 flex flex-col gap-5">
-          <div class="flex items-center gap-4">
-            <div class="w-12 h-12 rounded-full border-2 border-pdr-gold/50 bg-pdr-gold/10 flex items-center justify-center shrink-0">
-              <span class="font-mono text-pdr-gold text-sm font-medium">03</span>
-            </div>
-          </div>
-          <div>
-            <h3 class="font-serif text-2xl text-white mb-3">Lock in savings</h3>
-            <p class="text-white/50 text-sm leading-relaxed">Pick your rate and sign one pricing contract. We coordinate the switch — same meter, no downtime, no service interruption. Savings start on your next billing cycle.</p>
-          </div>
-          <div class="font-mono text-xs text-white/25 border-t border-white/8 pt-4">Seamless switch, same meter</div>
-        </div>
-      </div>
-
-      <!-- Bottom CTA strip -->
-      <div class="mt-16 flex items-center justify-center gap-4">
-        <div class="h-px w-16 bg-white/10"></div>
-        <a href="#lead" class="text-pdr-teal hover:text-white text-sm font-medium transition-colors flex items-center gap-1.5">
-          Get your first quote in 24 hours
-          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 8H13M9 4l4 4-4 4"/></svg>
-        </a>
-        <div class="h-px w-16 bg-white/10"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SAVINGS CALCULATOR ── -->
-  <section id="calc" class="bg-pdr-cream py-24">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-      <div class="text-center mb-14 reveal">
-        <div class="inline-flex items-center gap-2 border border-pdr-teal/30 rounded-full px-4 py-1.5 text-xs font-mono text-pdr-teal mb-5">
-          Savings calculator
-        </div>
-        <h2 class="font-serif text-4xl lg:text-5xl text-pdr-ink mb-4">See what you could save</h2>
-        <p class="text-slate-600 text-lg max-w-lg mx-auto">Adjust to match your business. These are conservative estimates — our average is 18%.</p>
-      </div>
-
-      <div x-data="calculator()" class="grid lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
-        <!-- Controls -->
-        <div class="flex flex-col gap-8">
-          <div>
-            <div class="flex items-baseline justify-between mb-3">
-              <label class="text-sm font-medium text-slate-700">Monthly usage (kWh)</label>
-              <span class="font-mono text-pdr-teal font-medium" x-text="kWh.toLocaleString() + ' kWh'"></span>
-            </div>
-            <input type="range" min="500" max="25000" step="100" x-model.number="kWh"
-                   class="w-full h-1.5 rounded-full appearance-none cursor-pointer" style="accent-color:#0a7a5e;background:#d6d0c4" />
-            <div class="flex justify-between text-xs font-mono text-slate-500 mt-1.5">
-              <span>500 kWh</span><span>25,000 kWh</span>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-baseline justify-between mb-3">
-              <label class="text-sm font-medium text-slate-700">Current rate (¢/kWh)</label>
-              <span class="font-mono text-pdr-teal font-medium" x-text="(rate * 100).toFixed(1) + '¢'"></span>
-            </div>
-            <input type="range" min="0.06" max="0.22" step="0.001" x-model.number="rate"
-                   class="w-full h-1.5 rounded-full appearance-none cursor-pointer" style="accent-color:#0a7a5e;background:#d6d0c4" />
-            <div class="flex justify-between text-xs font-mono text-slate-500 mt-1.5">
-              <span>6¢</span><span>22¢</span>
-            </div>
-          </div>
-
-          <div class="bg-pdr-ink/8 rounded-2xl p-6 border border-pdr-ink/10">
-            <div class="text-xs font-mono text-slate-600 uppercase tracking-wider mb-2">Your current annual spend</div>
-            <div class="font-serif text-3xl text-pdr-ink mb-1" x-text="fmt(annualSpend)"></div>
-            <div class="text-xs text-slate-500" x-text="fmt(Math.round(annualSpend/12)) + ' per month at ' + (rate*100).toFixed(1) + '¢/kWh'"></div>
-          </div>
-
-          <a href="#lead" class="bg-pdr-teal hover:bg-pdr-teal-d text-white rounded-full px-8 py-4 text-sm font-medium transition-colors text-center">
-            Lock in a better rate →
-          </a>
-        </div>
-
-        <!-- Results -->
-        <div class="bg-pdr-ink rounded-2xl p-8 text-white">
-          <div class="text-xs font-mono text-white/35 uppercase tracking-wider mb-8">Projected savings range</div>
-
-          <div class="flex flex-col gap-5 mb-8">
-            <!-- Conservative -->
-            <div>
-              <div class="flex items-baseline justify-between mb-2">
-                <span class="text-sm text-white/60">Conservative (12%)</span>
-                <span class="font-mono text-white/80 font-medium" x-text="fmt(savingsLow)"></span>
-              </div>
-              <div class="h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,0.08)">
-                <div class="h-full rounded-full transition-all duration-500"
-                     style="background:#0a7a5e"
-                     :style="`width:${Math.min(100, (savingsLow / annualSpend) * 100)}%`"></div>
-              </div>
-            </div>
-            <!-- Optimistic -->
-            <div>
-              <div class="flex items-baseline justify-between mb-2">
-                <span class="text-sm text-white/60">Optimistic (28%)</span>
-                <span class="font-mono text-pdr-gold font-medium" x-text="fmt(savingsHigh)"></span>
-              </div>
-              <div class="h-2 rounded-full overflow-hidden" style="background:rgba(255,255,255,0.08)">
-                <div class="h-full rounded-full transition-all duration-500"
-                     style="background:#d4920c"
-                     :style="`width:${Math.min(100, (savingsHigh / annualSpend) * 100)}%`"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="border-t border-white/10 pt-6">
-            <div class="text-xs font-mono text-white/35 mb-2">Monthly savings estimate</div>
-            <div class="font-serif text-3xl text-pdr-gold">
-              <span x-text="fmt(Math.round(savingsLow/12))"></span>
-              <span class="text-white/20 text-xl mx-2">–</span>
-              <span x-text="fmt(Math.round(savingsHigh/12))"></span>
-            </div>
-            <p class="text-xs text-white/35 mt-2">per month back in your budget, every month</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── SUPPLIER NETWORK ── -->
-  <section id="suppliers" class="bg-pdr-navy py-24">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-      <div class="text-center mb-12 reveal">
-        <div class="inline-flex items-center gap-2 border border-pdr-teal/30 rounded-full px-4 py-1.5 text-xs font-mono text-pdr-teal mb-5">
-          Our network
-        </div>
-        <h2 class="font-serif text-4xl lg:text-5xl text-white mb-4">90+ suppliers compete for you</h2>
-        <p class="text-white/50 text-lg max-w-lg mx-auto">Every supplier is FERC-registered, credit-rated, and licensed in your state. We vet them so you don't have to.</p>
-      </div>
-
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 max-w-4xl mx-auto mb-8">
-        <!-- AEP Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <img src="https://www.aep.com/logos/aep-logo-red-gray.svg" alt="AEP Energy" class="max-h-10 max-w-full object-contain" onerror="this.style.display='none';this.nextElementSibling.removeAttribute('style')" />
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" style="display:none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#C8102E"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#C8102E">AEP Energy</text>
-          </svg>
-        </div>
-        <!-- Champion Energy Services -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#004B8D"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#004B8D">Champion Energy</text>
-          </svg>
-        </div>
-        <!-- Constellation Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <img src="https://www.constellation.com/content/dam/constellation/logos/constellation-logo.png" alt="Constellation Energy" class="max-h-10 max-w-full object-contain" onerror="this.style.display='none';this.nextElementSibling.removeAttribute('style')" />
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" style="display:none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#006272"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#006272">Constellation</text>
-          </svg>
-        </div>
-        <!-- Direct Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <img src="https://www.directenergy.com/language-masters/en/site/header/header-default/_jcr_content/root/header/image/default.coreimg.png/1708594209079/logo.png" alt="Direct Energy" class="max-h-10 max-w-full object-contain" onerror="this.style.display='none';this.nextElementSibling.removeAttribute('style')" />
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" style="display:none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#0057A8"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#0057A8">Direct Energy</text>
-          </svg>
-        </div>
-        <!-- Gexa Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#5E2B8C"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#5E2B8C">Gexa Energy</text>
-          </svg>
-        </div>
-        <!-- Green Mountain Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <img src="https://wheelock.nrg.com/app/assets/images/gme-logo.png" alt="Green Mountain Energy" class="max-h-10 max-w-full object-contain" onerror="this.style.display='none';this.nextElementSibling.removeAttribute('style')" />
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" style="display:none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#00843D"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="700" fill="#00843D">Green Mountain</text>
-          </svg>
-        </div>
-        <!-- Hudson Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <img src="https://hudsonenergy.net/wp-content/uploads/2023/04/cropped-logo-1.png" alt="Hudson Energy" class="max-h-10 max-w-full object-contain" onerror="this.style.display='none';this.nextElementSibling.removeAttribute('style')" />
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" style="display:none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#003087"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#003087">Hudson Energy</text>
-          </svg>
-        </div>
-        <!-- Reliant Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <img src="https://wheelock.nrg.com/app/assets/images/reliant-logo.png" alt="Reliant Energy" class="max-h-10 max-w-full object-contain" onerror="this.style.display='none';this.nextElementSibling.removeAttribute('style')" />
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" style="display:none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#1B4F9A"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#1B4F9A">Reliant Energy</text>
-          </svg>
-        </div>
-        <!-- Shell Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <img src="https://images.ctfassets.net/1n54v69mwqrd/4QS6pCsoLCNblVSK1Mcms0/7ec272f4f20c46bb737215775ac39e3f/shell-energy-logo.svg" alt="Shell Energy" class="max-h-10 max-w-full object-contain" onerror="this.style.display='none';this.nextElementSibling.removeAttribute('style')" />
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" style="display:none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#DD1D21"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#DD1D21">Shell Energy</text>
-          </svg>
-        </div>
-        <!-- Summer Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#E85C0A"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#E85C0A">Summer Energy</text>
-          </svg>
-        </div>
-        <!-- TXU Energy -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#0072C6"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#0072C6">TXU Energy</text>
-          </svg>
-        </div>
-        <!-- Vistra -->
-        <div class="bg-white rounded-xl p-4 flex items-center justify-center h-20 hover:shadow-lg transition-shadow">
-          <svg viewBox="0 0 180 44" class="max-h-10 max-w-full" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0" y="14" width="4" height="16" rx="2" fill="#6B2D8B"/>
-            <text x="12" y="30" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="700" fill="#6B2D8B">Vistra</text>
-          </svg>
-        </div>
-      </div>
-      <p class="text-center text-white/30 text-sm font-mono">…and 80+ more vetted suppliers across 17 deregulated markets</p>
-    </div>
-  </section>
-
-  <!-- ── TESTIMONIALS ── -->
-  <section id="testimonials" class="bg-pdr-cream py-24">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8">
-      <div class="text-center mb-14 reveal">
-        <div class="inline-flex items-center gap-2 border border-pdr-teal/30 rounded-full px-4 py-1.5 text-xs font-mono text-pdr-teal mb-5">
-          Success stories
-        </div>
-        <h2 class="font-serif text-4xl lg:text-5xl text-pdr-ink mb-4">Real businesses, real savings</h2>
-        <p class="text-slate-600 text-lg max-w-lg mx-auto">1,400+ commercial sites across 17 states are paying less for electricity today.</p>
-      </div>
-
-      <!-- Commercial cityscape illustration -->
-      <div class="rounded-2xl overflow-hidden mb-12 reveal" aria-hidden="true">
-        <svg viewBox="0 0 1200 160" width="100%" height="160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="ts-sky" cx="50%" cy="0%" r="80%"><stop offset="0%" stop-color="#0d2e55" stop-opacity="1"/><stop offset="100%" stop-color="#05111f" stop-opacity="1"/></radialGradient>
-            <radialGradient id="ts-glow-l" cx="25%" cy="100%" r="40%"><stop offset="0%" stop-color="#0a7a5e" stop-opacity="0.4"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-            <radialGradient id="ts-glow-c" cx="50%" cy="100%" r="50%"><stop offset="0%" stop-color="#d4920c" stop-opacity="0.25"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-            <radialGradient id="ts-glow-r" cx="75%" cy="100%" r="40%"><stop offset="0%" stop-color="#0a7a5e" stop-opacity="0.35"/><stop offset="100%" stop-color="transparent"/></radialGradient>
-          </defs>
-          <rect width="1200" height="160" fill="url(#ts-sky)"/>
-          <rect width="1200" height="160" fill="url(#ts-glow-l)"/>
-          <rect width="1200" height="160" fill="url(#ts-glow-c)"/>
-          <rect width="1200" height="160" fill="url(#ts-glow-r)"/>
-          <!-- Stars -->
-          <circle cx="80" cy="18" r="1" fill="white" opacity="0.4"/><circle cx="200" cy="10" r="1.2" fill="white" opacity="0.3"/><circle cx="350" cy="22" r="0.8" fill="white" opacity="0.5"/><circle cx="500" cy="8" r="1" fill="white" opacity="0.35"/><circle cx="680" cy="15" r="1.2" fill="white" opacity="0.3"/><circle cx="820" cy="25" r="0.8" fill="white" opacity="0.45"/><circle cx="950" cy="12" r="1" fill="white" opacity="0.4"/><circle cx="1100" cy="20" r="1.2" fill="white" opacity="0.3"/><circle cx="160" cy="35" r="0.8" fill="white" opacity="0.25"/><circle cx="440" cy="30" r="1" fill="white" opacity="0.3"/><circle cx="760" cy="18" r="0.8" fill="white" opacity="0.35"/><circle cx="1050" cy="32" r="1" fill="white" opacity="0.25"/>
-          <!-- Left cluster buildings -->
-          <rect x="0" y="108" width="25" height="52" fill="#071828"/><rect x="27" y="92" width="18" height="68" fill="#0a2240"/><rect x="47" y="82" width="22" height="78" fill="#071828"/><rect x="71" y="70" width="16" height="90" fill="#0a2240"/><rect x="89" y="88" width="28" height="72" fill="#071828"/><rect x="119" y="76" width="20" height="84" fill="#0a2240"/><rect x="141" y="94" width="16" height="66" fill="#071828"/><rect x="159" y="86" width="24" height="74" fill="#0a2240"/>
-          <!-- Left windows -->
-          <rect x="50" y="88" width="4" height="4" fill="#d4920c" opacity="0.7"/><rect x="56" y="88" width="4" height="4" fill="#d4920c" opacity="0.4"/><rect x="50" y="96" width="4" height="4" fill="#0a7a5e" opacity="0.8"/><rect x="74" y="76" width="4" height="4" fill="#d4920c" opacity="0.6"/><rect x="80" y="76" width="4" height="4" fill="#0a7a5e" opacity="0.7"/><rect x="74" y="84" width="4" height="4" fill="#d4920c" opacity="0.5"/><rect x="122" y="83" width="4" height="4" fill="#0a7a5e" opacity="0.8"/><rect x="128" y="83" width="4" height="4" fill="#0a7a5e" opacity="0.5"/><rect x="122" y="91" width="4" height="4" fill="#d4920c" opacity="0.6"/>
-          <!-- Center cluster — tall commercial towers -->
-          <rect x="390" y="40" width="36" height="120" fill="#0a2240"/><rect x="428" y="58" width="28" height="102" fill="#071828"/><rect x="458" y="50" width="40" height="110" fill="#0d2e55"/><rect x="500" y="32" width="32" height="128" fill="#0a2240"/><rect x="534" y="48" width="36" height="112" fill="#071828"/><rect x="572" y="62" width="28" height="98" fill="#0d2e55"/><rect x="602" y="44" width="34" height="116" fill="#0a2240"/><rect x="638" y="70" width="24" height="90" fill="#071828"/><rect x="664" y="56" width="30" height="104" fill="#0d2e55"/><rect x="696" y="78" width="22" height="82" fill="#0a2240"/>
-          <!-- Center windows -->
-          <rect x="394" y="48" width="4" height="4" fill="#d4920c" opacity="0.8"/><rect x="400" y="48" width="4" height="4" fill="#d4920c" opacity="0.5"/><rect x="406" y="48" width="4" height="4" fill="#0a7a5e" opacity="0.6"/><rect x="394" y="56" width="4" height="4" fill="#0a7a5e" opacity="0.7"/><rect x="400" y="56" width="4" height="4" fill="#d4920c" opacity="0.4"/><rect x="462" y="58" width="4" height="4" fill="#d4920c" opacity="0.8"/><rect x="468" y="58" width="4" height="4" fill="#0a7a5e" opacity="0.9"/><rect x="474" y="58" width="4" height="4" fill="#d4920c" opacity="0.5"/><rect x="462" y="66" width="4" height="4" fill="#0a7a5e" opacity="0.6"/><rect x="468" y="66" width="4" height="4" fill="#d4920c" opacity="0.7"/><rect x="504" y="40" width="4" height="4" fill="#d4920c" opacity="0.9"/><rect x="510" y="40" width="4" height="4" fill="#d4920c" opacity="0.6"/><rect x="516" y="40" width="4" height="4" fill="#0a7a5e" opacity="0.7"/><rect x="504" y="48" width="4" height="4" fill="#0a7a5e" opacity="0.8"/><rect x="510" y="48" width="4" height="4" fill="#d4920c" opacity="0.5"/><rect x="538" y="56" width="4" height="4" fill="#d4920c" opacity="0.7"/><rect x="544" y="56" width="4" height="4" fill="#0a7a5e" opacity="0.8"/><rect x="538" y="64" width="4" height="4" fill="#d4920c" opacity="0.5"/><rect x="606" y="52" width="4" height="4" fill="#0a7a5e" opacity="0.9"/><rect x="612" y="52" width="4" height="4" fill="#d4920c" opacity="0.6"/><rect x="618" y="52" width="4" height="4" fill="#0a7a5e" opacity="0.5"/><rect x="606" y="60" width="4" height="4" fill="#d4920c" opacity="0.7"/><rect x="668" y="64" width="4" height="4" fill="#d4920c" opacity="0.8"/><rect x="674" y="64" width="4" height="4" fill="#0a7a5e" opacity="0.6"/>
-          <!-- Right cluster buildings -->
-          <rect x="1024" y="86" width="24" height="74" fill="#0a2240"/><rect x="1050" y="76" width="20" height="84" fill="#071828"/><rect x="1072" y="64" width="28" height="96" fill="#0a2240"/><rect x="1102" y="80" width="18" height="80" fill="#071828"/><rect x="1122" y="72" width="22" height="88" fill="#0a2240"/><rect x="1146" y="90" width="16" height="70" fill="#071828"/><rect x="1164" y="84" width="20" height="76" fill="#0a2240"/><rect x="1186" y="98" width="14" height="62" fill="#071828"/>
-          <!-- Right windows -->
-          <rect x="1076" y="72" width="4" height="4" fill="#d4920c" opacity="0.8"/><rect x="1082" y="72" width="4" height="4" fill="#0a7a5e" opacity="0.7"/><rect x="1076" y="80" width="4" height="4" fill="#0a7a5e" opacity="0.6"/><rect x="1082" y="80" width="4" height="4" fill="#d4920c" opacity="0.5"/><rect x="1126" y="80" width="4" height="4" fill="#d4920c" opacity="0.7"/><rect x="1132" y="80" width="4" height="4" fill="#0a7a5e" opacity="0.8"/><rect x="1126" y="88" width="4" height="4" fill="#d4920c" opacity="0.5"/>
-          <!-- Horizon glow line -->
-          <rect x="0" y="119" width="1200" height="1" fill="rgba(10,122,94,0.2)"/>
-          <!-- Ground -->
-          <rect x="0" y="120" width="1200" height="40" fill="#03090f"/>
-          <!-- Ground reflections -->
-          <line x1="460" y1="120" x2="460" y2="160" stroke="rgba(212,146,12,0.15)" stroke-width="2"/><line x1="504" y1="120" x2="504" y2="160" stroke="rgba(10,122,94,0.12)" stroke-width="1.5"/><line x1="538" y1="120" x2="538" y2="160" stroke="rgba(212,146,12,0.1)" stroke-width="1"/>
-        </svg>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="reveal bg-pdr-paper rounded-2xl p-8 flex flex-col gap-5 relative" style="border:1px solid rgba(212,146,12,0.12)">
-          <div class="font-serif text-7xl text-pdr-gold/15 leading-none absolute top-4 left-7 select-none">"</div>
-          <div class="flex gap-0.5 mt-3">
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="font-serif text-slate-700 text-base leading-relaxed flex-1">"We were paying $4,200 a month for our restaurant locations. Power Done Right got us to $3,100 in the same week. The whole process took maybe 15 minutes of my time."</p>
-          <div class="text-xs font-mono text-pdr-teal font-medium">Saved $13,200 last year</div>
-          <div class="flex items-center gap-3 pt-4 border-t border-stone-200">
-            <img src="https://i.pravatar.cc/48?img=11" alt="Maria G." width="40" height="40" class="rounded-full object-cover" />
-            <div>
-              <div class="text-sm font-medium text-pdr-ink">Maria G.</div>
-              <div class="text-xs text-slate-500 font-mono">Multi-location Restaurant · Dallas, TX</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="reveal reveal-delay-1 bg-pdr-paper rounded-2xl p-8 flex flex-col gap-5 relative" style="border:1px solid rgba(212,146,12,0.12)">
-          <div class="font-serif text-7xl text-pdr-gold/15 leading-none absolute top-4 left-7 select-none">"</div>
-          <div class="flex gap-0.5 mt-3">
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="font-serif text-slate-700 text-base leading-relaxed flex-1">"I was skeptical about the no-fees claim. There genuinely aren't any. They saved our distribution center over $28,000 last year. The switch happened without anyone noticing — exactly what you want."</p>
-          <div class="text-xs font-mono text-pdr-teal font-medium">Saved $28,400 last year</div>
-          <div class="flex items-center gap-3 pt-4 border-t border-stone-200">
-            <img src="https://i.pravatar.cc/48?img=33" alt="David K." width="40" height="40" class="rounded-full object-cover" />
-            <div>
-              <div class="text-sm font-medium text-pdr-ink">David K.</div>
-              <div class="text-xs text-slate-500 font-mono">Distribution Warehouse · Chicago, IL</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="reveal reveal-delay-2 bg-pdr-paper rounded-2xl p-8 flex flex-col gap-5 relative" style="border:1px solid rgba(212,146,12,0.12)">
-          <div class="font-serif text-7xl text-pdr-gold/15 leading-none absolute top-4 left-7 select-none">"</div>
-          <div class="flex gap-0.5 mt-3">
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-          </div>
-          <p class="font-serif text-slate-700 text-base leading-relaxed flex-1">"Our office park has eight buildings. Power Done Right ran a bid for all of them simultaneously and cut our combined bill by 21%. The renewal process that used to take 3 months now takes 3 days."</p>
-          <div class="text-xs font-mono text-pdr-teal font-medium">Saved $41,600 last year</div>
-          <div class="flex items-center gap-3 pt-4 border-t border-stone-200">
-            <img src="https://i.pravatar.cc/48?img=47" alt="Sandra M." width="40" height="40" class="rounded-full object-cover" />
-            <div>
-              <div class="text-sm font-medium text-pdr-ink">Sandra M.</div>
-              <div class="text-xs text-slate-500 font-mono">Commercial Property Manager · Houston, TX</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FAQ ── -->
-  <section id="faq" class="bg-pdr-ink py-24 relative overflow-hidden">
-    <div class="absolute left-0 top-0 bottom-0 flex items-center pointer-events-none select-none" aria-hidden="true">
-      <span class="font-mono text-[280px] leading-none text-white/[0.015] font-bold">?</span>
-    </div>
-
-    <div class="max-w-3xl mx-auto px-5 lg:px-8 relative">
-      <div class="text-center mb-12 reveal">
-        <div class="inline-flex items-center gap-2 border border-pdr-teal/30 rounded-full px-4 py-1.5 text-xs font-mono text-pdr-teal mb-5">
-          Common questions
-        </div>
-        <h2 class="font-serif text-4xl text-white mb-3">Frequently asked</h2>
-      </div>
-
-      <div x-data="{ open: null }" class="flex flex-col gap-2">
-
-        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
-          <button @click="open = open===0 ? null : 0" class="w-full flex items-center justify-between px-6 py-5 text-left">
-            <span class="text-sm font-medium text-white">Is there a fee for your service?</span>
-            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===0?'rotate-45':''">+</span>
-          </button>
-          <div x-show="open===0" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">No. Power Done Right is 100% free to commercial electricity customers. We earn a commission from the winning supplier — only if you save — so we only make money when you do.</p>
-          </div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
-          <button @click="open = open===1 ? null : 1" class="w-full flex items-center justify-between px-6 py-5 text-left">
-            <span class="text-sm font-medium text-white">Will switching suppliers interrupt my electricity service?</span>
-            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===1?'rotate-45':''">+</span>
-          </button>
-          <div x-show="open===1" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">Never. Your local utility (ComEd, Oncor, AEP, etc.) continues to maintain the wires and meters. Only the commodity supplier changes — on a specific billing cycle, transparently. No one knocks on your door and your lights never flicker.</p>
-          </div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
-          <button @click="open = open===2 ? null : 2" class="w-full flex items-center justify-between px-6 py-5 text-left">
-            <span class="text-sm font-medium text-white">How long does the entire process take?</span>
-            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===2?'rotate-45':''">+</span>
-          </button>
-          <div x-show="open===2" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">You spend about 5 minutes submitting your info and sharing a recent bill. First competitive bids arrive within 24 hours. When you pick a rate, you'll sign a Letter of Authorization and a one-page pricing contract — both take under 10 minutes total. The switch happens on your next billing cycle, typically 2–4 weeks later.</p>
-          </div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
-          <button @click="open = open===3 ? null : 3" class="w-full flex items-center justify-between px-6 py-5 text-left">
-            <span class="text-sm font-medium text-white">What if I'm currently locked into a contract?</span>
-            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===3?'rotate-45':''">+</span>
-          </button>
-          <div x-show="open===3" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">Start now anyway. We'll review your contract terms and show you the savings you're leaving on the table. When your contract expires, we'll have bids ready so you never miss a renewal window.</p>
-          </div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
-          <button @click="open = open===4 ? null : 4" class="w-full flex items-center justify-between px-6 py-5 text-left">
-            <span class="text-sm font-medium text-white">Which states do you serve?</span>
-            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===4?'rotate-45':''">+</span>
-          </button>
-          <div x-show="open===4" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">All 17 deregulated electricity markets: Texas (ERCOT), Illinois, Ohio, Pennsylvania, New Jersey, Maryland, Massachusetts, Connecticut, New York, Michigan, and more. Enter your ZIP and we'll confirm eligibility instantly.</p>
-          </div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
-          <button @click="open = open===5 ? null : 5" class="w-full flex items-center justify-between px-6 py-5 text-left">
-            <span class="text-sm font-medium text-white">How do I know I'm getting the best rate?</span>
-            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===5?'rotate-45':''">+</span>
-          </button>
-          <div x-show="open===5" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">Because our incentives are the same regardless of the winning supplier. That structure means our entire incentive is to find the absolute lowest rate in the market. No cherry-picking, no kickback from a preferred supplier. If we don't beat your current rate, we tell you straight.</p>
-          </div>
-        </div>
-
-        <div class="rounded-xl overflow-hidden border border-white/8" style="background:rgba(255,255,255,0.03)">
-          <button @click="open = open===6 ? null : 6" class="w-full flex items-center justify-between px-6 py-5 text-left">
-            <span class="text-sm font-medium text-white">What documents will I need to sign?</span>
-            <span class="text-pdr-teal text-xl leading-none ml-4 shrink-0 transition-transform duration-200" :class="open===6?'rotate-45':''">+</span>
-          </button>
-          <div x-show="open===6" x-transition class="px-6 pb-5">
-            <p class="text-white/50 text-sm leading-relaxed">Just two: a Letter of Authorization (LOA) that gives us permission to shop rates on your behalf, and a standard pricing contract once you select a supplier. Both are straightforward, one-page documents. You can review each before signing — no pressure, no fine print surprises.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-8">
-        <p class="text-white/40 text-sm">More questions? <a href="tel:+18778173744" class="text-pdr-gold hover:text-pdr-gold-l transition-colors">(877) 817-3744</a> or <a href="faq" class="text-pdr-teal hover:text-white transition-colors">view all FAQs →</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FINAL CTA ── -->
-  <section class="teal-cta-bg relative overflow-hidden py-28">
-    <div class="hero-grid absolute inset-0 pointer-events-none opacity-50"></div>
-    <div class="relative max-w-3xl mx-auto px-5 lg:px-8 text-center">
-      <div class="inline-flex items-center gap-2 border border-white/20 rounded-full px-4 py-1.5 text-xs font-mono text-white/70 mb-6">
-        <span class="live-dot w-1.5 h-1.5 rounded-full bg-pdr-gold shrink-0"></span>
-        Free · No commitment · 2 minutes
-      </div>
-      <h2 class="font-serif text-4xl lg:text-5xl text-white mb-5 leading-tight">
-        Ready to see what your<br>market rate actually is?
-      </h2>
-      <p class="text-white/70 text-lg mb-8 max-w-xl mx-auto leading-relaxed">
-        Join 1,400+ commercial sites that switched to a better rate — without a single minute of downtime.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a href="#lead" class="bg-pdr-paper hover:bg-white text-pdr-ink rounded-full px-9 py-4 text-base font-medium transition-colors">
-          Get My Free Rate Comparison →
-        </a>
-        <a href="tel:+18778173744" class="flex items-center gap-2 text-white/70 hover:text-white transition-colors text-sm">
-          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M2 2.5A.5.5 0 012.5 2H5l1 3-1.75 1.25C5.33 8.9 7.1 10.67 9 11.75L10.25 10l3 1v2.5a.5.5 0 01-.5.5C5.5 14 2 10.5 2 6V2.5z"/></svg>
-          Or call (877) 817-3744
-        </a>
-      </div>
-      <p class="text-white/40 text-xs font-mono mt-6">No credit pull · No service interruption · No fees, ever</p>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
-  <footer class="bg-pdr-ink border-t border-white/8">
-    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 pb-12 border-b border-white/8">
-        <div class="lg:col-span-1">
-          <a href="#top" class="flex items-center gap-2.5 font-serif text-[19px] text-white mb-4">
-            <svg viewBox="0 0 28 28" width="24" height="24" fill="none">
-              <rect x="1" y="1" width="26" height="26" rx="6" fill="#0a2240"/>
-              <path d="M15 4.5 L8 15.5 H13 L12 23.5 L20.5 12 H15.5 L17 4.5 Z" fill="#0a7a5e"/>
-            </svg>
-            Power Done Right
-          </a>
-          <p class="text-sm leading-relaxed text-white/35 max-w-[220px]">Commercial energy procurement in 17 deregulated US markets.</p>
-          <a href="tel:+18778173744" class="flex items-center gap-2 text-pdr-gold hover:text-pdr-gold-l text-sm mt-4 transition-colors font-mono">
-            (877) 817-3744
-          </a>
-        </div>
-        <div>
-          <div class="text-xs font-mono text-white/25 uppercase tracking-wider mb-4">Markets</div>
-          <ul class="flex flex-col gap-2.5 text-sm text-white/45">
-            <li><a href="electricity"       class="hover:text-white transition-colors">Electricity</a></li>
-            <li><a href="natural-gas"       class="hover:text-white transition-colors">Natural gas</a></li>
-            <li><a href="renewable-plans"   class="hover:text-white transition-colors">Renewable plans</a></li>
-            <li><a href="demand-management" class="hover:text-white transition-colors">Demand management</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="text-xs font-mono text-white/25 uppercase tracking-wider mb-4">Company</div>
-          <ul class="flex flex-col gap-2.5 text-sm text-white/45">
-            <li><a href="about"   class="hover:text-white transition-colors">About</a></li>
-            <li><a href="contact" class="hover:text-white transition-colors">Contact</a></li>
-            <li><a href="careers" class="hover:text-white transition-colors">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="text-xs font-mono text-white/25 uppercase tracking-wider mb-4">Resources</div>
-          <ul class="flex flex-col gap-2.5 text-sm text-white/45">
-            <li><a href="bill-analysis"  class="hover:text-white transition-colors">Bill analysis</a></li>
-            <li><a href="market-intel"   class="hover:text-white transition-colors">Market intel</a></li>
-            <li><a href="renewal-guide"  class="hover:text-white transition-colors">Renewal guide</a></li>
-            <li><a href="faq"            class="hover:text-white transition-colors">FAQ</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-white/25 font-mono">
-        <span>© 2026 Power Done Right LLC · Commercial energy procurement in 17 deregulated markets</span>
-        <div class="flex gap-6">
-          <a href="privacy" class="hover:text-white transition-colors">Privacy</a>
-          <a href="terms" class="hover:text-white transition-colors">Terms</a>
-          <a href="disclosures" class="hover:text-white transition-colors">Disclosures</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ── SCRIPTS ── -->
-  <script>
-    /* ── Supabase ── */
-    const SUPABASE_URL = 'https://lhwfbectnrmrvwhkftun.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxod2ZiZWN0bnJtcnZ3aGtmdHVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4NzE1MzEsImV4cCI6MjA4OTQ0NzUzMX0.zmPRPeILtFNgGMp66JzhD44QUamXr0GFQAQq7y2WyoU';
-
-    /* ── Form submit ── */
-    async function submitForm() {
-      const name  = document.getElementById('lf-name').value.trim();
-      const email = document.getElementById('lf-email').value.trim();
-      const phone = document.getElementById('lf-phone').value.trim();
-      const errEl = document.getElementById('lf-error');
-
-      if (!name || !email || !phone) {
-        errEl.textContent = 'Please fill in your name, email, and phone number.';
-        errEl.style.display = '';
-        return;
-      }
-      errEl.style.display = 'none';
-
-      const btn = document.getElementById('lf-next');
-      btn.disabled = true;
-      btn.innerHTML = 'Sending…';
-
-      const bill = parseFloat(document.getElementById('lf-bill').value) || null;
-      const ref  = 'PDR-' + Math.floor(100000 + Math.random() * 900000);
-
-      const payload = {
-        name, email,
-        phone: phone || null,
-        property_name: document.getElementById('lf-business').value.trim() || null,
-        monthly_bill_estimate: bill,
-        service_zip: document.getElementById('lf-zip').value.trim() || null,
-        source: 'power-done-right',
-        status: 'new',
-      };
-
-      try {
-        const res = await fetch(`${SUPABASE_URL}/rest/v1/electricity_leads`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'apikey': SUPABASE_ANON_KEY,
-            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-            'Prefer': 'return=representation',
-          },
-          body: JSON.stringify(payload),
-        });
-        if (!res.ok) throw new Error('insert failed');
-        const [inserted] = await res.json();
-
-        fetch(`${SUPABASE_URL}/functions/v1/send-notification`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
-          body: JSON.stringify({ type: 'ELECTRICITY_LEAD', record: inserted || payload }),
-        }).catch(() => {});
-
-        document.getElementById('lead-form-wrap').style.display = 'none';
-        document.getElementById('lead-success').style.display = '';
-        document.getElementById('success-ref').textContent = ref;
-        document.getElementById('success-savings').textContent = bill
-          ? '$' + Math.round(bill * 0.12 * 12).toLocaleString() + ' – $' + Math.round(bill * 0.28 * 12).toLocaleString()
-          : '—';
-
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'pdr_lead_submit', { event_category: 'lead', event_label: payload.property_name });
-        }
-      } catch (err) {
-        btn.disabled = false;
-        btn.innerHTML = 'Get my rates <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
-        const errEl = document.getElementById('lf-error');
-        errEl.textContent = 'Submission failed — please try again or call us directly.';
-        errEl.style.display = '';
-        console.error('Form submit error:', err);
-      }
-    }
-
-    /* ── Form step management ── */
-    let formStep = 0;
-
-    function goToStep(n) {
-      [0, 1, 2].forEach(i => {
-        document.getElementById('lf-step-' + i).style.display = i === n ? '' : 'none';
-        document.getElementById('lf-bar-' + i).classList.toggle('active', i <= n);
-      });
-      const labels = ['Step 1 of 3 — Your usage', 'Step 2 of 3 — Your business', 'Step 3 of 3 — Your contact'];
-      document.getElementById('lf-step-label').textContent = labels[n];
-      document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
-      const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
-      const btn = document.getElementById('lf-next');
-      btn.innerHTML = (n < 2 ? 'Continue' : 'Get my rates') + arrow;
-      formStep = n;
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      goToStep(0);
-
-      document.getElementById('lf-next').addEventListener('click', () => {
-        if (formStep < 2) goToStep(formStep + 1);
-        else submitForm();
-      });
-      document.getElementById('lf-back').addEventListener('click', () => {
-        if (formStep > 0) goToStep(formStep - 1);
-      });
-      document.getElementById('lf-bill').addEventListener('input', function () {
-        const bill = parseFloat(this.value);
-        const est = document.getElementById('lf-estimate');
-        if (bill && bill > 0) {
-          est.style.display = '';
-          document.getElementById('lf-est-low').textContent  = '$' + Math.round(bill * 0.12 * 12).toLocaleString();
-          document.getElementById('lf-est-high').textContent = '$' + Math.round(bill * 0.28 * 12).toLocaleString();
-        } else {
-          est.style.display = 'none';
-        }
-      });
-
-      /* Scroll reveal */
-      const revealObs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }});
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+<script>
+  /* ── Mobile nav ── */
+  (function(){
+    const btn = document.getElementById('navToggle');
+    const menu = document.getElementById('mobMenu');
+    const ham = document.getElementById('hamIcon');
+    const close = document.getElementById('closeIcon');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      ham.style.display = open ? 'none' : '';
+      close.style.display = open ? '' : 'none';
     });
+  })();
+  function closeMobMenu(){
+    const menu = document.getElementById('mobMenu');
+    const btn = document.getElementById('navToggle');
+    const ham = document.getElementById('hamIcon');
+    const close = document.getElementById('closeIcon');
+    menu.classList.remove('open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+    if (ham) ham.style.display = '';
+    if (close) close.style.display = 'none';
+  }
 
-    /* ── Alpine: premium bid ticker ── */
-    function bidTicker() {
-      const suppliers = [
-        'Constellation Energy', 'NRG Energy', 'Direct Energy',
-        'Reliant Energy', 'TXU Energy', 'Cirro Energy',
-        'Verde Energy', 'Spark Energy', 'Gexa Energy',
-        'Ambit Energy', 'Calpine Energy', 'Vistra Energy',
-        'YEP Energy', 'TriEagle Energy', 'Tara Energy',
-      ];
-      const BASELINE = 0.112; // market baseline for % delta
-      let uid = 0;
+  /* ── Hero drop zone interaction ── */
+  (function(){
+    const dz = document.getElementById('dropZone');
+    const input = document.getElementById('dropInput');
+    if (!dz) return;
+    ['dragenter','dragover'].forEach(e => dz.addEventListener(e, ev => { ev.preventDefault(); dz.classList.add('drag'); }));
+    ['dragleave','drop'].forEach(e => dz.addEventListener(e, ev => { ev.preventDefault(); dz.classList.remove('drag'); }));
+    dz.addEventListener('drop', ev => {
+      const f = ev.dataTransfer.files && ev.dataTransfer.files[0];
+      if (f) { showAccepted(f.name); scrollToForm(); }
+    });
+    input.addEventListener('change', ev => {
+      const f = ev.target.files && ev.target.files[0];
+      if (f) { showAccepted(f.name); scrollToForm(); }
+    });
+    function showAccepted(name){
+      dz.querySelector('.ttl').textContent = '✓ ' + name;
+      dz.querySelector('.meta').textContent = 'Reading… fill in your contact below to receive your audit.';
+      dz.style.borderColor = 'var(--green)';
+      dz.style.background = '#e6f3ec';
+    }
+    function scrollToForm(){
+      const lead = document.getElementById('lead');
+      if (lead) lead.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  })();
 
-      function makeRow() {
-        const name = suppliers[Math.floor(Math.random() * suppliers.length)];
-        const rate = parseFloat((0.068 + Math.random() * 0.032).toFixed(4));
-        const pct  = ((BASELINE - rate) / BASELINE * 100).toFixed(1);
-        return { id: uid++, name, rate: rate.toFixed(4), pct };
+  /* ── Bar chart render ── */
+  (function(){
+    const bars = document.getElementById('bars');
+    if (!bars) return;
+    const months = ['Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun'];
+    const data = [
+      {cur: 105, pdr: null}, {cur: 112, pdr: null}, {cur: 108, pdr: null},
+      {cur: 118, pdr: null}, {cur: 102, pdr: null}, {cur: 110, pdr: null},
+      {cur: 100, pdr: 88}, {cur: 96,  pdr: 84}, {cur: 92,  pdr: 81},
+      {cur: 88,  pdr: 78}, {cur: 86,  pdr: 76}, {cur: 84,  pdr: 75}
+    ];
+    const xStart = 60, xStep = (700-60)/12, w = 22;
+    const yScale = v => 200 - (v / 120) * 160;
+    let html = '';
+    data.forEach((d, i) => {
+      const x = xStart + i*xStep;
+      const yC = yScale(d.cur);
+      html += `<rect class="${d.pdr==null ? 'bar-cur' : 'bar-bg'}" x="${x}" y="${yC}" width="${w}" height="${200-yC}" rx="3"/>`;
+      if (d.pdr != null){
+        const yP = yScale(d.pdr);
+        html += `<rect class="bar-saved" x="${x}" y="${yP}" width="${w}" height="${yC-yP}" rx="3"/>`;
+        html += `<rect class="bar-pdr" x="${x}" y="${yP}" width="${w}" height="${200-yP}" rx="3"/>`;
       }
+      html += `<text class="axis" x="${x + w/2}" y="216" text-anchor="middle">${months[i]}</text>`;
+    });
+    bars.innerHTML = html;
+  })();
 
-      return {
-        rows: [],
-        lowest: '—',
-        start() {
-          // seed with 6 rows
-          for (let i = 0; i < 6; i++) this.rows.push(makeRow());
-          this.sortAndTrim();
-          setInterval(() => {
-            this.rows.push(makeRow());
-            this.sortAndTrim();
-          }, 3000);
-        },
-        sortAndTrim() {
-          this.rows.sort((a, b) => parseFloat(a.rate) - parseFloat(b.rate));
-          if (this.rows.length > 6) this.rows = this.rows.slice(0, 6);
-          this.lowest = '$' + this.rows[0].rate + '/kWh';
-        }
-      };
-    }
+  /* ── Calculator preview live ── */
+  (function(){
+    const sliders = document.querySelectorAll('#sliderMock .slider-row');
+    const big = document.getElementById('savingsBig');
+    const pct = document.getElementById('savingsPct');
+    const state = { sites: 38, kwh: 14200000, rate: 11.8, term: 36 };
 
-    /* ── Alpine: stats counter ── */
-    function statsCounter() {
-      return {
-        counts: { sites: 0, markets: 0, suppliers: 0 },
-        init() {
-          const io = new IntersectionObserver(([e]) => {
-            if (e.isIntersecting) { this.animateAll(); io.disconnect(); }
-          }, { threshold: 0.5 });
-          io.observe(this.$el);
-        },
-        animateAll() {
-          this.countTo('sites',     1400, 1200);
-          this.countTo('markets',     17,  700);
-          this.countTo('suppliers',   90,  900);
-        },
-        countTo(key, target, duration) {
-          const start = performance.now();
-          const tick = (now) => {
-            const p = Math.min((now - start) / duration, 1);
-            const ease = 1 - Math.pow(1 - p, 3); // ease-out cubic
-            this.counts[key] = Math.round(ease * target);
-            if (p < 1) requestAnimationFrame(tick);
-          };
-          requestAnimationFrame(tick);
-        }
-      };
+    function fmt$(n){ return '$' + Math.round(n).toLocaleString(); }
+    function calc(){
+      const spread = 0.114;
+      const annualSpend = state.kwh * (state.rate/100);
+      const savings = annualSpend * spread;
+      big.textContent = fmt$(savings);
+      pct.textContent = (spread * 100).toFixed(1) + '%';
     }
+    function setSlider(row, pctVal){
+      const fill = row.querySelector('.fill');
+      const knob = row.querySelector('.knob');
+      const val = row.querySelector('.val');
+      fill.style.width = pctVal + '%';
+      knob.style.left = pctVal + '%';
+      const min = +row.dataset.min, max = +row.dataset.max;
+      const v = min + (max-min) * (pctVal/100);
+      const key = row.dataset.key;
+      if (key === 'sites'){ state.sites = Math.round(v); val.textContent = state.sites; }
+      else if (key === 'kwh'){ state.kwh = v; val.textContent = (v/1e6).toFixed(1) + 'M'; }
+      else if (key === 'rate'){ state.rate = v; val.textContent = v.toFixed(1); }
+      calc();
+    }
+    sliders.forEach(row => {
+      const track = row.querySelector('.track');
+      let dragging = false;
+      function onMove(clientX){
+        const r = track.getBoundingClientRect();
+        const p = Math.max(0, Math.min(100, ((clientX - r.left)/r.width)*100));
+        setSlider(row, p);
+      }
+      track.addEventListener('mousedown', e => { dragging = true; onMove(e.clientX); });
+      window.addEventListener('mousemove', e => { if (dragging) onMove(e.clientX); });
+      window.addEventListener('mouseup', () => dragging = false);
+      track.addEventListener('touchstart', e => { dragging = true; onMove(e.touches[0].clientX); }, {passive:true});
+      window.addEventListener('touchmove', e => { if (dragging) onMove(e.touches[0].clientX); }, {passive:true});
+      window.addEventListener('touchend', () => dragging = false);
+    });
+    document.querySelectorAll('[data-term]').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('[data-term]').forEach(x => { x.classList.remove('btn-dark'); x.classList.add('btn-ghost'); });
+        b.classList.remove('btn-ghost'); b.classList.add('btn-dark');
+        state.term = +b.dataset.term;
+      });
+    });
+    calc();
+  })();
 
-    /* ── Alpine: calculator ── */
-    function calculator() {
-      return {
-        kWh: 5000,
-        rate: 0.112,
-        get annualSpend() { return Math.round(this.kWh * this.rate * 12); },
-        get savingsLow()  { return Math.round(this.annualSpend * 0.12); },
-        get savingsHigh() { return Math.round(this.annualSpend * 0.28); },
-        fmt(n) { return '$' + n.toLocaleString(); }
-      };
+  /* ── Industry copy swap ── */
+  const INDUSTRY_COPY = {
+    restaurants: {
+      lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market and send back a written savings analysis in 24 hours. Built for chains running 20+ locations across multiple utilities.",
+      rate: "$0.1182 / kWh", usage: "2.4M kWh", ends: "Aug 2026", save: "$54,300 / yr",
+      'kwh-total':"42.7M", 'sites-total':"128", ytd:"$612k", 'ytd-pct':"11.4%",
+    },
+    retail: {
+      lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market. Built for retail portfolios with high HVAC + refrigeration loads across 50–500 stores.",
+      rate: "$0.1124 / kWh", usage: "3.6M kWh", ends: "Mar 2027", save: "$68,900 / yr",
+      'kwh-total':"58.4M", 'sites-total':"212", ytd:"$847k", 'ytd-pct':"12.1%",
+    },
+    realestate: {
+      lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market. Built for REITs and property managers consolidating pass-through energy across triple-net portfolios.",
+      rate: "$0.1041 / kWh", usage: "8.1M kWh", ends: "Jun 2027", save: "$92,100 / yr",
+      'kwh-total':"148M", 'sites-total':"86", ytd:"$1.7M", 'ytd-pct':"10.8%",
     }
-  </script>
+  };
+  function applyIndustry(key){
+    const data = INDUSTRY_COPY[key] || INDUSTRY_COPY.restaurants;
+    document.querySelectorAll('[data-industry-copy]').forEach(el => {
+      const k = el.dataset.industryCopy;
+      if (data[k]) el.textContent = data[k];
+    });
+  }
+  applyIndustry('restaurants');
+
+  /* ── Supabase ── */
+  const SUPABASE_URL = 'https://lhwfbectnrmrvwhkftun.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxod2ZiZWN0bnJtcnZ3aGtmdHVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4NzE1MzEsImV4cCI6MjA4OTQ0NzUzMX0.zmPRPeILtFNgGMp66JzhD44QUamXr0GFQAQq7y2WyoU';
+
+  /* ── Form submit ── */
+  async function submitForm() {
+    const name  = document.getElementById('lf-name').value.trim();
+    const email = document.getElementById('lf-email').value.trim();
+    const phone = document.getElementById('lf-phone').value.trim();
+    const errEl = document.getElementById('lf-error');
+
+    if (!name || !email || !phone) {
+      errEl.textContent = 'Please fill in your name, email, and phone number.';
+      errEl.style.display = '';
+      return;
+    }
+    errEl.style.display = 'none';
+
+    const btn = document.getElementById('lf-next');
+    btn.disabled = true;
+    btn.innerHTML = 'Sending…';
+
+    const bill = parseFloat(document.getElementById('lf-bill').value) || null;
+    const ref  = 'PDR-' + Math.floor(100000 + Math.random() * 900000);
+
+    const payload = {
+      name, email,
+      phone: phone || null,
+      property_name: document.getElementById('lf-business').value.trim() || null,
+      monthly_bill_estimate: bill,
+      service_zip: document.getElementById('lf-zip').value.trim() || null,
+      source: 'power-done-right',
+      status: 'new',
+    };
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/electricity_leads`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=representation',
+        },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('insert failed');
+      const [inserted] = await res.json();
+
+      fetch(`${SUPABASE_URL}/functions/v1/send-notification`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
+        body: JSON.stringify({ type: 'ELECTRICITY_LEAD', record: inserted || payload }),
+      }).catch(() => {});
+
+      document.getElementById('lead-form-wrap').style.display = 'none';
+      document.getElementById('lead-success').style.display = '';
+      document.getElementById('success-ref').textContent = ref;
+      document.getElementById('success-savings').textContent = bill
+        ? '$' + Math.round(bill * 0.12 * 12).toLocaleString() + ' – $' + Math.round(bill * 0.28 * 12).toLocaleString()
+        : '—';
+
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'pdr_lead_submit', { event_category: 'lead', event_label: payload.property_name });
+      }
+    } catch (err) {
+      btn.disabled = false;
+      btn.innerHTML = 'Get my rates <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
+      errEl.textContent = 'Submission failed — please try again or call us directly.';
+      errEl.style.display = '';
+      console.error('Form submit error:', err);
+    }
+  }
+
+  /* ── Form step management ── */
+  let formStep = 0;
+
+  function goToStep(n) {
+    [0, 1, 2].forEach(i => {
+      document.getElementById('lf-step-' + i).style.display = i === n ? '' : 'none';
+      document.getElementById('lf-bar-' + i).classList.toggle('active', i <= n);
+    });
+    const labels = ['Step 1 of 3 — Your usage', 'Step 2 of 3 — Your business', 'Step 3 of 3 — Your contact'];
+    document.getElementById('lf-step-label').textContent = labels[n];
+    document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
+    const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
+    const btn = document.getElementById('lf-next');
+    btn.innerHTML = (n < 2 ? 'Continue' : 'Get my rates') + arrow;
+    formStep = n;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    goToStep(0);
+
+    document.getElementById('lf-next').addEventListener('click', () => {
+      if (formStep < 2) goToStep(formStep + 1);
+      else submitForm();
+    });
+    document.getElementById('lf-back').addEventListener('click', () => {
+      if (formStep > 0) goToStep(formStep - 1);
+    });
+    document.getElementById('lf-bill').addEventListener('input', function () {
+      const bill = parseFloat(this.value);
+      const est = document.getElementById('lf-estimate');
+      if (bill && bill > 0) {
+        est.style.display = '';
+        document.getElementById('lf-est-low').textContent  = '$' + Math.round(bill * 0.12 * 12).toLocaleString();
+        document.getElementById('lf-est-high').textContent = '$' + Math.round(bill * 0.28 * 12).toLocaleString();
+      } else {
+        est.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>
