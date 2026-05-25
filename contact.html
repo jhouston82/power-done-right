@@ -306,6 +306,15 @@
         <label class="cf-label" for="cf-message">How can we help?</label>
         <textarea class="cf-input" id="cf-message" placeholder="Tell us about your business, number of locations, or any questions about the process…"></textarea>
 
+        <label class="cf-label" style="margin-top:4px;">Electricity bill (optional)</label>
+        <div id="cf-upload-area" style="border:1px dashed rgba(255,255,255,0.18);border-radius:10px;padding:18px 16px;text-align:center;cursor:pointer;margin-bottom:18px;transition:border-color .15s ease;" onmouseenter="this.style.borderColor='var(--pdr-accent)'" onmouseleave="this.style.borderColor='rgba(255,255,255,0.18)'">
+          <div id="cf-upload-label" style="font-size:13px;color:var(--pdr-ink-3);">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;opacity:.7" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Attach your latest electricity bill · PDF, JPG, PNG
+          </div>
+        </div>
+        <input type="file" id="cf-bill-file" accept=".pdf,.jpg,.jpeg,.png,.webp" style="display:none" />
+
         <button class="cf-submit" id="cf-submit" type="button">Send message →</button>
         <p class="cf-fine">By submitting you agree to be contacted by Power Done Right. We never sell your data.</p>
       </div>
@@ -374,6 +383,51 @@
 
   document.getElementById('footer-year').textContent = new Date().getFullYear();
 
+  /* Bill upload for contact form */
+  let cfBillFile = null;
+
+  const uploadArea = document.getElementById('cf-upload-area');
+  const fileInput  = document.getElementById('cf-bill-file');
+  const uploadLabel = document.getElementById('cf-upload-label');
+
+  uploadArea.addEventListener('click', () => fileInput.click());
+  uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.style.borderColor = 'var(--pdr-accent)'; });
+  uploadArea.addEventListener('dragleave', () => { uploadArea.style.borderColor = 'rgba(255,255,255,0.18)'; });
+  uploadArea.addEventListener('drop', e => {
+    e.preventDefault();
+    uploadArea.style.borderColor = 'rgba(255,255,255,0.18)';
+    const file = e.dataTransfer.files[0];
+    if (file) setFile(file);
+  });
+  fileInput.addEventListener('change', () => { if (fileInput.files[0]) setFile(fileInput.files[0]); });
+
+  function setFile(file) {
+    cfBillFile = file;
+    uploadLabel.innerHTML = `<span style="color:var(--pdr-ink)">✓ ${file.name}</span> <span style="margin-left:8px;color:var(--pdr-ink-3);cursor:pointer;text-decoration:underline" id="cf-remove-file">Remove</span>`;
+    document.getElementById('cf-remove-file').addEventListener('click', e => {
+      e.stopPropagation();
+      cfBillFile = null;
+      fileInput.value = '';
+      uploadLabel.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:6px;opacity:.7" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Attach your latest electricity bill · PDF, JPG, PNG`;
+    });
+  }
+
+  async function uploadBill(file) {
+    const filename = crypto.randomUUID() + '-' + file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+    const buf = await file.arrayBuffer();
+    const uploadRes = await fetch(`${SUPABASE_URL}/storage/v1/object/electricity-bills/${filename}`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': file.type,
+      },
+      body: buf,
+    });
+    if (!uploadRes.ok) throw new Error('Upload failed');
+    return `${SUPABASE_URL}/storage/v1/object/public/electricity-bills/${filename}`;
+  }
+
   document.getElementById('cf-submit').addEventListener('click', async () => {
     const name    = document.getElementById('cf-name').value.trim();
     const email   = document.getElementById('cf-email').value.trim();
@@ -387,10 +441,16 @@
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
+    let billUrl = null;
+    if (cfBillFile) {
+      try { billUrl = await uploadBill(cfBillFile); } catch (_) { /* non-fatal */ }
+    }
+
     const payload = {
       name, email,
       phone: phone || null,
       property_name: company || null,
+      bill_url: billUrl,
       source: 'contact-page',
       status: 'new',
       notes: message || null,

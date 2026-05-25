@@ -344,6 +344,30 @@
     border-radius: 10px; padding: 12px 16px;
     font-size: 14px; color: var(--red);
   }
+  /* Bill upload drop zone */
+  .bill-drop-zone{
+    border: 2px dashed var(--line); border-radius: 14px;
+    padding: 32px 20px; text-align: center; cursor: pointer;
+    transition: border-color .2s ease, background .2s ease;
+    background: var(--paper);
+  }
+  .bill-drop-zone:hover, .bill-drop-zone.dragging{
+    border-color: var(--amber); background: rgba(230,181,66,.05);
+  }
+  .bill-drop-zone svg{ display:block; margin: 0 auto 12px; opacity:.45; }
+  .bill-drop-title{ font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .bill-drop-sub{ font-size: 13px; color: var(--muted); }
+  .bill-skip{
+    display:block; text-align:center; margin-top: 14px;
+    font-size: 13px; color: var(--muted-on); cursor:pointer;
+    text-decoration:underline; text-underline-offset: 2px;
+    background:none; border:none; font-family:inherit; padding:0; width:100%;
+  }
+  .bill-skip:hover{ color: var(--ink); }
+  .bill-status{ margin-top: 16px; font-size: 14px; text-align:center; min-height: 22px; }
+  .bill-analyzing{ color: var(--muted); }
+  .bill-success{ color: var(--green); font-weight: 600; }
+  .bill-warn{ color: var(--amber-2); }
   /* Success state */
   .lead-success{
     display:none; text-align:center; padding: 8px 0;
@@ -744,36 +768,77 @@
         <div class="form-card-head">
           <div style="display:flex; align-items:center; gap: 8px; margin-bottom: 8px;">
             <span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite;flex-shrink:0;display:inline-block;"></span>
-            <span class="step-label" id="lf-step-label">Step 1 of 3 — Your usage</span>
+            <span class="step-label" id="lf-step-label">Step 1 of 4 — Your bill</span>
           </div>
           <div class="step-bars">
             <div class="lf-bar active" id="lf-bar-0"></div>
             <div class="lf-bar" id="lf-bar-1"></div>
             <div class="lf-bar" id="lf-bar-2"></div>
+            <div class="lf-bar" id="lf-bar-3"></div>
           </div>
         </div>
 
-        <!-- Step 0: Usage -->
+        <!-- Step 0: Bill upload -->
         <div id="lf-step-0">
-          <label class="form-label" for="lf-bill">What's your average monthly electric bill?</label>
-          <div class="bill-input-wrap">
-            <span class="pfx">$</span>
-            <input id="lf-bill" type="number" inputmode="decimal" placeholder="2,400" min="0" />
-            <span class="sfx">/mo</span>
+          <p class="form-hint" style="margin-bottom:14px;">Upload your latest electricity bill and we'll fill in the details for you — or skip and enter them manually.</p>
+          <div class="bill-drop-zone" id="lf-drop-zone" role="button" tabindex="0" aria-label="Upload electricity bill">
+            <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="4" width="28" height="32" rx="3"/>
+              <polyline points="20,13 20,27"/>
+              <polyline points="14,20 20,13 26,20"/>
+              <line x1="13" y1="31" x2="27" y2="31"/>
+            </svg>
+            <div class="bill-drop-title">Drop your electricity bill here</div>
+            <div class="bill-drop-sub">PDF, JPG, or PNG · click to browse</div>
           </div>
-          <div id="lf-estimate" class="savings-preview">
-            <div class="lbl">Estimated annual savings range</div>
-            <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
-            <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
+          <input type="file" id="lf-bill-file" accept=".pdf,.jpg,.jpeg,.png,.webp" style="display:none" />
+          <div id="lf-bill-status" class="bill-status" style="display:none"></div>
+          <button class="bill-skip" id="lf-bill-skip" type="button">Skip — I'll enter details manually</button>
+        </div>
+
+        <!-- Step 1: Usage -->
+        <div id="lf-step-1" style="display:none">
+          <div class="form-row">
+            <div>
+              <label class="form-label" for="lf-bill">Average monthly electric bill</label>
+              <div class="bill-input-wrap">
+                <span class="pfx">$</span>
+                <input id="lf-bill" type="number" inputmode="decimal" placeholder="2,400" min="0" />
+                <span class="sfx">/mo</span>
+              </div>
+              <div id="lf-estimate" class="savings-preview">
+                <div class="lbl">Estimated annual savings range</div>
+                <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
+                <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
+              </div>
+            </div>
+            <div>
+              <label class="form-label" for="lf-kwh">Monthly usage (kWh, optional)</label>
+              <input id="lf-kwh" class="form-input" type="number" inputmode="decimal" placeholder="45,000" min="0" />
+            </div>
+            <div>
+              <label class="form-label" for="lf-provider">Current electricity provider (optional)</label>
+              <input id="lf-provider" class="form-input" type="text" placeholder="ComEd, Ameren, PECO…" />
+            </div>
           </div>
         </div>
 
-        <!-- Step 1: Business -->
-        <div id="lf-step-1" style="display:none">
+        <!-- Step 2: Business -->
+        <div id="lf-step-2" style="display:none">
           <div class="form-row">
             <div>
               <label class="form-label" for="lf-business">Business name</label>
               <input id="lf-business" class="form-input" type="text" placeholder="Acme Manufacturing" />
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div>
+                <label class="form-label" for="lf-city">City</label>
+                <input id="lf-city" class="form-input" type="text" placeholder="Chicago" />
+              </div>
+              <div>
+                <label class="form-label" for="lf-state">State</label>
+                <input id="lf-state" class="form-input" type="text" placeholder="IL" maxlength="2" />
+              </div>
             </div>
             <div>
               <label class="form-label" for="lf-zip">Service ZIP code</label>
@@ -783,8 +848,8 @@
           </div>
         </div>
 
-        <!-- Step 2: Contact -->
-        <div id="lf-step-2" style="display:none">
+        <!-- Step 3: Contact -->
+        <div id="lf-step-3" style="display:none">
           <div class="form-row">
             <div>
               <label class="form-label" for="lf-name">Full name</label>
@@ -1447,6 +1512,66 @@
   const SUPABASE_URL = 'https://lhwfbectnrmrvwhkftun.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxod2ZiZWN0bnJtcnZ3aGtmdHVuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4NzE1MzEsImV4cCI6MjA4OTQ0NzUzMX0.zmPRPeILtFNgGMp66JzhD44QUamXr0GFQAQq7y2WyoU';
 
+  /* ── Bill upload state ── */
+  let billUrl = null;
+
+  async function uploadAndExtractBill(file) {
+    const filename = crypto.randomUUID() + '-' + file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+    const buf = await file.arrayBuffer();
+
+    const uploadRes = await fetch(`${SUPABASE_URL}/storage/v1/object/electricity-bills/${filename}`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': file.type,
+      },
+      body: buf,
+    });
+    if (!uploadRes.ok) throw new Error('Upload failed');
+    billUrl = `${SUPABASE_URL}/storage/v1/object/public/electricity-bills/${filename}`;
+
+    const base64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+    const extractRes = await fetch(`${SUPABASE_URL}/functions/v1/extract-bill`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
+      body: JSON.stringify({ base64, mimeType: file.type }),
+    });
+    const { data } = await extractRes.json();
+    return data || {};
+  }
+
+  function prefillFromBill(data) {
+    if (!data) return;
+    if (data.current_monthly_bill) {
+      const el = document.getElementById('lf-bill');
+      el.value = data.current_monthly_bill;
+      el.dispatchEvent(new Event('input'));
+    }
+    if (data.current_monthly_usage) document.getElementById('lf-kwh').value = data.current_monthly_usage;
+    if (data.current_provider) document.getElementById('lf-provider').value = data.current_provider;
+    if (data.city) document.getElementById('lf-city').value = data.city;
+    if (data.state) document.getElementById('lf-state').value = data.state;
+    if (data.zip) document.getElementById('lf-zip').value = data.zip;
+  }
+
+  async function handleBillFile(file) {
+    const statusEl = document.getElementById('lf-bill-status');
+    const dropZone = document.getElementById('lf-drop-zone');
+    dropZone.style.display = 'none';
+    statusEl.style.display = '';
+    statusEl.innerHTML = '<span class="bill-analyzing">Analyzing your bill…</span>';
+    try {
+      const data = await uploadAndExtractBill(file);
+      prefillFromBill(data);
+      statusEl.innerHTML = '<span class="bill-success">✓ Bill analyzed — details filled in below</span>';
+      setTimeout(() => goToStep(1), 900);
+    } catch (_) {
+      statusEl.innerHTML = '<span class="bill-warn">Couldn\'t read bill — fill in details manually below.</span>';
+      setTimeout(() => goToStep(1), 1400);
+    }
+  }
+
   /* ── Form submit ── */
   async function submitForm() {
     const name  = document.getElementById('lf-name').value.trim();
@@ -1472,8 +1597,13 @@
       name, email,
       phone: phone || null,
       property_name: document.getElementById('lf-business').value.trim() || null,
-      monthly_bill_estimate: bill,
+      current_monthly_bill: bill,
+      monthly_kwh: parseFloat(document.getElementById('lf-kwh').value) || null,
+      current_provider: document.getElementById('lf-provider').value.trim() || null,
+      service_city: document.getElementById('lf-city').value.trim() || null,
+      service_state: document.getElementById('lf-state').value.trim() || null,
       service_zip: document.getElementById('lf-zip').value.trim() || null,
+      bill_url: billUrl || null,
       source: 'power-done-right',
       status: 'new',
     };
@@ -1521,16 +1651,16 @@
   let formStep = 0;
 
   function goToStep(n) {
-    [0, 1, 2].forEach(i => {
+    [0, 1, 2, 3].forEach(i => {
       document.getElementById('lf-step-' + i).style.display = i === n ? '' : 'none';
       document.getElementById('lf-bar-' + i).classList.toggle('active', i <= n);
     });
-    const labels = ['Step 1 of 3 — Your usage', 'Step 2 of 3 — Your business', 'Step 3 of 3 — Your contact'];
+    const labels = ['Step 1 of 4 — Your bill', 'Step 2 of 4 — Your usage', 'Step 3 of 4 — Your business', 'Step 4 of 4 — Your contact'];
     document.getElementById('lf-step-label').textContent = labels[n];
     document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
     const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
     const btn = document.getElementById('lf-next');
-    btn.innerHTML = (n < 2 ? 'Continue' : 'Get my rates') + arrow;
+    btn.innerHTML = (n < 3 ? 'Continue' : 'Get my rates') + arrow;
     formStep = n;
   }
 
@@ -1538,12 +1668,35 @@
     goToStep(0);
 
     document.getElementById('lf-next').addEventListener('click', () => {
-      if (formStep < 2) goToStep(formStep + 1);
+      if (formStep < 3) goToStep(formStep + 1);
       else submitForm();
     });
     document.getElementById('lf-back').addEventListener('click', () => {
       if (formStep > 0) goToStep(formStep - 1);
     });
+
+    /* Bill upload handlers */
+    const dropZone = document.getElementById('lf-drop-zone');
+    const fileInput = document.getElementById('lf-bill-file');
+
+    dropZone.addEventListener('click', () => fileInput.click());
+    dropZone.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') fileInput.click(); });
+    dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragging'); });
+    dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragging'));
+    dropZone.addEventListener('drop', e => {
+      e.preventDefault();
+      dropZone.classList.remove('dragging');
+      const file = e.dataTransfer.files[0];
+      if (file) handleBillFile(file);
+    });
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files[0]) handleBillFile(fileInput.files[0]);
+    });
+    document.getElementById('lf-bill-skip').addEventListener('click', () => {
+      billUrl = null;
+      goToStep(1);
+    });
+
     document.getElementById('lf-bill').addEventListener('input', function () {
       const bill = parseFloat(this.value);
       const est = document.getElementById('lf-estimate');
