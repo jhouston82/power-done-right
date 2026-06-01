@@ -95,6 +95,7 @@
 
   p{ margin: 0; color: var(--muted); }
   .lede{ font-size: clamp(17px, 1.4vw, 19px); color: #2a3042; max-width: 60ch; }
+  .hero .lede{ color: rgba(255,255,255,.75); }
 
   /* ---------- Buttons ---------- */
   .btn{
@@ -169,34 +170,46 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    background: var(--paper);
+    background: var(--navy);
     position: relative;
     padding-top: clamp(50px, 7vw, 90px);
     padding-bottom: clamp(40px, 5vw, 60px);
     overflow: hidden;
   }
+  .hero-vid{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; z-index: 0;
+    -webkit-transform: translateZ(0); transform: translateZ(0);
+  }
+  .hero-vid-overlay{
+    position: absolute; inset: 0;
+    background: rgba(8,18,32,.70); z-index: 1;
+  }
   .hero-grid{
     display: grid; gap: clamp(28px, 4vw, 56px);
     grid-template-columns: 1.1fr 1fr;
     align-items: end;
+    position: relative; z-index: 2;
   }
   @media (max-width: 980px){ .hero-grid{ grid-template-columns: 1fr; } }
 
-  .hero h1 .stroke{ color: var(--ink); }
+  .hero .eyebrow{ color: rgba(255,255,255,.6); }
+  .hero h1 .stroke{ color: var(--paper); }
   .hero h1 .em{
     background: linear-gradient(180deg, transparent 62%, rgba(245,180,0,.55) 62%);
     padding: 0 4px; border-radius: 2px;
   }
-  .hero h1 .ed{ color: #2a3042; }
+  .hero h1 .ed{ color: rgba(255,255,255,.75); }
 
   .hero-sub{ margin-top: 24px; }
   .hero-actions{ display:flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
   .hero-trust{
     display:flex; gap: 18px; flex-wrap: wrap; margin-top: 26px;
-    color: var(--muted); font-size: 13px;
+    color: rgba(255,255,255,.55); font-size: 13px;
   }
   .hero-trust .it{ display:inline-flex; align-items:center; gap: 6px; }
-  .hero-trust svg{ width: 14px; height: 14px; color: var(--green); }
+  .hero-trust svg{ width: 14px; height: 14px; color: #4ade80; }
 
   /* ----- Drop card ----- */
   .drop-card{
@@ -653,6 +666,11 @@
     background-image: radial-gradient(circle at 1px 1px, rgba(11,18,32,.1) 1px, transparent 1.4px);
     background-size: 22px 22px;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-vid{ display: none; }
+    .hero-vid-overlay{ background: rgba(8,18,32,.92); }
+  }
 </style>
 </head>
 <body>
@@ -699,6 +717,10 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
+  <video class="hero-vid" autoplay muted loop playsinline preload="auto">
+    <source src="/hero-loop.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-vid-overlay"></div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
