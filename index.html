@@ -671,6 +671,41 @@
     .hero-vid{ display: none; }
     .hero-vid-overlay{ background: rgba(8,18,32,.92); }
   }
+
+  /* ---------- Photo-slot video ---------- */
+  .photo-slot video{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  /* ---------- Explainer video section ---------- */
+  .explainer-vid-wrap{
+    position:relative; border-radius:18px; overflow:hidden;
+    aspect-ratio:16/9; background:var(--navy); cursor:pointer;
+  }
+  .explainer-vid-wrap video{ width:100%; height:100%; object-fit:cover; display:block; }
+  .explainer-play{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    background:rgba(11,18,32,.18);
+    transition:opacity .2s;
+  }
+  .explainer-play .play-btn{
+    width:68px; height:68px; border-radius:50%;
+    background:rgba(255,255,255,.92);
+    display:flex; align-items:center; justify-content:center;
+    transition:transform .2s, background .2s;
+    border:none; cursor:pointer;
+  }
+  .explainer-play .play-btn:hover{ transform:scale(1.08); background:#fff; }
+  .explainer-vid-wrap.playing .explainer-play{ opacity:0; pointer-events:none; }
+
+  /* ---------- Quote section video bg ---------- */
+  .quote-section{ position:relative; overflow:hidden; }
+  .quote-vid{
+    position:absolute; inset:0;
+    width:100%; height:100%; object-fit:cover;
+    z-index:0; opacity:.15;
+    -webkit-transform:translateZ(0); transform:translateZ(0);
+  }
+  .quote-section > *{ position:relative; z-index:1; }
 </style>
 </head>
 <body>
@@ -1066,6 +1101,30 @@
   </div>
 </section>
 
+<!-- ============ EXPLAINER VIDEO ============ -->
+<section class="section tight">
+  <div class="wrap">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,56px); align-items:center;">
+      <div>
+        <span class="eyebrow">See it in action</span>
+        <h2 style="margin-top:14px;">Watch suppliers <span class="ed">compete in real time.</span></h2>
+        <p class="lede" style="margin-top:16px;">In our reverse auction, 8–12 vetted suppliers from the BOX network bid against each other for your commercial load. The lowest rate wins — you lock it in with one signature.</p>
+        <a class="btn btn-primary" href="#lead" style="margin-top:24px;">Start your auction <span class="arrow">→</span></a>
+      </div>
+      <div class="explainer-vid-wrap" id="explainerWrap">
+        <video id="explainerVid" autoplay muted loop playsinline preload="auto">
+          <source src="/explainer-auction.mp4" type="video/mp4" />
+        </video>
+        <div class="explainer-play" id="explainerPlay">
+          <button class="play-btn" aria-label="Play with sound">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--navy)"><path d="M5 3l14 9-14 9V3z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ INDUSTRIES ============ -->
 <section class="section tight" id="industries">
   <div class="wrap">
@@ -1092,7 +1151,9 @@
       <div class="industry-card">
         <span class="tag">Real estate &amp; property mgmt</span>
         <div class="photo-slot" aria-hidden="true">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c8c0a8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <video autoplay muted loop playsinline preload="auto">
+            <source src="/testimonial-realestate.mp4" type="video/mp4" />
+          </video>
         </div>
         <h3>Pass-through energy, captured at the portfolio level.</h3>
         <p>Lower NOI for triple-net buildings. Standing audits across REIT portfolios. Renewal alerts so a CAM line never gets caught flat-footed by a market spike.</p>
@@ -1221,6 +1282,9 @@
 <section class="section tight">
   <div class="wrap">
     <div class="quote-section">
+      <video class="quote-vid" autoplay muted loop playsinline preload="auto">
+        <source src="/testimonial-restaurant.mp4" type="video/mp4" />
+      </video>
       <div>
         <span class="eyebrow on-dark">Section 07 · CFO outcome</span>
         <blockquote style="margin-top: 18px;">
@@ -1369,6 +1433,32 @@
 </footer>
 
 <script>
+  /* ── Explainer play button ── */
+  (function(){
+    const wrap = document.getElementById('explainerWrap');
+    const vid = document.getElementById('explainerVid');
+    const play = document.getElementById('explainerPlay');
+    if (!wrap || !vid) return;
+    wrap.addEventListener('click', function(){
+      if (vid.muted) {
+        vid.muted = false;
+        vid.loop = false;
+        wrap.classList.add('playing');
+        vid.play();
+      } else {
+        vid.muted = true;
+        vid.loop = true;
+        wrap.classList.remove('playing');
+      }
+    });
+    vid.addEventListener('ended', function(){
+      vid.muted = true;
+      vid.loop = true;
+      wrap.classList.remove('playing');
+      vid.play();
+    });
+  })();
+
   /* ── Mobile nav ── */
   (function(){
     const btn = document.getElementById('navToggle');
