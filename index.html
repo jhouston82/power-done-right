@@ -381,6 +381,43 @@
   .bill-analyzing{ color: var(--muted); }
   .bill-success{ color: var(--green); font-weight: 600; }
   .bill-warn{ color: var(--amber-2); }
+
+  /* Scanner styles */
+  .scanner-container {
+    position: relative;
+    width: 90px;
+    height: 110px;
+    margin: 16px auto;
+    border: 2px solid var(--line);
+    border-radius: 8px;
+    background: rgba(19, 28, 46, 0.03);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .scanner-doc {
+    color: var(--amber);
+    animation: scannerPulse 1.5s infinite ease-in-out;
+  }
+  .scanner-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, var(--amber), transparent);
+    box-shadow: 0 0 10px var(--amber);
+    animation: scannerScan 2s infinite ease-in-out;
+  }
+  @keyframes scannerPulse {
+    0%, 100% { opacity: 0.6; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+  @keyframes scannerScan {
+    0% { top: 5%; }
+    50% { top: 90%; }
+    100% { top: 5%; }
+  }
   /* Success state */
   .lead-success{
     display:none; text-align:center; padding: 8px 0;
@@ -850,7 +887,7 @@
           </div>
           <input type="file" id="lf-bill-file" accept=".pdf,.jpg,.jpeg,.png,.webp" style="display:none" />
           <div id="lf-bill-status" class="bill-status" style="display:none"></div>
-          <button class="bill-skip" id="lf-bill-skip" type="button">Skip — I'll enter details manually</button>
+          <button class="bill-skip" id="lf-bill-skip" type="button">I don't have my bill handy — enter details manually</button>
         </div>
 
         <!-- Step 1: Usage -->
@@ -920,7 +957,7 @@
               <label class="form-label" for="lf-phone">Phone</label>
               <input id="lf-phone" class="form-input" type="tel" placeholder="(312) 555-0119" />
             </div>
-            <p style="font-size:12px; color:var(--muted);">By submitting you agree to be contacted by Power Done Right. No obligation. We never sell your data.</p>
+            <p style="font-size:12px; color:var(--muted);">🔒 Secure SSL encrypted upload. No credit checks or data selling. By submitting you agree to be contacted by Power Done Right. No obligation. Strict spam-free policy.</p>
           </div>
         </div>
 
@@ -1672,7 +1709,20 @@
     const dropZone = document.getElementById('lf-drop-zone');
     dropZone.style.display = 'none';
     statusEl.style.display = '';
-    statusEl.innerHTML = '<span class="bill-analyzing">Analyzing your bill…</span>';
+    statusEl.innerHTML = `
+      <div class="scanner-container">
+        <div class="scanner-line"></div>
+        <svg class="scanner-doc" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+      </div>
+      <div style="font-weight: 600; color: var(--navy); font-size:15px; margin-bottom: 4px;">AI analyzing bill line items...</div>
+      <div style="font-size:12px; color: var(--muted); margin-bottom: 12px;">checking for historical utility overcharges & usage metrics</div>
+    `;
     try {
       const data = await uploadAndExtractBill(file);
       prefillFromBill(data);
@@ -1752,7 +1802,7 @@
       }
     } catch (err) {
       btn.disabled = false;
-      btn.innerHTML = 'Get my rates <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
+      btn.innerHTML = 'Start Supplier Auction <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
       errEl.textContent = 'Submission failed — please try again or call us directly.';
       errEl.style.display = '';
       console.error('Form submit error:', err);
@@ -1772,7 +1822,7 @@
     document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
     const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
     const btn = document.getElementById('lf-next');
-    btn.innerHTML = (n < 3 ? 'Continue' : 'Get my rates') + arrow;
+    btn.innerHTML = (n < 3 ? 'Continue' : 'Start Supplier Auction') + arrow;
     formStep = n;
   }
 
