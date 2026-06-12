@@ -1787,7 +1787,7 @@
       fetch(`${SUPABASE_URL}/functions/v1/send-notification`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
-        body: JSON.stringify({ type: 'ELECTRICITY_LEAD', record: inserted || payload }),
+        body: JSON.stringify({ type: 'PDR_LEAD', record: inserted || payload }),
       }).catch(() => {});
 
       document.getElementById('lead-form-wrap').style.display = 'none';

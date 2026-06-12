@@ -466,6 +466,13 @@
         },
         body: JSON.stringify(payload),
       });
+
+      // Fire-and-forget lead notification (Power Done Right branded).
+      fetch(`${SUPABASE_URL}/functions/v1/send-notification`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
+        body: JSON.stringify({ type: 'PDR_LEAD', record: payload }),
+      }).catch(() => {});
     } catch (_) { /* show success regardless */ }
 
     document.getElementById('contact-form-body').style.display = 'none';
