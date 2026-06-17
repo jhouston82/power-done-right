@@ -971,6 +971,10 @@
                     <input id="lf-account" class="form-input" type="text" placeholder="183578" />
                   </div>
                 </div>
+                <div>
+                  <label class="form-label" for="lf-esi">ESI ID <span style="font-weight:400;color:var(--muted)">(Texas meters)</span></label>
+                  <input id="lf-esi" class="form-input" type="text" inputmode="numeric" placeholder="10443720004701492" />
+                </div>
                 <div class="review-grid-2">
                   <div>
                     <label class="form-label" for="lf-bill">Monthly bill</label>
@@ -1773,6 +1777,7 @@
     set('lf-state', data.state);
     set('lf-zip', data.zip);
     set('lf-account', data.account_number);
+    set('lf-esi', data.esi_id);
     set('lf-rate', data.current_rate);
     set('lf-contract', data.contract_expiration);
     renderReviewSummary();
@@ -1797,6 +1802,7 @@
       ['Location', loc, false],
       ['Current provider', fieldVal('lf-provider'), false],
       ['Account #', fieldVal('lf-account'), false],
+      ['ESI ID', fieldVal('lf-esi'), false],
       ['Monthly bill', bill != null ? '$' + bill.toLocaleString(undefined, { maximumFractionDigits: 2 }) : '', false],
       ['Monthly usage', kwh != null ? kwh.toLocaleString() + ' kWh' : '', false],
       ['Current rate', rate != null ? '$' + rate.toFixed(4) + '/kWh' : '', false],
@@ -1883,6 +1889,7 @@
       current_provider: document.getElementById('lf-provider').value.trim() || null,
       current_rate: parseFloat(document.getElementById('lf-rate').value) || null,
       account_number: document.getElementById('lf-account').value.trim() || null,
+      esi_id: document.getElementById('lf-esi').value.trim() || null,
       contract_expiration: document.getElementById('lf-contract').value.trim() || null,
       service_address: document.getElementById('lf-address').value.trim() || null,
       service_city: document.getElementById('lf-city').value.trim() || null,
