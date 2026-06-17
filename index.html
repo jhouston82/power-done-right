@@ -357,6 +357,39 @@
     border-radius: 10px; padding: 12px 16px;
     font-size: 14px; color: var(--red);
   }
+  /* Extracted-bill review card */
+  .review-card{
+    background: var(--green-soft); border: 1px solid rgba(30,138,95,.25);
+    border-radius: 14px; padding: 16px 18px; margin-bottom: 22px;
+  }
+  .review-head{ display:flex; align-items:center; justify-content:space-between; gap: 12px; margin-bottom: 14px; }
+  .review-title{ display:flex; align-items:center; gap: 8px; font-weight: 700; font-size: 14px; color: var(--ink); }
+  .review-check{
+    display:inline-flex; align-items:center; justify-content:center;
+    width: 18px; height: 18px; border-radius: 50%; background: var(--green);
+    color:#fff; font-size: 11px; line-height: 1; flex-shrink: 0;
+  }
+  .review-edit-toggle{
+    background:none; border:none; font-family:inherit; font-size: 13px; font-weight: 600;
+    color: var(--green); cursor:pointer; text-decoration:underline; text-underline-offset: 2px; padding: 0;
+  }
+  .review-edit-toggle:hover{ color: var(--ink); }
+  .review-summary{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px 18px; }
+  .review-summary .ri{ min-width: 0; }
+  .review-summary .ri.full{ grid-column: 1 / -1; }
+  .review-summary .ri .k{
+    display:block; font-family: var(--mono); font-size: 10px; letter-spacing: .1em;
+    text-transform: uppercase; color: var(--green); margin-bottom: 2px;
+  }
+  .review-summary .ri .v{
+    display:block; color: var(--ink); font-weight: 600; font-size: 14px;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  }
+  .review-empty{ font-size: 13px; color: var(--muted); }
+  .review-grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .review-grid-3{ display:grid; grid-template-columns: 2fr 1fr 1fr; gap: 12px; }
+  .review-card .savings-preview{ margin-bottom: 0; }
+
   /* Bill upload drop zone */
   .bill-drop-zone{
     border: 2px dashed var(--line); border-radius: 14px;
@@ -862,13 +895,11 @@
         <div class="form-card-head">
           <div style="display:flex; align-items:center; gap: 8px; margin-bottom: 8px;">
             <span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite;flex-shrink:0;display:inline-block;"></span>
-            <span class="step-label" id="lf-step-label">Step 1 of 4 — Your bill</span>
+            <span class="step-label" id="lf-step-label">Step 1 of 2 — Your bill</span>
           </div>
           <div class="step-bars">
             <div class="lf-bar active" id="lf-bar-0"></div>
             <div class="lf-bar" id="lf-bar-1"></div>
-            <div class="lf-bar" id="lf-bar-2"></div>
-            <div class="lf-bar" id="lf-bar-3"></div>
           </div>
         </div>
 
@@ -890,72 +921,106 @@
           <button class="bill-skip" id="lf-bill-skip" type="button">I don't have my bill handy — enter details manually</button>
         </div>
 
-        <!-- Step 1: Usage -->
+        <!-- Step 1: Review extracted bill details + contact -->
         <div id="lf-step-1" style="display:none">
-          <div class="form-row">
-            <div>
-              <label class="form-label" for="lf-bill">Average monthly electric bill</label>
-              <div class="bill-input-wrap">
-                <span class="pfx">$</span>
-                <input id="lf-bill" type="number" inputmode="decimal" placeholder="2,400" min="0" />
-                <span class="sfx">/mo</span>
-              </div>
-              <div id="lf-estimate" class="savings-preview">
-                <div class="lbl">Estimated annual savings range</div>
-                <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
-                <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
+
+          <!-- Editable review card (populated from the uploaded bill) -->
+          <div class="review-card" id="lf-review-card">
+            <div class="review-head">
+              <div class="review-title"><span class="review-check">✓</span> <span id="lf-review-title-text">Pulled from your bill</span></div>
+              <button type="button" class="review-edit-toggle" id="lf-review-toggle">Edit details</button>
+            </div>
+
+            <!-- Read-only summary (rendered by JS) -->
+            <div class="review-summary" id="lf-review-summary"></div>
+
+            <!-- Editable fields (hidden until "Edit details") -->
+            <div class="review-edit" id="lf-review-edit" style="display:none">
+              <div class="form-row">
+                <div>
+                  <label class="form-label" for="lf-business">Business name</label>
+                  <input id="lf-business" class="form-input" type="text" placeholder="Acme Manufacturing" />
+                </div>
+                <div>
+                  <label class="form-label" for="lf-address">Service address</label>
+                  <input id="lf-address" class="form-input" type="text" placeholder="123 Main St" />
+                </div>
+                <div class="review-grid-3">
+                  <div>
+                    <label class="form-label" for="lf-city">City</label>
+                    <input id="lf-city" class="form-input" type="text" placeholder="Chicago" />
+                  </div>
+                  <div>
+                    <label class="form-label" for="lf-state">State</label>
+                    <input id="lf-state" class="form-input" type="text" placeholder="IL" maxlength="2" />
+                  </div>
+                  <div>
+                    <label class="form-label" for="lf-zip">ZIP</label>
+                    <input id="lf-zip" class="form-input" type="text" placeholder="60601" maxlength="5" inputmode="numeric" />
+                  </div>
+                </div>
+                <div class="review-grid-2">
+                  <div>
+                    <label class="form-label" for="lf-provider">Current provider</label>
+                    <input id="lf-provider" class="form-input" type="text" placeholder="ComEd, Ameren…" />
+                  </div>
+                  <div>
+                    <label class="form-label" for="lf-account">Account number</label>
+                    <input id="lf-account" class="form-input" type="text" placeholder="183578" />
+                  </div>
+                </div>
+                <div class="review-grid-2">
+                  <div>
+                    <label class="form-label" for="lf-bill">Monthly bill</label>
+                    <div class="bill-input-wrap">
+                      <span class="pfx">$</span>
+                      <input id="lf-bill" type="number" inputmode="decimal" placeholder="2,400" min="0" />
+                      <span class="sfx">/mo</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label class="form-label" for="lf-kwh">Monthly usage (kWh)</label>
+                    <input id="lf-kwh" class="form-input" type="number" inputmode="decimal" placeholder="45,000" min="0" />
+                  </div>
+                </div>
+                <div class="review-grid-2">
+                  <div>
+                    <label class="form-label" for="lf-rate">Current rate ($/kWh)</label>
+                    <input id="lf-rate" class="form-input" type="number" inputmode="decimal" step="0.0001" placeholder="0.0715" min="0" />
+                  </div>
+                  <div>
+                    <label class="form-label" for="lf-contract">Contract expiration</label>
+                    <input id="lf-contract" class="form-input" type="text" placeholder="11/26/2026" />
+                  </div>
+                </div>
+                <p class="form-hint">We'll match you with suppliers licensed in your deregulated market.</p>
               </div>
             </div>
-            <div>
-              <label class="form-label" for="lf-kwh">Monthly usage (kWh, optional)</label>
-              <input id="lf-kwh" class="form-input" type="number" inputmode="decimal" placeholder="45,000" min="0" />
-            </div>
-            <div>
-              <label class="form-label" for="lf-provider">Current electricity provider (optional)</label>
-              <input id="lf-provider" class="form-input" type="text" placeholder="ComEd, Ameren, PECO…" />
+
+            <!-- Savings estimate (always visible once a bill amount is known) -->
+            <div id="lf-estimate" class="savings-preview">
+              <div class="lbl">Estimated annual savings range</div>
+              <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
+              <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
             </div>
           </div>
-        </div>
 
-        <!-- Step 2: Business -->
-        <div id="lf-step-2" style="display:none">
-          <div class="form-row">
-            <div>
-              <label class="form-label" for="lf-business">Business name</label>
-              <input id="lf-business" class="form-input" type="text" placeholder="Acme Manufacturing" />
-            </div>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-              <div>
-                <label class="form-label" for="lf-city">City</label>
-                <input id="lf-city" class="form-input" type="text" placeholder="Chicago" />
-              </div>
-              <div>
-                <label class="form-label" for="lf-state">State</label>
-                <input id="lf-state" class="form-input" type="text" placeholder="IL" maxlength="2" />
-              </div>
-            </div>
-            <div>
-              <label class="form-label" for="lf-zip">Service ZIP code</label>
-              <input id="lf-zip" class="form-input" type="text" placeholder="60601" maxlength="5" inputmode="numeric" />
-              <p class="form-hint">We'll match you with suppliers licensed in your deregulated market.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 3: Contact -->
-        <div id="lf-step-3" style="display:none">
+          <!-- Contact (the only thing we ask you to type) -->
+          <p class="form-label" style="margin-bottom:14px;">Where should we send your quote?</p>
           <div class="form-row">
             <div>
               <label class="form-label" for="lf-name">Full name</label>
               <input id="lf-name" class="form-input" type="text" placeholder="Jordan Reyes" />
             </div>
-            <div>
-              <label class="form-label" for="lf-email">Work email</label>
-              <input id="lf-email" class="form-input" type="email" placeholder="jordan@acme.com" />
-            </div>
-            <div>
-              <label class="form-label" for="lf-phone">Phone</label>
-              <input id="lf-phone" class="form-input" type="tel" placeholder="(312) 555-0119" />
+            <div class="review-grid-2">
+              <div>
+                <label class="form-label" for="lf-email">Work email</label>
+                <input id="lf-email" class="form-input" type="email" placeholder="jordan@acme.com" />
+              </div>
+              <div>
+                <label class="form-label" for="lf-phone">Phone</label>
+                <input id="lf-phone" class="form-input" type="tel" placeholder="(312) 555-0119" />
+              </div>
             </div>
             <p style="font-size:12px; color:var(--muted);">🔒 Secure SSL encrypted upload. No credit checks or data selling. By submitting you agree to be contacted by Power Done Right. No obligation. Strict spam-free policy.</p>
           </div>
@@ -1692,16 +1757,68 @@
 
   function prefillFromBill(data) {
     if (!data) return;
+    const set = (id, v) => { if (v !== null && v !== undefined && v !== '') document.getElementById(id).value = v; };
     if (data.current_monthly_bill) {
       const el = document.getElementById('lf-bill');
       el.value = data.current_monthly_bill;
       el.dispatchEvent(new Event('input'));
     }
-    if (data.current_monthly_usage) document.getElementById('lf-kwh').value = data.current_monthly_usage;
-    if (data.current_provider) document.getElementById('lf-provider').value = data.current_provider;
-    if (data.city) document.getElementById('lf-city').value = data.city;
-    if (data.state) document.getElementById('lf-state').value = data.state;
-    if (data.zip) document.getElementById('lf-zip').value = data.zip;
+    set('lf-kwh', data.current_monthly_usage);
+    set('lf-provider', data.current_provider);
+    set('lf-business', data.customer_name);
+    set('lf-address', data.service_address);
+    set('lf-city', data.city);
+    set('lf-state', data.state);
+    set('lf-zip', data.zip);
+    set('lf-account', data.account_number);
+    set('lf-rate', data.current_rate);
+    set('lf-contract', data.contract_expiration);
+    renderReviewSummary();
+  }
+
+  /* ── Review card (summary of extracted bill details) ── */
+  function fieldVal(id) { return (document.getElementById(id).value || '').trim(); }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  }
+
+  function renderReviewSummary() {
+    const city = fieldVal('lf-city'), state = fieldVal('lf-state'), zip = fieldVal('lf-zip');
+    const loc = [city, [state, zip].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+    const num = id => { const n = parseFloat(fieldVal(id)); return isNaN(n) ? null : n; };
+    const bill = num('lf-bill'), kwh = num('lf-kwh'), rate = num('lf-rate');
+
+    const rows = [
+      ['Business', fieldVal('lf-business'), true],
+      ['Service address', fieldVal('lf-address'), true],
+      ['Location', loc, false],
+      ['Current provider', fieldVal('lf-provider'), false],
+      ['Account #', fieldVal('lf-account'), false],
+      ['Monthly bill', bill != null ? '$' + bill.toLocaleString(undefined, { maximumFractionDigits: 2 }) : '', false],
+      ['Monthly usage', kwh != null ? kwh.toLocaleString() + ' kWh' : '', false],
+      ['Current rate', rate != null ? '$' + rate.toFixed(4) + '/kWh' : '', false],
+      ['Contract ends', fieldVal('lf-contract'), false],
+    ].filter(r => r[1]);
+
+    const summaryEl = document.getElementById('lf-review-summary');
+    const titleEl = document.getElementById('lf-review-title-text');
+    if (!rows.length) {
+      titleEl.textContent = 'Add your details';
+      summaryEl.innerHTML = '<div class="review-empty">No bill details yet — tap “Edit details” to enter them manually.</div>';
+      return;
+    }
+    titleEl.textContent = 'Pulled from your bill';
+    summaryEl.innerHTML = rows.map(([k, v, full]) =>
+      `<div class="ri${full ? ' full' : ''}"><span class="k">${k}</span><span class="v">${escapeHtml(v)}</span></div>`
+    ).join('');
+  }
+
+  function setReviewEditOpen(open) {
+    document.getElementById('lf-review-edit').style.display = open ? '' : 'none';
+    document.getElementById('lf-review-summary').style.display = open ? 'none' : '';
+    document.getElementById('lf-review-toggle').textContent = open ? 'Done' : 'Edit details';
+    if (!open) renderReviewSummary();
   }
 
   async function handleBillFile(file) {
@@ -1762,6 +1879,10 @@
       current_monthly_bill: bill,
       monthly_kwh: parseFloat(document.getElementById('lf-kwh').value) || null,
       current_provider: document.getElementById('lf-provider').value.trim() || null,
+      current_rate: parseFloat(document.getElementById('lf-rate').value) || null,
+      account_number: document.getElementById('lf-account').value.trim() || null,
+      contract_expiration: document.getElementById('lf-contract').value.trim() || null,
+      service_address: document.getElementById('lf-address').value.trim() || null,
       service_city: document.getElementById('lf-city').value.trim() || null,
       service_state: document.getElementById('lf-state').value.trim() || null,
       service_zip: document.getElementById('lf-zip').value.trim() || null,
@@ -1813,16 +1934,16 @@
   let formStep = 0;
 
   function goToStep(n) {
-    [0, 1, 2, 3].forEach(i => {
+    [0, 1].forEach(i => {
       document.getElementById('lf-step-' + i).style.display = i === n ? '' : 'none';
       document.getElementById('lf-bar-' + i).classList.toggle('active', i <= n);
     });
-    const labels = ['Step 1 of 4 — Your bill', 'Step 2 of 4 — Your usage', 'Step 3 of 4 — Your business', 'Step 4 of 4 — Your contact'];
+    const labels = ['Step 1 of 2 — Your bill', 'Step 2 of 2 — Your details'];
     document.getElementById('lf-step-label').textContent = labels[n];
     document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
     const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
     const btn = document.getElementById('lf-next');
-    btn.innerHTML = (n < 3 ? 'Continue' : 'Start Supplier Auction') + arrow;
+    btn.innerHTML = (n < 1 ? 'Continue' : 'Start Supplier Auction') + arrow;
     formStep = n;
   }
 
@@ -1830,11 +1951,16 @@
     goToStep(0);
 
     document.getElementById('lf-next').addEventListener('click', () => {
-      if (formStep < 3) goToStep(formStep + 1);
+      if (formStep < 1) goToStep(formStep + 1);
       else submitForm();
     });
     document.getElementById('lf-back').addEventListener('click', () => {
       if (formStep > 0) goToStep(formStep - 1);
+    });
+
+    document.getElementById('lf-review-toggle').addEventListener('click', () => {
+      const isOpen = document.getElementById('lf-review-edit').style.display !== 'none';
+      setReviewEditOpen(!isOpen);
     });
 
     /* Bill upload handlers */
@@ -1856,6 +1982,8 @@
     });
     document.getElementById('lf-bill-skip').addEventListener('click', () => {
       billUrl = null;
+      renderReviewSummary();
+      setReviewEditOpen(true);
       goToStep(1);
     });
 
