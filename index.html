@@ -1744,27 +1744,70 @@
   /* ── Bill upload state ── */
   let billUrl = null;
 
+  // Base64-encode an ArrayBuffer in chunks — spreading a multi-MB array into
+  // String.fromCharCode(...) overflows the call stack (breaks large iPhone photos).
+  function bufToBase64(buf) {
+    const bytes = new Uint8Array(buf);
+    let bin = '';
+    const CHUNK = 0x8000;
+    for (let i = 0; i < bytes.length; i += CHUNK) {
+      bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
+    }
+    return btoa(bin);
+  }
+
+  // iPhone camera-roll photos are often HEIC and/or many megapixels, which the
+  // extractor can't read. Decode + downscale to a JPEG on-device (Safari decodes
+  // HEIC) so the upload + AI extraction both work reliably.
+  function imageToJpegBlob(file, maxDim, quality) {
+    return new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = () => {
+        const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+        const w = Math.max(1, Math.round(img.width * scale));
+        const h = Math.max(1, Math.round(img.height * scale));
+        const c = document.createElement('canvas');
+        c.width = w; c.height = h;
+        c.getContext('2d').drawImage(img, 0, 0, w, h);
+        URL.revokeObjectURL(url);
+        c.toBlob(b => b ? resolve(b) : reject(new Error('encode failed')), 'image/jpeg', quality);
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('decode failed')); };
+      img.src = url;
+    });
+  }
+
   async function uploadAndExtractBill(file) {
-    const filename = crypto.randomUUID() + '-' + file.name.replace(/[^a-zA-Z0-9._-]/g, '_');
-    const buf = await file.arrayBuffer();
+    const isPdf = file.type === 'application/pdf' || /\.pdf$/i.test(file.name || '');
+    let blob, mimeType, ext;
+    if (isPdf) {
+      blob = file; mimeType = 'application/pdf'; ext = 'pdf';
+    } else {
+      blob = await imageToJpegBlob(file, 1568, 0.85);  // normalize HEIC / large photos
+      mimeType = 'image/jpeg'; ext = 'jpg';
+    }
+
+    const filename = crypto.randomUUID() + '.' + ext;
+    const buf = await blob.arrayBuffer();
 
     const uploadRes = await fetch(`${SUPABASE_URL}/storage/v1/object/electricity-bills/${filename}`, {
       method: 'POST',
       headers: {
         'apikey': SUPABASE_ANON_KEY,
         'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-        'Content-Type': file.type,
+        'Content-Type': mimeType,
       },
       body: buf,
     });
     if (!uploadRes.ok) throw new Error('Upload failed');
     billUrl = `${SUPABASE_URL}/storage/v1/object/public/electricity-bills/${filename}`;
 
-    const base64 = btoa(String.fromCharCode(...new Uint8Array(buf)));
+    const base64 = bufToBase64(buf);
     const extractRes = await fetch(`${SUPABASE_URL}/functions/v1/extract-bill`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
-      body: JSON.stringify({ base64, mimeType: file.type }),
+      body: JSON.stringify({ base64, mimeType }),
     });
     const { data } = await extractRes.json();
     return data || {};
