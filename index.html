@@ -1900,6 +1900,11 @@
       status: 'new',
     };
 
+    // Client-generated id so the inserted row and the send-notification call share
+    // the same lead id (the insert uses return=minimal, so the server can't echo it
+    // back, and without it the CRM intake can't stamp the lead or link records).
+    if (window.crypto && crypto.randomUUID) payload.id = crypto.randomUUID();
+
     try {
       const res = await fetch(`${SUPABASE_URL}/rest/v1/electricity_leads`, {
         method: 'POST',
