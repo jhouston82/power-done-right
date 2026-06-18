@@ -177,7 +177,14 @@
     @media (max-width:640px) {
       .footer-cols { grid-template-columns:1fr; }
     }
-  </style>
+  
+  /* mobile partner-login fit: keep Partner Login + Get rates visible on phones */
+  @media (max-width: 760px){
+    .nav-right .nav-phone[href^="tel:"]{ display:none; }
+    .nav-right{ gap:10px; }
+    .nav-cta{ padding:8px 13px; }
+  }
+</style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
