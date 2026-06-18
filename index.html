@@ -160,8 +160,10 @@
     .nav-links{ display:none; }
     .topnav .actions .btn-ghost{ display:none; }
     /* keep Partner Login visible at the top on mobile; move the quote CTA into the menu */
-    .topnav .actions .partner-login{ display:inline-flex; }
+    .topnav .actions .partner-login{ display:inline-flex; padding:8px 12px; }
     .topnav .actions .btn-primary{ display:none; }
+    /* tighten the nav so brand + Partner Login + hamburger all fit (no clipping) */
+    .topnav .row{ gap: 10px; }
     .nav-ham{ display:flex; align-items:center; justify-content:center; }
   }
   .mob-menu{
