@@ -23,6 +23,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
+  /* Mobile: prevent whole-page horizontal scroll; keep content within viewport */
+  html,body{ overflow-x: clip; max-width: 100%; }
+  img,svg,video,canvas{ max-width: 100%; height: auto; }
+
     /* ── Variables ── */
     :root {
       --pdr-bg: #05111f;

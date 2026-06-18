@@ -44,6 +44,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
+  /* Mobile: prevent whole-page horizontal scroll; keep content within viewport */
+  html,body{ overflow-x: clip; max-width: 100%; }
+  img,svg,video,canvas{ max-width: 100%; height: auto; }
+
   :root{
     --navy:        #0b1220;
     --navy-2:      #131c2e;

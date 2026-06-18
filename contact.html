@@ -21,6 +21,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
+  /* Mobile: prevent whole-page horizontal scroll; keep content within viewport */
+  html,body{ overflow-x: clip; max-width: 100%; }
+  img,svg,video,canvas{ max-width: 100%; height: auto; }
+
     :root {
       --pdr-bg: #05111f; --pdr-bg-elev: #0a2240; --pdr-ink: #f0ece3; --pdr-ink-2: rgba(240,236,227,0.70); --pdr-ink-3: rgba(240,236,227,0.42);
       --pdr-line: rgba(255,255,255,0.07); --pdr-line-2: rgba(255,255,255,0.12);
