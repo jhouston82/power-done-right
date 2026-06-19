@@ -627,6 +627,39 @@
     display: flex; align-items: center; justify-content: center;
   }
 
+  /* ---------- Industries we serve (icon grid) ---------- */
+  .ind-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 900px){ .ind-grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px){ .ind-grid{ grid-template-columns: 1fr; } }
+  .ind-card{
+    position: relative; display:flex; flex-direction:column; gap: 12px;
+    background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px 24px 22px;
+    transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+  }
+  .ind-card:hover{ transform: translateY(-3px); border-color: #cdd6e4; box-shadow: 0 14px 32px -18px rgba(11,18,32,.28); }
+  .ind-icon{
+    width: 44px; height: 44px; border-radius: 12px; background: var(--navy);
+    color: var(--amber); display:inline-flex; align-items:center; justify-content:center;
+  }
+  .ind-icon svg{ width: 22px; height: 22px; }
+  .ind-card h3{ font-size: 19px; letter-spacing: -.012em; }
+  .ind-card p{ font-size: 14px; line-height: 1.5; }
+  .ind-arrow{ position:absolute; top: 24px; right: 22px; color: var(--muted); transition: transform .2s ease, color .2s ease; }
+  .ind-card:hover .ind-arrow{ transform: translateX(3px); color: var(--ink); }
+
+  .ind-more{ margin-top: 28px; }
+  .ind-more-label{ display:block; margin-bottom: 14px; }
+  .ind-tags{ display:flex; flex-wrap:wrap; gap: 10px; }
+  .ind-tag{
+    display:inline-flex; align-items:center; gap: 9px;
+    background: #fff; border: 1px solid var(--line); border-radius: 999px;
+    padding: 9px 16px 9px 12px; font-size: 13.5px; font-weight: 500; color: var(--ink);
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+  }
+  .ind-tag:hover{ border-color: #cdd6e4; transform: translateY(-1px); box-shadow: 0 8px 18px -12px rgba(11,18,32,.25); }
+  .ind-tag svg{ width: 16px; height: 16px; color: var(--navy); flex-shrink: 0; }
+
   /* ---------- US map ---------- */
   .map-section{
     background: var(--paper-2);
@@ -840,13 +873,13 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Commercial electricity · CFO-grade procurement</span>
+        <span class="eyebrow">Commercial electricity procurement · Texas-rooted, nationwide</span>
         <h1 style="margin-top: 18px;">
-          <span class="stroke">Cut your <span class="em">commercial electricity</span> spend —</span>
-          <span class="ed">without changing a thing on-site.</span>
+          <span class="stroke">The <span class="em">electricity procurement</span> big chains get —</span>
+          <span class="ed">for a business your size.</span>
         </h1>
         <p class="lede hero-sub" data-industry-copy="lede">
-          Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market and send back a written savings analysis in 24 hours. No fee to you — suppliers pay us.
+          From restaurants and medical offices to gyms, storefronts, and apartment communities — we put your electricity account in front of 90+ suppliers and make them compete. Deep roots in Texas and the ERCOT market, with the network to serve every deregulated US market. Send one bill; get a written savings analysis in 24 hours — no fee to you.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#lead">
@@ -1245,36 +1278,61 @@
 <!-- ============ INDUSTRIES ============ -->
 <section class="section tight" id="industries">
   <div class="wrap">
-    <div style="display:flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
-      <div>
-        <span class="eyebrow">Section 04 · Built for chains &amp; portfolios</span>
-        <h2 style="margin-top: 14px;">When every site has a different utility — <span class="ed">we still ship one contract.</span></h2>
-      </div>
+    <div style="margin-bottom: 36px; max-width: 60ch;">
+      <span class="eyebrow">Section 04 · Industries we serve</span>
+      <h2 style="margin-top: 14px;">Built for the businesses <span class="ed">in between.</span></h2>
+      <p class="lede" style="margin-top: 14px;">Not residential. Not a 200-store national chain. The medium-usage commercial accounts that deserve real procurement attention — and rarely get it. We started in multifamily, and we still lead with it.</p>
     </div>
 
-    <div class="industries">
-      <div class="industry-card dark">
-        <span class="tag">Multi-site retail &amp; restaurants</span>
-        <h3>38 stores. 6 utilities. One signature.</h3>
-        <p>Drop a CSV of your locations and we map each meter to the right supplier in each deregulated market — Constellation in Texas, AEP in Ohio, Direct Energy in PA — under one consolidated agreement.</p>
-        <div class="ststats">
-          <div><div class="k" style="color: var(--amber);">11.4%</div><div class="l">avg savings</div></div>
-          <div><div class="k" style="color: var(--amber);">5 days</div><div class="l">to written quote</div></div>
-          <div><div class="k" style="color: var(--amber);">90+</div><div class="l">suppliers in network</div></div>
-        </div>
-        <a class="btn btn-ghost on-dark" href="#lead" style="align-self:flex-start;">Upload site list <span class="arrow">→</span></a>
-      </div>
+    <div class="ind-grid">
+      <a class="ind-card" href="/industries/multifamily-property-management">
+        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span>
+        <h3>Multifamily &amp; property management</h3>
+        <p>Apartment communities, leasing offices, and amenity centers — common-area load, optimized. Our proven track record, via sister company MDU Advisors.</p>
+        <span class="ind-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="ind-card" href="/industries/restaurants">
+        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span>
+        <h3>Restaurants &amp; food service</h3>
+        <p>Kitchens, walk-ins, and HVAC run a heavy, predictable load. Small rate moves add up fast on thin margins.</p>
+        <span class="ind-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="ind-card" href="/industries/gyms-fitness">
+        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg></span>
+        <h3>Gyms &amp; fitness studios</h3>
+        <p>Long operating hours, heavy HVAC, and equipment loads make electricity a top controllable cost.</p>
+        <span class="ind-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="ind-card" href="/industries/medical-dental">
+        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span>
+        <h3>Medical &amp; dental offices</h3>
+        <p>Imaging, sterilization, and climate control demand steady power. Reliability and rate both matter.</p>
+        <span class="ind-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="ind-card" href="/industries/retail">
+        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg></span>
+        <h3>Retail storefronts</h3>
+        <p>Lighting, HVAC, and refrigeration run all day. A lower rate drops straight to the bottom line.</p>
+        <span class="ind-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="ind-card" href="/industries/light-industrial-warehousing">
+        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect width="12" height="12" x="6" y="10"/></svg></span>
+        <h3>Light industrial &amp; warehousing</h3>
+        <p>Motors, compressors, and high-bay lighting drive demand charges — where contract structure really counts.</p>
+        <span class="ind-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
 
-      <div class="industry-card">
-        <span class="tag">Real estate &amp; property mgmt</span>
-        <div class="photo-slot" aria-hidden="true">
-          <video autoplay muted loop playsinline preload="auto">
-            <source src="/testimonial-realestate.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <h3>Pass-through energy, captured at the portfolio level.</h3>
-        <p>Lower NOI for triple-net buildings. Standing audits across REIT portfolios. Renewal alerts so a CAM line never gets caught flat-footed by a market spike.</p>
-        <a class="btn btn-dark btn-sm" href="#lead" style="align-self:flex-start;">Get REIT audit <span class="arrow">→</span></a>
+    <div class="ind-more">
+      <span class="eyebrow ind-more-label">More industries we serve</span>
+      <div class="ind-tags">
+        <a class="ind-tag" href="/industries/salons-spas-dry-cleaners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>Salons, spas &amp; dry cleaners</a>
+        <a class="ind-tag" href="/industries/auto-repair-tire-shops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>Auto repair &amp; tire shops</a>
+        <a class="ind-tag" href="/industries/self-storage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z"/><path d="M10 21.9V14L2.1 9.1"/><path d="m10 14 11.9-6.9"/><path d="M14 19.8v-8.1"/><path d="M18 17.5V9.4"/></svg>Self-storage facilities</a>
+        <a class="ind-tag" href="/industries/daycare-early-learning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg>Daycare &amp; early learning</a>
+        <a class="ind-tag" href="/industries/churches-religious-facilities"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 9h4"/><path d="M12 7v5"/><path d="M14 22v-4a2 2 0 0 0-4 0v4"/><path d="M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22"/><path d="m18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7"/></svg>Churches &amp; religious facilities</a>
+        <a class="ind-tag" href="/industries/professional-offices"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>Professional offices</a>
+        <a class="ind-tag" href="/industries/convenience-stores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 11-1 9"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="M4.5 15.5h15"/><path d="m5 11 4-7"/><path d="m9 11 1 9"/></svg>Convenience stores</a>
       </div>
     </div>
   </div>
@@ -1517,10 +1575,11 @@
       </div>
       <div><h4>Industries</h4>
         <ul>
-          <li><a href="#industries">Multi-site retail</a></li>
-          <li><a href="#industries">Restaurants</a></li>
-          <li><a href="#industries">Real estate &amp; REIT</a></li>
-          <li><a href="#industries">Property management</a></li>
+          <li><a href="/industries/multifamily-property-management">Multifamily &amp; property mgmt</a></li>
+          <li><a href="/industries/restaurants">Restaurants</a></li>
+          <li><a href="/industries/medical-dental">Medical &amp; dental</a></li>
+          <li><a href="/industries/retail">Retail storefronts</a></li>
+          <li><a href="#industries">All industries</a></li>
         </ul>
       </div>
       <div><h4>Markets</h4>
