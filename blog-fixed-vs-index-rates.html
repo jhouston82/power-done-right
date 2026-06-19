@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fixed vs. Index Electricity Rates for Business</title>
+  <meta name="description" content="Fixed, index, and hybrid commercial electricity rates compared: how each works, the risk trade-offs, and which structure fits different businesses." />
+  <link rel="canonical" href="https://www.powerdoneright.com/blog-fixed-vs-index-rates" />
+  <meta property="og:title" content="Fixed vs. Index Electricity Rates for Business &mdash; Power Done Right" />
+  <meta property="og:description" content="Fixed, index, and hybrid commercial electricity rates compared: how each works, the risk trade-offs, and which structure fits different businesses." />
+  <meta property="og:url" content="https://www.powerdoneright.com/blog-fixed-vs-index-rates" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fixed vs. Index Electricity Rates for Business &mdash; Power Done Right" />
+  <meta name="twitter:description" content="Fixed, index, and hybrid commercial electricity rates compared: how each works, the risk trade-offs, and which structure fits different businesses." />
+  <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KG0X9SXT4Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KG0X9SXT4Q');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+  html,body{ overflow-x: clip; max-width: 100%; }
+  img,svg,video,canvas{ max-width: 100%; height: auto; }
+  :root{
+    --pdr-bg:#05111f; --pdr-bg-elev:#0a2240; --pdr-ink:#f0ece3; --pdr-ink-2:rgba(240,236,227,.70); --pdr-ink-3:rgba(240,236,227,.42);
+    --pdr-line:rgba(255,255,255,.07); --pdr-line-2:rgba(255,255,255,.12);
+    --pdr-navy:#0a2240; --pdr-navy-2:#1a3056; --pdr-accent:#E8B43A; --pdr-accent-ink:#5e3f00;
+    --serif:"Instrument Serif","Source Serif Pro","Times New Roman",serif;
+    --sans:"Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+    --mono:"Geist Mono","JetBrains Mono",ui-monospace,monospace;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:var(--sans); background:var(--pdr-bg); color:var(--pdr-ink); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; }
+  em{ font-style:normal; font-family:var(--serif); font-weight:400; color:var(--pdr-ink); }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:22px 56px; border-bottom:1px solid var(--pdr-line); background:var(--pdr-bg); }
+  .nav-logo{ display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; letter-spacing:-.01em; color:var(--pdr-ink); font-weight:400; line-height:1; }
+  .nav-logo em{ font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+  .nav-cta{ font-size:13.5px; padding:9px 16px; border-radius:999px; background:var(--pdr-navy); color:#fafaf6; transition:transform .15s ease; border:0; }
+  .nav-cta:hover{ transform:translateY(-1px); }
+  .nav-right{ display:flex; align-items:center; gap:16px; }
+  .nav-phone{ display:flex; align-items:center; gap:6px; font-size:13.5px; color:var(--pdr-ink-3); white-space:nowrap; }
+  .nav-phone:hover{ color:var(--pdr-ink); }
+  .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
+  .eyebrow-dot{ width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); flex-shrink:0; }
+  .eyebrow--inv{ background:rgba(255,255,255,.05); color:rgba(247,245,240,.7); border-color:rgba(255,255,255,.12); }
+  .eyebrow a{ color:inherit; } .eyebrow a:hover{ color:var(--pdr-ink); }
+  .page-hero{ padding:72px 56px 56px; border-bottom:1px solid var(--pdr-line); background:radial-gradient(ellipse 130% 90% at 50% -10%, #0d2e55 0%, #05111f 65%); }
+  .page-hero-inner{ max-width:760px; margin:0 auto; }
+  .hero-h{ font-family:var(--serif); font-weight:400; font-size:clamp(38px,5.4vw,62px); line-height:1.06; letter-spacing:-.025em; margin:22px 0 20px; color:var(--pdr-ink); text-wrap:balance; }
+  .hero-h em{ font-style:italic; color:var(--pdr-accent); }
+  .post-meta{ font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--pdr-ink-3); text-transform:uppercase; }
+  .hero-sub{ font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:600px; margin:0; text-wrap:pretty; }
+  /* Article */
+  .article{ max-width:720px; margin:0 auto; padding:64px 56px 24px; }
+  .article p{ font-size:17px; line-height:1.7; color:var(--pdr-ink-2); margin:0 0 22px; text-wrap:pretty; }
+  .article h2{ font-family:var(--serif); font-weight:400; font-size:clamp(26px,3.4vw,38px); line-height:1.12; letter-spacing:-.02em; color:var(--pdr-ink); margin:44px 0 14px; }
+  .article h3{ font-size:19px; font-weight:600; color:var(--pdr-ink); margin:32px 0 10px; letter-spacing:-.01em; }
+  .article strong{ color:var(--pdr-ink); font-weight:600; }
+  .article a{ color:var(--pdr-accent); text-decoration:underline; text-underline-offset:2px; }
+  .article ul{ margin:0 0 22px; padding-left:22px; }
+  .article li{ font-size:17px; line-height:1.65; color:var(--pdr-ink-2); margin:0 0 10px; }
+  .article li::marker{ color:var(--pdr-accent); }
+  .callout{ border:1px solid var(--pdr-line-2); border-left:3px solid var(--pdr-accent); border-radius:12px; background:var(--pdr-bg-elev); padding:22px 24px; margin:28px 0; }
+  .callout p{ margin:0; font-size:16px; color:var(--pdr-ink); }
+  .article-foot{ max-width:720px; margin:0 auto; padding:8px 56px 8px; }
+  .article-foot a{ font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--pdr-ink-3); }
+  .article-foot a:hover{ color:var(--pdr-accent); }
+  /* Blog index cards */
+  .post-list{ max-width:880px; margin:0 auto; padding:56px 56px 8px; display:flex; flex-direction:column; gap:16px; }
+  .post-card{ display:block; border:1px solid var(--pdr-line-2); border-radius:16px; padding:28px 30px; background:var(--pdr-bg-elev); transition:transform 220ms cubic-bezier(.2,.7,.2,1), border-color 220ms; }
+  .post-card:hover{ transform:translateY(-3px); border-color:rgba(255,255,255,.22); }
+  .post-card .pc-meta{ font-family:var(--mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--pdr-ink-3); }
+  .post-card h2{ font-family:var(--serif); font-weight:400; font-size:26px; letter-spacing:-.015em; color:var(--pdr-ink); margin:10px 0 8px; line-height:1.15; }
+  .post-card p{ font-size:15.5px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
+  .post-card .pc-more{ display:inline-block; margin-top:14px; font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--pdr-accent); }
+  .cta-band{ background:var(--pdr-navy); padding:80px 56px; text-align:center; position:relative; overflow:hidden; margin-top:48px; }
+  .cta-band::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(to right,rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.03) 1px,transparent 1px); background-size:80px 80px; pointer-events:none; }
+  .cta-band-inner{ position:relative; max-width:680px; margin:0 auto; }
+  .cta-band-h{ font-family:var(--serif); font-weight:400; font-size:clamp(30px,4vw,52px); line-height:1.05; letter-spacing:-.025em; color:#f7f5f0; margin:18px 0 30px; text-wrap:balance; }
+  .cta-band-h em{ font-style:italic; color:var(--pdr-accent); }
+  .cta-btn{ display:inline-flex; align-items:center; gap:12px; background:var(--pdr-accent); color:var(--pdr-accent-ink); padding:16px 30px; border-radius:999px; font-size:15.5px; font-weight:600; transition:transform .15s ease; box-shadow:0 10px 30px -10px rgba(232,180,58,.5); border:0; }
+  .cta-btn:hover{ transform:translateY(-2px); }
+  .cta-foot{ margin-top:18px; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(247,245,240,.65); text-transform:uppercase; }
+  .footer{ background:var(--pdr-navy); color:#c8d3e3; padding:64px 56px 32px; }
+  .footer-logo{ display:inline-flex; align-items:center; gap:10px; font-family:var(--serif); font-size:22px; color:#fafaf6; font-weight:400; line-height:1; }
+  .footer-logo em{ font-style:italic; color:var(--pdr-accent); margin:0 1px; }
+  .footer-top{ max-width:1208px; margin:0 auto; display:grid; grid-template-columns:1fr 2fr; gap:64px; padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.08); }
+  .footer-cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+  .footer-h{ font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(247,245,240,.7); margin-bottom:14px; }
+  .footer ul{ margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px; font-size:14px; }
+  .footer ul a{ color:#c8d3e3; transition:color .15s; } .footer ul a:hover{ color:#fafaf6; }
+  .footer-bot{ max-width:1208px; margin:32px auto 0; display:flex; justify-content:space-between; font-size:12px; color:rgba(247,245,240,.65); }
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  @media (max-width:980px){
+    .nav{ padding:16px 24px; } .nav-phone-text{ display:none; }
+    .page-hero{ padding:52px 24px 40px; } .article,.article-foot{ padding-left:24px; padding-right:24px; }
+    .post-list{ padding:40px 24px 8px; } .footer{ padding:48px 24px 24px; }
+    .footer-top{ grid-template-columns:1fr; gap:32px; } .footer-bot{ flex-direction:column; gap:8px; } .cta-band{ padding:56px 24px; }
+  }
+  @media (max-width:760px){ .nav-right .nav-phone[href^="tel:"]{ display:none; } .nav-right{ gap:10px; } .nav-cta{ padding:8px 13px; } }
+  @media (max-width:640px){ .footer-cols{ grid-template-columns:1fr; } }
+  @media (prefers-reduced-motion:reduce){ .reveal,.reveal.is-visible{ opacity:1!important; transform:none!important; } }
+</style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"BlogPosting","headline":"Fixed vs. Index Electricity Rates for Business &mdash; Power Done Right","description":"Fixed, index, and hybrid commercial electricity rates compared: how each works, the risk trade-offs, and which structure fits different businesses.","datePublished":"2026-06-18","dateModified":"2026-06-18","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.powerdoneright.com/blog-fixed-vs-index-rates"},"author":{"@type":"Organization","name":"Power Done Right","url":"https://www.powerdoneright.com"},"publisher":{"@type":"Organization","name":"Power Done Right","logo":{"@type":"ImageObject","url":"https://www.powerdoneright.com/apple-touch-icon.png"}},"image":"https://www.powerdoneright.com/og-image.svg"},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.powerdoneright.com"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.powerdoneright.com/blog"},
+      {"@type":"ListItem","position":3,"name":"Fixed vs. index electricity rates","item":"https://www.powerdoneright.com/blog-fixed-vs-index-rates"}]}]}
+  </script>
+</head>
+<body>
+<nav class="nav">
+  <a href="/" class="nav-logo" aria-label="Power Done Right home">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#0a2240"/><path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/></svg>
+    Power<em>Done</em>Right
+  </a>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:+18778173744"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 2.5A.5.5 0 012.5 2H5l1 3-1.75 1.25C5.33 8.9 7.1 10.67 9 11.75L10.25 10l3 1v2.5a.5.5 0 01-.5.5C5.5 14 2 10.5 2 6V2.5z"/></svg><span class="nav-phone-text">(877) 817-3744</span></a>
+    <a class="nav-phone" href="https://portal.powerdoneright.com/crm/auth/login">Partner Login</a>
+    <a class="nav-cta" href="/">Get rates &rarr;</a>
+  </div>
+</nav>
+<section class="page-hero"><div class="page-hero-inner">
+  <div class="eyebrow"><span class="eyebrow-dot"></span><a href="blog">Blog</a></div>
+  <h1 class="hero-h">Fixed vs. index electricity rates: <em>which is right for your business?</em></h1>
+  <p class="post-meta">June 18, 2026 &middot; 7 min read</p>
+</div></section>
+<article class="article reveal">
+  <p class="hero-sub" style="margin-bottom:8px;">The rate structure you choose matters as much as the number itself. Here&rsquo;s how fixed, index, and hybrid pricing actually behave &mdash; and how to match one to your tolerance for risk.</p>
+<h2>Fixed-rate: predictability</h2>
+<p>With a fixed rate, you lock a single price per kWh for the entire contract term. Your supply charge per unit doesn&rsquo;t move even if wholesale markets spike. For most commercial buyers who value budget certainty &mdash; and don&rsquo;t want to watch energy markets &mdash; this is the default choice.</p>
+<p><strong>Trade-off:</strong> you pay a small premium for that certainty, because the supplier is taking on the price risk. And if markets fall during your term, you don&rsquo;t capture the drop.</p>
+<h2>Index / variable: exposure to the market</h2>
+<p>An index (or variable) rate floats with the wholesale market, typically tracking a published index plus a fixed adder. When markets are low, you benefit immediately. When they&rsquo;re high &mdash; a heat wave, a cold snap, a supply shock &mdash; your cost rises with them.</p>
+<p><strong>Trade-off:</strong> potential savings in exchange for volatility. This suits businesses that can absorb monthly swings, have someone watching the market, and want to capture downside when it appears.</p>
+<div class="callout"><p><strong>Rule of thumb:</strong> if an unexpected 30% jump in a single month&rsquo;s energy cost would hurt, you probably want fixed &mdash; or a hybrid &mdash; not pure index.</p></div>
+<h2>Hybrid &amp; block-and-index</h2>
+<p>You don&rsquo;t have to pick a corner. A common middle path is <strong>block-and-index</strong>: you fix a &ldquo;block&rdquo; of your expected usage at a set price and leave the remainder on index. You get budget certainty on the bulk of your load while keeping some exposure to capture market dips.</p>
+<h2>How to choose</h2>
+<ul>
+  <li><strong>Budget certainty is the priority?</strong> Fixed, for a term that matches your planning horizon.</li>
+  <li><strong>Can you tolerate volatility and want to play the market?</strong> Index, with someone monitoring it.</li>
+  <li><strong>Want most of the certainty but some upside?</strong> Block-and-index hybrid.</li>
+  <li><strong>Term length:</strong> longer fixed terms smooth out volatility but reduce flexibility; shorter terms let you re-bid sooner.</li>
+</ul>
+<p>Whatever structure you choose, the winning move is the same: have suppliers compete for it. The same business, on the same day, will see meaningfully different fixed <em>and</em> index adders depending on whether suppliers know they&rsquo;re in a competitive bid.</p>
+</article>
+<div class="article-foot"><a href="blog">&larr; All articles</a></div>
+<section class="cta-band"><div class="cta-band-inner"><div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>See your number</div><h2 class="cta-band-h">Find out what your business <em>should</em> be paying.</h2><a href="/" class="cta-btn">Get my rates &rarr;</a><p class="cta-foot">90+ suppliers &middot; No fees to your business &middot; First quote in 24 hours</p></div></section>
+<footer class="footer">
+  <div class="footer-top">
+    <div><div class="footer-logo"><svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="7" fill="#fafaf6"/><path d="M17.5 6 L9 18 H14.5 L13 26 L23 13 H17.5 L19 6 Z" fill="#E8B43A"/></svg>Power<em>Done</em>Right</div></div>
+    <div class="footer-cols">
+      <div><div class="footer-h">Markets</div><ul><li><a href="electricity">Electricity</a></li><li><a href="natural-gas">Natural gas</a></li><li><a href="renewable-plans">Renewable plans</a></li><li><a href="demand-management">Demand management</a></li></ul></div>
+      <div><div class="footer-h">Company</div><ul><li><a href="about">About</a></li><li><a href="contact">Contact</a></li><li><a href="careers">Careers</a></li></ul></div>
+      <div><div class="footer-h">Resources</div><ul><li><a href="blog">Blog</a></li><li><a href="bill-analysis">Bill analysis</a></li><li><a href="market-intel">Market intel</a></li><li><a href="renewal-guide">Renewal guide</a></li><li><a href="faq">FAQ</a></li></ul></div>
+    </div>
+  </div>
+  <div class="footer-bot"><span>&copy; <span id="footer-year"></span> Power Done Right LLC &middot; Licensed energy broker in 17 deregulated markets</span><span><a href="privacy">Privacy</a> &middot; <a href="terms">Terms</a> &middot; <a href="disclosures">Disclosures</a></span></div>
+</footer>
+<script>
+(function(){ document.getElementById('footer-year').textContent=new Date().getFullYear();
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);e.target.classList.add('is-visible');});},{threshold:.1,rootMargin:'0px 0px -6% 0px'}); document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);}); } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('is-visible');}); }
+})();
+</script>
+</body>
+</html>
