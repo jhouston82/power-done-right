@@ -153,9 +153,6 @@
   .prose a{ color: var(--green); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
   .prose a:hover{ color: var(--ink); }
 
-  /* Verify flag for proposed thresholds (remove before publish) */
-  .vflag{ font-family: var(--mono); font-size: .58em; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--red); background: rgba(200,74,49,.08); border: 1px solid rgba(200,74,49,.35); border-radius: 5px; padding: 1px 5px; margin-left: 4px; vertical-align: middle; white-space: nowrap; }
-
   /* Tier cards */
   .tiergrid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: stretch; }
   @media (max-width: 900px){ .tiergrid{ grid-template-columns: 1fr; } }
@@ -423,7 +420,7 @@
         <span class="stroke">How much electricity does my business use?</span>
         <span class="ed">Small, medium, or large?</span>
       </h1>
-      <p class="lede">"How much" usually means one of two numbers: the kilowatt-hours (kWh) you burn each month, or the size of your monthly bill. Where you land decides how much attention the energy market pays you — and whether anyone's competing for your account. Here's how to place yourself, in plain language.</p>
+      <p class="lede">The clearest measure is the kilowatt-hours (kWh) you burn each month — your monthly bill is a rough proxy too, though the dollar amount swings with your local rate. Where you land decides how much attention the energy market pays you, and whether anyone's competing for your account. Here's how to place yourself, in plain language.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#lead">Check my usage with a bill <span class="arrow">→</span></a>
         <a class="btn btn-ghost on-dark" href="tel:+12144941627">(214) 494-1627</a>
@@ -457,28 +454,28 @@
     <div class="shead reveal">
       <span class="eyebrow">The three tiers</span>
       <h2>Small, medium, and large <span class="ed">commercial usage.</span></h2>
-      <p class="lede">Approximate ranges below — verify the exact thresholds before relying on them. Most independent businesses with a real building and real operating hours land in the middle tier.</p>
+      <p class="lede">These are rough brackets by monthly usage, not official definitions — but they're a useful way to place yourself. Most independent businesses with a real building and real operating hours land in the middle tier.</p>
     </div>
     <div class="tiergrid">
       <div class="tier reveal">
         <span class="tk">Tier 1</span>
         <h3>Small commercial</h3>
-        <div class="metric">Under ~6,000 kWh<span class="vflag">verify</span><small>per month</small></div>
-        <div class="metric">Roughly under ~$1,000<span class="vflag">verify</span><small>monthly bill</small></div>
+        <div class="metric">Under ~5,000 kWh<small>per month</small></div>
+        <div class="metric">Light, steady load<small>modest HVAC</small></div>
         <p class="ex"><b>Looks like:</b> a small office suite, a one-chair salon, a boutique storefront, a small café with limited equipment. Light, fairly steady load with modest HVAC.</p>
       </div>
       <div class="tier focus reveal">
         <span class="tk">Tier 2</span>
         <h3>Medium commercial</h3>
-        <div class="metric">~6,000 – 100,000 kWh<span class="vflag">verify</span><small>per month</small></div>
-        <div class="metric">Roughly ~$1,000 – $15,000<span class="vflag">verify</span><small>monthly bill</small></div>
+        <div class="metric">~5,000 – 100,000 kWh<small>per month</small></div>
+        <div class="metric">Real equipment + HVAC load<small>open all day</small></div>
         <p class="ex"><b>Looks like:</b> a full-service restaurant, a fitness studio or gym, a dental or medical office, a busy storefront, an apartment community's common areas. Real equipment load and meaningful HVAC — big enough that a better rate matters, small enough to be overlooked. <b>This is who we're built for.</b></p>
       </div>
       <div class="tier reveal">
         <span class="tk">Tier 3</span>
         <h3>Large commercial &amp; industrial</h3>
-        <div class="metric">100,000+ kWh<span class="vflag">verify</span><small>per month</small></div>
-        <div class="metric">Roughly $15,000+<span class="vflag">verify</span><small>monthly bill</small></div>
+        <div class="metric">100,000+ kWh<small>per month</small></div>
+        <div class="metric">Heavy load, demand charges<small>often metered on peak</small></div>
         <p class="ex"><b>Looks like:</b> a warehouse or light-industrial facility, a manufacturer, a large multi-site portfolio, a big-box anchor. Often already has procurement help — and sometimes demand charges to manage too.</p>
       </div>
     </div>
