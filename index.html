@@ -864,9 +864,7 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <video class="hero-vid" autoplay muted loop playsinline preload="auto">
-    <source src="/hero-loop.mp4" type="video/mp4" />
-  </video>
+  <video class="hero-vid" muted loop playsinline preload="none" poster="/hero-loop.jpg" data-src="/hero-loop.mp4"></video>
   <div class="hero-vid-overlay"></div>
   <div class="wrap">
     <div class="hero-grid">
@@ -1260,9 +1258,7 @@
         <a class="btn btn-primary" href="#lead" style="margin-top:24px;">Start your auction <span class="arrow">→</span></a>
       </div>
       <div class="explainer-vid-wrap" id="explainerWrap">
-        <video id="explainerVid" autoplay muted loop playsinline preload="auto">
-          <source src="/explainer-auction.mp4" type="video/mp4" />
-        </video>
+        <video id="explainerVid" class="lazy-vid" muted loop playsinline preload="none" poster="/explainer-auction.jpg" data-src="/explainer-auction.mp4"></video>
         <div class="explainer-play" id="explainerPlay">
           <button class="play-btn" aria-label="Play with sound">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--navy)"><path d="M5 3l14 9-14 9V3z"/></svg>
@@ -1462,9 +1458,7 @@
 <section class="section tight">
   <div class="wrap">
     <div class="quote-section">
-      <video class="quote-vid" autoplay muted loop playsinline preload="auto">
-        <source src="/testimonial-restaurant.mp4" type="video/mp4" />
-      </video>
+      <video class="quote-vid lazy-vid" muted loop playsinline preload="none" poster="/testimonial-restaurant.jpg" data-src="/testimonial-restaurant.mp4"></video>
       <div>
         <span class="eyebrow on-dark">Section 07 · Client outcome</span>
         <blockquote style="margin-top: 18px;">
@@ -1625,6 +1619,32 @@
 </footer>
 
 <script>
+  /* ── Video loading: hero deferred off mobile, below-the-fold lazy-loaded ── */
+  (function(){
+    function loadVid(v){
+      if (!v || v.dataset.loaded) return;
+      v.dataset.loaded = '1';
+      if (v.dataset.src) v.src = v.dataset.src;
+      v.load();
+      var p = v.play();
+      if (p && p.catch) p.catch(function(){});
+    }
+    window.__loadVid = loadVid;
+    var reduce  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var desktop = window.matchMedia('(min-width: 701px)').matches;
+    var hero = document.querySelector('.hero-vid');
+    if (hero && desktop && !reduce) loadVid(hero);   // mobile / reduced-motion: poster only, no MP4
+    var lazy = Array.prototype.slice.call(document.querySelectorAll('video.lazy-vid'));
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting){ loadVid(e.target); io.unobserve(e.target); } });
+      }, { rootMargin: '300px 0px' });
+      lazy.forEach(function(v){ io.observe(v); });
+    } else if (!reduce) {
+      lazy.forEach(loadVid);
+    }
+  })();
+
   /* ── Explainer play button ── */
   (function(){
     const wrap = document.getElementById('explainerWrap');
@@ -1632,6 +1652,7 @@
     const play = document.getElementById('explainerPlay');
     if (!wrap || !vid) return;
     wrap.addEventListener('click', function(){
+      if (window.__loadVid) window.__loadVid(vid);   // ensure loaded (e.g. reduced-motion users)
       if (vid.muted) {
         vid.muted = false;
         vid.loop = false;
