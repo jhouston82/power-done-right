@@ -4,16 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Power Done Right — Commercial electricity, done right.</title>
-<meta name="description" content="Power Done Right puts your commercial electricity account in front of 90+ vetted suppliers and lets them compete in real time. The lowest bid wins — and your business pays 12–28% less from day one." />
+<meta name="description" content="Power Done Right puts your commercial electricity account in front of 90+ vetted suppliers and makes them compete for it. We bring you their best offers in a written savings analysis within 24 hours." />
 <link rel="canonical" href="https://www.powerdoneright.com" />
 <meta property="og:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
-<meta property="og:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
+<meta property="og:description" content="90+ vetted suppliers compete for your business. First quote in 24 hours. No fees, no credit pull, no service interruption." />
 <meta property="og:url" content="https://www.powerdoneright.com" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Power Done Right — Lower Your Commercial Energy Bill" />
-<meta name="twitter:description" content="90+ vetted suppliers compete for your business in real time. First quote in 24 hours. No fees, no credit pull, no service interruption." />
+<meta name="twitter:description" content="90+ vetted suppliers compete for your business. First quote in 24 hours. No fees, no credit pull, no service interruption." />
 <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -33,7 +33,7 @@
   "name": "Power Done Right",
   "url": "https://www.powerdoneright.com",
   "telephone": "+12144941627",
-  "description": "Commercial energy procurement specialist helping businesses in deregulated US markets secure lower electricity and natural gas rates through competitive supplier bidding. Average savings: 12–28%.",
+  "description": "Commercial energy procurement specialist helping businesses in deregulated US markets secure lower electricity and natural gas rates through competitive supplier bidding. Indicative supply savings of 12–28%.",
   "serviceArea": {"@type": "Country", "name": "United States"},
   "knowsAbout": ["Commercial electricity procurement", "Natural gas procurement", "Energy cost reduction", "Deregulated energy markets", "Commercial energy contracts", "Energy broker services"],
   "sameAs": ["https://www.powerdoneright.com"]
@@ -149,8 +149,8 @@
     padding: 5px 9px; border-radius: 999px; letter-spacing: .04em;
     white-space: nowrap;
   }
-  @media (max-width: 1100px){ .pill-state{ display: none; } }
-  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); animation: pulse 1.6s infinite; }
+  @media (max-width: 1240px){ .pill-state{ display: none; } }
+  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); }
   @keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.35 } }
 
   /* Mobile nav */
@@ -703,29 +703,6 @@
   }
 
   /* ---------- Testimonial ---------- */
-  .quote-section{
-    background: var(--navy); color:#fff; border-radius: 28px;
-    padding: clamp(36px, 5vw, 64px);
-    display:grid; gap: 36px; grid-template-columns: 1.2fr 1fr; align-items: center;
-  }
-  @media (max-width: 980px){ .quote-section{ grid-template-columns: 1fr; } }
-  .quote-section blockquote{
-    margin: 0; font-family: var(--ed); font-size: clamp(26px, 3vw, 38px);
-    line-height: 1.2; color: #fff;
-  }
-  .quote-section .source{ margin-top: 22px; display:flex; align-items:center; gap: 12px; color: var(--muted-on); font-size: 14px;}
-  .quote-section .source .av{
-    width: 44px; height: 44px; border-radius: 50%; background: var(--paper-2); flex: 0 0 44px;
-    overflow: hidden;
-  }
-  .quote-section .stat-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-  .quote-section .stat-grid .stat{
-    background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
-    border-radius: 16px; padding: 18px;
-  }
-  .quote-section .stat .k{ font-family: var(--ed); font-size: 38px; line-height: 1; color: var(--amber); }
-  .quote-section .stat .l{ font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted-on); margin-top: 6px;}
-
   /* ---------- FAQ ---------- */
   .faq{ display: grid; gap: 12px; max-width: 880px; margin: 32px auto 0; }
   .faq details{
@@ -787,37 +764,6 @@
   /* ---------- Photo-slot video ---------- */
   .photo-slot video{ width:100%; height:100%; object-fit:cover; display:block; }
 
-  /* ---------- Explainer video section ---------- */
-  .explainer-vid-wrap{
-    position:relative; border-radius:18px; overflow:hidden;
-    aspect-ratio:16/9; background:var(--navy); cursor:pointer;
-  }
-  .explainer-vid-wrap video{ width:100%; height:100%; object-fit:cover; display:block; }
-  .explainer-play{
-    position:absolute; inset:0;
-    display:flex; align-items:center; justify-content:center;
-    background:rgba(11,18,32,.18);
-    transition:opacity .2s;
-  }
-  .explainer-play .play-btn{
-    width:68px; height:68px; border-radius:50%;
-    background:rgba(255,255,255,.92);
-    display:flex; align-items:center; justify-content:center;
-    transition:transform .2s, background .2s;
-    border:none; cursor:pointer;
-  }
-  .explainer-play .play-btn:hover{ transform:scale(1.08); background:#fff; }
-  .explainer-vid-wrap.playing .explainer-play{ opacity:0; pointer-events:none; }
-
-  /* ---------- Quote section video bg ---------- */
-  .quote-section{ position:relative; overflow:hidden; }
-  .quote-vid{
-    position:absolute; inset:0;
-    width:100%; height:100%; object-fit:cover;
-    z-index:0; opacity:.75;
-    -webkit-transform:translateZ(0); transform:translateZ(0);
-  }
-  .quote-section > *{ position:relative; z-index:1; }
 </style>
 </head>
 <body>
@@ -838,7 +784,7 @@
       <a href="#calc-preview">Calculator</a>
     </nav>
     <div class="grow"></div>
-    <span class="pill-state" title="Live market"><span class="dot"></span> ERCOT 7.32¢ · PJM 8.61¢</span>
+    <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
     <div class="actions">
       <a class="btn btn-ghost btn-sm partner-login" href="https://portal.powerdoneright.com/crm/auth/login">Partner Login</a>
       <a class="btn btn-ghost btn-sm" href="tel:+12144941627">(214) 494-1627</a>
@@ -875,18 +821,18 @@
           <span class="ed">for a business your size.</span>
         </h1>
         <p class="lede hero-sub">
-          From restaurants and medical offices to gyms, storefronts, and apartment communities — we put your electricity account in front of 90+ suppliers and make them compete. Deep roots in Texas and the ERCOT market, with the network to serve every deregulated US market. Send one bill; get a written savings analysis in 24 hours — no fee to you.
+          We started in multifamily — apartment communities and property managers — and we now shop electricity for restaurants, medical offices, gyms, and storefronts alike. We put your account in front of 90+ suppliers and make them compete. Deep roots in Texas and the ERCOT market, with the network to serve every deregulated US market. Send one bill; get a written savings analysis in 24 hours — no fee to you.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#lead">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
             Drop your bill — get an audit
           </a>
-          <a class="btn btn-ghost on-dark" href="#dash">See the platform <span class="arrow">→</span></a>
+          <a class="btn btn-ghost on-dark" href="#dash">Multi-site portfolios <span class="arrow">→</span></a>
         </div>
         <div class="hero-trust">
           <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No fee to you</span>
-          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> SOC-2 handled documents</span>
+          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Your bill stays confidential</span>
           <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> All US deregulated markets</span>
         </div>
       </div>
@@ -906,7 +852,7 @@
             <input type="file" id="dropInput" accept="application/pdf,image/*" hidden>
           </label>
 
-          <div class="drop-or">— or paste your account # —</div>
+          <div class="drop-or">— sample analysis —</div>
 
           <div class="read-out" aria-live="polite">
             <div class="row"><span class="lbl">Current rate</span><span class="val" data-industry-copy="rate">$0.1182 / kWh</span></div>
@@ -1045,7 +991,7 @@
             <div id="lf-estimate" class="savings-preview">
               <div class="lbl">Estimated annual savings range</div>
               <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
-              <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
+              <div class="note">Indicative only, based on a 12–28% reduction. Your actual rate depends on usage profile, market, and contract length.</div>
             </div>
           </div>
 
@@ -1101,6 +1047,33 @@
         </div>
       </div>
     </div>
+
+    <!-- What happens next -->
+    <div style="max-width:820px; margin:36px auto 0;">
+      <span class="eyebrow" style="display:block; text-align:center; margin-bottom:20px;">What happens next</span>
+      <ol style="list-style:none; padding:0; margin:0; display:grid; gap:14px;">
+        <li style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="flex:0 0 26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font-family:var(--mono); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center;">1</span>
+          <span style="font-size:15px; line-height:1.55;"><b>You send one bill.</b> We read your usage, current supply rate, and contract end date.</span>
+        </li>
+        <li style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="flex:0 0 26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font-family:var(--mono); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center;">2</span>
+          <span style="font-size:15px; line-height:1.55;"><b>Within 24 hours,</b> you get a written savings analysis — what you pay today against what the market is offering.</span>
+        </li>
+        <li style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="flex:0 0 26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font-family:var(--mono); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center;">3</span>
+          <span style="font-size:15px; line-height:1.55;"><b>One e-signature.</b> A letter of authorization lets us pull your historical usage from the utility. No commitment to switch.</span>
+        </li>
+        <li style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="flex:0 0 26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font-family:var(--mono); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center;">4</span>
+          <span style="font-size:15px; line-height:1.55;"><b>We shop your account.</b> Suppliers licensed in your market price your actual load and compete for the business.</span>
+        </li>
+        <li style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="flex:0 0 26px; height:26px; border-radius:50%; background:var(--green); color:#fff; font-family:var(--mono); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center;">5</span>
+          <span style="font-size:15px; line-height:1.55;"><b>You choose.</b> Every offer side by side with our recommendation — including when we think you should stay where you are. Sign once; we handle the switch.</span>
+        </li>
+      </ol>
+    </div>
   </div>
 </section>
 
@@ -1108,7 +1081,7 @@
 <section class="logos">
   <div class="wrap">
     <div style="display:flex; justify-content:center; padding-top: 24px;">
-      <span class="eyebrow">Powered by the BOX network · 90+ suppliers · 100,000+ contracts closed</span>
+      <span class="eyebrow">Powered by the BOX network · 90+ suppliers · 100,000+ contracts closed across the network</span>
     </div>
     <div class="logos-row">
       <div class="supplier-logo">Constellation<small>Fortune-200</small></div>
@@ -1128,83 +1101,46 @@
       <div class="head">
         <div>
           <span class="eyebrow on-dark">Section 02 · Built for owners &amp; operators</span>
-          <h2 style="margin-top: 14px;">A standing audit of <span class="ed" style="color: var(--amber);">every kWh you buy.</span></h2>
+          <h2 style="margin-top: 14px;">A standing review of <span class="ed" style="color: var(--amber);">every kWh you buy.</span></h2>
         </div>
         <p class="lede">
-          Connect a portfolio. We benchmark spend across all your meters, flag contracts inside their renewal window, and surface the rate you <em>should</em> be paying — daily.
+          Operate more than one location? Send us the bills. We benchmark supply cost across all of your meters, tell you which contracts are inside their renewal window, and shop the ones worth shopping.
         </p>
       </div>
 
       <div class="grid">
         <div class="card card-portfolio">
-          <div style="display:flex; justify-content: space-between; align-items: baseline;">
-            <span class="lbl">Portfolio · Q2 2026</span>
-            <span class="lbl" style="color: #74e7b0;">● synced 4m ago</span>
-          </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px;">
-            <div>
-              <span class="lbl">Annual kWh</span>
-              <div class="kpi" data-industry-copy="kwh-total">42.7M</div>
-            </div>
-            <div>
-              <span class="lbl">Sites</span>
-              <div class="kpi" data-industry-copy="sites-total">128</div>
-            </div>
+          <span class="lbl">Every meter, one review</span>
+          <div style="font-size:15px; line-height:1.55; color:rgba(255,255,255,.88); margin-top:12px;">
+            We consolidate your accounts into a single written analysis — current supply rate, contract structure, and end date for every site you operate.
           </div>
         </div>
 
         <div class="card card-savings">
-          <span class="lbl">YTD savings vs benchmark</span>
-          <div class="kpi" data-industry-copy="ytd">$612k</div>
-          <div style="font-size: 13px; color: rgba(255,255,255,.85);">
-            <span data-industry-copy="ytd-pct">11.4%</span> below incumbent suppliers
+          <span class="lbl">No fee to your business</span>
+          <div style="font-size:15px; line-height:1.55; color:rgba(255,255,255,.95); margin-top:12px;">
+            The supplier you choose pays us out of their margin. The review costs you nothing — whether or not you switch.
           </div>
         </div>
 
         <div class="card card-renewals">
-          <span class="lbl">Renewing &lt; 90d</span>
-          <div class="kpi amber">7</div>
-          <div style="font-size: 13px; color: var(--muted-on);">contracts auto-flagged</div>
-        </div>
-
-        <div class="card card-chart">
-          <div style="display:flex; justify-content: space-between; align-items: baseline;">
-            <span class="lbl">Spend vs benchmark — last 12 months</span>
-            <span class="lbl" style="color: var(--amber);">▲ trending below benchmark</span>
-          </div>
-          <svg class="chart" id="chart" viewBox="0 0 720 220" preserveAspectRatio="none" aria-hidden="true">
-            <g class="grid-l">
-              <line x1="40" y1="40"  x2="720" y2="40"/>
-              <line x1="40" y1="90"  x2="720" y2="90"/>
-              <line x1="40" y1="140" x2="720" y2="140"/>
-              <line x1="40" y1="190" x2="720" y2="190"/>
-            </g>
-            <g class="axis">
-              <text x="0" y="44">120k</text>
-              <text x="0" y="94">90k</text>
-              <text x="0" y="144">60k</text>
-              <text x="0" y="194">30k</text>
-            </g>
-            <g id="bars"></g>
-            <path id="benchmark" d="" stroke="#ffcb45" stroke-dasharray="4 4" stroke-width="1.5" fill="none" opacity=".7"/>
-          </svg>
-          <div class="legend">
-            <span><span class="sw" style="background: rgba(255,255,255,.45);"></span> Incumbent supplier</span>
-            <span><span class="sw" style="background: var(--amber);"></span> Power Done Right rate</span>
-            <span><span class="sw" style="background: var(--green);"></span> Savings captured</span>
-            <span><span class="sw" style="background:transparent; border-bottom: 2px dashed var(--amber);"></span> Market benchmark</span>
+          <span class="lbl">Renewal alerts</span>
+          <div style="font-size:15px; line-height:1.55; color:rgba(255,255,255,.88); margin-top:12px;">
+            We track every contract end date and reach out before your renewal window closes.
           </div>
         </div>
 
-        <div class="card card-side">
-          <div>
-            <span class="lbl">Renewals up next</span>
-          </div>
-          <div class="item"><span class="name">Store #014 · PA · PECO</span><span class="v">42 days</span></div>
-          <div class="item"><span class="name">HQ · TX · Oncor</span><span class="v">61 days</span></div>
-          <div class="item"><span class="name">Warehouse · NJ · PSE&amp;G</span><span class="v">73 days</span></div>
-          <div class="item"><span class="name">Store #221 · OH · AEP</span><span class="v">88 days</span></div>
-          <a class="btn btn-ghost btn-sm on-dark" href="#lead" style="align-self: flex-start; margin-top: 6px;">Get portfolio audit <span class="arrow">→</span></a>
+        <div class="card" style="grid-column: span 12;">
+          <span class="lbl">What the portfolio review covers</span>
+          <ul style="list-style:none; padding:0; margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px 28px; font-size:15px; line-height:1.5; color:rgba(255,255,255,.88);">
+            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Supply rate benchmarked site by site</li>
+            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Contract end dates and renewal windows</li>
+            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Rate structure review — fixed, index, block+index</li>
+            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Competing supplier offers on the sites worth shopping</li>
+            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> One consolidated recommendation, in writing</li>
+            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Where we recommend you stay put, we say so</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm on-dark" href="#lead" style="align-self:flex-start; margin-top:22px; display:inline-flex;">Get a portfolio review <span class="arrow">&#8594;</span></a>
         </div>
       </div>
     </div>
@@ -1231,40 +1167,22 @@
       <div class="step">
         <span class="n">02</span>
         <h3>e-Sign an LOA</h3>
-        <p>One DocuSign so we can pull historical usage from your utility — no commitment to switch suppliers.</p>
+        <p>One e-signature so we can pull historical usage from your utility — no commitment to switch suppliers.</p>
       </div>
       <div class="step">
         <span class="n">03</span>
-        <h3>We run a reverse auction</h3>
-        <p>8–12 suppliers from the BOX network bid against each other for your load. You watch them compete.</p>
+        <h3>We shop the market for you</h3>
+        <p>We take your load to 8–12 suppliers in the BOX network and negotiate their best pricing on your behalf.</p>
       </div>
       <div class="step">
         <span class="n">04</span>
         <h3>You sign once</h3>
-        <p>Pick the winning offer. We handle the supplier switch and renewal alerts for the life of the contract.</p>
+        <p>Pick the offer you want. We handle the supplier switch and renewal alerts for the life of the contract.</p>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ============ EXPLAINER VIDEO ============ -->
-<section class="section tight">
-  <div class="wrap">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(28px,4vw,56px); align-items:center;">
-      <div>
-        <span class="eyebrow">See it in action</span>
-        <h2 style="margin-top:14px;">Watch suppliers <span class="ed">compete in real time.</span></h2>
-        <p class="lede" style="margin-top:16px;">In our reverse auction, 8–12 vetted suppliers from the BOX network bid against each other for your commercial load. The lowest rate wins — you lock it in with one signature.</p>
-        <a class="btn btn-primary" href="#lead" style="margin-top:24px;">Start your auction <span class="arrow">→</span></a>
-      </div>
-      <div class="explainer-vid-wrap" id="explainerWrap">
-        <video id="explainerVid" class="lazy-vid" muted loop playsinline preload="none" poster="/explainer-auction.jpg" data-src="/explainer-auction.mp4"></video>
-        <div class="explainer-play" id="explainerPlay">
-          <button class="play-btn" aria-label="Play with sound">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--navy)"><path d="M5 3l14 9-14 9V3z"/></svg>
-          </button>
-        </div>
-      </div>
+    <div style="margin-top:36px;">
+      <a class="btn btn-primary" href="#lead">Get my quotes <span class="arrow">&#8594;</span></a>
     </div>
   </div>
 </section>
@@ -1409,7 +1327,7 @@
         <span class="eyebrow">Section 06 · Try it live</span>
         <h2 style="margin-top: 14px;">How much could you save? <span class="ed">Move the sliders.</span></h2>
       </div>
-      <p class="lede" style="max-width: 44ch;">Indicative numbers — based on average spreads from our last 1,200 commercial contracts.</p>
+      <p class="lede" style="max-width: 44ch;">Indicative numbers only — actual pricing depends on your market, load profile, and term.</p>
     </div>
 
     <div class="calc-preview">
@@ -1454,41 +1372,11 @@
   </div>
 </section>
 
-<!-- ============ TESTIMONIAL ============ -->
-<section class="section tight">
-  <div class="wrap">
-    <div class="quote-section">
-      <video class="quote-vid lazy-vid" muted loop playsinline preload="none" poster="/testimonial-restaurant.jpg" data-src="/testimonial-restaurant.mp4"></video>
-      <div>
-        <span class="eyebrow on-dark">Section 07 · Client outcome</span>
-        <blockquote style="margin-top: 18px;">
-          "We thought we were on a 'great' rate. They benchmarked us against five other suppliers, ran an auction, and we re-signed at a rate <span style="color: var(--amber);">14% lower</span> for three years."
-        </blockquote>
-        <div class="source">
-          <div class="av" aria-hidden="true">
-            <svg viewBox="0 0 44 44" width="44" height="44"><rect width="44" height="44" fill="#1a253b"/><circle cx="22" cy="17" r="7" fill="#ffd766"/><path d="M6 44c2-9 9-13 16-13s14 4 16 13z" fill="#ffd766"/></svg>
-          </div>
-          <div>
-            <div style="color:#fff; font-weight: 600;">Margaret Chen</div>
-            <div>VP Procurement · 38-location restaurant group</div>
-          </div>
-        </div>
-      </div>
-      <div class="stat-grid">
-        <div class="stat"><div class="k">$284k</div><div class="l">first-year savings</div></div>
-        <div class="stat"><div class="k">5 days</div><div class="l">audit to recommendation</div></div>
-        <div class="stat"><div class="k">38</div><div class="l">sites · one signature</div></div>
-        <div class="stat"><div class="k">3 yrs</div><div class="l">price certainty</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ FAQ ============ -->
 <section class="section">
   <div class="wrap">
     <div class="center-text">
-      <span class="eyebrow">Section 08 · FAQ</span>
+      <span class="eyebrow">Section 07 · FAQ</span>
       <h2 style="margin-top: 14px;" class="max-72">Questions <span class="ed">owners ask us first.</span></h2>
     </div>
 
@@ -1499,7 +1387,7 @@
       </details>
       <details>
         <summary>Are you a supplier or a broker?</summary>
-        <p>A broker. We don't generate or sell electricity ourselves. We run reverse auctions across 90+ retail energy suppliers in the BOX network — including Constellation, NRG/Direct Energy, AEP Energy, Engie, Shell Energy, and TXU — and bring you the winning offer.</p>
+        <p>A broker. We don't generate or sell electricity ourselves. We shop your account across 90+ retail energy suppliers in the BOX network — including Constellation, NRG/Direct Energy, AEP Energy, Engie, Shell Energy, and TXU — and bring you their best competing offers.</p>
       </details>
       <details>
         <summary>Will my service be interrupted when I switch?</summary>
@@ -1539,14 +1427,10 @@
         </div>
       </div>
       <div class="dotbg" style="aspect-ratio: 4/3; border-radius: 18px; background-color: var(--navy); display:flex; flex-direction: column; justify-content: center; padding: 28px; color: #fff;">
-        <span class="eyebrow on-dark">Tomorrow's market · ERCOT</span>
+        <span class="eyebrow on-dark">Indicative market · ERCOT</span>
         <div style="font-family: var(--ed); font-size: 64px; line-height: 1; margin-top: 8px;">7.32¢</div>
-        <div style="font-size: 14px; color: var(--muted-on); margin-top: 6px;">36-mo fixed · best of 8 suppliers · 6.4M kWh load</div>
-        <div style="display:flex; gap: 8px; margin-top: 16px; flex-wrap: wrap;">
-          <span style="font-family: var(--mono); font-size: 11px; padding: 4px 8px; background: rgba(255,255,255,.08); border-radius: 999px;">Constellation 7.32</span>
-          <span style="font-family: var(--mono); font-size: 11px; padding: 4px 8px; background: rgba(255,255,255,.08); border-radius: 999px;">TXU 7.41</span>
-          <span style="font-family: var(--mono); font-size: 11px; padding: 4px 8px; background: rgba(255,255,255,.08); border-radius: 999px;">Engie 7.49</span>
-        </div>
+        <div style="font-size: 14px; color: var(--muted-on); margin-top: 6px;">36-mo fixed · indicative only · 6.4M kWh load</div>
+        <div style="font-size: 13px; color: var(--muted-on); margin-top: 16px; line-height:1.5;">Your quote is priced to your actual load, market, and term — we shop it across 90+ suppliers and send you the best of what comes back.</div>
       </div>
     </div>
   </div>
@@ -1566,7 +1450,7 @@
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="#dash">Portfolio platform</a></li>
+          <li><a href="#dash">Portfolio review</a></li>
           <li><a href="#calc-preview">Savings calculator</a></li>
           <li><a href="#lead">Get a quote</a></li>
           <li><a href="#how">How it works</a></li>
@@ -1645,58 +1529,6 @@
     }
   })();
 
-  /* ── Explainer play button ── */
-  (function(){
-    const wrap = document.getElementById('explainerWrap');
-    const vid = document.getElementById('explainerVid');
-    const play = document.getElementById('explainerPlay');
-    if (!wrap || !vid) return;
-    wrap.addEventListener('click', function(){
-      if (window.__loadVid) window.__loadVid(vid);   // ensure loaded (e.g. reduced-motion users)
-      if (vid.muted) {
-        vid.muted = false;
-        vid.loop = false;
-        wrap.classList.add('playing');
-        vid.play();
-      } else {
-        vid.muted = true;
-        vid.loop = true;
-        wrap.classList.remove('playing');
-      }
-    });
-    vid.addEventListener('ended', function(){
-      vid.muted = true;
-      vid.loop = true;
-      wrap.classList.remove('playing');
-      vid.play();
-    });
-  })();
-
-  /* ── Mobile nav ── */
-  (function(){
-    const btn = document.getElementById('navToggle');
-    const menu = document.getElementById('mobMenu');
-    const ham = document.getElementById('hamIcon');
-    const close = document.getElementById('closeIcon');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-      ham.style.display = open ? 'none' : '';
-      close.style.display = open ? '' : 'none';
-    });
-  })();
-  function closeMobMenu(){
-    const menu = document.getElementById('mobMenu');
-    const btn = document.getElementById('navToggle');
-    const ham = document.getElementById('hamIcon');
-    const close = document.getElementById('closeIcon');
-    menu.classList.remove('open');
-    if (btn) btn.setAttribute('aria-expanded', 'false');
-    if (ham) ham.style.display = '';
-    if (close) close.style.display = 'none';
-  }
-
   /* ── Hero drop zone interaction ── */
   (function(){
     const dz = document.getElementById('dropZone');
@@ -1706,15 +1538,21 @@
     ['dragleave','drop'].forEach(e => dz.addEventListener(e, ev => { ev.preventDefault(); dz.classList.remove('drag'); }));
     dz.addEventListener('drop', ev => {
       const f = ev.dataTransfer.files && ev.dataTransfer.files[0];
-      if (f) { showAccepted(f.name); scrollToForm(); }
+      if (f) accept(f);
     });
     input.addEventListener('change', ev => {
       const f = ev.target.files && ev.target.files[0];
-      if (f) { showAccepted(f.name); scrollToForm(); }
+      if (f) accept(f);
     });
+    /* Hand the file straight to the lead form so the visitor never uploads twice. */
+    function accept(f){
+      showAccepted(f.name);
+      scrollToForm();
+      handleBillFile(f);
+    }
     function showAccepted(name){
       dz.querySelector('.ttl').textContent = '✓ ' + name;
-      dz.querySelector('.meta').textContent = 'Reading… fill in your contact below to receive your audit.';
+      dz.querySelector('.meta').textContent = 'Reading your bill below — add your contact to receive the analysis.';
       dz.style.borderColor = 'var(--green)';
       dz.style.background = '#e6f3ec';
     }
@@ -1722,34 +1560,6 @@
       const lead = document.getElementById('lead');
       if (lead) lead.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
-  })();
-
-  /* ── Bar chart render ── */
-  (function(){
-    const bars = document.getElementById('bars');
-    if (!bars) return;
-    const months = ['Jul','Aug','Sep','Oct','Nov','Dec','Jan','Feb','Mar','Apr','May','Jun'];
-    const data = [
-      {cur: 105, pdr: null}, {cur: 112, pdr: null}, {cur: 108, pdr: null},
-      {cur: 118, pdr: null}, {cur: 102, pdr: null}, {cur: 110, pdr: null},
-      {cur: 100, pdr: 88}, {cur: 96,  pdr: 84}, {cur: 92,  pdr: 81},
-      {cur: 88,  pdr: 78}, {cur: 86,  pdr: 76}, {cur: 84,  pdr: 75}
-    ];
-    const xStart = 60, xStep = (700-60)/12, w = 22;
-    const yScale = v => 200 - (v / 120) * 160;
-    let html = '';
-    data.forEach((d, i) => {
-      const x = xStart + i*xStep;
-      const yC = yScale(d.cur);
-      html += `<rect class="${d.pdr==null ? 'bar-cur' : 'bar-bg'}" x="${x}" y="${yC}" width="${w}" height="${200-yC}" rx="3"/>`;
-      if (d.pdr != null){
-        const yP = yScale(d.pdr);
-        html += `<rect class="bar-saved" x="${x}" y="${yP}" width="${w}" height="${yC-yP}" rx="3"/>`;
-        html += `<rect class="bar-pdr" x="${x}" y="${yP}" width="${w}" height="${200-yP}" rx="3"/>`;
-      }
-      html += `<text class="axis" x="${x + w/2}" y="216" text-anchor="middle">${months[i]}</text>`;
-    });
-    bars.innerHTML = html;
   })();
 
   /* ── Calculator preview live ── */
@@ -1811,17 +1621,14 @@
     restaurants: {
       lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market and send back a written savings analysis in 24 hours. From a single kitchen to a small group of locations.",
       rate: "$0.1182 / kWh", usage: "2.4M kWh", ends: "Aug 2026", save: "$54,300 / yr",
-      'kwh-total':"42.7M", 'sites-total':"128", ytd:"$612k", 'ytd-pct':"11.4%",
     },
     retail: {
       lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market. Built for storefronts with high HVAC and refrigeration loads — one location or several.",
       rate: "$0.1124 / kWh", usage: "3.6M kWh", ends: "Mar 2027", save: "$68,900 / yr",
-      'kwh-total':"58.4M", 'sites-total':"212", ytd:"$847k", 'ytd-pct':"12.1%",
     },
     realestate: {
       lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market. Built for property managers optimizing common-area and pass-through energy across their buildings.",
       rate: "$0.1041 / kWh", usage: "8.1M kWh", ends: "Jun 2027", save: "$92,100 / yr",
-      'kwh-total':"148M", 'sites-total':"86", ytd:"$1.7M", 'ytd-pct':"10.8%",
     }
   };
   function applyIndustry(key){
@@ -2099,7 +1906,7 @@
       // hidden, so only restore the label while it's still visible.
       btn.disabled = false;
       if (document.getElementById('lead-form-wrap').style.display !== 'none') {
-        btn.innerHTML = 'Start Supplier Auction <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
+        btn.innerHTML = 'Get My Quotes <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
       }
     }
   }
@@ -2117,7 +1924,7 @@
     document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
     const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
     const btn = document.getElementById('lf-next');
-    btn.innerHTML = (n < 1 ? 'Continue' : 'Start Supplier Auction') + arrow;
+    btn.innerHTML = (n < 1 ? 'Continue' : 'Get My Quotes') + arrow;
     formStep = n;
   }
 

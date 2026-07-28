@@ -116,8 +116,8 @@
   .topnav .grow{ flex:1; }
   .topnav .actions{ display:flex; gap: 8px; align-items:center; }
   .pill-state{ display:inline-flex; align-items:center; gap:6px; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--green); background: var(--green-soft); padding: 5px 9px; border-radius: 999px; letter-spacing: .04em; white-space: nowrap; }
-  @media (max-width: 1100px){ .pill-state{ display: none; } }
-  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); animation: pulse 1.6s infinite; }
+  @media (max-width: 1240px){ .pill-state{ display: none; } }
+  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); }
   @keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.35 } }
   .nav-ham{ display:none; padding: 8px; border-radius: 8px; color: var(--muted); }
   .nav-ham:hover{ background: var(--paper-2); }
@@ -526,7 +526,7 @@
         <span class="step-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg></span>
         <div class="n">03</div>
         <h3>We make suppliers compete</h3>
-        <p>We put your load profile in front of 90+ vetted suppliers at once. They bid against each other, the best offer wins your contract, and we handle the paperwork — at <b>no fee to your business.</b></p>
+        <p>We put your load profile in front of 90+ vetted suppliers at once. We collect their best pricing, bring you the competing offers side by side, and handle the paperwork — at <b>no fee to your business.</b></p>
       </div>
     </div>
   </div>
@@ -708,7 +708,7 @@
             <div id="lf-estimate" class="savings-preview">
               <div class="lbl">Estimated annual savings range</div>
               <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
-              <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
+              <div class="note">Indicative only, based on a 12–28% reduction. Your actual rate depends on usage profile, market, and contract length.</div>
             </div>
           </div>
 
@@ -778,7 +778,7 @@
         </div>
         <p class="foot">ISO-NE · Rhode Island Energy · No fees to your business</p>
       </div>
-      <div style="text-align:right; font-family: var(--ed); font-size: clamp(40px,7vw,72px); line-height: 1; color: var(--navy);">12–28%<div style="font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: rgba(11,18,32,.6); margin-top: 8px; font-weight:600;">typical supply savings</div></div>
+      <div style="text-align:right; font-family: var(--ed); font-size: clamp(40px,7vw,72px); line-height: 1; color: var(--navy);">12–28%<div style="font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: rgba(11,18,32,.6); margin-top: 8px; font-weight:600;">indicative supply savings</div></div>
     </div>
   </div>
 </section>
@@ -798,7 +798,7 @@
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="/#dash">Portfolio platform</a></li>
+          <li><a href="/#dash">Portfolio review</a></li>
           <li><a href="/#calc-preview">Savings calculator</a></li>
           <li><a href="#lead">Get a quote</a></li>
           <li><a href="/#how">How it works</a></li>
@@ -1131,7 +1131,7 @@
     } finally {
       btn.disabled = false;
       if (document.getElementById('lead-form-wrap').style.display !== 'none') {
-        btn.innerHTML = 'Start Supplier Auction <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
+        btn.innerHTML = 'Get My Quotes <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
       }
     }
   }
@@ -1148,7 +1148,7 @@
     document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
     const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
     const btn = document.getElementById('lf-next');
-    btn.innerHTML = (n < 1 ? 'Continue' : 'Start Supplier Auction') + arrow;
+    btn.innerHTML = (n < 1 ? 'Continue' : 'Get My Quotes') + arrow;
     formStep = n;
   }
 

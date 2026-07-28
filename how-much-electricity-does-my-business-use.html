@@ -106,8 +106,8 @@
   .topnav .grow{ flex:1; }
   .topnav .actions{ display:flex; gap: 8px; align-items:center; }
   .pill-state{ display:inline-flex; align-items:center; gap:6px; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--green); background: var(--green-soft); padding: 5px 9px; border-radius: 999px; letter-spacing: .04em; white-space: nowrap; }
-  @media (max-width: 1100px){ .pill-state{ display: none; } }
-  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); animation: pulse 1.6s infinite; }
+  @media (max-width: 1240px){ .pill-state{ display: none; } }
+  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); }
   @keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.35 } }
   .nav-ham{ display:none; padding: 8px; border-radius: 8px; color: var(--muted); }
   .nav-ham:hover{ background: var(--paper-2); }
@@ -659,7 +659,7 @@
             <div id="lf-estimate" class="savings-preview">
               <div class="lbl">Estimated annual savings range</div>
               <div class="amt"><span id="lf-est-low">$0</span> – <span id="lf-est-high">$0</span></div>
-              <div class="note">Based on 12–28% reduction. Final rate depends on usage profile and contract length.</div>
+              <div class="note">Indicative only, based on a 12–28% reduction. Your actual rate depends on usage profile, market, and contract length.</div>
             </div>
           </div>
 
@@ -728,7 +728,7 @@
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="/#dash">Portfolio platform</a></li>
+          <li><a href="/#dash">Portfolio review</a></li>
           <li><a href="/#calc-preview">Savings calculator</a></li>
           <li><a href="#lead">Get a quote</a></li>
           <li><a href="/#how">How it works</a></li>
@@ -1061,7 +1061,7 @@
     } finally {
       btn.disabled = false;
       if (document.getElementById('lead-form-wrap').style.display !== 'none') {
-        btn.innerHTML = 'Start Supplier Auction <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
+        btn.innerHTML = 'Get My Quotes <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
       }
     }
   }
@@ -1078,7 +1078,7 @@
     document.getElementById('lf-back').style.display = n > 0 ? '' : 'none';
     const arrow = '<svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="display:inline;vertical-align:middle;margin-left:4px"><path d="M2 8H13M9 4l4 4-4 4"/></svg>';
     const btn = document.getElementById('lf-next');
-    btn.innerHTML = (n < 1 ? 'Continue' : 'Start Supplier Auction') + arrow;
+    btn.innerHTML = (n < 1 ? 'Continue' : 'Get My Quotes') + arrow;
     formStep = n;
   }
 

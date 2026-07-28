@@ -116,8 +116,8 @@
   .topnav .grow{ flex:1; }
   .topnav .actions{ display:flex; gap: 8px; align-items:center; }
   .pill-state{ display:inline-flex; align-items:center; gap:6px; font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--green); background: var(--green-soft); padding: 5px 9px; border-radius: 999px; letter-spacing: .04em; white-space: nowrap; }
-  @media (max-width: 1100px){ .pill-state{ display: none; } }
-  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); animation: pulse 1.6s infinite; }
+  @media (max-width: 1240px){ .pill-state{ display: none; } }
+  .pill-state .dot{ width:6px; height:6px; border-radius:50%; background: var(--green); }
   @keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.35 } }
   .nav-ham{ display:none; padding: 8px; border-radius: 8px; color: var(--muted); }
   .nav-ham:hover{ background: var(--paper-2); }
@@ -245,7 +245,7 @@
       <a href="/#calc-preview">Calculator</a>
     </nav>
     <div class="grow"></div>
-    <span class="pill-state" title="Live market"><span class="dot"></span> ERCOT 7.32¢ · PJM 8.61¢</span>
+    <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
     <div class="actions">
       <a class="btn btn-ghost btn-sm partner-login" href="https://portal.powerdoneright.com/crm/auth/login">Partner Login</a>
       <a class="btn btn-ghost btn-sm" href="tel:+12144941627">(214) 494-1627</a>
@@ -347,7 +347,7 @@
       <div class="step reveal">
         <div class="n">03</div>
         <h3>We make suppliers compete</h3>
-        <p>We submit your load profile to 90+ vetted suppliers at once. They bid against each other, the lowest bid wins your contract — and we charge <b>no fees to your business.</b></p>
+        <p>We take your load profile to 90+ vetted suppliers at once and collect their best pricing. We bring you the competing offers side by side — and we charge <b>no fees to your business.</b></p>
       </div>
     </div>
   </div>
@@ -446,7 +446,7 @@
         </div>
         <p class="foot">Medical · Dental · Veterinary · Outpatient clinics · No fees to your business</p>
       </div>
-      <div style="text-align:right; font-family: var(--ed); font-size: clamp(40px,7vw,72px); line-height: 1; color: var(--navy);">12–28%<div style="font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: rgba(11,18,32,.6); margin-top: 8px; font-weight:600;">typical supply savings</div></div>
+      <div style="text-align:right; font-family: var(--ed); font-size: clamp(40px,7vw,72px); line-height: 1; color: var(--navy);">12–28%<div style="font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: rgba(11,18,32,.6); margin-top: 8px; font-weight:600;">indicative supply savings</div></div>
     </div>
   </div>
 </section>
@@ -465,7 +465,7 @@
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="/#dash">Portfolio platform</a></li>
+          <li><a href="/#dash">Portfolio review</a></li>
           <li><a href="/#calc-preview">Savings calculator</a></li>
           <li><a href="/#lead">Get a quote</a></li>
           <li><a href="/#how">How it works</a></li>
