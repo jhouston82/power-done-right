@@ -7,13 +7,13 @@
 <meta name="description" content="Compare Delaware commercial electricity rates the right way: submit one bill and let 90+ suppliers compete for your account across Delmarva Power territories. No fee to your business." />
 <link rel="canonical" href="https://www.powerdoneright.com/electricity/delaware" />
 <meta property="og:title" content="Delaware Business Electricity Rates — Power Done Right" />
-<meta property="og:description" content="Delaware commercial customers can choose their supplier. Submit one bill and 90+ suppliers compete for your account. Written savings analysis in 24 hours — no fee." />
+<meta property="og:description" content="Delaware commercial customers can choose their supplier. Submit one bill and 90+ suppliers compete for your account. Written savings analysis after suppliers return pricing — no fee." />
 <meta property="og:url" content="https://www.powerdoneright.com/electricity/delaware" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="https://www.powerdoneright.com/og-image.svg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Delaware Business Electricity Rates — Power Done Right" />
-<meta name="twitter:description" content="90+ suppliers compete for your Delaware commercial electricity account. Written analysis in 24 hours — no fee." />
+<meta name="twitter:description" content="90+ suppliers compete for your Delaware commercial electricity account. Written analysis after suppliers return pricing — no fee." />
 <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.svg" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -400,6 +400,7 @@
   }
   .step-ic{display:block;color:var(--amber);margin-bottom:12px}.step-ic svg{width:28px;height:28px}
 </style>
+<script src="/analytics-events.js" defer></script>
 </head>
 <body>
 
@@ -464,7 +465,7 @@
       </div>
       <div class="hero-trust">
         <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No fee to your business</span>
-        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Written analysis in 24 hours</span>
+        <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Written analysis after suppliers return pricing</span>
         <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> All US deregulated markets</span>
       </div>
     </div>
@@ -480,7 +481,7 @@
     </div>
     <div class="prose reveal">
       <p>Commercial electricity rates in Delaware change constantly. They move with PJM wholesale prices, the season, your usage profile, your credit, and how long a term you're willing to sign. A headline cents-per-kWh number you see advertised is rarely the rate a specific business actually gets — which is why we don't post one here.</p>
-      <p>The most accurate, current quote comes from your own bill. Submit one recent statement and we benchmark your account against 90+ suppliers competing for it, then send back a written savings analysis in 24 hours — at no fee to your business. <a href="#lead">Start with your bill below.</a></p>
+      <p>The most accurate, current quote comes from your own bill. Submit one recent statement and we benchmark your account against 90+ suppliers competing for it, then send back a written savings analysis after suppliers return pricing — at no fee to your business. <a href="#lead">Start with your bill below.</a></p>
     </div>
   </div>
 </section>
@@ -549,8 +550,8 @@
           <div class="l">From bill analysis to signed contract and renewal reminders — you approve, we run it.</div>
         </div>
         <div>
-          <div class="k"><b>24-hour</b> turnaround</div>
-          <div class="l">Send one recent bill; get a written savings analysis the next business day.</div>
+          <div class="k"><b>Supplier-led</b> turnaround</div>
+          <div class="l">Send one recent bill; get a written savings analysis after suppliers return pricing.</div>
         </div>
       </div>
     </div>
@@ -593,7 +594,7 @@
   <div class="wrap">
     <div style="text-align:center; margin-bottom: 32px;">
       <span class="eyebrow">Get started · free, no obligation</span>
-      <h2 style="margin-top: 14px;">Get your written Delaware savings analysis. <span class="ed">In 24 hours.</span></h2>
+      <h2 style="margin-top: 14px;">Get your written Delaware savings analysis. <span class="ed">On the supplier timeline.</span></h2>
     </div>
 
     <div class="form-card">
@@ -750,7 +751,7 @@
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
         <h3>Thank you — request received!</h3>
-        <p style="color:var(--muted);">We've got your details and we'll be in touch soon with your competitive quotes — typically within 24 hours by email and phone.</p>
+        <p style="color:var(--muted);">We've got your details and we'll be in touch soon with your competitive quotes — as soon as suppliers complete their pricing review by email and phone.</p>
         <div class="success-detail" style="margin-top:16px;">
           <div class="lbl">Reference</div>
           <div class="val" id="success-ref" style="font-size:18px; color:var(--muted);">PDR-000000</div>
@@ -1119,7 +1120,7 @@
         : '—';
 
       if (typeof gtag !== 'undefined') {
-        gtag('event', 'pdr_lead_submit', { event_category: 'lead', event_label: payload.property_name });
+        gtag('event', 'generate_lead', { event_category: 'lead', event_label: payload.property_name });
       }
     } catch (err) {
       const msg = String((err && err.message) || err);
