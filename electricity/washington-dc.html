@@ -125,8 +125,7 @@
   @media (max-width: 880px){
     .nav-links{ display:none; }
     .topnav .actions .btn-ghost{ display:none; }
-    .topnav .actions .partner-login{ display:inline-flex; padding:8px 12px; }
-    .topnav .actions .btn-primary{ display:none; }
+    .topnav .actions .btn-primary{ display:inline-flex; padding:8px 12px; }
     .topnav .row{ gap: 10px; }
     .nav-ham{ display:flex; align-items:center; justify-content:center; }
   }
@@ -425,7 +424,6 @@
          Replaced with a non-numeric pill on rate landing pages per the no-live-data rule. -->
     <span class="pill-state" title="Live supplier competition"><span class="dot"></span> 90+ suppliers competing</span>
     <div class="actions">
-      <a class="btn btn-ghost btn-sm partner-login" href="https://portal.powerdoneright.com/crm/auth/login">Partner Login</a>
       <a class="btn btn-ghost btn-sm" href="tel:+12144941627">(214) 494-1627</a>
       <a class="btn btn-primary btn-sm" href="#lead">Get a quote <span class="arrow">→</span></a>
     </div>
@@ -442,7 +440,6 @@
   <a href="/electricity" onclick="closeMobMenu()">Electricity</a>
   <a href="/natural-gas" onclick="closeMobMenu()">Natural gas</a>
   <a href="tel:+12144941627">(214) 494-1627</a>
-  <a href="https://portal.powerdoneright.com/crm/auth/login">Partner Login</a>
   <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Get a quote →</a>
 </nav>
 
@@ -584,7 +581,7 @@
     <div class="panel-navy reveal">
       <span class="eyebrow">Why Washington, D.C. businesses choose us</span>
       <h2>The electricity procurement big chains get — <span class="ed" style="color: var(--amber);">for a business your size.</span></h2>
-      <p class="lede">Power Done Right is Texas-rooted, and we bring that same discipline to Washington, D.C.. We started by optimizing energy for multifamily portfolios — where every avoidable dollar comes straight off the owner's return — and now we put restaurants, clinics, shops, and offices across Washington, D.C. in front of suppliers who compete for the account: benchmark your current rate, run the competition, and handle the switch end to end.</p>
+      <p class="lede">Power Done Right is Texas-rooted, and we bring that same discipline to Washington, D.C.. Our lead advisor has helped businesses with electricity pricing for more than 10 years, and now we put restaurants, clinics, shops, and offices across Washington, D.C. in front of suppliers who compete for the account: benchmark your current rate, run the competition, and handle the switch end to end.</p>
       <div class="panel-stats">
         <div>
           <div class="k"><b>No fee</b> to you</div>
@@ -770,7 +767,7 @@
                 <input id="lf-email" class="form-input" type="email" placeholder="jordan@acme.com" />
               </div>
               <div>
-                <label class="form-label" for="lf-phone">Phone</label>
+                <label class="form-label" for="lf-phone">Phone (optional)</label>
                 <input id="lf-phone" class="form-input" type="tel" placeholder="(214) 555-0119" />
               </div>
             </div>
@@ -795,8 +792,8 @@
         <div class="check">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
-        <h3>Thank you — request received!</h3>
-        <p style="color:var(--muted);">We've got your details and we'll be in touch soon with your competitive quotes — as soon as suppliers complete their pricing review by email and phone.</p>
+        <h3>Thank you — we have your request.</h3>
+        <p style="color:var(--muted);">We'll be in touch to confirm your account details. Once suppliers return pricing, you'll receive a written comparison of the offers — at no fee to your business.</p>
         <div class="success-detail" style="margin-top:16px;">
           <div class="lbl">Reference</div>
           <div class="val" id="success-ref" style="font-size:18px; color:var(--muted);">PDR-000000</div>
@@ -872,6 +869,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
+          <li><a href="https://portal.powerdoneright.com/crm/auth/login">Partner login</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/blog">Blog</a></li>
         </ul>
@@ -1079,8 +1077,8 @@
           <polyline points="10 9 9 9 8 9"/>
         </svg>
       </div>
-      <div style="font-weight: 600; color: var(--navy); font-size:15px; margin-bottom: 4px;">AI analyzing bill line items...</div>
-      <div style="font-size:12px; color: var(--muted); margin-bottom: 12px;">checking for historical utility overcharges &amp; usage metrics</div>
+      <div style="font-weight: 600; color: var(--navy); font-size:15px; margin-bottom: 4px;">Reading your bill…</div>
+      <div style="font-size:12px; color: var(--muted); margin-bottom: 12px;">pulling your usage, rate, and contract end date</div>
     `;
     try {
       const data = await uploadAndExtractBill(file);
@@ -1099,8 +1097,8 @@
     const phone = document.getElementById('lf-phone').value.trim();
     const errEl = document.getElementById('lf-error');
 
-    if (!name || !email || !phone) {
-      errEl.textContent = 'Please fill in your name, email, and phone number.';
+    if (!name || !email) {
+      errEl.textContent = 'Please fill in your name and email.';
       errEl.style.display = '';
       return;
     }
