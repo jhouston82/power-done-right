@@ -33,7 +33,7 @@
 
   <!-- Bottom strip -->
   <rect x="0" y="548" width="1200" height="82" fill="rgba(0,0,0,0.22)"/>
-  <text x="80" y="578" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="rgba(247,245,240,0.45)" letter-spacing="2.5">90+ VETTED SUPPLIERS · NO FEES · FIRST QUOTE IN 24 HRS</text>
+  <text x="80" y="578" font-family="Helvetica Neue,Arial,sans-serif" font-size="12" fill="rgba(247,245,240,0.45)" letter-spacing="2.5">90+ VETTED SUPPLIERS · NO FEE TO YOUR BUSINESS</text>
   <text x="80" y="608" font-family="Helvetica Neue,Arial,sans-serif" font-size="20" font-weight="600" fill="#fafaf6">Average savings: 12–28% on your commercial energy bill</text>
   <text x="1120" y="608" font-family="Helvetica Neue,Arial,sans-serif" font-size="14" fill="rgba(247,245,240,0.38)" text-anchor="end">powerdoneright.com</text>
 
