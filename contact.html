@@ -328,6 +328,7 @@
         </div>
         <input type="file" id="cf-bill-file" accept=".pdf,.jpg,.jpeg,.png,.webp" style="display:none" />
 
+        <div id="cf-error" role="alert" style="display:none;background:rgba(200,74,49,.15);color:#f3c4b8;border-radius:10px;padding:10px 14px;font-size:14px;margin-bottom:14px"></div>
         <button class="cf-submit" id="cf-submit" type="button">Send message →</button>
         <p class="cf-fine">By submitting you agree to be contacted by Power Done Right. We never sell your data.</p>
       </div>
@@ -458,7 +459,13 @@
     const phone   = document.getElementById('cf-phone').value.trim();
     const message = document.getElementById('cf-message').value.trim();
 
-    if (!name || !email) return;
+    const errEl = document.getElementById('cf-error');
+    const fail = (msg) => { errEl.innerHTML = msg; errEl.style.display = 'block'; };
+    if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      fail('Please enter your name and a valid email address.');
+      return;
+    }
+    errEl.style.display = 'none';
 
     const btn = document.getElementById('cf-submit');
     btn.disabled = true;
@@ -478,17 +485,21 @@
       status: 'new',
       notes: message || null,
     };
+    // Client-generated id so the CRM intake can stamp this lead (see index.html).
+    if (window.crypto && crypto.randomUUID) payload.id = crypto.randomUUID();
 
     try {
-      await fetch(`${SUPABASE_URL}/rest/v1/electricity_leads`, {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/electricity_leads`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'apikey': SUPABASE_ANON_KEY,
           'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Prefer': 'return=minimal',
         },
         body: JSON.stringify(payload),
       });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
       // Fire-and-forget lead notification (Power Done Right branded).
       fetch(`${SUPABASE_URL}/functions/v1/send-notification`, {
@@ -496,7 +507,14 @@
         headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${SUPABASE_ANON_KEY}` },
         body: JSON.stringify({ type: 'PDR_LEAD', record: payload }),
       }).catch(() => {});
-    } catch (_) { /* show success regardless */ }
+      if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'lead', form: 'contact' });
+    } catch (err) {
+      fail('We couldn\'t send your message. Please try again, or call us at <a href="tel:+12144941627" style="color:inherit;font-weight:700">(214) 494-1627</a>.');
+      btn.disabled = false;
+      btn.textContent = 'Send message →';
+      console.error('Contact submit error:', err);
+      return;
+    }
 
     document.getElementById('contact-form-body').style.display = 'none';
     document.getElementById('contact-success').style.display = 'block';
