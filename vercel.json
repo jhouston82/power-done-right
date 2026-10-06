@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/careers",
+      "destination": "/about",
+      "permanent": true
+    }
+  ],
   "cleanUrls": true,
   "trailingSlash": false
 }
