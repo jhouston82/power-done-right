@@ -1245,7 +1245,7 @@
       const bill = parseFloat(this.value);
       const est = document.getElementById('lf-estimate');
       if (bill && bill > 0) {
-        est.style.display = '';
+        est.style.display = 'block';
         document.getElementById('lf-est-low').textContent  = '$' + Math.round(bill * 0.12 * 12).toLocaleString();
         document.getElementById('lf-est-high').textContent = '$' + Math.round(bill * 0.28 * 12).toLocaleString();
       } else {
