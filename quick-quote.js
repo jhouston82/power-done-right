@@ -48,7 +48,7 @@
         '<div class="qq-f"><label>Typical monthly electricity bill (optional)</label><input type="number" name="bill" inputmode="decimal" min="0" placeholder="$" /></div>' +
         '<label class="qq-file"><input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png,.webp" hidden />' +
           '<span class="qq-file-label">Attach a recent bill (optional) · PDF, JPG, PNG</span></label>' +
-        '<button type="button">Get my quotes →</button>' +
+        '<button type="button">Send my details</button>' +
         '<p class="qq-fine">No fees to your business · We reply within one business day</p>' +
       '</div>' +
       '<div class="qq-done" hidden>' +
@@ -82,9 +82,13 @@
     var btn = box.querySelector('button');
     var fileLabel = box.querySelector('.qq-file-label');
 
+    // The button names what it sends: the bill when one is attached, otherwise the details.
+    function btnLabel() { return field('file').files[0] ? 'Send my bill' : 'Send my details'; }
+
     field('file').addEventListener('change', function () {
       var f = field('file').files[0];
       fileLabel.textContent = f ? '✓ ' + f.name : 'Attach a recent bill (optional) · PDF, JPG, PNG';
+      btn.textContent = btnLabel();
     });
 
     function fail(msg) {
@@ -160,7 +164,7 @@
       } catch (err) {
         fail('We couldn\'t send your details. Please try again, or call us at <a href="tel:+12144941627">' + PHONE + '</a>.');
         btn.disabled = false;
-        btn.textContent = 'Get my quotes →';
+        btn.textContent = btnLabel();
         console.error('Quick-quote submit error:', err);
       }
     });
