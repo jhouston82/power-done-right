@@ -12,24 +12,24 @@
 
   var CSS = '' +
     '.qq,.qq *{box-sizing:border-box}' +
-    '.qq{background:#fff;color:#0b1220;border:1px solid #e3dfd5;border-radius:16px;padding:clamp(22px,4vw,34px);max-width:640px;margin:0 auto;text-align:left;font-family:Manrope,system-ui,-apple-system,sans-serif;box-shadow:0 20px 50px -30px rgba(11,18,32,.35)}' +
-    '.qq h3{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,34px);line-height:1.1;margin:0 0 6px;color:#0b1220}' +
-    '.qq .qq-sub{font-size:14.5px;color:#5b6373;margin:0 0 20px;line-height:1.5}' +
+    '.qq{background:#fff;color:#1A1F2B;border:1px solid #D9DEE3;border-radius:16px;padding:clamp(22px,4vw,34px);max-width:640px;margin:0 auto;text-align:left;font-family:Archivo,system-ui,-apple-system,sans-serif;box-shadow:0 20px 50px -30px rgba(20,33,61,.3)}' +
+    '.qq h3{font-family:Archivo,system-ui,sans-serif;font-weight:700;font-stretch:88%;font-size:clamp(26px,3.4vw,34px);line-height:1.1;margin:0 0 6px;color:#1A1F2B}' +
+    '.qq .qq-sub{font-size:14.5px;color:#5A6475;margin:0 0 20px;line-height:1.5}' +
     '.qq .qq-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}' +
     '@media(max-width:560px){.qq .qq-row{grid-template-columns:1fr}}' +
-    '.qq label{display:block;font-size:12.5px;font-weight:600;color:#0b1220;margin:0 0 6px}' +
+    '.qq label{display:block;font-size:12.5px;font-weight:600;color:#1A1F2B;margin:0 0 6px}' +
     '.qq .qq-f{margin-bottom:14px}' +
-    '.qq input[type=text],.qq input[type=email],.qq input[type=tel],.qq input[type=number]{width:100%;box-sizing:border-box;border:1px solid #d6d1c4;border-radius:10px;padding:12px 14px;font:inherit;font-size:15px;color:#0b1220;background:#fbfaf7}' +
+    '.qq input[type=text],.qq input[type=email],.qq input[type=tel],.qq input[type=number]{width:100%;box-sizing:border-box;border:1px solid #D9DEE3;border-radius:10px;padding:12px 14px;font:inherit;font-size:15px;color:#1A1F2B;background:#fff}' +
     '.qq input:focus{outline:2px solid #1e8a5f;outline-offset:1px;border-color:#1e8a5f}' +
-    '.qq .qq-file{display:block;border:1px dashed #c8c0a8;border-radius:10px;padding:14px;text-align:center;font-size:13.5px;color:#5b6373;cursor:pointer;margin-bottom:16px}' +
+    '.qq .qq-file{display:block;border:1px dashed #C9D0D7;border-radius:10px;padding:14px;text-align:center;font-size:13.5px;color:#5A6475;cursor:pointer;margin-bottom:16px}' +
     '.qq .qq-file:hover{border-color:#1e8a5f}' +
-    '.qq button{width:100%;border:0;border-radius:999px;background:#0b1220;color:#fff;font:inherit;font-weight:600;font-size:15.5px;padding:15px 20px;cursor:pointer}' +
+    '.qq button{width:100%;border:0;border-radius:8px;background:#14213D;color:#fff;font:inherit;font-weight:600;font-size:15.5px;padding:15px 20px;cursor:pointer}' +
     '.qq button:disabled{opacity:.65;cursor:not-allowed}' +
     '.qq .qq-err{display:none;background:#fbeae6;color:#8a2c1a;border-radius:10px;padding:10px 14px;font-size:14px;margin-bottom:14px}' +
     '.qq .qq-err a{color:inherit;font-weight:700}' +
-    '.qq .qq-fine{font-size:12px;color:#5b6373;margin:12px 0 0;text-align:center}' +
+    '.qq .qq-fine{font-size:12px;color:#5A6475;margin:12px 0 0;text-align:center}' +
     '.qq .qq-done{text-align:center;padding:12px 0}' +
-    '.qq .qq-done p{color:#5b6373;font-size:15px;margin:8px 0 0}';
+    '.qq .qq-done p{color:#5A6475;font-size:15px;margin:8px 0 0}';
 
   function html(heading) {
     return '' +

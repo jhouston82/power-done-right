@@ -750,24 +750,24 @@
 
 </style>
 <script src="/analytics-events.js" defer></script>
-<link rel="stylesheet" href="/pdr.css">
+<link rel="stylesheet" href="/pdr.css?v=2">
 </head>
 <body>
 
 <!-- ============ TOP NAV ============ -->
 <header class="topnav">
   <div class="wrap row">
-    <a class="brand" href="#top">
+    <a class="brand" href="/">
       <span class="mark" aria-hidden="true">
         <svg viewBox="0 0 32 32" fill="currentColor"><path d="M18 5 L8.6 18.2 H13.9 L12.3 27 L23.4 12.8 H17.6 L19.4 5 Z"/></svg>
       </span>
       Power Done Right
     </a>
     <nav class="nav-links">
-      <a href="#how">How it works</a>
-      <a href="#industries">Industries</a>
-      <a href="#suppliers">Suppliers</a>
-      <a href="#calc-preview">Calculator</a>
+      <a href="/#how">How it works</a>
+      <a href="/#industries">Industries</a>
+      <a href="/#suppliers">Suppliers</a>
+      <a href="/#calc-preview">Calculator</a>
     </nav>
     <div class="grow"></div>
     <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
@@ -782,15 +782,17 @@
   </div>
 </header>
 
-<!-- Mobile menu (injected below header) -->
+<!-- Mobile menu (shown below the header) -->
 <nav class="mob-menu" id="mobMenu">
-  <a href="#how"          onclick="closeMobMenu()">How it works</a>
-  <a href="#industries"   onclick="closeMobMenu()">Industries</a>
-  <a href="#suppliers"    onclick="closeMobMenu()">Suppliers</a>
-  <a href="#calc-preview" onclick="closeMobMenu()">Calculator</a>
+  <a href="/#how"          onclick="closeMobMenu()">How it works</a>
+  <a href="/#industries"   onclick="closeMobMenu()">Industries</a>
+  <a href="/#suppliers"    onclick="closeMobMenu()">Suppliers</a>
+  <a href="/#calc-preview" onclick="closeMobMenu()">Calculator</a>
   <a href="tel:+12144941627">(214) 494-1627</a>
   <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Send your bill</a>
 </nav>
+<script src="/pdr-nav.js?v=1" defer></script>
+
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
@@ -1436,11 +1438,11 @@
 </div>
 
 <!-- ============ FOOTER ============ -->
-<footer>
+<footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#top" style="color: #fff;">
+        <a class="brand" href="/" style="color: #fff;">
           <span class="mark"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
           Power Done Right
         </a>
@@ -1449,10 +1451,10 @@
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="#dash">Portfolio review</a></li>
-          <li><a href="#calc-preview">Savings calculator</a></li>
+          <li><a href="/#dash">Portfolio review</a></li>
+          <li><a href="/#calc-preview">Savings calculator</a></li>
           <li><a href="#lead">Send your bill</a></li>
-          <li><a href="#how">How it works</a></li>
+          <li><a href="/#how">How it works</a></li>
         </ul>
       </div>
       <div><h4>Industries</h4>
@@ -1461,26 +1463,26 @@
           <li><a href="/industries/restaurants">Restaurants</a></li>
           <li><a href="/industries/medical-dental">Medical &amp; dental</a></li>
           <li><a href="/industries/retail">Retail storefronts</a></li>
-          <li><a href="#industries">All industries</a></li>
+          <li><a href="/#industries">All industries</a></li>
         </ul>
       </div>
       <div><h4>Markets</h4>
         <ul>
-          <li><a href="electricity">Electricity</a></li>
-          <li><a href="natural-gas">Natural gas</a></li>
-          <li><a href="renewable-plans">Renewable plans</a></li>
-          <li><a href="demand-management">Demand mgmt</a></li>
+          <li><a href="/electricity">Electricity</a></li>
+          <li><a href="/natural-gas">Natural gas</a></li>
+          <li><a href="/renewable-plans">Renewable plans</a></li>
+          <li><a href="/demand-management">Demand mgmt</a></li>
         </ul>
       </div>
       <div><h4>Company</h4>
         <ul>
-          <li><a href="about">About</a></li>
-          <li><a href="contact">Contact</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
           <li><a href="https://portal.powerdoneright.com/crm/auth/login">Partner login</a></li>
-          <li><a href="faq">FAQ</a></li>
-          <li><a href="blog">Blog</a></li>
-          <li><a href="renewal-guide">Renewal guide</a></li>
-          <li><a href="market-intel">Market intel</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/renewal-guide">Renewal guide</a></li>
+          <li><a href="/market-intel">Market intel</a></li>
         </ul>
       </div>
     </div>
@@ -1496,10 +1498,11 @@
   </div>
     <div class="foot-bottom">
       <span>© 2026 Power Done Right LLC · Fulfillment partner: Broker Online Exchange (BOX)</span>
-      <span><a href="privacy">Privacy</a> · <a href="terms">Terms</a> · <a href="disclosures">Disclosures</a></span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/disclosures">Disclosures</a></span>
     </div>
   </div>
 </footer>
+
 
 <script>
   /* ── Mobile action bar: shown after the hero, hidden while the form is on screen ── */

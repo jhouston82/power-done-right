@@ -226,8 +226,8 @@
   }
 </style>
 <script src="/analytics-events.js" defer></script>
-<script src="/quick-quote.js" defer></script>
-<link rel="stylesheet" href="/pdr.css">
+<script src="/quick-quote.js?v=2" defer></script>
+<link rel="stylesheet" href="/pdr.css?v=2">
 </head>
 <body>
 
@@ -259,6 +259,7 @@
   </div>
 </header>
 
+<!-- Mobile menu (shown below the header) -->
 <nav class="mob-menu" id="mobMenu">
   <a href="/#how"          onclick="closeMobMenu()">How it works</a>
   <a href="/#industries"   onclick="closeMobMenu()">Industries</a>
@@ -267,6 +268,8 @@
   <a href="tel:+12144941627">(214) 494-1627</a>
   <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Send your bill</a>
 </nav>
+<script src="/pdr-nav.js?v=1" defer></script>
+
 
 <!-- ============ HERO ============ -->
 <section class="hero">
@@ -458,7 +461,7 @@
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer>
+<footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
       <div>
@@ -501,6 +504,8 @@
           <li><a href="https://portal.powerdoneright.com/crm/auth/login">Partner login</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/blog">Blog</a></li>
+          <li><a href="/renewal-guide">Renewal guide</a></li>
+          <li><a href="/market-intel">Market intel</a></li>
         </ul>
       </div>
     </div>
@@ -521,31 +526,8 @@
   </div>
 </footer>
 
+
 <script>
-  /* Mobile nav */
-  (function(){
-    const btn = document.getElementById('navToggle');
-    const menu = document.getElementById('mobMenu');
-    const ham = document.getElementById('hamIcon');
-    const close = document.getElementById('closeIcon');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-      ham.style.display = open ? 'none' : '';
-      close.style.display = open ? '' : 'none';
-    });
-  })();
-  function closeMobMenu(){
-    const menu = document.getElementById('mobMenu');
-    const btn = document.getElementById('navToggle');
-    const ham = document.getElementById('hamIcon');
-    const close = document.getElementById('closeIcon');
-    menu.classList.remove('open');
-    if (btn) btn.setAttribute('aria-expanded', 'false');
-    if (ham) ham.style.display = '';
-    if (close) close.style.display = 'none';
-  }
   /* Reveal on scroll */
   (function(){
     if (!('IntersectionObserver' in window)) { document.querySelectorAll('.reveal').forEach(el => el.classList.add('in')); return; }

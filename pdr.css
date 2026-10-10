@@ -1,7 +1,7 @@
 /* Power Done Right — shared brand layer.
    Loaded after each page's own <style>, so these tokens and rules win.
-   Two page families exist: light (--navy/--paper/--ed: home, industry, state pages)
-   and dark (--pdr-* and --serif: about, blog, contact, faq, legal). Both map onto one system:
+   Two token families exist: --navy/--paper/--ed (home, industry, state pages) and
+   --pdr-* with --serif (about, blog, contact, faq, legal). Both map onto one system:
    Archivo throughout, condensed for headings; white + Grid Navy; amber for action;
    green reserved for "the winning bid" moments. No italics, no all-caps labels. */
 
@@ -26,14 +26,7 @@
   --ed: var(--brand-font);
   --mono: var(--brand-font);
 
-  /* Dark family */
-  --pdr-bg: #14213D;
-  --pdr-bg-elev: #1C2C4F;
-  --pdr-ink: #F5F7FA;
-  --pdr-ink-2: rgba(245,247,250,.74);
-  --pdr-ink-3: rgba(245,247,250,.50);
-  --pdr-navy: #1C2C4F;
-  --pdr-navy-2: #2A3A5C;
+  /* Content-page family (values for white and navy surfaces are set further down) */
   --pdr-accent: #F5B400;
   --serif: var(--brand-font);
   --sans: var(--brand-font);
@@ -82,21 +75,20 @@ h1 em, h2 em, .hero-h em, .cta-band-h em, .section-h em{ color: inherit; }
 .hero h1 .ed{ color: var(--amber); }
 
 /* Brand lockups */
-.brand, .nav-logo, .footer-logo{
+.brand{
   font-family: var(--brand-font);
   font-weight: 800;
   font-stretch: 75%;
   letter-spacing: .01em;
 }
-.nav-logo em, .footer-logo em{ font-style: normal; font-weight: inherit; color: inherit; margin: 0 .26em; }
 
 /* Quotes read as quotes, not headlines */
 .pull-quote-t{ font-weight: 500; font-stretch: 100%; }
 .pull-quote-t em{ font-weight: 700; }
 .pull-quote::before{ display: none; }
 
-/* Small badges need legible contrast on the navy pages */
-.badge-hot{ color: var(--pdr-accent); font-size: 12px; }
+/* Small badges need legible contrast */
+.badge-hot{ color: var(--navy); font-size: 12px; }
 
 /* ---------- Figures: upright, tabular ---------- */
 .num, .kpi, .read-out .val, .slider-row .val, .success-detail .val, .savings-preview .amt,
@@ -135,7 +127,8 @@ h1 em, h2 em, .hero-h em, .cta-band-h em, .section-h em{ color: inherit; }
 .tier.focus::before{ text-transform: none; letter-spacing: 0; }
 
 /* ---------- Buttons: squared, no arrows ---------- */
-.btn, .btn-submit, .btn-back, .nav-cta, .btn-primary, .btn-secondary{ border-radius: 8px; }
+.btn, .btn-submit, .btn-back, .btn-primary, .btn-secondary, .cta-btn, .faq-cta-btn,
+.submit-cta-box-btn, .brief-box-btn{ border-radius: 8px; }
 .btn .arrow, .ind-arrow{ display: none; }
 .btn-primary{ box-shadow: none; }
 .form-actions .btn-submit, .btn-submit, .qq button{ border-radius: 8px !important; box-shadow: none !important; }
@@ -153,3 +146,93 @@ h1 em, h2 em, .hero-h em, .cta-band-h em, .section-h em{ color: inherit; }
 
 /* ---------- Focus ---------- */
 :focus-visible{ outline: 3px solid var(--amber); outline-offset: 3px; }
+
+/* ---------- Site header (one design on every page; markup matches the homepage) ---------- */
+.topnav, .mob-menu, .site-foot{ font-family: var(--brand-font); font-size: 16px; line-height: 1.5; }
+.topnav a, .mob-menu a, .site-foot a{ color: inherit; text-decoration: none; }
+.topnav .wrap, .site-foot .wrap{ width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); box-sizing: border-box; }
+.topnav{ position: sticky; top: 0; z-index: 40; backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid var(--line); color: var(--ink); }
+.topnav .row{ display: flex; align-items: center; gap: 24px; height: 68px; }
+.topnav .brand{ display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; color: var(--ink); font-size: 16px; }
+.brand .mark{ width: 28px; height: 28px; border-radius: 8px; background: var(--navy); display: inline-flex; align-items: center; justify-content: center; color: var(--amber); }
+.brand .mark svg{ width: 14px; height: 14px; }
+.topnav .nav-links{ display: flex; gap: 22px; margin-left: 8px; }
+.topnav .nav-links a{ font-size: 14px; color: var(--muted); font-weight: 500; white-space: nowrap; }
+.topnav .nav-links a:hover{ color: var(--ink); }
+.topnav .grow{ flex: 1; }
+.topnav .actions{ display: flex; gap: 8px; align-items: center; }
+.pill-state{ display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: var(--green); background: var(--green-soft); padding: 5px 9px; border-radius: 999px; white-space: nowrap; }
+.pill-state .dot{ width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+@media (max-width: 1240px){ .pill-state{ display: none; } }
+.topnav .btn, .mob-menu .btn{ display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 14px; border-radius: 8px; font-weight: 600; font-size: 14px; line-height: 1; white-space: nowrap; transition: background .15s ease; }
+.topnav .btn-primary, .mob-menu .btn-primary{ background: var(--amber); color: var(--navy); box-shadow: none; }
+.topnav .btn-primary:hover, .mob-menu .btn-primary:hover{ background: var(--amber-2); }
+.topnav .btn-ghost{ background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.topnav .btn-ghost:hover{ background: var(--paper-2); }
+.nav-ham{ display: none; padding: 8px; border-radius: 8px; color: var(--muted); background: none; border: 0; cursor: pointer; }
+.nav-ham:hover{ background: var(--paper-2); }
+@media (max-width: 880px){
+  .topnav .nav-links{ display: none; }
+  .topnav .actions .btn-ghost{ display: none; }
+  .topnav .actions .btn-primary{ display: inline-flex; padding: 8px 12px; }
+  .topnav .row{ gap: 10px; }
+  .nav-ham{ display: flex; align-items: center; justify-content: center; }
+}
+.mob-menu{ display: none; flex-direction: column; background: var(--paper); border-bottom: 1px solid var(--line); padding: 12px clamp(20px, 4vw, 40px) 16px; }
+.mob-menu.open{ display: flex; }
+.mob-menu a{ padding: 12px 0; font-size: 15px; color: var(--muted); border-bottom: 1px solid var(--line); font-weight: 500; }
+.mob-menu a:last-child{ border-bottom: 0; }
+.mob-menu a:hover{ color: var(--ink); }
+.mob-menu .mob-cta{ margin-top: 12px; padding: 12px 18px; color: var(--navy); }
+
+/* ---------- Site footer ---------- */
+.site-foot{ background: var(--navy); color: var(--muted-on); padding: 60px 0 30px; font-size: 14px; margin-top: 0; }
+.site-foot h4{ color: #fff; font-size: 14px; font-weight: 600; margin: 0 0 14px; }
+.site-foot p{ margin-bottom: 0; }
+.site-foot ul{ list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.site-foot a:hover{ color: #fff; }
+.site-foot .brand{ font-size: 16px; }
+.foot-grid{ display: grid; gap: 28px; grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; }
+@media (max-width: 880px){ .foot-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px){ .foot-grid{ grid-template-columns: 1fr; } }
+.foot-bottom{ border-top: 1px solid rgba(255,255,255,.08); margin-top: 50px; padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-size: 12px; }
+
+/* ---------- Content pages: white body, navy hero and closing band (the homepage pattern) ----------
+   These pages were built on dark tokens. White is now the default; navy surfaces re-declare
+   the dark values so everything inside them stays light-on-navy. */
+:root{
+  --pdr-bg: #FFFFFF;
+  --pdr-bg-elev: #F3F5F7;
+  --pdr-ink: #1A1F2B;
+  --pdr-ink-2: #3F4859;
+  --pdr-ink-3: #5A6475;
+  --pdr-line: #E3E7EB;
+  --pdr-line-2: #D9DEE3;
+  --pdr-navy: #14213D;
+  --pdr-navy-2: #1C2C4F;
+  --pdr-accent-ink: #14213D;
+}
+.page-hero, .page-illus, .cta-band, .compare-col--pdr, .coverage-map-box{
+  --pdr-bg: #14213D;
+  --pdr-bg-elev: #1C2C4F;
+  --pdr-ink: #F5F7FA;
+  --pdr-ink-2: rgba(245,247,250,.78);
+  --pdr-ink-3: rgba(245,247,250,.62);
+  --pdr-line: rgba(255,255,255,.08);
+  --pdr-line-2: rgba(255,255,255,.16);
+  color: var(--pdr-ink);
+}
+
+/* Amber is for buttons, rules and navy surfaces. As text on white it is too faint, so
+   white-surface text that used it takes navy; links keep amber as their underline. */
+.article a, .prose-wrap .prose a, .accordion-body-inner a{
+  color: var(--navy); text-decoration: underline; text-decoration-color: var(--amber);
+  text-decoration-thickness: 2px; text-underline-offset: 3px;
+}
+.post-card .pc-more, .article-foot a:hover, .accordion-btn:hover, .deliverable-num,
+.how-step:hover .how-n, .disclosure-box-label, .demand-peak-note, .ldc-list li::before{ color: var(--navy); }
+.badge{ color: var(--navy); }
+.badge--both{ color: #1D5F8A; }
+/* The line illustrations were drawn for navy, so they sit inside the hero band. */
+.page-hero{ border-bottom: 0; }
+.page-illus{ background: var(--pdr-bg); padding: 0 1rem 56px; margin-top: -1px; }
