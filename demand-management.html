@@ -21,7 +21,7 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KG0X9SXT4Q');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
   <style>
   /* Mobile: prevent whole-page horizontal scroll; keep content within viewport */
   html,body{ overflow-x: clip; max-width: 100%; }
@@ -81,11 +81,13 @@
     .demand-chart { background:var(--pdr-bg-elev); border:1px solid var(--pdr-line-2); border-radius:14px; padding:24px; }
     .demand-chart-title { font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); margin-bottom:20px; }
     .demand-bars { display:flex; align-items:flex-end; gap:6px; height:120px; }
+    .demand-bars > div { flex:1; height:100%; display:flex; flex-direction:column; justify-content:flex-end; }
+    .demand-bars > div > .demand-bar { flex:none; }
     .demand-bar { flex:1; border-radius:4px 4px 0 0; background:var(--pdr-line); transition:background .2s; position:relative; }
     .demand-bar.peak { background:var(--pdr-accent); }
     .demand-bar-label { font-family:var(--mono); font-size:9px; color:var(--pdr-ink-3); text-align:center; margin-top:6px; letter-spacing:.02em; }
     .demand-peak-line { border-top:2px dashed var(--pdr-accent); margin:8px 0 4px; }
-    .demand-peak-note { font-family:var(--mono); font-size:11px; color:var(--pdr-accent-ink); letter-spacing:.03em; }
+    .demand-peak-note { font-family:var(--mono); font-size:11px; color:var(--pdr-accent); letter-spacing:.03em; }
 
     /* DR markets list */
     .dr-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
@@ -173,6 +175,7 @@
   </script>
 <script src="/analytics-events.js" defer></script>
 <script src="/quick-quote.js" defer></script>
+<link rel="stylesheet" href="/pdr.css">
 </head>
 <body>
 
@@ -257,7 +260,7 @@
           <div><div class="demand-bar" style="height:72%"></div><div class="demand-bar-label">9am</div></div>
           <div><div class="demand-bar" style="height:76%"></div><div class="demand-bar-label">10am</div></div>
           <div><div class="demand-bar" style="height:82%"></div><div class="demand-bar-label">11am</div></div>
-          <div><div class="demand-bar peak" style="height:100%"></div><div class="demand-bar-label" style="color:var(--pdr-accent-ink);font-weight:600">12pm ← peak</div></div>
+          <div><div class="demand-bar peak" style="height:100%"></div><div class="demand-bar-label" style="color:var(--pdr-accent);font-weight:600">12pm ← peak</div></div>
           <div><div class="demand-bar" style="height:88%"></div><div class="demand-bar-label">1pm</div></div>
           <div><div class="demand-bar" style="height:84%"></div><div class="demand-bar-label">2pm</div></div>
           <div><div class="demand-bar" style="height:79%"></div><div class="demand-bar-label">3pm</div></div>

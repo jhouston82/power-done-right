@@ -42,7 +42,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
 <style>
   /* Mobile: prevent whole-page horizontal scroll; keep content within viewport */
   html,body{ overflow-x: clip; max-width: 100%; }
@@ -184,94 +184,66 @@
     padding-bottom: clamp(40px, 5vw, 60px);
     overflow: hidden;
   }
-  .hero-vid{
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; z-index: 0;
-    -webkit-transform: translateZ(0); transform: translateZ(0);
-  }
-  .hero-vid-overlay{
-    position: absolute; inset: 0;
-    background: rgba(8,18,32,.70); z-index: 1;
-  }
   .hero-grid{
-    display: grid; gap: clamp(28px, 4vw, 56px);
-    grid-template-columns: 1.1fr 1fr;
-    align-items: end;
-    position: relative; z-index: 2;
+    display: grid; gap: clamp(32px, 5vw, 64px);
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
   }
   @media (max-width: 980px){ .hero-grid{ grid-template-columns: 1fr; } }
 
-  .hero .eyebrow{ color: rgba(255,255,255,.6); }
-  .hero h1 .stroke{ color: var(--paper); }
-  .hero h1 .em{
-    background: linear-gradient(180deg, transparent 62%, rgba(245,180,0,.55) 62%);
-    padding: 0 4px; border-radius: 2px;
-  }
-  .hero h1 .ed{ color: rgba(255,255,255,.75); }
+  .hero .eyebrow{ color: rgba(255,255,255,.7); }
+  .hero h1{ color: #fff; font-size: clamp(48px, 7vw, 100px); line-height: .94; }
+  .hero h1 .h1-second{ display: block; color: var(--amber); }
 
   .hero-sub{ margin-top: 24px; }
   .hero-actions{ display:flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
-  .hero-trust{
-    display:flex; gap: 18px; flex-wrap: wrap; margin-top: 26px;
-    color: rgba(255,255,255,.55); font-size: 13px;
-  }
-  .hero-trust .it{ display:inline-flex; align-items:center; gap: 6px; }
-  .hero-trust svg{ width: 14px; height: 14px; color: #4ade80; }
 
-  /* ----- Drop card ----- */
-  .drop-card{
-    background: #fff; border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 22px;
-    box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 30px 40px -28px rgba(11,18,32,.18);
-  }
-  .drop-card .head{
-    display:flex; align-items:center; justify-content:space-between;
-    font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .14em;
-    text-transform: uppercase; color: var(--muted);
-  }
+  /* ----- Hero bill drop ----- */
   .drop-zone{
-    margin-top: 12px;
-    border: 1.5px dashed #c8c0a8;
-    border-radius: 14px; padding: 22px;
-    background: var(--paper-2);
-    text-align: center;
-    transition: border-color .2s ease, background .2s ease;
+    margin-top: 22px; max-width: 560px;
+    display: flex; align-items: center; gap: 14px;
+    border: 1.5px dashed rgba(255,255,255,.28);
+    border-radius: 10px; padding: 14px 16px;
     cursor: pointer;
-    display: block;
+    transition: border-color .2s ease, background .2s ease;
   }
-  .drop-zone:hover, .drop-zone.drag{
-    border-color: var(--amber); background: #fff8e5;
-  }
+  .drop-zone:hover, .drop-zone.drag{ border-color: var(--amber); background: rgba(245,180,0,.08); }
   .drop-zone .icon{
-    width: 56px; height: 56px; border-radius: 16px;
-    background: var(--navy); color: var(--amber);
-    display:inline-flex; align-items:center; justify-content:center; margin-bottom: 10px;
+    flex: 0 0 40px; width: 40px; height: 40px; border-radius: 8px;
+    background: rgba(255,255,255,.08); color: var(--amber);
+    display:inline-flex; align-items:center; justify-content:center;
   }
-  .drop-zone .icon svg{ width: 26px; height: 26px; }
-  .drop-zone .ttl{ font-weight: 700; font-size: 17px; color: var(--ink); }
-  .drop-zone .meta{ font-size: 13px; color: var(--muted); margin-top: 4px; font-family: var(--mono); }
-  .drop-or{
-    display:flex; align-items:center; gap: 10px; margin: 14px 4px 12px;
-    color: var(--muted); font-size: 12px; font-family: var(--mono); text-transform: uppercase; letter-spacing: .12em;
-  }
-  .drop-or::before, .drop-or::after{ content:""; flex:1; height: 1px; background: var(--line); }
+  .drop-zone .icon svg{ width: 20px; height: 20px; }
+  .drop-zone .ttl{ display:block; font-weight: 700; font-size: 16px; color: #fff; }
+  .drop-zone .meta{ display:block; font-size: 14px; color: rgba(255,255,255,.7); margin-top: 2px; }
 
-  .read-out{
-    display: grid; gap: 8px;
-    background: var(--navy); color: #fff;
-    border-radius: 14px; padding: 16px 16px 18px;
+  /* ----- Bid board: the one animated moment on the page ----- */
+  .board{ margin: 0; background: #fff; color: var(--ink); border-radius: 12px; padding: 22px 22px 18px; }
+  .board-head{ display:flex; justify-content:space-between; align-items:baseline; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .board-head strong{ font-weight: 800; font-stretch: 75%; font-size: 22px; }
+  .board-head span{ font-size: 13px; color: var(--muted); }
+  .board-rows{ list-style: none; margin: 6px 0 0; padding: 0; }
+  .board-rows li{
+    display: grid; grid-template-columns: 96px 1fr; gap: 6px 14px; align-items: center;
+    padding: 11px 0; border-bottom: 1px solid #EEF1F4;
+    opacity: 0; transform: translateY(6px);
+    animation: board-arrive .45s ease-out forwards; animation-delay: calc(var(--i) * .22s + .3s);
   }
-  .read-out .row{
-    display:flex; justify-content:space-between; align-items: baseline;
-    padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,.08);
-    font-size: 14px;
+  .board-rows .who{ font-weight: 700; font-size: 15px; }
+  .board-rows .bar{ height: 10px; border-radius: 5px; background: var(--line); width: var(--w); }
+  .board-rows .tags{ grid-column: 2; font-size: 13px; color: var(--muted); }
+  .board-rows .win .who, .board-rows .win .tags{ color: var(--green); }
+  .board-rows .win .tags{ font-weight: 600; }
+  .board-rows .win .bar{ background: var(--green); }
+  .board-rows li.win{
+    animation-name: board-arrive, board-settle; animation-duration: .45s, .6s;
+    animation-delay: calc(var(--i) * .22s + .3s), calc(var(--i) * .22s + .9s);
   }
-  .read-out .row:last-child{ border-bottom: 0; }
-  .read-out .lbl{ color: var(--muted-on); font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;}
-  .read-out .val{ font-family: var(--ed); font-size: clamp(17px, 2vw, 22px); white-space: nowrap; }
-  .read-out .val.green{ color: #74e7b0; }
+  .board figcaption{ margin-top: 14px; font-size: 13px; color: var(--muted); }
+  @keyframes board-arrive{ to{ opacity: 1; transform: none; } }
+  @keyframes board-settle{ 0%{ background: transparent; } 40%{ background: var(--green-soft); } 100%{ background: transparent; } }
+  @media (max-width: 480px){ .board-rows li{ grid-template-columns: 78px 1fr; } }
+  @media (prefers-reduced-motion: reduce){ .board-rows li, .board-rows li.win{ animation: none; opacity: 1; transform: none; } }
 
   /* ---------- Lead form section ---------- */
   .lead-section{
@@ -693,7 +665,7 @@
     background: var(--green); color: #fff; border-radius: 18px; padding: 24px;
     display: flex; flex-direction: column; justify-content: space-between; gap: 14px;
   }
-  .calc-preview .right .big{ font-family: var(--ed); font-size: clamp(36px, 4.6vw, 60px); line-height: 1; }
+  .calc-preview .right .big{ font-family: var(--ed); font-size: clamp(28px, 3vw, 42px); line-height: 1.05; }
   .slider-mock{ display:flex; flex-direction: column; gap: 14px; }
   .slider-row{
     display:flex; align-items: center; gap: 14px;
@@ -734,10 +706,8 @@
     background: var(--amber);
     border-radius: 28px;
     padding: clamp(40px, 6vw, 80px);
-    display: grid; gap: 28px; grid-template-columns: 1.4fr 1fr; align-items: center;
     color: var(--ink);
   }
-  @media (max-width: 980px){ .final-cta{ grid-template-columns: 1fr; } }
   .final-cta h2{ max-width: 16ch; }
   .final-cta .actions{ display:flex; gap: 12px; flex-wrap: wrap; }
 
@@ -759,15 +729,6 @@
   .max-72{ max-width: 72ch; margin: 0 auto; }
 
   /* dot grid bg accent */
-  .dotbg{
-    background-image: radial-gradient(circle at 1px 1px, rgba(11,18,32,.1) 1px, transparent 1.4px);
-    background-size: 22px 22px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hero-vid{ display: none; }
-    .hero-vid-overlay{ background: rgba(8,18,32,.92); }
-  }
 
   /* ---------- Photo-slot video ---------- */
   .photo-slot video{ width:100%; height:100%; object-fit:cover; display:block; }
@@ -789,6 +750,7 @@
 
 </style>
 <script src="/analytics-events.js" defer></script>
+<link rel="stylesheet" href="/pdr.css">
 </head>
 <body>
 
@@ -832,15 +794,13 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <video class="hero-vid" muted loop playsinline preload="none" poster="/hero-loop.jpg" data-src="/hero-loop.mp4"></video>
-  <div class="hero-vid-overlay"></div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Commercial electricity broker · Texas-rooted, nationwide</span>
+        <span class="eyebrow">Commercial electricity broker, Texas-rooted and nationwide</span>
         <h1 style="margin-top: 18px;">
-          <span class="stroke"><span class="em">Suppliers compete.</span></span>
-          <span class="ed">We structure the contract.</span>
+          Suppliers compete.
+          <span class="h1-second">We structure the contract.</span>
         </h1>
         <p class="lede hero-sub">
           Send one bill. We make the suppliers licensed in your market compete for your account, then build the contract — product, term, and timing — around how you actually use power, so you pay less over its life. No fee to you.
@@ -852,38 +812,29 @@
           </a>
           <a class="btn btn-ghost on-dark" href="#dash">Several locations? See the portfolio review</a>
         </div>
-        <div class="hero-trust">
-          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No fee to you</span>
-          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Your bill stays confidential</span>
-          <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> All US deregulated markets</span>
-        </div>
+        <label class="drop-zone" id="dropZone" for="dropInput">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+          </span>
+          <span>
+            <span class="ttl">Or drop your latest bill here</span>
+            <span class="meta">PDF or photo. We read your usage, rate, and contract end. Your bill stays confidential.</span>
+          </span>
+          <input type="file" id="dropInput" accept="application/pdf,image/*" hidden>
+        </label>
       </div>
 
-      <div>
-        <div class="drop-card" id="dropCard">
-          <div class="head">
-            <span>Send your bill</span>
-            <span style="color: var(--green); display:inline-flex; align-items:center; gap:6px;"><span style="width:6px;height:6px;background:var(--green);border-radius:50%;display:inline-block;"></span> ready</span>
-          </div>
-          <label class="drop-zone" id="dropZone" for="dropInput">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
-            </span>
-            <div class="ttl">Drag your latest utility bill here</div>
-            <div class="meta">PDF or JPG · we read kWh, rate &amp; contract end</div>
-            <input type="file" id="dropInput" accept="application/pdf,image/*" hidden>
-          </label>
-
-          <div class="drop-or">— sample analysis —</div>
-
-          <div class="read-out" aria-live="polite">
-            <div class="row"><span class="lbl">Current rate</span><span class="val" data-industry-copy="rate">$0.1182 / kWh</span></div>
-            <div class="row"><span class="lbl">Annual usage</span><span class="val" data-industry-copy="usage">2.4M kWh</span></div>
-            <div class="row"><span class="lbl">Contract ends</span><span class="val" data-industry-copy="ends">Within the year</span></div>
-            <div class="row"><span class="lbl">Estimated savings</span><span class="val green" data-industry-copy="save">$54,300 / yr</span></div>
-          </div>
-        </div>
-      </div>
+      <figure class="board" aria-label="Illustration of how we compare supplier offers, with the recommended structure highlighted">
+        <div class="board-head"><strong>How we compare offers</strong><span>Illustration</span></div>
+        <ol class="board-rows">
+          <li style="--i:0"><span class="who">Supplier A</span><span class="bar" style="--w:92%"></span><span class="tags">Fixed · 12 mo</span></li>
+          <li style="--i:1"><span class="who">Supplier B</span><span class="bar" style="--w:84%"></span><span class="tags">Fixed · 36 mo · usage bandwidth limit</span></li>
+          <li style="--i:2"><span class="who">Supplier C</span><span class="bar" style="--w:78%"></span><span class="tags">Index · 24 mo</span></li>
+          <li class="win" style="--i:3"><span class="who">Supplier D</span><span class="bar" style="--w:70%"></span><span class="tags">Recommended: block + index · 24 mo · starts at your renewal</span></li>
+          <li style="--i:4"><span class="who">Supplier E</span><span class="bar" style="--w:88%"></span><span class="tags">Fixed · 24 mo · pass-through charges</span></li>
+        </ol>
+        <figcaption>We weigh each offer by its expected cost over the contract's life, not the headline rate. Shorter bar = lower expected cost. You receive a written comparison of every offer, with our recommendation.</figcaption>
+      </figure>
 
     </div>
   </div>
@@ -1188,7 +1139,7 @@
       <div class="head">
         <div>
           <span class="eyebrow on-dark">Built for owners &amp; operators</span>
-          <h2 style="margin-top: 14px;">A standing review of <span class="ed" style="color: var(--amber);">every kWh you buy.</span></h2>
+          <h2 style="margin-top: 14px;">A standing review of <span class="ed">every kWh you buy.</span></h2>
         </div>
         <p class="lede">
           Operate more than one location? Send us the bills. We benchmark supply cost across all of your meters, tell you which contracts are inside their renewal window, and shop the ones worth shopping.
@@ -1474,12 +1425,6 @@
           <a class="btn btn-ghost" href="#calc-preview">Run the calculator <span class="arrow">→</span></a>
         </div>
       </div>
-      <div class="dotbg" style="aspect-ratio: 4/3; border-radius: 18px; background-color: var(--navy); display:flex; flex-direction: column; justify-content: center; padding: 28px; color: #fff;">
-        <span class="eyebrow on-dark">Indicative market · ERCOT</span>
-        <div style="font-family: var(--ed); font-size: 64px; line-height: 1; margin-top: 8px;">7.32¢</div>
-        <div style="font-size: 14px; color: var(--muted-on); margin-top: 6px;">36-mo fixed · indicative only · 6.4M kWh load</div>
-        <div style="font-size: 13px; color: var(--muted-on); margin-top: 16px; line-height:1.5;">Your quote is priced to your actual load, market, and term — we shop it across 90+ suppliers and send you the best of what comes back.</div>
-      </div>
     </div>
   </div>
 </section>
@@ -1557,32 +1502,6 @@
 </footer>
 
 <script>
-  /* ── Video loading: hero deferred off mobile, below-the-fold lazy-loaded ── */
-  (function(){
-    function loadVid(v){
-      if (!v || v.dataset.loaded) return;
-      v.dataset.loaded = '1';
-      if (v.dataset.src) v.src = v.dataset.src;
-      v.load();
-      var p = v.play();
-      if (p && p.catch) p.catch(function(){});
-    }
-    window.__loadVid = loadVid;
-    var reduce  = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var desktop = window.matchMedia('(min-width: 701px)').matches;
-    var hero = document.querySelector('.hero-vid');
-    if (hero && desktop && !reduce) loadVid(hero);   // mobile / reduced-motion: poster only, no MP4
-    var lazy = Array.prototype.slice.call(document.querySelectorAll('video.lazy-vid'));
-    if (!reduce && 'IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){ if (e.isIntersecting){ loadVid(e.target); io.unobserve(e.target); } });
-      }, { rootMargin: '300px 0px' });
-      lazy.forEach(function(v){ io.observe(v); });
-    } else if (!reduce) {
-      lazy.forEach(loadVid);
-    }
-  })();
-
   /* ── Mobile action bar: shown after the hero, hidden while the form is on screen ── */
   (function(){
     const bar = document.getElementById('mobBar');
@@ -1682,35 +1601,6 @@
     });
     calc();
   })();
-
-  /* ── Industry copy swap ── */
-  // Sample contract end dates stay in the future: N months from today, as "Mon YYYY".
-  function monthsAhead(n){
-    const d = new Date(); d.setDate(1); d.setMonth(d.getMonth() + n);
-    return d.toLocaleString("en-US", { month: "short", year: "numeric" });
-  }
-  const INDUSTRY_COPY = {
-    restaurants: {
-      lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market and send back a written savings analysis with a recommended contract structure. From a single kitchen to a small group of locations.",
-      rate: "$0.1182 / kWh", usage: "2.4M kWh", ends: monthsAhead(10), save: "$54,300 / yr",
-    },
-    retail: {
-      lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market. Built for storefronts with high HVAC and refrigeration loads — one location or several.",
-      rate: "$0.1124 / kWh", usage: "3.6M kWh", ends: monthsAhead(17), save: "$68,900 / yr",
-    },
-    realestate: {
-      lede: "Upload one utility bill. We benchmark it against 90+ suppliers in every deregulated US market. Built for property managers optimizing common-area and pass-through energy across their buildings.",
-      rate: "$0.1041 / kWh", usage: "8.1M kWh", ends: monthsAhead(20), save: "$92,100 / yr",
-    }
-  };
-  function applyIndustry(key){
-    const data = INDUSTRY_COPY[key] || INDUSTRY_COPY.restaurants;
-    document.querySelectorAll('[data-industry-copy]').forEach(el => {
-      const k = el.dataset.industryCopy;
-      if (data[k]) el.textContent = data[k];
-    });
-  }
-  applyIndustry('restaurants');
 
   /* ── Supabase ── */
   const SUPABASE_URL = 'https://lhwfbectnrmrvwhkftun.supabase.co';
