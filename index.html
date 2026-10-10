@@ -647,12 +647,6 @@
   }
   .map-grid{ display: grid; gap: 28px; grid-template-columns: 1fr 1.3fr; align-items: center;}
   @media (max-width: 980px){ .map-grid{ grid-template-columns: 1fr; } }
-  .us-map{ width: 100%; height: auto; }
-  .us-map .state{ fill: #e7e1d2; stroke: #c8c0a8; stroke-width: .5; transition: fill .2s ease; }
-  .us-map .state.elec{ fill: #ffd766; }
-  .us-map .state.both{ fill: var(--amber); }
-  .us-map .state:hover{ filter: brightness(.95); }
-  .us-map .label{ fill: var(--ink); font-family: var(--mono); font-size: 9px; font-weight: 700; pointer-events: none; }
 
   /* ---------- Calculator preview ---------- */
   .calc-preview{
@@ -748,6 +742,71 @@
   }
   @media (max-width: 700px) and (prefers-reduced-motion: reduce){ .mob-bar{ transition: none; } }
 
+
+  /* ---- Bill anatomy ---- */
+  .ba{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); gap:64px; align-items:center; }
+  .ba-bill{ background:#fff; border:1px solid var(--line); border-radius:6px; padding:28px 30px 30px; transform:rotate(-1.2deg);
+    box-shadow:0 1px 0 var(--line), 0 24px 48px -28px rgba(20,33,61,.35); }
+  .ba-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; border-bottom:2px solid var(--ink); padding-bottom:14px; margin-bottom:16px; }
+  .ba-top b{ font-stretch:88%; font-size:20px; display:block; }
+  .ba-top small{ font-size:13px; color:var(--muted); }
+  .ba-sk{ display:block; height:8px; border-radius:2px; background:#E6EAEE; }
+  .ba-grp{ padding:12px 12px 12px 14px; margin:0 -12px 8px -14px; border-radius:4px; }
+  .ba-grp h4{ margin:0 0 8px; font-size:14px; font-weight:700; display:flex; justify-content:space-between; gap:12px; }
+  .ba-grp h4 span{ color:var(--muted); font-weight:500; }
+  .ba-row{ display:flex; gap:24px; margin:7px 0; }
+  .ba-row .ba-sk:first-child{ flex:1; } .ba-row .ba-sk:last-child{ width:56px; flex:none; }
+  .ba-supply{ background:#FFE9A8; }
+  .ba-struct{ box-shadow:inset 0 0 0 2px var(--amber); }
+  .ba-deliv h4{ color:var(--muted); }
+  .ba-total{ display:flex; justify-content:space-between; border-top:2px solid var(--ink); padding-top:12px; margin-top:14px; font-weight:700; }
+  .ba-keys{ list-style:none; margin:28px 0 0; padding:0; display:grid; gap:22px; }
+  .ba-keys li{ display:grid; grid-template-columns:28px 1fr; gap:14px; }
+  .ba-sw{ width:28px; height:18px; border-radius:3px; margin-top:4px; }
+  .ba-keys b{ display:block; font-size:18px; color:var(--ink); }
+  .ba-keys p{ margin:2px 0 0; font-size:16px; }
+  @media (max-width: 900px){ .ba{ grid-template-columns:1fr; gap:40px; } .ba-bill{ transform:none; padding:22px; } }
+
+  /* ---- Contract term sheet ---- */
+  .ts{ margin-top:44px; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:#fff; }
+  .ts-top{ display:flex; justify-content:space-between; align-items:baseline; gap:16px; background:var(--navy); color:#fff; padding:16px 28px; }
+  .ts-top b{ font-stretch:88%; font-size:20px; } .ts-top span{ color:#A9B3C2; font-size:14px; }
+  .ts-row{ display:grid; grid-template-columns:190px minmax(0,1fr) 340px; gap:32px; align-items:center; padding:26px 28px; border-top:1px solid var(--line); }
+  .ts-row:first-of-type{ border-top:0; }
+  .ts-row h3{ margin:0; font-stretch:88%; font-size:24px; line-height:1.1; }
+  .ts-row p{ margin:0; font-size:15px; }
+  .ts-row svg{ width:100%; height:auto; display:block; }
+  .ts-t{ font:600 12px Archivo, sans-serif; fill:var(--muted); } .ts-t.dk{ fill:var(--ink); }
+  @media (max-width: 900px){ .ts-row{ grid-template-columns:1fr; gap:12px; padding:22px 20px; } .ts-row svg{ max-width:340px; } .ts-top{ padding:14px 20px; } }
+
+  /* ---- Renewal calendar ---- */
+  .dash .rc-head{ display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:48px; align-items:center; }
+  .rc{ background:var(--navy-2, #1C2C4F); border:1px solid #2A3A5C; border-radius:14px; padding:22px 22px 18px; }
+  .rc-h{ display:flex; justify-content:space-between; font-size:14px; color:#A9B3C2; margin-bottom:10px; }
+  .rc-h b{ color:#fff; font-weight:600; }
+  .rc-row{ display:grid; grid-template-columns:96px 1fr; align-items:center; height:36px; }
+  .rc-row > span{ font-size:14px; font-weight:600; color:#fff; }
+  .rc-track{ position:relative; height:100%; }
+  .rc-axis .rc-track span{ position:absolute; top:50%; transform:translate(-50%,-50%); font-size:12px; font-weight:600; color:#A9B3C2; white-space:nowrap; }
+  .rc-body{ position:relative; }
+  .rc-lines{ position:absolute; top:0; bottom:0; left:96px; right:0; }
+  .rc-grid{ position:absolute; top:0; bottom:0; width:1px; background:#2A3A5C; }
+  .rc-now{ position:absolute; top:0; bottom:0; width:2px; background:#fff; }
+  .rc-bar{ position:absolute; top:10px; height:16px; border-radius:3px; background:#3A4A6B; }
+  .rc-bar.win{ background:var(--amber); } .rc-bar.risk{ background:#E2554A; }
+  .rc-leg{ display:flex; gap:16px; flex-wrap:wrap; margin-top:12px; font-size:13px; color:#A9B3C2; }
+  .rc-leg i{ display:inline-block; width:14px; height:10px; border-radius:2px; margin-right:6px; vertical-align:-1px; }
+  @media (max-width: 980px){ .dash .rc-head{ grid-template-columns:1fr; gap:32px; } }
+  @media (max-width: 480px){ .rc{ padding:16px 14px 14px; } .rc-row{ grid-template-columns:76px 1fr; } .rc-row > span{ font-size:13px; } .rc-lines{ left:76px; } }
+
+  /* ---- Coverage tile map ---- */
+  .tm{ display:grid; grid-template-columns:repeat(11, 1fr); gap:5px; }
+  .tm span{ aspect-ratio:1; border-radius:5px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:clamp(9px, 1vw, 12px); font-stretch:90%; background:#E6EAEE; color:#8A94A3; }
+  .tm .e{ background:var(--navy); color:#fff; }
+  .tm .g{ background:var(--amber); color:var(--navy); }
+  .tm-leg{ display:flex; gap:22px; margin-top:16px; font-size:14px; color:var(--muted); }
+  .tm-leg i{ display:inline-block; width:14px; height:14px; border-radius:3px; margin-right:7px; vertical-align:-2px; }
+  @media (max-width: 480px){ .tm{ gap:3px; } .tm span{ border-radius:3px; } }
 </style>
 <script src="/analytics-events.js" defer></script>
 <link rel="stylesheet" href="/pdr.css?v=2">
@@ -864,6 +923,45 @@
   </div>
 </section>
 
+<!-- ============ BILL ANATOMY ============ -->
+<section class="section" id="bill">
+  <div class="wrap ba">
+    <div class="ba-bill" aria-hidden="true">
+      <div class="ba-top">
+        <div><b>Commercial electric service</b><small>Statement · one meter</small></div>
+        <div style="width:110px"><span class="ba-sk" style="margin-bottom:6px"></span><span class="ba-sk" style="width:70%;margin-left:auto"></span></div>
+      </div>
+      <div class="ba-grp ba-supply">
+        <h4>Supply charges <span>Energy</span></h4>
+        <div class="ba-row"><span class="ba-sk"></span><span class="ba-sk"></span></div>
+        <div class="ba-row"><span class="ba-sk" style="max-width:70%"></span><span class="ba-sk"></span></div>
+      </div>
+      <div class="ba-grp ba-struct">
+        <h4>Capacity and pass-through charges <span>Supplier contract</span></h4>
+        <div class="ba-row"><span class="ba-sk" style="max-width:80%"></span><span class="ba-sk"></span></div>
+        <div class="ba-row"><span class="ba-sk" style="max-width:60%"></span><span class="ba-sk"></span></div>
+      </div>
+      <div class="ba-grp ba-deliv">
+        <h4>Delivery charges <span>Your utility</span></h4>
+        <div class="ba-row"><span class="ba-sk"></span><span class="ba-sk"></span></div>
+        <div class="ba-row"><span class="ba-sk" style="max-width:75%"></span><span class="ba-sk"></span></div>
+        <div class="ba-row"><span class="ba-sk" style="max-width:55%"></span><span class="ba-sk"></span></div>
+      </div>
+      <div class="ba-total"><span>Amount due</span><span class="ba-sk" style="width:80px;height:12px;margin-top:6px;background:var(--line)"></span></div>
+    </div>
+    <div>
+      <span class="eyebrow">Read your bill like we do</span>
+      <h2 style="margin-top: 14px;">Your bill has two sides. <span class="ed">Only one is negotiable.</span></h2>
+      <p class="lede" style="margin-top: 16px;">Every commercial bill combines charges set by your supplier and charges set by your utility. We put suppliers in competition for the first side, decide how capacity and pass-through charges are handled in the contract, and leave delivery with your utility.</p>
+      <ul class="ba-keys">
+        <li><span class="ba-sw ba-supply"></span><div><b>Supply: we shop it</b><p>Suppliers compete on the energy rate for your account.</p></div></li>
+        <li><span class="ba-sw ba-struct"></span><div><b>Capacity and pass-throughs: we structure them</b><p>Whether these are fixed into your rate or passed through is a contract choice. We show you which on every offer.</p></div></li>
+        <li><span class="ba-sw" style="background:#E6EAEE"></span><div><b>Delivery: stays with your utility</b><p>Wires, meters and outage response don't change when you switch.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTRACT STRUCTURE ============ -->
 <section class="section" id="structure">
   <div class="wrap">
@@ -875,26 +973,60 @@
       <p class="lede" style="max-width: 44ch;">Competition gets you a good number. How the contract is built decides what you actually pay over its life — so we structure it around your load, not around whatever the supplier sent first.</p>
     </div>
 
-    <div class="steps" style="grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));">
-      <div class="step">
+    <div class="ts">
+      <div class="ts-top"><b>Your contract, decided line by line</b><span>Illustration</span></div>
+      <div class="ts-row">
         <h3>Product</h3>
         <p>Fixed, index, or block-and-index. The right answer turns on whether your business can absorb a monthly swing — and we say plainly which one your load profile argues for.</p>
+        <svg viewBox="0 0 340 70" role="img" aria-label="A scale from budget certainty (fixed) to market exposure (index), with block and index in between">
+          <defs><linearGradient id="tsg"><stop offset="0" stop-color="#14213D"/><stop offset="1" stop-color="#D9DEE3"/></linearGradient></defs>
+          <rect x="0" y="22" width="340" height="10" rx="5" fill="url(#tsg)"/>
+          <circle cx="170" cy="27" r="11" fill="#F5B400" stroke="#fff" stroke-width="3"/>
+          <text class="ts-t" x="0" y="12">Budget certainty</text><text class="ts-t" x="340" y="12" text-anchor="end">Market exposure</text>
+          <text class="ts-t dk" x="0" y="58">Fixed</text><text class="ts-t dk" x="170" y="58" text-anchor="middle">Block + index</text><text class="ts-t dk" x="340" y="58" text-anchor="end">Index</text>
+        </svg>
       </div>
-      <div class="step">
+      <div class="ts-row">
         <h3>Term length</h3>
         <p>Most commercial contracts run 12–36 months. A longer term is not automatically cheaper — it depends on where the forward curve sits when you sign. We advise on term against current market conditions.</p>
+        <svg viewBox="0 0 340 70" role="img" aria-label="Term options of 12, 24 and 36 months">
+          <rect x="0" y="12" width="108" height="28" rx="4" fill="#E6EAEE"/><rect x="116" y="12" width="108" height="28" rx="4" fill="#14213D"/><rect x="232" y="12" width="108" height="28" rx="4" fill="#E6EAEE"/>
+          <text class="ts-t dk" x="54" y="31" text-anchor="middle">12 mo</text><text x="170" y="31" text-anchor="middle" style="font:600 12px Archivo,sans-serif;fill:#fff">24 mo</text><text class="ts-t dk" x="286" y="31" text-anchor="middle">36 mo</text>
+          <text class="ts-t" x="170" y="62" text-anchor="middle">Chosen against where the forward curve sits</text>
+        </svg>
       </div>
-      <div class="step">
+      <div class="ts-row">
         <h3>Timing</h3>
         <p>We pull current forward curve data to time the purchase, and we shop inside your renewal window — not after it closes, when a lapsed contract rolls onto default or holdover pricing.</p>
+        <svg viewBox="0 0 340 80" role="img" aria-label="A forward price curve over time, with the renewal window shaded and the purchase point inside it">
+          <rect x="120" y="4" width="120" height="56" rx="3" fill="#FFE9A8"/>
+          <line x1="300" y1="4" x2="300" y2="60" stroke="#5A6475" stroke-dasharray="3 3"/>
+          <path d="M0 30 C30 18 55 40 85 34 S140 14 175 36 S230 46 260 22 S315 30 340 16" fill="none" stroke="#14213D" stroke-width="2.5"/>
+          <circle cx="175" cy="36" r="6" fill="#F5B400" stroke="#14213D" stroke-width="2"/>
+          <text class="ts-t dk" x="180" y="76" text-anchor="middle">Your renewal window</text><text class="ts-t" x="340" y="76" text-anchor="end">Contract ends</text>
+        </svg>
       </div>
-      <div class="step">
+      <div class="ts-row">
         <h3>The fine print</h3>
         <p>Early termination language, usage bandwidth limits, and which charges are passed through rather than fixed. We normalize every offer so you are comparing like with like.</p>
+        <svg viewBox="0 0 340 80" role="img" aria-label="Contract clauses, with early termination and usage bandwidth highlighted for review">
+          <rect x="0" y="6" width="300" height="7" rx="2" fill="#E6EAEE"/><rect x="0" y="20" width="250" height="7" rx="2" fill="#E6EAEE"/>
+          <rect x="0" y="31" width="214" height="15" rx="3" fill="#FFE9A8"/><text class="ts-t dk" x="6" y="43">Early termination</text>
+          <rect x="0" y="52" width="280" height="7" rx="2" fill="#E6EAEE"/>
+          <rect x="0" y="63" width="190" height="15" rx="3" fill="#FFE9A8"/><text class="ts-t dk" x="6" y="75">Usage bandwidth</text>
+        </svg>
       </div>
-      <div class="step">
+      <div class="ts-row">
         <h3>Across your sites</h3>
         <p>Operate several locations? Where it helps, we line up contract end dates so your portfolio can be shopped as one account instead of one meter at a time.</p>
+        <svg viewBox="0 0 340 80" role="img" aria-label="Four site contracts with staggered end dates realigned to one shared end date">
+          <rect x="0" y="6" width="150" height="9" rx="2" fill="#D9DEE3"/><rect x="150" y="6" width="150" height="9" rx="2" fill="#1E8A5F"/>
+          <rect x="0" y="24" width="210" height="9" rx="2" fill="#D9DEE3"/><rect x="210" y="24" width="90" height="9" rx="2" fill="#1E8A5F"/>
+          <rect x="0" y="42" width="95" height="9" rx="2" fill="#D9DEE3"/><rect x="95" y="42" width="205" height="9" rx="2" fill="#1E8A5F"/>
+          <rect x="0" y="60" width="185" height="9" rx="2" fill="#D9DEE3"/><rect x="185" y="60" width="115" height="9" rx="2" fill="#1E8A5F"/>
+          <line x1="300" y1="0" x2="300" y2="76" stroke="#14213D" stroke-width="2"/>
+          <text class="ts-t dk" x="306" y="34">One</text><text class="ts-t dk" x="306" y="48">date</text>
+        </svg>
       </div>
     </div>
 
@@ -1138,14 +1270,26 @@
 <section class="section" id="dash">
   <div class="wrap">
     <div class="dash">
-      <div class="head">
+      <div class="head rc-head">
         <div>
           <span class="eyebrow on-dark">Built for owners &amp; operators</span>
           <h2 style="margin-top: 14px;">A standing review of <span class="ed">every kWh you buy.</span></h2>
+          <p class="lede" style="margin-top: 16px;">Operate more than one location? Send us the bills. We benchmark supply cost across all of your meters, tell you which contracts are inside their renewal window, and shop the ones worth shopping.</p>
         </div>
-        <p class="lede">
-          Operate more than one location? Send us the bills. We benchmark supply cost across all of your meters, tell you which contracts are inside their renewal window, and shop the ones worth shopping.
-        </p>
+        <div class="rc" role="img" aria-label="Illustrative renewal calendar for six sites: two have a renewal window open, one ends before it can be shopped">
+          <div class="rc-h"><b>Renewal calendar</b><span>Illustration</span></div>
+          <div class="rc-row rc-axis" aria-hidden="true"><span style="color:#A9B3C2;font-size:12px">Site</span><div class="rc-track"><span style="left:5%">Now</span><span style="left:26%">+6 mo</span><span style="left:52%">+12 mo</span><span style="left:78%">+18 mo</span></div></div>
+          <div class="rc-body" aria-hidden="true">
+            <div class="rc-lines"><span class="rc-grid" style="left:26%"></span><span class="rc-grid" style="left:52%"></span><span class="rc-grid" style="left:78%"></span><span class="rc-now" style="left:5%"></span></div>
+              <div class="rc-row"><span>Store 1</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:22%"></i><i class="rc-bar win" style="left:9%;width:13%"></i></div></div>
+              <div class="rc-row"><span>Store 2</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:70%"></i></div></div>
+              <div class="rc-row"><span>Warehouse</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:32%"></i><i class="rc-bar win" style="left:18%;width:14%"></i></div></div>
+              <div class="rc-row"><span>Office</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:96%"></i></div></div>
+              <div class="rc-row"><span>Store 3</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:56%"></i></div></div>
+              <div class="rc-row"><span>Store 4</span><div class="rc-track"><i class="rc-bar risk" style="left:0%;width:12%"></i></div></div>
+          </div>
+          <div class="rc-leg"><span><i style="background:#3A4A6B"></i>Under contract</span><span><i style="background:var(--amber)"></i>Renewal window open</span><span><i style="background:#E2554A"></i>Ends before it can be shopped</span></div>
+        </div>
       </div>
 
       <div class="grid">
@@ -1277,43 +1421,8 @@
         </div>
 
         <div>
-          <svg class="us-map" viewBox="0 0 600 360" aria-label="US deregulated states map">
-            <path class="state" d="M40 200 C 40 130, 120 80, 220 90 C 300 60, 380 70, 460 100 C 530 120, 560 160, 555 210 C 545 260, 480 290, 400 295 C 320 305, 220 305, 150 285 C 90 270, 40 250, 40 200 Z" fill="#efe7d4" stroke="#c8c0a8" stroke-width="1"/>
-            <path class="state both" d="M260 235 L 295 235 L 305 280 L 280 305 L 245 295 Z"/>
-            <text class="label" x="270" y="270">TX</text>
-            <path class="state both" d="M55 175 L 90 165 L 100 215 L 75 240 L 50 220 Z"/>
-            <text class="label" x="68" y="205">CA</text>
-            <path class="state both" d="M295 165 L 325 160 L 330 200 L 305 210 L 295 195 Z"/>
-            <text class="label" x="305" y="190">IL</text>
-            <path class="state both" d="M380 160 L 420 158 L 425 195 L 395 210 L 378 195 Z"/>
-            <text class="label" x="392" y="185">OH</text>
-            <path class="state both" d="M425 150 L 475 148 L 478 175 L 440 188 L 425 175 Z"/>
-            <text class="label" x="445" y="170">PA</text>
-            <path class="state both" d="M478 158 L 495 158 L 498 185 L 482 188 Z"/>
-            <text class="label" x="481" y="178">NJ</text>
-            <path class="state both" d="M450 130 L 500 122 L 510 152 L 478 152 L 460 145 Z"/>
-            <text class="label" x="475" y="142">NY</text>
-            <path class="state both" d="M505 122 L 535 118 L 538 138 L 510 142 Z"/>
-            <text class="label" x="515" y="135">MA</text>
-            <path class="state both" d="M440 188 L 478 188 L 480 205 L 442 205 Z"/>
-            <text class="label" x="453" y="200">MD</text>
-            <path class="state both" d="M538 110 L 555 105 L 558 130 L 540 132 Z"/>
-            <text class="label" x="544" y="124">ME</text>
-            <path class="state both" d="M520 110 L 538 108 L 538 122 L 522 125 Z"/>
-            <text class="label" x="524" y="120">NH</text>
-            <path class="state both" d="M510 146 L 528 144 L 529 159 L 511 160 Z"/>
-            <text class="label" x="513" y="156">CT</text>
-            <path class="state both" d="M530 144 L 544 143 L 545 157 L 531 158 Z"/>
-            <text class="label" x="533" y="155">RI</text>
-            <path class="state elec" d="M483 191 L 499 190 L 501 207 L 485 208 Z"/>
-            <text class="label" x="486" y="203">DE</text>
-            <path class="state both" d="M452 209 L 470 208 L 472 223 L 454 224 Z"/>
-            <text class="label" x="455" y="220">DC</text>
-          </svg>
-          <div style="display:flex; gap: 18px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; color: var(--muted); font-family: var(--mono); text-transform: uppercase; letter-spacing: .1em;">
-            <span><span style="display:inline-block;width:10px;height:10px;background:var(--amber);border-radius:2px;vertical-align:-1px;margin-right:6px;"></span>Electricity &amp; gas</span>
-            <span><span style="display:inline-block;width:10px;height:10px;background:#ffd766;border-radius:2px;vertical-align:-1px;margin-right:6px;"></span>Electricity only</span>
-          </div>
+          <div class="tm" role="img" aria-label="US map. Electricity: CA, CT, DC, DE, IL, MA, MD, ME, NH, NJ, NY, OH, PA, RI, TX. Natural gas: AZ, CO, FL, IN, KY, MI, VA."><span class="e" style="grid-area:1/11">ME</span><span style="grid-area:2/10">VT</span><span class="e" style="grid-area:2/11">NH</span><span style="grid-area:3/1">WA</span><span style="grid-area:3/2">ID</span><span style="grid-area:3/3">MT</span><span style="grid-area:3/4">ND</span><span style="grid-area:3/5">MN</span><span class="e" style="grid-area:3/6">IL</span><span style="grid-area:3/7">WI</span><span class="g" style="grid-area:3/8">MI</span><span class="e" style="grid-area:3/9">NY</span><span class="e" style="grid-area:3/10">RI</span><span class="e" style="grid-area:3/11">MA</span><span style="grid-area:4/1">OR</span><span style="grid-area:4/2">NV</span><span style="grid-area:4/3">WY</span><span style="grid-area:4/4">SD</span><span style="grid-area:4/5">IA</span><span class="g" style="grid-area:4/6">IN</span><span class="e" style="grid-area:4/7">OH</span><span class="e" style="grid-area:4/8">PA</span><span class="e" style="grid-area:4/9">NJ</span><span class="e" style="grid-area:4/10">CT</span><span class="e" style="grid-area:5/1">CA</span><span style="grid-area:5/2">UT</span><span class="g" style="grid-area:5/3">CO</span><span style="grid-area:5/4">NE</span><span style="grid-area:5/5">MO</span><span class="g" style="grid-area:5/6">KY</span><span style="grid-area:5/7">WV</span><span class="g" style="grid-area:5/8">VA</span><span class="e" style="grid-area:5/9">MD</span><span class="e" style="grid-area:5/10">DE</span><span class="g" style="grid-area:6/2">AZ</span><span style="grid-area:6/3">NM</span><span style="grid-area:6/4">KS</span><span style="grid-area:6/5">AR</span><span style="grid-area:6/6">TN</span><span style="grid-area:6/7">NC</span><span style="grid-area:6/8">SC</span><span class="e" style="grid-area:6/9">DC</span><span style="grid-area:7/4">OK</span><span style="grid-area:7/5">LA</span><span style="grid-area:7/6">MS</span><span style="grid-area:7/7">AL</span><span style="grid-area:7/8">GA</span><span class="e" style="grid-area:8/4">TX</span><span class="g" style="grid-area:8/9">FL</span></div>
+          <div class="tm-leg"><span><i style="background:var(--navy)"></i>Electricity</span><span><i style="background:var(--amber)"></i>Natural gas</span></div>
         </div>
       </div>
     </div>
