@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Is a Demand Charge? How to Lower It</title>
+  <meta name="description" content="Commercial demand charges explained: kW vs. kWh, how one 15-minute peak sets your bill, demand ratchets, Texas 4CP transmission charges, and practical ways to lower them." />
+  <link rel="canonical" href="https://www.powerdoneright.com/blog-demand-charges" />
+  <meta property="og:title" content="What Is a Demand Charge? How to Lower It &mdash; Power Done Right" />
+  <meta property="og:description" content="Commercial demand charges explained: kW vs. kWh, how one 15-minute peak sets your bill, demand ratchets, Texas 4CP transmission charges, and practical ways to lower them." />
+  <meta property="og:url" content="https://www.powerdoneright.com/blog-demand-charges" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://www.powerdoneright.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is a Demand Charge? How to Lower It &mdash; Power Done Right" />
+  <meta name="twitter:description" content="Commercial demand charges explained: kW vs. kWh, how one 15-minute peak sets your bill, demand ratchets, Texas 4CP transmission charges, and practical ways to lower them." />
+  <meta name="twitter:image" content="https://www.powerdoneright.com/og-image.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KG0X9SXT4Q"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KG0X9SXT4Q');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+  <style>
+  html,body{ overflow-x: clip; max-width: 100%; }
+  img,svg,video,canvas{ max-width: 100%; height: auto; }
+  :root{
+    --pdr-bg:#05111f; --pdr-bg-elev:#0a2240; --pdr-ink:#f0ece3; --pdr-ink-2:rgba(240,236,227,.70); --pdr-ink-3:rgba(240,236,227,.42);
+    --pdr-line:rgba(255,255,255,.07); --pdr-line-2:rgba(255,255,255,.12);
+    --pdr-navy:#0a2240; --pdr-navy-2:#1a3056; --pdr-accent:#E8B43A; --pdr-accent-ink:#5e3f00;
+    --serif:"Instrument Serif","Source Serif Pro","Times New Roman",serif;
+    --sans:"Geist","Inter",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+    --mono:"Geist Mono","JetBrains Mono",ui-monospace,monospace;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:var(--sans); background:var(--pdr-bg); color:var(--pdr-ink); -webkit-font-smoothing:antialiased; }
+  a{ color:inherit; text-decoration:none; }
+  em{ font-style:normal; font-family:var(--serif); font-weight:400; color:var(--pdr-ink); }
+  .eyebrow{ display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--pdr-ink-3); padding:6px 12px; border:1px solid var(--pdr-line-2); border-radius:999px; background:var(--pdr-bg-elev); }
+  .eyebrow-dot{ width:6px; height:6px; border-radius:50%; background:var(--pdr-accent); flex-shrink:0; }
+  .eyebrow--inv{ background:rgba(255,255,255,.05); color:rgba(247,245,240,.7); border-color:rgba(255,255,255,.12); }
+  .eyebrow a{ color:inherit; } .eyebrow a:hover{ color:var(--pdr-ink); }
+  .page-hero{ padding:72px 56px 56px; border-bottom:1px solid var(--pdr-line); background:radial-gradient(ellipse 130% 90% at 50% -10%, #0d2e55 0%, #05111f 65%); }
+  .page-hero-inner{ max-width:760px; margin:0 auto; }
+  .hero-h{ font-family:var(--serif); font-weight:400; font-size:clamp(38px,5.4vw,62px); line-height:1.06; letter-spacing:-.025em; margin:22px 0 20px; color:var(--pdr-ink); text-wrap:balance; }
+  .hero-h em{ font-style:italic; color:var(--pdr-accent); }
+  .post-meta{ font-family:var(--mono); font-size:12px; letter-spacing:.04em; color:var(--pdr-ink-3); text-transform:uppercase; }
+  .hero-sub{ font-size:18px; line-height:1.55; color:var(--pdr-ink-2); max-width:600px; margin:0; text-wrap:pretty; }
+  /* Article */
+  .article{ max-width:720px; margin:0 auto; padding:64px 56px 24px; }
+  .article p{ font-size:17px; line-height:1.7; color:var(--pdr-ink-2); margin:0 0 22px; text-wrap:pretty; }
+  .article h2{ font-family:var(--serif); font-weight:400; font-size:clamp(26px,3.4vw,38px); line-height:1.12; letter-spacing:-.02em; color:var(--pdr-ink); margin:44px 0 14px; }
+  .article h3{ font-size:19px; font-weight:600; color:var(--pdr-ink); margin:32px 0 10px; letter-spacing:-.01em; }
+  .article strong{ color:var(--pdr-ink); font-weight:600; }
+  .article a{ color:var(--pdr-accent); text-decoration:underline; text-underline-offset:2px; }
+  .article ul{ margin:0 0 22px; padding-left:22px; }
+  .article li{ font-size:17px; line-height:1.65; color:var(--pdr-ink-2); margin:0 0 10px; }
+  .article li::marker{ color:var(--pdr-accent); }
+  .callout{ border:1px solid var(--pdr-line-2); border-left:3px solid var(--pdr-accent); border-radius:12px; background:var(--pdr-bg-elev); padding:22px 24px; margin:28px 0; }
+  .callout p{ margin:0; font-size:16px; color:var(--pdr-ink); }
+  .article-foot{ max-width:720px; margin:0 auto; padding:8px 56px 8px; }
+  .article-foot a{ font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--pdr-ink-3); }
+  .article-foot a:hover{ color:var(--pdr-accent); }
+  /* Blog index cards */
+  .post-list{ max-width:880px; margin:0 auto; padding:56px 56px 8px; display:flex; flex-direction:column; gap:16px; }
+  .post-card{ display:block; border:1px solid var(--pdr-line-2); border-radius:16px; padding:28px 30px; background:var(--pdr-bg-elev); transition:transform 220ms cubic-bezier(.2,.7,.2,1), border-color 220ms; }
+  .post-card:hover{ transform:translateY(-3px); border-color:rgba(255,255,255,.22); }
+  .post-card .pc-meta{ font-family:var(--mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color:var(--pdr-ink-3); }
+  .post-card h2{ font-family:var(--serif); font-weight:400; font-size:26px; letter-spacing:-.015em; color:var(--pdr-ink); margin:10px 0 8px; line-height:1.15; }
+  .post-card p{ font-size:15.5px; line-height:1.55; color:var(--pdr-ink-2); margin:0; }
+  .post-card .pc-more{ display:inline-block; margin-top:14px; font-family:var(--mono); font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:var(--pdr-accent); }
+  .cta-band{ background:var(--pdr-navy); padding:80px 56px; text-align:center; position:relative; overflow:hidden; margin-top:48px; }
+  .cta-band::before{ content:""; position:absolute; inset:0; background-image:linear-gradient(to right,rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.03) 1px,transparent 1px); background-size:80px 80px; pointer-events:none; }
+  .cta-band-inner{ position:relative; max-width:680px; margin:0 auto; }
+  .cta-band-h{ font-family:var(--serif); font-weight:400; font-size:clamp(30px,4vw,52px); line-height:1.05; letter-spacing:-.025em; color:#f7f5f0; margin:18px 0 30px; text-wrap:balance; }
+  .cta-band-h em{ font-style:italic; color:var(--pdr-accent); }
+  .cta-btn{ display:inline-flex; align-items:center; gap:12px; background:var(--pdr-accent); color:var(--pdr-accent-ink); padding:16px 30px; border-radius:999px; font-size:15.5px; font-weight:600; transition:transform .15s ease; box-shadow:0 10px 30px -10px rgba(232,180,58,.5); border:0; }
+  .cta-btn:hover{ transform:translateY(-2px); }
+  .cta-foot{ margin-top:18px; font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:rgba(247,245,240,.65); text-transform:uppercase; }
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity 700ms cubic-bezier(.2,.7,.2,1), transform 700ms cubic-bezier(.2,.7,.2,1); }
+  .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  @media (max-width:980px){
+    .page-hero{ padding:52px 24px 40px; } .article,.article-foot{ padding-left:24px; padding-right:24px; }
+    .post-list{ padding:40px 24px 8px; }
+    .cta-band{ padding:56px 24px; }
+  }
+  @media (prefers-reduced-motion:reduce){ .reveal,.reveal.is-visible{ opacity:1!important; transform:none!important; } }
+</style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"BlogPosting","headline":"What Is a Demand Charge? How to Lower It &mdash; Power Done Right","description":"Commercial demand charges explained: kW vs. kWh, how one 15-minute peak sets your bill, demand ratchets, Texas 4CP transmission charges, and practical ways to lower them.","datePublished":"2026-07-15","dateModified":"2026-07-15","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.powerdoneright.com/blog-demand-charges"},"author":{"@type":"Organization","name":"Power Done Right","url":"https://www.powerdoneright.com"},"publisher":{"@type":"Organization","name":"Power Done Right","logo":{"@type":"ImageObject","url":"https://www.powerdoneright.com/apple-touch-icon.png"}},"image":"https://www.powerdoneright.com/og-image.png"},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.powerdoneright.com"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.powerdoneright.com/blog"},
+      {"@type":"ListItem","position":3,"name":"What a demand charge is","item":"https://www.powerdoneright.com/blog-demand-charges"}]}]}
+  </script>
+<script src="/analytics-events.js" defer></script>
+<script src="/quick-quote.js?v=2" defer></script>
+<link rel="stylesheet" href="/pdr.css?v=2">
+</head>
+<body>
+<header class="topnav">
+  <div class="wrap row">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="currentColor"><path d="M18 5 L8.6 18.2 H13.9 L12.3 27 L23.4 12.8 H17.6 L19.4 5 Z"/></svg>
+      </span>
+      Power Done Right
+    </a>
+    <nav class="nav-links">
+      <a href="/#how">How it works</a>
+      <a href="/#industries">Industries</a>
+      <a href="/#suppliers">Suppliers</a>
+      <a href="/#calc-preview">Calculator</a>
+    </nav>
+    <div class="grow"></div>
+    <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
+    <div class="actions">
+      <a class="btn btn-ghost btn-sm" href="tel:+12144941627">(214) 494-1627</a>
+      <a class="btn btn-primary btn-sm" href="#lead">Send your bill</a>
+    </div>
+    <button class="nav-ham" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg id="hamIcon" viewBox="0 0 20 20" width="22" height="22" fill="currentColor"><path fill-rule="evenodd" d="M3 5h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2z" clip-rule="evenodd"/></svg>
+      <svg id="closeIcon" viewBox="0 0 20 20" width="22" height="22" fill="currentColor" style="display:none"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu (shown below the header) -->
+<nav class="mob-menu" id="mobMenu">
+  <a href="/#how"          onclick="closeMobMenu()">How it works</a>
+  <a href="/#industries"   onclick="closeMobMenu()">Industries</a>
+  <a href="/#suppliers"    onclick="closeMobMenu()">Suppliers</a>
+  <a href="/#calc-preview" onclick="closeMobMenu()">Calculator</a>
+  <a href="tel:+12144941627">(214) 494-1627</a>
+  <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Send your bill</a>
+</nav>
+<script src="/pdr-nav.js?v=1" defer></script>
+
+<section class="page-hero"><div class="page-hero-inner">
+  <div class="eyebrow"><span class="eyebrow-dot"></span><a href="blog">Blog</a></div>
+  <h1 class="hero-h">What a demand charge is, <em>and how to lower it.</em></h1>
+  <p class="post-meta">July 15, 2026 &middot; 4 min read</p>
+</div></section>
+<article class="article reveal">
+  <p class="hero-sub" style="margin-bottom:8px;">Two businesses can use the same number of kilowatt-hours in a month and pay very different delivery bills. The difference is usually demand: not how much electricity you used, but how fast you used it at your busiest moment.</p>
+<h2>kWh vs. kW</h2>
+<p>A <strong>kilowatt-hour (kWh)</strong> measures energy used over time &mdash; the volume. A <strong>kilowatt (kW)</strong> measures the rate you draw power at any instant &mdash; the size of the pipe. If kWh is the miles you drove this month, kW is your top speed.</p>
+<p>The utility has to build wires, transformers and substations large enough for your highest draw, even if you only reach it for a few minutes a month. The demand charge is how it recovers that cost.</p>
+<h2>How demand is measured</h2>
+<p>Most utilities measure demand in 15-minute intervals and bill on the highest one in the billing period. Oncor, the largest delivery utility in Texas, defines it in its tariff as the kW supplied &ldquo;during the 15-minute period of maximum use during the billing month.&rdquo;</p>
+<p>In practice, one bad quarter-hour &mdash; every rooftop unit, the compressor and the ovens starting at once on a hot morning &mdash; can set the demand charge for the entire month.</p>
+<p>Not every account pays one. Small accounts are often billed on kWh alone; once a meter records demand above a threshold set in the utility&rsquo;s tariff, the account moves to a demand-billed rate class. In Oncor&rsquo;s territory that threshold is 10 kW, and an account stays on the demand rate until it goes 12 consecutive months without exceeding it.</p>
+<div class="callout"><p><strong>The short version:</strong> a demand charge is set by your worst 15 minutes, not your average day.</p></div>
+<h2>The ratchet: one peak, eleven more months of bills</h2>
+<p>Many utilities add a <strong>demand ratchet</strong>. Under Oncor&rsquo;s tariff, for most demand-billed accounts the billed kW for the distribution charge is the higher of this month&rsquo;s peak or 80% of the highest monthly peak in the preceding 11 months. (Very small accounts and some low-load-factor accounts are billed on the current month only.)</p>
+<p>The consequence is easy to miss: a single July spike can keep showing up on bills well into the following year, long after the equipment that caused it has been switched off.</p>
+<h2>Texas: four intervals that set a year of transmission cost</h2>
+<p>Larger Texas sites face a second demand measure, known as <strong>4CP</strong>. In Oncor&rsquo;s territory, any premises that has reached 700 kW in a previous billing month pays its transmission charge on 4CP kW: the average of its demand during the single 15-minute interval of ERCOT&rsquo;s system-wide peak in each of June, July, August and September. That figure is reset each January 1 and holds for the whole calendar year.</p>
+<p>No one knows in advance which afternoon will be the monthly peak, so businesses that manage 4CP watch grid conditions through the summer and reduce load on the likeliest days. The method itself is under review at the Public Utility Commission of Texas, so the rules may change; for now, four intervals set a year of transmission cost.</p>
+<h2>How to lower demand charges</h2>
+<ul>
+  <li><strong>Get your interval data.</strong> Ask your utility or retail provider for 15-minute interval data. It shows exactly when your peaks happen and what was running.</li>
+  <li><strong>Stagger start-ups.</strong> Bring HVAC, compressors, kitchen equipment and EV chargers online in sequence rather than all at once.</li>
+  <li><strong>Use controls.</strong> Building automation can cap demand by briefly cycling non-critical loads; pre-cooling before a peak shifts load without affecting comfort.</li>
+  <li><strong>Watch load factor.</strong> Load factor compares your average demand to your peak. In Oncor&rsquo;s territory, the per-kW distribution rate itself varies with annual load factor, so a flatter load profile can lower the rate as well as the billed kW.</li>
+  <li><strong>Revisit after a permanent change.</strong> If you have closed a line, replaced equipment or reduced your footprint, ask the utility whether your billing demand can be reviewed rather than waiting out the ratchet.</li>
+</ul>
+<h2>Where procurement fits</h2>
+<p>Demand charges are part of the regulated delivery bill, so supplier competition does not change the tariff. What it does change is how your supply contract treats them: whether transmission and other delivery costs pass through at cost, how capacity is priced, and whether the contract&rsquo;s usage terms penalize the swings your operations create. Those terms are worth reading as closely as the rate. Our <a href="/demand-management">demand management overview</a> covers the operational side in more depth.</p>
+</article>
+<div class="article-foot"><a href="blog">&larr; All articles</a></div>
+<section class="cta-band"><div class="cta-band-inner"><div class="eyebrow eyebrow--inv"><span class="eyebrow-dot"></span>See your number</div><h2 class="cta-band-h">Find out what your business <em>should</em> be paying.</h2><div id="lead" data-quick-quote></div><p class="cta-foot">90+ suppliers &middot; No fees to your business &middot; Contracts structured to minimize cost</p></div></section>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="/" style="color: #fff;">
+          <span class="mark"><svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+          Power Done Right
+        </a>
+        <p style="color: var(--muted-on); margin-top: 14px; max-width: 30ch;">Independent commercial electricity broker. Fulfilled via the BOX network. All US deregulated markets.</p>
+        <a href="tel:+12144941627" style="color: var(--amber); font-family: var(--mono); font-size: 14px; font-weight: 700; margin-top: 12px; display:block;">(214) 494-1627</a>
+      </div>
+      <div><h4>Product</h4>
+        <ul>
+          <li><a href="/#dash">Portfolio review</a></li>
+          <li><a href="/#calc-preview">Savings calculator</a></li>
+          <li><a href="#lead">Send your bill</a></li>
+          <li><a href="/#how">How it works</a></li>
+        </ul>
+      </div>
+      <div><h4>Industries</h4>
+        <ul>
+          <li><a href="/industries/multifamily-property-management">Multifamily &amp; property mgmt</a></li>
+          <li><a href="/industries/restaurants">Restaurants</a></li>
+          <li><a href="/industries/medical-dental">Medical &amp; dental</a></li>
+          <li><a href="/industries/retail">Retail storefronts</a></li>
+          <li><a href="/#industries">All industries</a></li>
+        </ul>
+      </div>
+      <div><h4>Markets</h4>
+        <ul>
+          <li><a href="/electricity">Electricity</a></li>
+          <li><a href="/natural-gas">Natural gas</a></li>
+          <li><a href="/renewable-plans">Renewable plans</a></li>
+          <li><a href="/demand-management">Demand mgmt</a></li>
+        </ul>
+      </div>
+      <div><h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="https://portal.powerdoneright.com/crm/auth/login">Partner login</a></li>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/renewal-guide">Renewal guide</a></li>
+          <li><a href="/market-intel">Market intel</a></li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- Coverage by state (Batch C) -->
+  <div class="pdr-coverage" style="border-top:1px solid rgba(255,255,255,.08);margin-top:30px;padding-top:26px;">
+    <style>.pdr-coverage a{color:#9aa3b2;text-decoration:none;transition:color .15s ease}.pdr-coverage a:hover{color:#fff}</style>
+    <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:14px;">Coverage by state</div>
+    <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9aa3b2;margin-bottom:9px;">Commercial electricity</div>
+    <div style="display:flex;flex-wrap:wrap;gap:9px 18px;font-size:13.5px;margin-bottom:18px;"><a href="/electricity/texas">Texas</a><a href="/electricity/california">California</a><a href="/electricity/connecticut">Connecticut</a><a href="/electricity/delaware">Delaware</a><a href="/electricity/illinois">Illinois</a><a href="/electricity/maine">Maine</a><a href="/electricity/maryland">Maryland</a><a href="/electricity/massachusetts">Massachusetts</a><a href="/electricity/new-hampshire">New Hampshire</a><a href="/electricity/new-jersey">New Jersey</a><a href="/electricity/new-york">New York</a><a href="/electricity/ohio">Ohio</a><a href="/electricity/pennsylvania">Pennsylvania</a><a href="/electricity/rhode-island">Rhode Island</a><a href="/electricity/washington-dc">Washington, D.C.</a></div>
+    <div style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9aa3b2;margin-bottom:9px;">Commercial natural gas</div>
+    <div style="display:flex;flex-wrap:wrap;gap:9px 18px;font-size:13.5px;"><a href="/natural-gas/arizona">Arizona</a><a href="/natural-gas/colorado">Colorado</a><a href="/natural-gas/florida">Florida</a><a href="/natural-gas/indiana">Indiana</a><a href="/natural-gas/kentucky">Kentucky</a><a href="/natural-gas/michigan">Michigan</a><a href="/natural-gas/virginia">Virginia</a></div>
+  </div>
+    <div class="foot-bottom">
+      <span>© 2026 Power Done Right LLC · Fulfillment partner: Broker Online Exchange (BOX)</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/disclosures">Disclosures</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){ document.getElementById('footer-year').textContent=new Date().getFullYear();
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);e.target.classList.add('is-visible');});},{threshold:.1,rootMargin:'0px 0px -6% 0px'}); document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);}); } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('is-visible');}); }
+})();
+</script>
+</body>
+</html>
