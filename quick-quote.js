@@ -76,6 +76,10 @@
     box.className = 'qq';
     box.innerHTML = html(el.getAttribute('data-heading') || 'Get your written rate comparison.');
     el.appendChild(box);
+    // Lighter first steps (renewal reminder / call back) — rendered by pdr-light-ask.js.
+    var light = document.createElement('div');
+    light.setAttribute('data-light-ask', '');
+    el.appendChild(light);
 
     var field = function (n) { return box.querySelector('[name="' + n + '"]'); };
     var errEl = box.querySelector('.qq-err');
@@ -177,6 +181,12 @@
     style.textContent = CSS;
     document.head.appendChild(style);
     els.forEach(mount);
+    if (window.PDRLead) window.PDRLead.init();
+    else {
+      var sc = document.createElement('script');
+      sc.src = '/pdr-light-ask.js?v=1';
+      document.head.appendChild(sc);
+    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
