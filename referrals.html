@@ -295,6 +295,8 @@
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var v = function (id) { return $(id).value.trim(); };
+  // "|" separates fields in the notes; newlines would break the one-line format.
+  var clean = function (id) { return v(id).replace(/[|\r\n]+/g, ' ').trim(); };
   var box = $('ref-form'), err = box.querySelector('.err'), btn = $('rf-send');
   btn.addEventListener('click', async function () {
     if (!v('rf-name') || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('rf-email')) || !v('rf-client')) {
@@ -306,9 +308,10 @@
       await window.PDRLead.submit({
         name: v('rf-name'), email: v('rf-email'), phone: v('rf-phone') || null,
         property_name: v('rf-client'),
-        notes: '[Referral] From ' + v('rf-name') + (v('rf-firm') ? ' at ' + v('rf-firm') : '') +
-          '. Client: ' + v('rf-client') + '. Client contact: ' + (v('rf-contact') || 'not given') +
-          '. Note: ' + (v('rf-note') || 'none') + '. NOTE: name/email on this lead are the REFERRER, not the client.',
+        // Parsed by send-notification (processPdrReferral): keep the "Key: value | " format.
+        notes: '[Referral] Referred by: ' + clean('rf-name') + ' | Firm: ' + clean('rf-firm') +
+          ' | Client: ' + clean('rf-client') + ' | Client contact: ' + clean('rf-contact') +
+          ' | Note: ' + clean('rf-note'),
       }, 'referral');
       box.querySelector('.ref-body').hidden = true;
       box.querySelector('.ref-done').hidden = false;
