@@ -809,28 +809,6 @@
   @media (max-width: 480px){ .tm{ gap:3px; } .tm span{ border-radius:3px; } }
 
 /* ===== Homepage redesign (Elite structure, PDR system) — hx- prefix ===== */
-.hx-util{ background: var(--navy); color: var(--muted-on); font-size: 12.5px; }
-.hx-util .wrap{ display:flex; justify-content:space-between; align-items:center; gap:16px; height:34px; }
-.hx-util a{ color:#fff; text-decoration:none; }
-.hx-util .pill-state{ display:inline-flex; background: rgba(30,138,95,.18); color:#7fd6ad; }
-.hx-util .pill-state .dot{ background:#7fd6ad; }
-@media (max-width: 640px){ .hx-util .hx-util-r{ display:none; } }
-
-.topnav .nav-links{ gap: 4px; align-items:center; }
-.hx-dd{ position: relative; }
-.hx-dd > button{ background:none; border:0; font: inherit; font-size:14px; font-weight:500; color: var(--muted); padding: 10px 10px; display:inline-flex; align-items:center; gap:5px; cursor:pointer; border-radius:8px; }
-.hx-dd > button:hover, .hx-dd:focus-within > button, .hx-dd.open > button{ color: var(--ink); background: var(--paper-2); }
-.hx-dd > button svg{ width:10px; height:10px; transition: transform .15s ease; }
-.hx-dd.open > button svg{ transform: rotate(180deg); }
-.hx-menu{ display:none; position:absolute; top: calc(100% + 6px); left: 0; min-width: 250px; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow: 0 18px 40px -20px rgba(20,33,61,.35); padding:8px; z-index: 50; }
-.hx-menu.wide{ min-width: 460px; display:none; grid-template-columns: 1fr 1fr; }
-.hx-dd:hover > .hx-menu, .hx-dd:focus-within > .hx-menu, .hx-dd.open > .hx-menu{ display:block; }
-.hx-dd:hover > .hx-menu.wide, .hx-dd:focus-within > .hx-menu.wide, .hx-dd.open > .hx-menu.wide{ display:grid; }
-.hx-menu a{ display:block; padding: 9px 12px; border-radius:8px; font-size:14px; color: var(--ink) !important; }
-.hx-menu a:hover{ background: var(--paper-2); }
-.hx-menu .hx-mh{ font-size:12px; font-weight:700; color: var(--muted); padding: 8px 12px 4px; }
-@media (max-width: 1080px){ .hx-dd > button{ padding: 10px 7px; } }
-.mob-menu .hx-mh{ font-size:12px; font-weight:700; color: var(--ink); padding: 14px 0 2px; }
 
 .hx-hero{ position:relative; color:#fff; background: var(--navy) url('/img/hero-dallas.jpg') center 40%/cover no-repeat; }
 .hx-hero::before{ content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(20,33,61,.94) 0%, rgba(20,33,61,.82) 45%, rgba(20,33,61,.45) 100%); }
@@ -925,7 +903,7 @@
 @media (max-width: 860px){ .hx-guides{ grid-template-columns: 1fr; } }
 </style>
 <script src="/analytics-events.js" defer></script>
-<link rel="stylesheet" href="/pdr.css?v=2">
+<link rel="stylesheet" href="/pdr.css?v=3">
 </head>
 <body>
 
@@ -943,9 +921,9 @@
       Power Done Right
     </a>
     <nav class="nav-links" aria-label="Main">
-      <div class="hx-dd"><button type="button" aria-expanded="false">Services <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/electricity">Commercial electricity</a><a href="/natural-gas">Commercial natural gas</a><a href="/#services-multi">Multi-location review</a><a href="/blog-fixed-vs-index-rates">Fixed vs. index rates</a><a href="/renewable-plans">Renewable plans</a><a href="/demand-management">Demand management</a><a href="/sample-comparison">Sample comparison</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Services <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/services">All services</a><a href="/electricity">Commercial electricity</a><a href="/natural-gas">Commercial natural gas</a><a href="/#services-multi">Multi-location review</a><a href="/blog-fixed-vs-index-rates">Fixed vs. index rates</a><a href="/renewable-plans">Renewable plans</a><a href="/demand-management">Demand management</a><a href="/sample-comparison">Sample comparison</a></div></div>
       <div class="hx-dd"><button type="button" aria-expanded="false">Industries <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu wide"><a href="/industries/multifamily-property-management">Multifamily &amp; property management</a><a href="/industries/restaurants">Restaurants &amp; food service</a><a href="/industries/retail">Retail storefronts</a><a href="/industries/medical-dental">Medical &amp; dental offices</a><a href="/industries/light-industrial-warehousing">Light industrial &amp; warehousing</a><a href="/industries/gyms-fitness">Gyms &amp; fitness studios</a><a href="/industries/professional-offices">Professional offices</a><a href="/industries/convenience-stores">Convenience stores</a><a href="/industries/self-storage">Self-storage</a><a href="/industries/salons-spas-dry-cleaners">Salons, spas &amp; dry cleaners</a><a href="/industries/auto-repair-tire-shops">Auto repair &amp; tire shops</a><a href="/industries/daycare-early-learning">Daycare &amp; early learning</a><a href="/industries/churches-religious-facilities">Churches &amp; religious facilities</a></div></div>
-      <div class="hx-dd"><button type="button" aria-expanded="false">Markets <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/electricity/texas">Texas</a><a href="/electricity/texas/dallas">Dallas</a><a href="/electricity/texas/houston">Houston</a><a href="/electricity">All electricity markets</a><a href="/natural-gas">All natural gas markets</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Markets <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/electricity/texas">Texas</a><a href="/electricity/texas/dallas">Dallas</a><a href="/electricity/texas/plano">Plano</a><a href="/electricity/texas/fort-worth">Fort Worth</a><a href="/electricity/texas/houston">Houston</a><a href="/electricity">All electricity markets</a><a href="/natural-gas">All natural gas markets</a></div></div>
       <div class="hx-dd"><button type="button" aria-expanded="false">Resources <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/blog">Blog</a><a href="/renewal-guide">Renewal guide</a><a href="/how-much-electricity-does-my-business-use">How much electricity does my business use?</a><a href="/market-intel">Market intel</a><a href="/faq">FAQ</a></div></div>
       <div class="hx-dd"><button type="button" aria-expanded="false">Company <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/about">About</a><a href="/referrals">Refer a client</a><a href="/contact">Contact</a><a href="https://portal.powerdoneright.com/crm/auth/login">Partner login</a></div></div>
     </nav>
@@ -963,7 +941,7 @@
 
 <!-- Mobile menu (shown below the header) -->
 <nav class="mob-menu" id="mobMenu">
-  <div class="hx-mh">Services</div><a href="/electricity" onclick="closeMobMenu()">Commercial electricity</a><a href="/natural-gas" onclick="closeMobMenu()">Commercial natural gas</a><a href="/#services-multi" onclick="closeMobMenu()">Multi-location review</a>
+  <div class="hx-mh">Services</div><a href="/services" onclick="closeMobMenu()">All services</a><a href="/electricity" onclick="closeMobMenu()">Commercial electricity</a><a href="/natural-gas" onclick="closeMobMenu()">Commercial natural gas</a><a href="/#services-multi" onclick="closeMobMenu()">Multi-location review</a>
   <div class="hx-mh">Industries</div><a href="/#industries" onclick="closeMobMenu()">All industries</a>
   <div class="hx-mh">Markets</div><a href="/electricity" onclick="closeMobMenu()">All electricity markets</a><a href="/natural-gas" onclick="closeMobMenu()">All natural gas markets</a><a href="/electricity/texas" onclick="closeMobMenu()">Texas</a>
   <div class="hx-mh">Resources</div><a href="/blog" onclick="closeMobMenu()">Blog</a><a href="/renewal-guide" onclick="closeMobMenu()">Renewal guide</a><a href="/how-much-electricity-does-my-business-use" onclick="closeMobMenu()">How much electricity does my business use?</a><a href="/market-intel" onclick="closeMobMenu()">Market intel</a><a href="/faq" onclick="closeMobMenu()">FAQ</a>
@@ -971,17 +949,7 @@
   <a href="tel:+12144941627">(214) 494-1627</a>
   <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Get a free quote</a>
 </nav>
-<script src="/pdr-nav.js?v=1" defer></script>
-<script>
-/* Header dropdowns: hover/focus open them on desktop (CSS); a click toggles for touch. */
-document.addEventListener('click', function (e) {
-  var b = e.target.closest('.hx-dd > button');
-  document.querySelectorAll('.hx-dd.open').forEach(function (d) {
-    if (!b || d !== b.parentNode) { d.classList.remove('open'); d.firstElementChild.setAttribute('aria-expanded', 'false'); }
-  });
-  if (b) { var o = b.parentNode.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); }
-});
-</script>
+<script src="/pdr-nav.js?v=2" defer></script>
 
 <!-- ============ HERO ============ -->
 <section class="hx-hero" id="top">
@@ -1218,7 +1186,7 @@ document.addEventListener('click', function (e) {
       <h2>Texas areas we serve</h2>
       <p>Texas is home. Commercial electricity in the ERCOT market, city by city.</p>
     </div>
-    <div class="hx-tiles"><a href="/electricity/texas/dallas">Dallas</a><a href="/electricity/texas/fort-worth">Fort Worth</a><a href="/electricity/texas/houston">Houston</a><a href="/electricity/texas/corpus-christi">Corpus Christi</a><a href="/electricity/texas/lubbock">Lubbock</a><a href="/electricity/texas">All of Texas</a></div>
+    <div class="hx-tiles"><a href="/electricity/texas/dallas">Dallas</a><a href="/electricity/texas/fort-worth">Fort Worth</a><a href="/electricity/texas/plano">Plano</a><a href="/electricity/texas/frisco">Frisco</a><a href="/electricity/texas/mckinney">McKinney</a><a href="/electricity/texas/allen">Allen</a><a href="/electricity/texas/richardson">Richardson</a><a href="/electricity/texas/irving">Irving</a><a href="/electricity/texas/arlington">Arlington</a><a href="/electricity/texas/grand-prairie">Grand Prairie</a><a href="/electricity/texas/carrollton">Carrollton</a><a href="/electricity/texas/mesquite">Mesquite</a><a href="/electricity/texas/houston">Houston</a><a href="/electricity/texas/corpus-christi">Corpus Christi</a><a href="/electricity/texas/lubbock">Lubbock</a><a href="/electricity/texas">All of Texas</a></div>
   </div>
 </section>
 
@@ -1495,8 +1463,8 @@ document.addEventListener('click', function (e) {
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="/#services-multi">Multi-location review</a></li>
-          <li><a href="#lead">Get a free quote</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/quote">Get a free quote</a></li>
           <li><a href="/#how">How it works</a></li>
           <li><a href="/sample-comparison">Sample comparison</a></li>
         </ul>

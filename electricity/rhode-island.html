@@ -401,11 +401,15 @@
   .step-ic{display:block;color:var(--amber);margin-bottom:12px}.step-ic svg{width:28px;height:28px}
 </style>
 <script src="/analytics-events.js" defer></script>
-<link rel="stylesheet" href="/pdr.css?v=2">
+<link rel="stylesheet" href="/pdr.css?v=3">
 </head>
 <body>
 
 <!-- ============ TOP NAV ============ -->
+<div class="hx-util"><div class="wrap">
+  <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
+  <span class="hx-util-r"><a href="/referrals">Refer a client</a> &nbsp;·&nbsp; <a href="tel:+12144941627">(214) 494-1627</a></span>
+</div></div>
 <header class="topnav">
   <div class="wrap row">
     <a class="brand" href="/">
@@ -414,17 +418,17 @@
       </span>
       Power Done Right
     </a>
-    <nav class="nav-links">
-      <a href="/#how">How it works</a>
-      <a href="/#industries">Industries</a>
-      <a href="/#suppliers">Suppliers</a>
-      <a href="/#calc-preview">Calculator</a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="hx-dd"><button type="button" aria-expanded="false">Services <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/services">All services</a><a href="/electricity">Commercial electricity</a><a href="/natural-gas">Commercial natural gas</a><a href="/#services-multi">Multi-location review</a><a href="/blog-fixed-vs-index-rates">Fixed vs. index rates</a><a href="/renewable-plans">Renewable plans</a><a href="/demand-management">Demand management</a><a href="/sample-comparison">Sample comparison</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Industries <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu wide"><a href="/industries/multifamily-property-management">Multifamily &amp; property management</a><a href="/industries/restaurants">Restaurants &amp; food service</a><a href="/industries/retail">Retail storefronts</a><a href="/industries/medical-dental">Medical &amp; dental offices</a><a href="/industries/light-industrial-warehousing">Light industrial &amp; warehousing</a><a href="/industries/gyms-fitness">Gyms &amp; fitness studios</a><a href="/industries/professional-offices">Professional offices</a><a href="/industries/convenience-stores">Convenience stores</a><a href="/industries/self-storage">Self-storage</a><a href="/industries/salons-spas-dry-cleaners">Salons, spas &amp; dry cleaners</a><a href="/industries/auto-repair-tire-shops">Auto repair &amp; tire shops</a><a href="/industries/daycare-early-learning">Daycare &amp; early learning</a><a href="/industries/churches-religious-facilities">Churches &amp; religious facilities</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Markets <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/electricity/texas">Texas</a><a href="/electricity/texas/dallas">Dallas</a><a href="/electricity/texas/plano">Plano</a><a href="/electricity/texas/fort-worth">Fort Worth</a><a href="/electricity/texas/houston">Houston</a><a href="/electricity">All electricity markets</a><a href="/natural-gas">All natural gas markets</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Resources <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/blog">Blog</a><a href="/renewal-guide">Renewal guide</a><a href="/how-much-electricity-does-my-business-use">How much electricity does my business use?</a><a href="/market-intel">Market intel</a><a href="/faq">FAQ</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Company <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/about">About</a><a href="/referrals">Refer a client</a><a href="/contact">Contact</a><a href="https://portal.powerdoneright.com/crm/auth/login">Partner login</a></div></div>
     </nav>
     <div class="grow"></div>
-    <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
     <div class="actions">
       <a class="btn btn-ghost btn-sm" href="tel:+12144941627">(214) 494-1627</a>
-      <a class="btn btn-primary btn-sm" href="#lead">Send your bill</a>
+      <a class="btn btn-primary btn-sm" href="#lead">Get a free quote</a>
     </div>
     <button class="nav-ham" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <svg id="hamIcon" viewBox="0 0 20 20" width="22" height="22" fill="currentColor"><path fill-rule="evenodd" d="M3 5h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2z" clip-rule="evenodd"/></svg>
@@ -435,14 +439,15 @@
 
 <!-- Mobile menu (shown below the header) -->
 <nav class="mob-menu" id="mobMenu">
-  <a href="/#how"          onclick="closeMobMenu()">How it works</a>
-  <a href="/#industries"   onclick="closeMobMenu()">Industries</a>
-  <a href="/#suppliers"    onclick="closeMobMenu()">Suppliers</a>
-  <a href="/#calc-preview" onclick="closeMobMenu()">Calculator</a>
+  <div class="hx-mh">Services</div><a href="/services" onclick="closeMobMenu()">All services</a><a href="/electricity" onclick="closeMobMenu()">Commercial electricity</a><a href="/natural-gas" onclick="closeMobMenu()">Commercial natural gas</a><a href="/#services-multi" onclick="closeMobMenu()">Multi-location review</a>
+  <div class="hx-mh">Industries</div><a href="/#industries" onclick="closeMobMenu()">All industries</a>
+  <div class="hx-mh">Markets</div><a href="/electricity" onclick="closeMobMenu()">All electricity markets</a><a href="/natural-gas" onclick="closeMobMenu()">All natural gas markets</a><a href="/electricity/texas" onclick="closeMobMenu()">Texas</a>
+  <div class="hx-mh">Resources</div><a href="/blog" onclick="closeMobMenu()">Blog</a><a href="/renewal-guide" onclick="closeMobMenu()">Renewal guide</a><a href="/how-much-electricity-does-my-business-use" onclick="closeMobMenu()">How much electricity does my business use?</a><a href="/market-intel" onclick="closeMobMenu()">Market intel</a><a href="/faq" onclick="closeMobMenu()">FAQ</a>
+  <div class="hx-mh">Company</div><a href="/about" onclick="closeMobMenu()">About</a><a href="/referrals" onclick="closeMobMenu()">Refer a client</a><a href="/contact" onclick="closeMobMenu()">Contact</a>
   <a href="tel:+12144941627">(214) 494-1627</a>
-  <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Send your bill</a>
+  <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Get a free quote</a>
 </nav>
-<script src="/pdr-nav.js?v=1" defer></script>
+<script src="/pdr-nav.js?v=2" defer></script>
 
 
 <!-- ============ HERO ============ -->
@@ -460,7 +465,7 @@
       </h1>
       <p class="lede">Rhode Island businesses can choose their electricity supplier. Supply rates move with the ISO-NE wholesale market and the terms you sign — so the only number that matters is the one suppliers quote for your actual usage. Send one recent bill and we put 90+ suppliers in competition for your account.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#lead">Send your bill</a>
+        <a class="btn btn-primary" href="#lead">Get a free quote</a>
         <a class="btn btn-ghost on-dark" href="tel:+12144941627">(214) 494-1627</a>
       </div>
       <div class="hero-trust">
@@ -820,7 +825,7 @@
         <span class="eyebrow">Start saving</span>
         <h2 style="margin-top: 12px;">See what a competitive Rhode Island rate does for your <span class="ed">bottom line.</span></h2>
         <div class="actions">
-          <a class="btn btn-dark" href="#lead">Send your bill</a>
+          <a class="btn btn-dark" href="#lead">Get a free quote</a>
           <a class="btn btn-ghost" href="tel:+12144941627">(214) 494-1627</a>
         </div>
         <p class="foot">ISO-NE · Rhode Island Energy · No fees to your business</p>
@@ -845,9 +850,8 @@
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="/#dash">Portfolio review</a></li>
-          <li><a href="/#calc-preview">Savings calculator</a></li>
-          <li><a href="#lead">Send your bill</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/quote">Get a free quote</a></li>
           <li><a href="/#how">How it works</a></li>
           <li><a href="/sample-comparison">Sample comparison</a></li>
         </ul>

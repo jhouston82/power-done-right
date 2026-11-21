@@ -22,3 +22,12 @@ function closeMobMenu(){
   if (ham) ham.style.display = '';
   if (close) close.style.display = 'none';
 }
+
+/* Header dropdowns: hover/focus open them on desktop (CSS); a click toggles for touch. */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.hx-dd > button');
+  document.querySelectorAll('.hx-dd.open').forEach(function (d) {
+    if (!b || d !== b.parentNode) { d.classList.remove('open'); d.firstElementChild.setAttribute('aria-expanded', 'false'); }
+  });
+  if (b) { var o = b.parentNode.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); }
+});
