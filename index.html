@@ -807,6 +807,122 @@
   .tm-leg{ display:flex; gap:22px; margin-top:16px; font-size:14px; color:var(--muted); }
   .tm-leg i{ display:inline-block; width:14px; height:14px; border-radius:3px; margin-right:7px; vertical-align:-2px; }
   @media (max-width: 480px){ .tm{ gap:3px; } .tm span{ border-radius:3px; } }
+
+/* ===== Homepage redesign (Elite structure, PDR system) — hx- prefix ===== */
+.hx-util{ background: var(--navy); color: var(--muted-on); font-size: 12.5px; }
+.hx-util .wrap{ display:flex; justify-content:space-between; align-items:center; gap:16px; height:34px; }
+.hx-util a{ color:#fff; text-decoration:none; }
+.hx-util .pill-state{ display:inline-flex; background: rgba(30,138,95,.18); color:#7fd6ad; }
+.hx-util .pill-state .dot{ background:#7fd6ad; }
+@media (max-width: 640px){ .hx-util .hx-util-r{ display:none; } }
+
+.topnav .nav-links{ gap: 4px; align-items:center; }
+.hx-dd{ position: relative; }
+.hx-dd > button{ background:none; border:0; font: inherit; font-size:14px; font-weight:500; color: var(--muted); padding: 10px 10px; display:inline-flex; align-items:center; gap:5px; cursor:pointer; border-radius:8px; }
+.hx-dd > button:hover, .hx-dd:focus-within > button, .hx-dd.open > button{ color: var(--ink); background: var(--paper-2); }
+.hx-dd > button svg{ width:10px; height:10px; transition: transform .15s ease; }
+.hx-dd.open > button svg{ transform: rotate(180deg); }
+.hx-menu{ display:none; position:absolute; top: calc(100% + 6px); left: 0; min-width: 250px; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow: 0 18px 40px -20px rgba(20,33,61,.35); padding:8px; z-index: 50; }
+.hx-menu.wide{ min-width: 460px; display:none; grid-template-columns: 1fr 1fr; }
+.hx-dd:hover > .hx-menu, .hx-dd:focus-within > .hx-menu, .hx-dd.open > .hx-menu{ display:block; }
+.hx-dd:hover > .hx-menu.wide, .hx-dd:focus-within > .hx-menu.wide, .hx-dd.open > .hx-menu.wide{ display:grid; }
+.hx-menu a{ display:block; padding: 9px 12px; border-radius:8px; font-size:14px; color: var(--ink) !important; }
+.hx-menu a:hover{ background: var(--paper-2); }
+.hx-menu .hx-mh{ font-size:12px; font-weight:700; color: var(--muted); padding: 8px 12px 4px; }
+@media (max-width: 1080px){ .hx-dd > button{ padding: 10px 7px; } }
+.mob-menu .hx-mh{ font-size:12px; font-weight:700; color: var(--ink); padding: 14px 0 2px; }
+
+.hx-hero{ position:relative; color:#fff; background: var(--navy) url('/img/hero-dallas.jpg') center 40%/cover no-repeat; }
+.hx-hero::before{ content:""; position:absolute; inset:0; background: linear-gradient(90deg, rgba(20,33,61,.94) 0%, rgba(20,33,61,.82) 45%, rgba(20,33,61,.45) 100%); }
+.hx-hero .wrap{ position:relative; padding-top: clamp(72px, 11vw, 140px); padding-bottom: clamp(72px, 11vw, 140px); }
+.hx-hero .eyebrow{ color: var(--amber-2); }
+.hx-hero h1{ color:#fff; font-size: clamp(44px, 6vw, 78px); max-width: 17ch; margin: 18px 0 0; }
+.hx-hero h1 span{ color: var(--amber); display:block; }
+.hx-hero p{ color: rgba(255,255,255,.86); font-size: clamp(17px, 1.6vw, 19px); line-height:1.55; max-width: 54ch; margin: 22px 0 0; }
+.hx-hero .hx-actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 32px; }
+.hx-btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; padding: 15px 24px; border-radius: 8px; font-weight: 700; font-size: 16px; text-decoration:none; white-space:nowrap; }
+.hx-btn-amber{ background: var(--amber); color: var(--navy); }
+.hx-btn-amber:hover{ background: var(--amber-2); }
+.hx-btn-line{ border:1px solid rgba(255,255,255,.4); color:#fff; }
+.hx-btn-line:hover{ background: rgba(255,255,255,.08); }
+.hx-btn-navy{ background: var(--navy); color:#fff; }
+.hx-btn-navy:hover{ background: var(--navy-2); }
+.hx-hero small{ display:block; margin-top: 18px; color: rgba(255,255,255,.66); font-size: 13.5px; }
+
+.hx-stats{ background: var(--navy); color:#fff; border-top: 1px solid rgba(255,255,255,.08); }
+.hx-stats .wrap{ display:grid; grid-template-columns: repeat(4, 1fr); }
+.hx-stat{ padding: 34px 18px; text-align:center; border-right: 1px solid rgba(255,255,255,.1); }
+.hx-stat:last-child{ border-right:0; }
+.hx-stat b{ display:block; font-weight:800; font-stretch:72%; font-size: clamp(40px, 5vw, 58px); line-height:1; color: var(--amber); }
+.hx-stat span{ display:block; margin-top: 10px; font-size: 14px; color: var(--muted-on); }
+.hx-stats-note{ text-align:center; font-size: 12.5px; color: var(--muted-on); padding: 0 20px 22px; }
+@media (max-width: 760px){ .hx-stats .wrap{ grid-template-columns: 1fr 1fr; } .hx-stat:nth-child(2){ border-right:0; } .hx-stat:nth-child(-n+2){ border-bottom:1px solid rgba(255,255,255,.1); } }
+
+.hx-sec{ padding: clamp(64px, 8vw, 104px) 0; }
+.hx-sec.alt{ background: var(--paper-2); }
+.hx-head{ text-align:center; max-width: 720px; margin: 0 auto 44px; }
+.hx-head h2{ font-size: clamp(34px, 4.4vw, 54px); margin: 14px 0 0; }
+.hx-head p{ color: var(--muted); font-size: 17px; line-height:1.55; margin: 16px auto 0; max-width: 60ch; }
+
+.hx-why{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.hx-why > div{ text-align:center; padding: 8px 6px; }
+.hx-why svg{ width: 40px; height: 40px; color: var(--navy); }
+.hx-why h3{ font-size: 19px; margin: 16px 0 8px; }
+.hx-why p{ font-size: 15px; color: var(--muted); line-height: 1.55; margin:0; }
+.hx-why a{ color: var(--navy); text-decoration: underline; text-decoration-color: var(--amber); text-underline-offset: 3px; }
+@media (max-width: 960px){ .hx-why{ grid-template-columns: 1fr 1fr; gap: 32px 20px; } }
+@media (max-width: 560px){ .hx-why{ grid-template-columns: 1fr; } }
+
+.hx-cmp{ max-width: 900px; margin: 0 auto; background:#fff; border:1px solid var(--line); border-radius: 16px; overflow:hidden; }
+.hx-cmp table{ width:100%; border-collapse: collapse; font-size: 15px; }
+.hx-cmp th{ background: var(--navy); color:#fff; font-weight:700; padding: 18px 16px; text-align:center; font-size: 15px; }
+.hx-cmp th:first-child{ text-align:left; }
+.hx-cmp th.us{ background: var(--navy-2); border-top: 4px solid var(--amber); }
+.hx-cmp th small{ display:block; font-weight:500; color: var(--muted-on); font-size: 12.5px; margin-top: 3px; }
+.hx-cmp td{ padding: 15px 16px; border-top: 1px solid var(--line); text-align:center; color: var(--muted); }
+.hx-cmp td:first-child{ text-align:left; color: var(--ink); font-weight:600; }
+.hx-cmp td.us{ background: #FFFBEB; color: var(--ink); font-weight:600; }
+.hx-cmp .ck{ color: var(--green); font-weight:800; font-size: 18px; }
+.hx-cmp .no{ color: #A9B3C2; }
+.hx-note{ text-align:center; font-size: 12.5px; color: var(--muted); margin-top: 14px; }
+@media (max-width: 640px){ .hx-cmp table{ font-size: 13.5px; } .hx-cmp th, .hx-cmp td{ padding: 12px 9px; } .hx-cmp th{ font-size: 13.5px; } .hx-cmp th small{ font-size: 11.5px; } }
+
+.hx-svc{ display:grid; grid-template-columns: 1fr 1.1fr; gap: clamp(28px, 5vw, 64px); align-items:center; }
+.hx-svc + .hx-svc{ margin-top: clamp(48px, 6vw, 80px); }
+.hx-svc.flip > .hx-svc-img{ order: 2; }
+.hx-svc-img{ border-radius: 16px; overflow:hidden; aspect-ratio: 16/11; background: var(--paper-2); box-shadow: 0 24px 50px -30px rgba(20,33,61,.45); }
+.hx-svc-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hx-svc h3{ font-size: clamp(28px, 3vw, 38px); font-weight:800; font-stretch:72%; margin: 12px 0 14px; }
+.hx-svc p{ color: var(--muted); font-size: 16.5px; line-height: 1.65; margin: 0; }
+.hx-svc ul{ margin: 16px 0 0; padding:0; list-style:none; display:grid; gap:8px; }
+.hx-svc li{ padding-left: 22px; position:relative; color: var(--ink); font-size: 15.5px; }
+.hx-svc li::before{ content:""; position:absolute; left:0; top: 8px; width: 10px; height: 10px; border-radius: 2px; background: var(--amber); }
+.hx-svc .hx-btn{ margin-top: 24px; }
+@media (max-width: 860px){ .hx-svc{ grid-template-columns: 1fr; } .hx-svc.flip > .hx-svc-img{ order: 0; } }
+
+.hx-tiles{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.hx-tiles a{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding: 18px 18px; background: #fff; border:1px solid var(--line); border-radius: 12px; font-weight: 600; font-size: 15px; color: var(--ink); text-decoration:none; }
+.hx-sec.alt .hx-tiles a{ background:#fff; }
+.hx-sec:not(.alt) .hx-tiles a{ background: var(--paper-2); border-color: transparent; }
+.hx-tiles a:hover{ border-color: var(--navy); }
+.hx-tiles a::after{ content:"→"; color: var(--amber); font-weight:700; }
+@media (max-width: 960px){ .hx-tiles{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px){ .hx-tiles{ grid-template-columns: 1fr; } }
+.hx-more{ text-align:center; margin-top: 22px; }
+.hx-more a{ color: var(--navy); font-weight:600; text-decoration: underline; text-decoration-color: var(--amber); text-underline-offset: 3px; }
+
+.hx-recv{ display:grid; grid-template-columns: 1fr 1.05fr; gap: clamp(28px, 5vw, 64px); align-items:center; }
+.hx-recv h2{ font-size: clamp(34px, 4.4vw, 54px); margin: 14px 0 0; }
+.hx-recv p{ color: var(--muted); font-size: 17px; line-height: 1.6; margin: 16px 0 0; }
+@media (max-width: 860px){ .hx-recv{ grid-template-columns: 1fr; } }
+
+.hx-guides{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.hx-guide{ background:#fff; border:1px solid var(--line); border-radius: 16px; padding: 26px; }
+.hx-guide h3{ font-size: 22px; margin: 0 0 8px; }
+.hx-guide p{ color: var(--muted); font-size: 15px; line-height: 1.55; margin: 0 0 16px; }
+.hx-guide a{ display:block; padding: 8px 0; border-top: 1px solid var(--line); color: var(--navy); font-weight: 600; font-size: 15px; text-decoration: none; }
+.hx-guide a:hover{ color: var(--ink); }
+@media (max-width: 860px){ .hx-guides{ grid-template-columns: 1fr; } }
 </style>
 <script src="/analytics-events.js" defer></script>
 <link rel="stylesheet" href="/pdr.css?v=2">
@@ -814,6 +930,10 @@
 <body>
 
 <!-- ============ TOP NAV ============ -->
+<div class="hx-util"><div class="wrap">
+  <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
+  <span class="hx-util-r"><a href="/referrals">Refer a client</a> &nbsp;·&nbsp; <a href="tel:+12144941627">(214) 494-1627</a></span>
+</div></div>
 <header class="topnav">
   <div class="wrap row">
     <a class="brand" href="/">
@@ -822,17 +942,17 @@
       </span>
       Power Done Right
     </a>
-    <nav class="nav-links">
-      <a href="/#how">How it works</a>
-      <a href="/#industries">Industries</a>
-      <a href="/#suppliers">Suppliers</a>
-      <a href="/#calc-preview">Calculator</a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="hx-dd"><button type="button" aria-expanded="false">Services <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/electricity">Commercial electricity</a><a href="/natural-gas">Commercial natural gas</a><a href="/#services-multi">Multi-location review</a><a href="/blog-fixed-vs-index-rates">Fixed vs. index rates</a><a href="/renewable-plans">Renewable plans</a><a href="/demand-management">Demand management</a><a href="/sample-comparison">Sample comparison</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Industries <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu wide"><a href="/industries/multifamily-property-management">Multifamily &amp; property management</a><a href="/industries/restaurants">Restaurants &amp; food service</a><a href="/industries/retail">Retail storefronts</a><a href="/industries/medical-dental">Medical &amp; dental offices</a><a href="/industries/light-industrial-warehousing">Light industrial &amp; warehousing</a><a href="/industries/gyms-fitness">Gyms &amp; fitness studios</a><a href="/industries/professional-offices">Professional offices</a><a href="/industries/convenience-stores">Convenience stores</a><a href="/industries/self-storage">Self-storage</a><a href="/industries/salons-spas-dry-cleaners">Salons, spas &amp; dry cleaners</a><a href="/industries/auto-repair-tire-shops">Auto repair &amp; tire shops</a><a href="/industries/daycare-early-learning">Daycare &amp; early learning</a><a href="/industries/churches-religious-facilities">Churches &amp; religious facilities</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Markets <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/electricity/texas">Texas</a><a href="/electricity/texas/dallas">Dallas</a><a href="/electricity/texas/houston">Houston</a><a href="/electricity">All electricity markets</a><a href="/natural-gas">All natural gas markets</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Resources <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/blog">Blog</a><a href="/renewal-guide">Renewal guide</a><a href="/how-much-electricity-does-my-business-use">How much electricity does my business use?</a><a href="/market-intel">Market intel</a><a href="/faq">FAQ</a></div></div>
+      <div class="hx-dd"><button type="button" aria-expanded="false">Company <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 3.5 5 6.5 8 3.5"/></svg></button><div class="hx-menu"><a href="/about">About</a><a href="/referrals">Refer a client</a><a href="/contact">Contact</a><a href="https://portal.powerdoneright.com/crm/auth/login">Partner login</a></div></div>
     </nav>
     <div class="grow"></div>
-    <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
     <div class="actions">
       <a class="btn btn-ghost btn-sm" href="tel:+12144941627">(214) 494-1627</a>
-      <a class="btn btn-primary btn-sm" href="#lead">Send your bill</a>
+      <a class="btn btn-primary btn-sm" href="#lead">Get a free quote</a>
     </div>
     <button class="nav-ham" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <svg id="hamIcon" viewBox="0 0 20 20" width="22" height="22" fill="currentColor"><path fill-rule="evenodd" d="M3 5h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2zm0 6h14a1 1 0 000-2H3a1 1 0 000 2z" clip-rule="evenodd"/></svg>
@@ -843,48 +963,163 @@
 
 <!-- Mobile menu (shown below the header) -->
 <nav class="mob-menu" id="mobMenu">
-  <a href="/#how"          onclick="closeMobMenu()">How it works</a>
-  <a href="/#industries"   onclick="closeMobMenu()">Industries</a>
-  <a href="/#suppliers"    onclick="closeMobMenu()">Suppliers</a>
-  <a href="/#calc-preview" onclick="closeMobMenu()">Calculator</a>
+  <div class="hx-mh">Services</div><a href="/electricity" onclick="closeMobMenu()">Commercial electricity</a><a href="/natural-gas" onclick="closeMobMenu()">Commercial natural gas</a><a href="/#services-multi" onclick="closeMobMenu()">Multi-location review</a>
+  <div class="hx-mh">Industries</div><a href="/#industries" onclick="closeMobMenu()">All industries</a>
+  <div class="hx-mh">Markets</div><a href="/electricity" onclick="closeMobMenu()">All electricity markets</a><a href="/natural-gas" onclick="closeMobMenu()">All natural gas markets</a><a href="/electricity/texas" onclick="closeMobMenu()">Texas</a>
+  <div class="hx-mh">Resources</div><a href="/blog" onclick="closeMobMenu()">Blog</a><a href="/renewal-guide" onclick="closeMobMenu()">Renewal guide</a><a href="/how-much-electricity-does-my-business-use" onclick="closeMobMenu()">How much electricity does my business use?</a><a href="/market-intel" onclick="closeMobMenu()">Market intel</a><a href="/faq" onclick="closeMobMenu()">FAQ</a>
+  <div class="hx-mh">Company</div><a href="/about" onclick="closeMobMenu()">About</a><a href="/referrals" onclick="closeMobMenu()">Refer a client</a><a href="/contact" onclick="closeMobMenu()">Contact</a>
   <a href="tel:+12144941627">(214) 494-1627</a>
-  <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Send your bill</a>
+  <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Get a free quote</a>
 </nav>
 <script src="/pdr-nav.js?v=1" defer></script>
-
+<script>
+/* Header dropdowns: hover/focus open them on desktop (CSS); a click toggles for touch. */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('.hx-dd > button');
+  document.querySelectorAll('.hx-dd.open').forEach(function (d) {
+    if (!b || d !== b.parentNode) { d.classList.remove('open'); d.firstElementChild.setAttribute('aria-expanded', 'false'); }
+  });
+  if (b) { var o = b.parentNode.classList.toggle('open'); b.setAttribute('aria-expanded', String(o)); }
+});
+</script>
 
 <!-- ============ HERO ============ -->
-<section class="hero" id="top">
+<section class="hx-hero" id="top">
   <div class="wrap">
-    <div class="hero-grid">
-      <div>
-        <span class="eyebrow">Commercial electricity broker, Texas-rooted and nationwide</span>
-        <h1 style="margin-top: 18px;">
-          Suppliers compete.
-          <span class="h1-second">We structure the contract.</span>
-        </h1>
-        <p class="lede hero-sub">
-          Send us one bill. We get the suppliers licensed in your area to compete for your business, then pick the contract — the type of price, how long it runs, and when it starts — that fits how your business actually uses power, so you pay less over the life of the contract. No fee to you.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#lead">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7-7 7 7"/></svg>
-            Send your bill
-          </a>
-          <a class="btn btn-ghost on-dark" href="#dash">Several locations? See the portfolio review</a>
-        </div>
-        <label class="drop-zone" id="dropZone" for="dropInput">
-          <span class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
-          </span>
-          <span>
-            <span class="ttl">Or drop your latest bill here</span>
-            <span class="meta">PDF or photo. We read your usage, rate, and contract end. Your bill stays confidential.</span>
-          </span>
-          <input type="file" id="dropInput" accept="application/pdf,image/*" hidden>
-        </label>
-      </div>
+    <span class="eyebrow">Commercial electricity &amp; natural gas broker · Texas-rooted, nationwide</span>
+    <h1>Suppliers compete. <span>We structure the contract.</span></h1>
+    <p>Send us one bill. We get the suppliers licensed in your area to compete for your business, then pick the contract — the type of price, how long it runs, and when it starts — that fits how your business actually uses power. No fee to you.</p>
+    <div class="hx-actions">
+      <a class="hx-btn hx-btn-amber" href="#lead">Get a free quote</a>
+      <a class="hx-btn hx-btn-line" href="tel:+12144941627">Call (214) 494-1627</a>
+    </div>
+    <small>No fee to your business · No obligation to switch</small>
+  </div>
+</section>
 
+<!-- ============ STATS ============ -->
+<section class="hx-stats" aria-label="At a glance">
+  <div class="wrap">
+    <div class="hx-stat"><b>90+</b><span>Suppliers in our network</span></div>
+    <div class="hx-stat"><b>15 / 7</b><span>Electricity / natural gas markets</span></div>
+    <div class="hx-stat"><b>$0</b><span>Fee to your business</span></div>
+    <div class="hx-stat"><b>10+</b><span>Years advising on electricity pricing</span></div>
+  </div>
+  <p class="hx-stats-note">Supplier access and licensing through the BOX network. Suppliers include Constellation, NRG / Direct Energy, AEP Energy, Engie, Shell Energy and TXU.</p>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="hx-sec">
+  <div class="wrap">
+    <div class="hx-head">
+      <span class="eyebrow">Why Power Done Right</span>
+      <h2>A better contract, not just a lower number.</h2>
+      <p>Competition gets you a good rate. How the contract is built decides what you actually pay over its life. We handle both.</p>
+    </div>
+    <div class="hx-why">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h3>Suppliers compete</h3><p>We put the suppliers licensed in your market against each other for your account — typically 8–12 of the 90+ in our network.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg><h3>Built around your usage</h3><p>Fixed, index, or block-and-index; one to three years; timed to your renewal. We pick what fits how you use power.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg><h3>Every offer in writing</h3><p>A side-by-side comparison with our recommendation — including when staying put is the better deal. <a href="/sample-comparison">See a sample</a></p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18M12 14v3l2 1"/></svg><h3>Renewals tracked</h3><p>We track every contract end date and reach out before your renewal window opens, so nothing rolls onto default pricing.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARE ============ -->
+<section class="hx-sec alt">
+  <div class="wrap">
+    <div class="hx-head">
+      <span class="eyebrow">Broker or supplier?</span>
+      <h2>Why not just call a supplier?</h2>
+      <p>You can. A supplier can only offer its own products. We bring you the market, then help you choose.</p>
+    </div>
+    <div class="hx-cmp">
+      <table>
+        <thead><tr><th scope="col">What you get</th><th scope="col" class="us">Power Done Right<small>Independent broker</small></th><th scope="col">Going direct<small>One supplier</small></th></tr></thead>
+        <tbody>
+          <tr><td>Offers from several competing suppliers</td><td class="us"><span class="ck">✓</span></td><td><span class="no">One supplier</span></td></tr>
+          <tr><td>A recommendation not tied to any one supplier</td><td class="us"><span class="ck">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>Price type, length and start date matched to your usage</td><td class="us"><span class="ck">✓</span></td><td>From that supplier's products</td></tr>
+          <tr><td>Fine print compared across offers</td><td class="us"><span class="ck">✓</span></td><td>One contract to read</td></tr>
+          <tr><td>Written side-by-side comparison</td><td class="us"><span class="ck">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>Contract end date tracked for you</td><td class="us"><span class="ck">✓</span></td><td>Varies by supplier</td></tr>
+          <tr><td>Fee to your business</td><td class="us">None</td><td>None</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hx-note">We are paid by the supplier you choose; the commission is disclosed in your contract. Supplier practices vary.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="hx-sec" id="services">
+  <div class="wrap">
+    <div class="hx-head">
+      <span class="eyebrow">What we do</span>
+      <h2>Energy procurement for your business</h2>
+    </div>
+
+    <div class="hx-svc">
+      <div class="hx-svc-img"><img src="/img/svc-electricity.jpg" alt="High-voltage transmission tower against an evening sky" loading="lazy" width="1200" height="800"></div>
+      <div>
+        <span class="eyebrow">Service</span>
+        <h3>Commercial electricity</h3>
+        <p>Supply contracts for offices, storefronts, restaurants, warehouses and multi-site operators in 15 deregulated electricity markets. We shop the supply side of your bill and settle how capacity and pass-through charges are handled in the contract.</p>
+        <ul><li>Fixed, index and block-and-index pricing</li><li>Terms timed to your renewal, not after it</li><li>Fine print read and compared for you</li></ul>
+        <a class="hx-btn hx-btn-navy" href="/electricity">Commercial electricity →</a>
+      </div>
+    </div>
+
+    <div class="hx-svc flip">
+      <div class="hx-svc-img"><img src="/img/svc-natural-gas.jpg" alt="Blue natural gas flame on a burner" loading="lazy" width="1200" height="800"></div>
+      <div>
+        <span class="eyebrow">Service</span>
+        <h3>Commercial natural gas</h3>
+        <p>Gas supply for kitchens, laundries, heating and light industry in the deregulated gas markets we serve. Offers are priced against your usage history and structured around how steady — or seasonal — your load is.</p>
+        <ul><li>Fixed and index gas supply</li><li>Who can choose a supplier, state by state</li><li>Renewal dates tracked alongside your electricity</li></ul>
+        <a class="hx-btn hx-btn-navy" href="/natural-gas">Commercial natural gas →</a>
+      </div>
+    </div>
+
+    <div class="hx-svc" id="services-multi">
+      <div class="hx-svc-img"><img src="/img/svc-multi-site.jpg" alt="An open sign hanging in a shop window" loading="lazy" width="1200" height="800"></div>
+      <div>
+        <span class="eyebrow">Service</span>
+        <h3>Multi-location review</h3>
+        <p>Operate several sites? Send us the bills. We benchmark supply cost across every meter, show which contracts are inside their renewal window, and line up end dates so your portfolio can be shopped as one account.</p>
+        <ul><li>Every site and end date in one written review</li><li>Competing offers on the sites worth shopping</li><li>Where staying put is better, we say so</li></ul>
+        <a class="hx-btn hx-btn-navy" href="#lead">Get a free quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES ============ -->
+<section class="hx-sec alt" id="industries">
+  <div class="wrap">
+    <div class="hx-head">
+      <span class="eyebrow">Industries we serve</span>
+      <h2>Built for the businesses in between</h2>
+      <p>Not residential. Not a 200-store national chain. The medium-usage commercial accounts that deserve real procurement attention.</p>
+    </div>
+    <div class="hx-tiles"><a href="/industries/multifamily-property-management">Multifamily &amp; property management</a><a href="/industries/restaurants">Restaurants &amp; food service</a><a href="/industries/retail">Retail storefronts</a><a href="/industries/medical-dental">Medical &amp; dental offices</a><a href="/industries/light-industrial-warehousing">Light industrial &amp; warehousing</a><a href="/industries/gyms-fitness">Gyms &amp; fitness studios</a><a href="/industries/professional-offices">Professional offices</a><a href="/industries/convenience-stores">Convenience stores</a><a href="/industries/self-storage">Self-storage</a><a href="/industries/salons-spas-dry-cleaners">Salons, spas &amp; dry cleaners</a><a href="/industries/auto-repair-tire-shops">Auto repair &amp; tire shops</a><a href="/industries/daycare-early-learning">Daycare &amp; early learning</a><a href="/industries/churches-religious-facilities">Churches &amp; religious facilities</a></div>
+    <p class="hx-more"><a href="/how-much-electricity-does-my-business-use">Not sure if that's you? See how much electricity your business uses</a></p>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU RECEIVE ============ -->
+<section class="hx-sec">
+  <div class="wrap">
+    <div class="hx-recv">
+      <div>
+        <span class="eyebrow">What you receive</span>
+        <h2>Every offer, side by side. Our recommendation, in writing.</h2>
+        <p>We weigh each offer by its expected cost over the whole contract, not the headline rate — then tell you plainly which one we'd sign, and why.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:26px;">
+          <a class="hx-btn hx-btn-navy" href="/sample-comparison">See a sample comparison</a>
+          <a class="hx-btn hx-btn-amber" href="#lead">Get a free quote</a>
+        </div>
+      </div>
       <figure class="board" aria-label="Illustration of how we compare supplier offers, with the recommended structure highlighted">
         <div class="board-head"><strong>How we compare offers</strong><span>Illustration</span></div>
         <ol class="board-rows">
@@ -896,142 +1131,6 @@
         </ol>
         <figcaption>We weigh each offer by its expected cost over the contract's life, not the headline rate. Shorter bar = lower expected cost. You receive a written comparison of every offer, with our recommendation. <a href="/sample-comparison" style="text-decoration:underline;color:inherit;">See a sample</a></figcaption>
       </figure>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ LOGO STRIP ============ -->
-<section class="logos">
-  <div class="wrap">
-    <div style="display:flex; justify-content:center; padding-top: 24px;">
-      <span class="eyebrow">Powered by the BOX network · 90+ suppliers · 100,000+ contracts closed across the network</span>
-    </div>
-    <ul class="trust-points">
-      <li><b>No fee to you.</b> The supplier you choose pays a commission that is disclosed in your contract.</li>
-      <li><b>Licensed through the BOX network</b> in every market we serve.</li>
-      <li><b>Led by an advisor with 10+ years</b> helping businesses with electricity pricing.</li>
-    </ul>
-    <div class="logos-row">
-      <div class="supplier-logo">Constellation<small>Fortune-200</small></div>
-      <div class="supplier-logo">NRG / Direct Energy<small>Reliant · Green Mtn</small></div>
-      <div class="supplier-logo">AEP Energy<small>Columbus, OH</small></div>
-      <div class="supplier-logo">Engie Resources<small>Fixed · Block+Index</small></div>
-      <div class="supplier-logo">Shell Energy<small>National</small></div>
-      <div class="supplier-logo">TXU Energy<small>ERCOT</small></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ BILL ANATOMY ============ -->
-<section class="section" id="bill">
-  <div class="wrap ba">
-    <div class="ba-bill" aria-hidden="true">
-      <div class="ba-top">
-        <div><b>Commercial electric service</b><small>Statement · one meter</small></div>
-        <div style="width:110px"><span class="ba-sk" style="margin-bottom:6px"></span><span class="ba-sk" style="width:70%;margin-left:auto"></span></div>
-      </div>
-      <div class="ba-grp ba-supply">
-        <h4>Supply charges <span>Energy</span></h4>
-        <div class="ba-row"><span class="ba-sk"></span><span class="ba-sk"></span></div>
-        <div class="ba-row"><span class="ba-sk" style="max-width:70%"></span><span class="ba-sk"></span></div>
-      </div>
-      <div class="ba-grp ba-struct">
-        <h4>Capacity and pass-through charges <span>Supplier contract</span></h4>
-        <div class="ba-row"><span class="ba-sk" style="max-width:80%"></span><span class="ba-sk"></span></div>
-        <div class="ba-row"><span class="ba-sk" style="max-width:60%"></span><span class="ba-sk"></span></div>
-      </div>
-      <div class="ba-grp ba-deliv">
-        <h4>Delivery charges <span>Your utility</span></h4>
-        <div class="ba-row"><span class="ba-sk"></span><span class="ba-sk"></span></div>
-        <div class="ba-row"><span class="ba-sk" style="max-width:75%"></span><span class="ba-sk"></span></div>
-        <div class="ba-row"><span class="ba-sk" style="max-width:55%"></span><span class="ba-sk"></span></div>
-      </div>
-      <div class="ba-total"><span>Amount due</span><span class="ba-sk" style="width:80px;height:12px;margin-top:6px;background:var(--line)"></span></div>
-    </div>
-    <div>
-      <span class="eyebrow">Read your bill like we do</span>
-      <h2 style="margin-top: 14px;">Your bill has two sides. <span class="ed">Only one is negotiable.</span></h2>
-      <p class="lede" style="margin-top: 16px;">Every commercial bill combines charges set by your supplier and charges set by your utility. We put suppliers in competition for the first side, decide how capacity and pass-through charges are handled in the contract, and leave delivery with your utility.</p>
-      <ul class="ba-keys">
-        <li><span class="ba-sw ba-supply"></span><div><b>Supply: we shop it</b><p>Suppliers compete on the energy rate for your account.</p></div></li>
-        <li><span class="ba-sw ba-struct"></span><div><b>Capacity and pass-throughs: we structure them</b><p>Grid charges a supplier can either lock into your price or pass along to you as they come. It's a contract choice, and we show you which on every offer.</p></div></li>
-        <li><span class="ba-sw" style="background:#E6EAEE"></span><div><b>Delivery: stays with your utility</b><p>Wires, meters and outage response don't change when you switch.</p></div></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTRACT STRUCTURE ============ -->
-<section class="section" id="structure">
-  <div class="wrap">
-    <div style="display:flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap;">
-      <div>
-        <span class="eyebrow">Contract structure</span>
-        <h2 style="margin-top: 14px;">The rate is half the job. <span class="ed">The contract is the other half.</span></h2>
-      </div>
-      <p class="lede" style="max-width: 44ch;">Competition gets you a good number. How the contract is built decides what you actually pay over its life — so we structure it around your load, not around whatever the supplier sent first.</p>
-    </div>
-
-    <div class="ts">
-      <div class="ts-top"><b>Your contract, decided line by line</b><span>Illustration</span></div>
-      <div class="ts-row">
-        <h3>Product</h3>
-        <p>Fixed is one price for the whole contract. Index follows the market month to month. Block-and-index locks in part of your usage and lets the rest float. The right choice depends on whether your business can handle a bill that moves — and we tell you plainly which one fits how you use power.</p>
-        <svg viewBox="0 0 340 70" role="img" aria-label="A scale from budget certainty (fixed) to market exposure (index), with block and index in between">
-          <defs><linearGradient id="tsg"><stop offset="0" stop-color="#14213D"/><stop offset="1" stop-color="#D9DEE3"/></linearGradient></defs>
-          <rect x="0" y="22" width="340" height="10" rx="5" fill="url(#tsg)"/>
-          <circle cx="170" cy="27" r="11" fill="#F5B400" stroke="#fff" stroke-width="3"/>
-          <text class="ts-t" x="0" y="12">Budget certainty</text><text class="ts-t" x="340" y="12" text-anchor="end">Market exposure</text>
-          <text class="ts-t dk" x="0" y="58">Fixed</text><text class="ts-t dk" x="170" y="58" text-anchor="middle">Block + index</text><text class="ts-t dk" x="340" y="58" text-anchor="end">Index</text>
-        </svg>
-      </div>
-      <div class="ts-row">
-        <h3>Term length</h3>
-        <p>Most business contracts run one to three years. Longer is not automatically cheaper — it depends on where prices for future months sit the day you sign. We tell you which length makes sense in today's market.</p>
-        <svg viewBox="0 0 340 70" role="img" aria-label="Term options of 12, 24 and 36 months">
-          <rect x="0" y="12" width="108" height="28" rx="4" fill="#E6EAEE"/><rect x="116" y="12" width="108" height="28" rx="4" fill="#14213D"/><rect x="232" y="12" width="108" height="28" rx="4" fill="#E6EAEE"/>
-          <text class="ts-t dk" x="54" y="31" text-anchor="middle">12 mo</text><text x="170" y="31" text-anchor="middle" style="font:600 12px Archivo,sans-serif;fill:#fff">24 mo</text><text class="ts-t dk" x="286" y="31" text-anchor="middle">36 mo</text>
-          <text class="ts-t" x="170" y="62" text-anchor="middle">Chosen against where the forward curve sits</text>
-        </svg>
-      </div>
-      <div class="ts-row">
-        <h3>Timing</h3>
-        <p>We watch market prices for the months ahead to time the purchase, and we shop before your current contract ends — not after, when it rolls onto default or holdover pricing.</p>
-        <svg viewBox="0 0 340 80" role="img" aria-label="A forward price curve over time, with the renewal window shaded and the purchase point inside it">
-          <rect x="120" y="4" width="120" height="56" rx="3" fill="#FFE9A8"/>
-          <line x1="300" y1="4" x2="300" y2="60" stroke="#5A6475" stroke-dasharray="3 3"/>
-          <path d="M0 30 C30 18 55 40 85 34 S140 14 175 36 S230 46 260 22 S315 30 340 16" fill="none" stroke="#14213D" stroke-width="2.5"/>
-          <circle cx="175" cy="36" r="6" fill="#F5B400" stroke="#14213D" stroke-width="2"/>
-          <text class="ts-t dk" x="180" y="76" text-anchor="middle">Your renewal window</text><text class="ts-t" x="340" y="76" text-anchor="end">Contract ends</text>
-        </svg>
-      </div>
-      <div class="ts-row">
-        <h3>The fine print</h3>
-        <p>Early termination fees, penalties if your usage moves outside a set range, and charges added on top of the rate. We line every offer up the same way so you are comparing like with like.</p>
-        <svg viewBox="0 0 340 80" role="img" aria-label="Contract clauses, with early termination and usage bandwidth highlighted for review">
-          <rect x="0" y="6" width="300" height="7" rx="2" fill="#E6EAEE"/><rect x="0" y="20" width="250" height="7" rx="2" fill="#E6EAEE"/>
-          <rect x="0" y="31" width="214" height="15" rx="3" fill="#FFE9A8"/><text class="ts-t dk" x="6" y="43">Early termination</text>
-          <rect x="0" y="52" width="280" height="7" rx="2" fill="#E6EAEE"/>
-          <rect x="0" y="63" width="190" height="15" rx="3" fill="#FFE9A8"/><text class="ts-t dk" x="6" y="75">Usage bandwidth</text>
-        </svg>
-      </div>
-      <div class="ts-row">
-        <h3>Across your sites</h3>
-        <p>Operate several locations? Where it helps, we line up contract end dates so your portfolio can be shopped as one account instead of one meter at a time.</p>
-        <svg viewBox="0 0 340 80" role="img" aria-label="Four site contracts with staggered end dates realigned to one shared end date">
-          <rect x="0" y="6" width="150" height="9" rx="2" fill="#D9DEE3"/><rect x="150" y="6" width="150" height="9" rx="2" fill="#1E8A5F"/>
-          <rect x="0" y="24" width="210" height="9" rx="2" fill="#D9DEE3"/><rect x="210" y="24" width="90" height="9" rx="2" fill="#1E8A5F"/>
-          <rect x="0" y="42" width="95" height="9" rx="2" fill="#D9DEE3"/><rect x="95" y="42" width="205" height="9" rx="2" fill="#1E8A5F"/>
-          <rect x="0" y="60" width="185" height="9" rx="2" fill="#D9DEE3"/><rect x="185" y="60" width="115" height="9" rx="2" fill="#1E8A5F"/>
-          <line x1="300" y1="0" x2="300" y2="76" stroke="#14213D" stroke-width="2"/>
-          <text class="ts-t dk" x="306" y="34">One</text><text class="ts-t dk" x="306" y="48">date</text>
-        </svg>
-      </div>
-    </div>
-
-    <div style="margin-top:36px;">
-      <a class="btn btn-primary" href="#lead">Send your bill</a>
     </div>
   </div>
 </section>
@@ -1071,17 +1170,123 @@
     </div>
 
     <div style="margin-top:36px;">
-      <a class="btn btn-primary" href="#lead">Send your bill</a>
+      <a class="btn btn-primary" href="#lead">Get a free quote</a>
     </div>
   </div>
 </section>
+
+
+<!-- ============ SUPPLIERS / MAP ============ -->
+<section class="section" id="suppliers">
+  <div class="wrap">
+    <div class="map-section">
+      <div class="map-grid">
+        <div>
+          <span class="eyebrow">Coverage</span>
+          <h2 style="margin-top: 14px;">Every deregulated market. <span class="ed">Coast to coast.</span></h2>
+          <p class="lede" style="margin-top: 16px;">Through the BOX network we have supplier access and licensing in every deregulated US electricity and gas market — giving you access to competitive rates wherever your sites are.</p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; max-width: 460px;">
+            <div>
+              <span class="eyebrow">Electricity</span>
+              <p style="font-size: 14px; color: var(--ink); margin-top: 6px;">CA, CT, DC, DE, IL, MA, MD, ME, NH, NJ, NY, OH, PA, RI, TX</p>
+            </div>
+            <div>
+              <span class="eyebrow">Gas</span>
+              <p style="font-size: 14px; color: var(--ink); margin-top: 6px;">+ AZ, CO, FL, IN, KY, MI, VA</p>
+            </div>
+          </div>
+
+          <a class="btn btn-dark" href="#lead" style="margin-top: 28px;">Get a free quote</a>
+        </div>
+
+        <div>
+          <div class="tm" role="img" aria-label="US map. Electricity: CA, CT, DC, DE, IL, MA, MD, ME, NH, NJ, NY, OH, PA, RI, TX. Natural gas: AZ, CO, FL, IN, KY, MI, VA."><span class="e" style="grid-area:1/11">ME</span><span style="grid-area:2/10">VT</span><span class="e" style="grid-area:2/11">NH</span><span style="grid-area:3/1">WA</span><span style="grid-area:3/2">ID</span><span style="grid-area:3/3">MT</span><span style="grid-area:3/4">ND</span><span style="grid-area:3/5">MN</span><span class="e" style="grid-area:3/6">IL</span><span style="grid-area:3/7">WI</span><span class="g" style="grid-area:3/8">MI</span><span class="e" style="grid-area:3/9">NY</span><span class="e" style="grid-area:3/10">RI</span><span class="e" style="grid-area:3/11">MA</span><span style="grid-area:4/1">OR</span><span style="grid-area:4/2">NV</span><span style="grid-area:4/3">WY</span><span style="grid-area:4/4">SD</span><span style="grid-area:4/5">IA</span><span class="g" style="grid-area:4/6">IN</span><span class="e" style="grid-area:4/7">OH</span><span class="e" style="grid-area:4/8">PA</span><span class="e" style="grid-area:4/9">NJ</span><span class="e" style="grid-area:4/10">CT</span><span class="e" style="grid-area:5/1">CA</span><span style="grid-area:5/2">UT</span><span class="g" style="grid-area:5/3">CO</span><span style="grid-area:5/4">NE</span><span style="grid-area:5/5">MO</span><span class="g" style="grid-area:5/6">KY</span><span style="grid-area:5/7">WV</span><span class="g" style="grid-area:5/8">VA</span><span class="e" style="grid-area:5/9">MD</span><span class="e" style="grid-area:5/10">DE</span><span class="g" style="grid-area:6/2">AZ</span><span style="grid-area:6/3">NM</span><span style="grid-area:6/4">KS</span><span style="grid-area:6/5">AR</span><span style="grid-area:6/6">TN</span><span style="grid-area:6/7">NC</span><span style="grid-area:6/8">SC</span><span class="e" style="grid-area:6/9">DC</span><span style="grid-area:7/4">OK</span><span style="grid-area:7/5">LA</span><span style="grid-area:7/6">MS</span><span style="grid-area:7/7">AL</span><span style="grid-area:7/8">GA</span><span class="e" style="grid-area:8/4">TX</span><span class="g" style="grid-area:8/9">FL</span></div>
+          <div class="tm-leg"><span><i style="background:var(--navy)"></i>Electricity</span><span><i style="background:var(--amber)"></i>Natural gas</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ TEXAS CITIES ============ -->
+<section class="hx-sec alt">
+  <div class="wrap">
+    <div class="hx-head">
+      <span class="eyebrow">Texas</span>
+      <h2>Texas areas we serve</h2>
+      <p>Texas is home. Commercial electricity in the ERCOT market, city by city.</p>
+    </div>
+    <div class="hx-tiles"><a href="/electricity/texas/dallas">Dallas</a><a href="/electricity/texas/fort-worth">Fort Worth</a><a href="/electricity/texas/houston">Houston</a><a href="/electricity/texas/corpus-christi">Corpus Christi</a><a href="/electricity/texas/lubbock">Lubbock</a><a href="/electricity/texas">All of Texas</a></div>
+  </div>
+</section>
+
+<!-- ============ GUIDES ============ -->
+<section class="hx-sec">
+  <div class="wrap">
+    <div class="hx-head">
+      <span class="eyebrow">Guides</span>
+      <h2>Know what you're signing</h2>
+      <p>Plain-English guides to the parts of a business energy contract that move the bill.</p>
+    </div>
+    <div class="hx-guides">
+      <div class="hx-guide"><h3>Rate structures</h3><p>Fixed, index and block-and-index — and when each one fits.</p><a href="/blog-fixed-vs-index-rates">Fixed vs. index rates →</a><a href="/blog-demand-charges">Demand charges, explained →</a></div>
+      <div class="hx-guide"><h3>Contract strategy</h3><p>Renewal timing, holdover pricing and the clauses that quietly cost money.</p><a href="/renewal-guide">The renewal guide →</a><a href="/blog-when-to-renew">When to renew →</a></div>
+      <div class="hx-guide"><h3>Energy basics</h3><p>How business electricity is bought, billed and budgeted.</p><a href="/how-much-electricity-does-my-business-use">How much electricity does my business use? →</a><a href="/blog-2027-energy-budget">Building a 2027 energy budget →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="center-text">
+      <span class="eyebrow">FAQ</span>
+      <h2 style="margin-top: 14px;" class="max-72">Questions <span class="ed">owners ask us first.</span></h2>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary>How do you get paid?</summary>
+        <p>The supplier you choose pays us a per-kWh fee out of their margin — disclosed in your contract. You pay nothing out of pocket, and our recommendation is the same regardless of which supplier you pick. We're independent.</p>
+      </details>
+      <details>
+        <summary>Are you a supplier or a broker?</summary>
+        <p>A broker. We don't generate or sell electricity ourselves. We shop your account across 90+ retail energy suppliers in the BOX network — including Constellation, NRG/Direct Energy, AEP Energy, Engie, Shell Energy, and TXU — and bring you their best competing offers.</p>
+      </details>
+      <details>
+        <summary>Will my service be interrupted when I switch?</summary>
+        <p>No. Your local utility still delivers the power and reads your meter. We're swapping the supplier behind the meter, which happens at your next billing cycle with zero on-site change.</p>
+      </details>
+      <details>
+        <summary>What if I'm mid-contract?</summary>
+        <p>Send the bill anyway. We note your contract end date and shop inside your renewal window, so the new contract starts when the current one ends and you never break the one you're in. Some suppliers will also offer to "blend and extend" a current contract; we'll tell you plainly whether that's worth taking.</p>
+      </details>
+      <details>
+        <summary>Which states do you cover?</summary>
+        <p>Every US deregulated market — including TX, PA, NJ, NY, OH, IL, MD, MA, CT, DC, DE, ME, NH, RI, VA, and CA — plus deregulated gas markets across the country. If your business has sites in multiple states, we consolidate them under one agreement.</p>
+      </details>
+      <details>
+        <summary>How long does the process take?</summary>
+        <p>You spend about 5 minutes submitting your info. First competitive bids arrive after suppliers return pricing. When you pick a rate, you'll sign a Letter of Authorization and a one-page pricing contract — both take under 10 minutes. The switch happens on your next billing cycle, typically 2–4 weeks later.</p>
+      </details>
+    </div>
+
+    <div class="center-text" style="margin-top: 28px;">
+      <p style="color: var(--muted);">More questions? <a href="tel:+12144941627" style="color: var(--green); font-weight: 600;">(214) 494-1627</a> or <a href="faq" style="color: var(--ink); font-weight: 600;">view all FAQs →</a></p>
+    </div>
+  </div>
+</section>
+
 
 <!-- ============ LEAD FORM ============ -->
 <section class="lead-section" id="lead">
   <div class="wrap">
     <div style="text-align:center; margin-bottom: 32px;">
       <span class="eyebrow">Free, no obligation</span>
-      <h2 style="margin-top: 14px;">Send your bill. <span class="ed">We'll take it from there.</span></h2>
+      <h2 style="margin-top: 14px;">Get a free quote. <span class="ed">Start with one bill.</span></h2>
+      <p class="lede" style="margin:14px auto 0; max-width:52ch;">Upload your latest bill and we read the details for you — or enter them by hand. No fee, no obligation.</p>
     </div>
 
     <div class="form-card">
@@ -1268,285 +1473,13 @@
   </div>
 </section>
 
-<!-- ============ DASHBOARD SECTION ============ -->
-<section class="section" id="dash">
-  <div class="wrap">
-    <div class="dash">
-      <div class="head rc-head">
-        <div>
-          <span class="eyebrow on-dark">Built for owners &amp; operators</span>
-          <h2 style="margin-top: 14px;">A standing review of <span class="ed">every kWh you buy.</span></h2>
-          <p class="lede" style="margin-top: 16px;">Operate more than one location? Send us the bills. We benchmark supply cost across all of your meters, tell you which contracts are inside their renewal window, and shop the ones worth shopping.</p>
-        </div>
-        <div class="rc" role="img" aria-label="Illustrative renewal calendar for six sites: two have a renewal window open, one ends before it can be shopped">
-          <div class="rc-h"><b>Renewal calendar</b><span>Illustration</span></div>
-          <div class="rc-row rc-axis" aria-hidden="true"><span style="color:#A9B3C2;font-size:12px">Site</span><div class="rc-track"><span style="left:5%">Now</span><span style="left:26%">+6 mo</span><span style="left:52%">+12 mo</span><span style="left:78%">+18 mo</span></div></div>
-          <div class="rc-body" aria-hidden="true">
-            <div class="rc-lines"><span class="rc-grid" style="left:26%"></span><span class="rc-grid" style="left:52%"></span><span class="rc-grid" style="left:78%"></span><span class="rc-now" style="left:5%"></span></div>
-              <div class="rc-row"><span>Store 1</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:22%"></i><i class="rc-bar win" style="left:9%;width:13%"></i></div></div>
-              <div class="rc-row"><span>Store 2</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:70%"></i></div></div>
-              <div class="rc-row"><span>Warehouse</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:32%"></i><i class="rc-bar win" style="left:18%;width:14%"></i></div></div>
-              <div class="rc-row"><span>Office</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:96%"></i></div></div>
-              <div class="rc-row"><span>Store 3</span><div class="rc-track"><i class="rc-bar" style="left:0%;width:56%"></i></div></div>
-              <div class="rc-row"><span>Store 4</span><div class="rc-track"><i class="rc-bar risk" style="left:0%;width:12%"></i></div></div>
-          </div>
-          <div class="rc-leg"><span><i style="background:#3A4A6B"></i>Under contract</span><span><i style="background:var(--amber)"></i>Renewal window open</span><span><i style="background:#E2554A"></i>Ends before it can be shopped</span></div>
-        </div>
-      </div>
-
-      <div class="grid">
-        <div class="card card-portfolio">
-          <span class="lbl">Every meter, one review</span>
-          <div style="font-size:15px; line-height:1.55; color:rgba(255,255,255,.88); margin-top:12px;">
-            We consolidate your accounts into a single written analysis — current supply rate, contract structure, and end date for every site you operate.
-          </div>
-        </div>
-
-        <div class="card card-savings">
-          <span class="lbl">No fee to your business</span>
-          <div style="font-size:15px; line-height:1.55; color:rgba(255,255,255,.95); margin-top:12px;">
-            The supplier you choose pays us out of their margin. The review costs you nothing — whether or not you switch.
-          </div>
-        </div>
-
-        <div class="card card-renewals">
-          <span class="lbl">Renewal alerts</span>
-          <div style="font-size:15px; line-height:1.55; color:rgba(255,255,255,.88); margin-top:12px;">
-            We track every contract end date and reach out before your renewal window closes.
-          </div>
-        </div>
-
-        <div class="card" style="grid-column: span 12;">
-          <span class="lbl">What the portfolio review covers</span>
-          <ul style="list-style:none; padding:0; margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px 28px; font-size:15px; line-height:1.5; color:rgba(255,255,255,.88);">
-            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Supply rate benchmarked site by site</li>
-            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Contract end dates and renewal windows</li>
-            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Rate structure review — fixed, index, block+index</li>
-            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Contract terms read closely — early termination, usage bandwidth, pass-throughs</li>
-            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Competing supplier offers on the sites worth shopping</li>
-            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> One consolidated recommendation, in writing</li>
-            <li style="display:flex; gap:10px;"><span style="color:var(--amber);">&#9656;</span> Where we recommend you stay put, we say so</li>
-          </ul>
-          <a class="btn btn-ghost btn-sm on-dark" href="#lead" style="align-self:flex-start; margin-top:22px; display:inline-flex;">Send your bill</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ INDUSTRIES ============ -->
-<section class="section tight" id="industries">
-  <div class="wrap">
-    <div style="margin-bottom: 36px; max-width: 60ch;">
-      <span class="eyebrow">Industries we serve</span>
-      <h2 style="margin-top: 14px;">Built for the businesses <span class="ed">in between.</span></h2>
-      <p class="lede" style="margin-top: 14px;">Not residential. Not a 200-store national chain. The medium-usage commercial accounts that deserve real procurement attention — and rarely get it.</p>
-      <a href="/how-much-electricity-does-my-business-use" style="display:inline-flex; align-items:center; gap:6px; margin-top:16px; font-weight:600; font-size:15px; color:var(--green); text-decoration:underline; text-underline-offset:3px;">Not sure if that's you? See how much electricity your business uses <span aria-hidden="true">→</span></a>
-    </div>
-
-    <div class="ind-grid">
-      <a class="ind-card" href="/industries/multifamily-property-management">
-        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span>
-        <h3>Multifamily &amp; property management</h3>
-        <p>Apartment communities, leasing offices, and amenity centers — common-area load, optimized.</p>
-        <span class="ind-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="ind-card" href="/industries/restaurants">
-        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span>
-        <h3>Restaurants &amp; food service</h3>
-        <p>Kitchens, walk-ins, and HVAC run a heavy, predictable load. Small rate moves add up fast on thin margins.</p>
-        <span class="ind-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="ind-card" href="/industries/gyms-fitness">
-        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.4 14.4 9.6 9.6"/><path d="M18.657 21.485a2 2 0 1 1-2.829-2.828l-1.767 1.768a2 2 0 1 1-2.829-2.829l6.364-6.364a2 2 0 1 1 2.829 2.829l-1.768 1.767a2 2 0 1 1 2.828 2.829z"/><path d="m21.5 21.5-1.4-1.4"/><path d="M3.9 3.9 2.5 2.5"/><path d="M6.404 12.768a2 2 0 1 1-2.829-2.829l1.768-1.767a2 2 0 1 1-2.828-2.829l2.828-2.828a2 2 0 1 1 2.829 2.828l1.767-1.768a2 2 0 1 1 2.829 2.829z"/></svg></span>
-        <h3>Gyms &amp; fitness studios</h3>
-        <p>Long operating hours, heavy HVAC, and equipment loads make electricity a top controllable cost.</p>
-        <span class="ind-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="ind-card" href="/industries/medical-dental">
-        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span>
-        <h3>Medical &amp; dental offices</h3>
-        <p>Imaging, sterilization, and climate control demand steady power. Reliability and rate both matter.</p>
-        <span class="ind-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="ind-card" href="/industries/retail">
-        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/></svg></span>
-        <h3>Retail storefronts</h3>
-        <p>Lighting, HVAC, and refrigeration run all day. A lower rate drops straight to the bottom line.</p>
-        <span class="ind-arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="ind-card" href="/industries/light-industrial-warehousing">
-        <span class="ind-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"/><path d="M6 18h12"/><path d="M6 14h12"/><rect width="12" height="12" x="6" y="10"/></svg></span>
-        <h3>Light industrial &amp; warehousing</h3>
-        <p>Motors, compressors, and high-bay lighting drive demand charges — where contract structure really counts.</p>
-        <span class="ind-arrow" aria-hidden="true">→</span>
-      </a>
-    </div>
-
-    <div class="ind-more">
-      <span class="eyebrow ind-more-label">More industries we serve</span>
-      <div class="ind-tags">
-        <a class="ind-tag" href="/industries/salons-spas-dry-cleaners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></svg>Salons, spas &amp; dry cleaners</a>
-        <a class="ind-tag" href="/industries/auto-repair-tire-shops"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>Auto repair &amp; tire shops</a>
-        <a class="ind-tag" href="/industries/self-storage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z"/><path d="M10 21.9V14L2.1 9.1"/><path d="m10 14 11.9-6.9"/><path d="M14 19.8v-8.1"/><path d="M18 17.5V9.4"/></svg>Self-storage facilities</a>
-        <a class="ind-tag" href="/industries/daycare-early-learning"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg>Daycare &amp; early learning</a>
-        <a class="ind-tag" href="/industries/churches-religious-facilities"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 9h4"/><path d="M12 7v5"/><path d="M14 22v-4a2 2 0 0 0-4 0v4"/><path d="M18 22V5.618a1 1 0 0 0-.553-.894l-4.553-2.277a2 2 0 0 0-1.788 0L6.553 4.724A1 1 0 0 0 6 5.618V22"/><path d="m18 7 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9.618a1 1 0 0 1 .553-.894L6 7"/></svg>Churches &amp; religious facilities</a>
-        <a class="ind-tag" href="/industries/professional-offices"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>Professional offices</a>
-        <a class="ind-tag" href="/industries/convenience-stores"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 11-1 9"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="M4.5 15.5h15"/><path d="m5 11 4-7"/><path d="m9 11 1 9"/></svg>Convenience stores</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SUPPLIERS / MAP ============ -->
-<section class="section" id="suppliers">
-  <div class="wrap">
-    <div class="map-section">
-      <div class="map-grid">
-        <div>
-          <span class="eyebrow">Coverage</span>
-          <h2 style="margin-top: 14px;">Every deregulated market. <span class="ed">Coast to coast.</span></h2>
-          <p class="lede" style="margin-top: 16px;">Through the BOX network we have supplier access and licensing in every deregulated US electricity and gas market — giving you access to competitive rates wherever your sites are.</p>
-
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 28px; max-width: 460px;">
-            <div>
-              <span class="eyebrow">Electricity</span>
-              <p style="font-size: 14px; color: var(--ink); margin-top: 6px;">CA, CT, DC, DE, IL, MA, MD, ME, NH, NJ, NY, OH, PA, RI, TX</p>
-            </div>
-            <div>
-              <span class="eyebrow">Gas</span>
-              <p style="font-size: 14px; color: var(--ink); margin-top: 6px;">+ AZ, CO, FL, IN, KY, MI, VA</p>
-            </div>
-          </div>
-
-          <a class="btn btn-dark" href="#lead" style="margin-top: 28px;">Send your bill</a>
-        </div>
-
-        <div>
-          <div class="tm" role="img" aria-label="US map. Electricity: CA, CT, DC, DE, IL, MA, MD, ME, NH, NJ, NY, OH, PA, RI, TX. Natural gas: AZ, CO, FL, IN, KY, MI, VA."><span class="e" style="grid-area:1/11">ME</span><span style="grid-area:2/10">VT</span><span class="e" style="grid-area:2/11">NH</span><span style="grid-area:3/1">WA</span><span style="grid-area:3/2">ID</span><span style="grid-area:3/3">MT</span><span style="grid-area:3/4">ND</span><span style="grid-area:3/5">MN</span><span class="e" style="grid-area:3/6">IL</span><span style="grid-area:3/7">WI</span><span class="g" style="grid-area:3/8">MI</span><span class="e" style="grid-area:3/9">NY</span><span class="e" style="grid-area:3/10">RI</span><span class="e" style="grid-area:3/11">MA</span><span style="grid-area:4/1">OR</span><span style="grid-area:4/2">NV</span><span style="grid-area:4/3">WY</span><span style="grid-area:4/4">SD</span><span style="grid-area:4/5">IA</span><span class="g" style="grid-area:4/6">IN</span><span class="e" style="grid-area:4/7">OH</span><span class="e" style="grid-area:4/8">PA</span><span class="e" style="grid-area:4/9">NJ</span><span class="e" style="grid-area:4/10">CT</span><span class="e" style="grid-area:5/1">CA</span><span style="grid-area:5/2">UT</span><span class="g" style="grid-area:5/3">CO</span><span style="grid-area:5/4">NE</span><span style="grid-area:5/5">MO</span><span class="g" style="grid-area:5/6">KY</span><span style="grid-area:5/7">WV</span><span class="g" style="grid-area:5/8">VA</span><span class="e" style="grid-area:5/9">MD</span><span class="e" style="grid-area:5/10">DE</span><span class="g" style="grid-area:6/2">AZ</span><span style="grid-area:6/3">NM</span><span style="grid-area:6/4">KS</span><span style="grid-area:6/5">AR</span><span style="grid-area:6/6">TN</span><span style="grid-area:6/7">NC</span><span style="grid-area:6/8">SC</span><span class="e" style="grid-area:6/9">DC</span><span style="grid-area:7/4">OK</span><span style="grid-area:7/5">LA</span><span style="grid-area:7/6">MS</span><span style="grid-area:7/7">AL</span><span style="grid-area:7/8">GA</span><span class="e" style="grid-area:8/4">TX</span><span class="g" style="grid-area:8/9">FL</span></div>
-          <div class="tm-leg"><span><i style="background:var(--navy)"></i>Electricity</span><span><i style="background:var(--amber)"></i>Natural gas</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CALCULATOR PREVIEW ============ -->
-<section class="section" id="calc-preview">
-  <div class="wrap">
-    <div style="display:flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px;">
-      <div>
-        <span class="eyebrow">Try it live</span>
-        <h2 style="margin-top: 14px;">How much could you save? <span class="ed">Move the sliders.</span></h2>
-      </div>
-      <p class="lede" style="max-width: 44ch;">Indicative numbers only — actual pricing depends on your market, load profile, and term.</p>
-    </div>
-
-    <div class="calc-preview">
-      <div>
-        <div class="slider-mock" id="sliderMock">
-          <div class="slider-row" data-key="sites" data-min="1" data-max="200">
-            <span class="label">Sites</span>
-            <div class="track"><div class="fill" style="width: 38%;"></div><div class="knob" style="left: 38%;"></div></div>
-            <span class="val">38</span>
-          </div>
-          <div class="slider-row" data-key="kwh" data-min="100000" data-max="50000000">
-            <span class="label">Annual kWh</span>
-            <div class="track"><div class="fill" style="width: 28%;"></div><div class="knob" style="left: 28%;"></div></div>
-            <span class="val">14.2M</span>
-          </div>
-          <div class="slider-row" data-key="rate" data-min="6" data-max="20">
-            <span class="label">Current ¢/kWh</span>
-            <div class="track"><div class="fill" style="width: 50%;"></div><div class="knob" style="left: 50%;"></div></div>
-            <span class="val">11.8</span>
-          </div>
-          <div style="display:flex; gap: 6px; flex-wrap: wrap; margin-top: 10px;">
-            <span class="eyebrow" style="width: 100%;">Term</span>
-            <button class="btn btn-ghost btn-sm" data-term="12">12 mo</button>
-            <button class="btn btn-ghost btn-sm" data-term="24">24 mo</button>
-            <button class="btn btn-dark btn-sm" data-term="36">36 mo</button>
-            <button class="btn btn-ghost btn-sm" data-term="48">48 mo</button>
-          </div>
-        </div>
-        <div style="margin-top: 22px;">
-          <a class="btn btn-primary" href="#lead">Send your bill</a>
-        </div>
-      </div>
-      <div class="right">
-        <div>
-          <span class="eyebrow on-dark" style="color: rgba(255,255,255,.85);">Estimated annual savings</span>
-          <div class="big" id="savingsBig">—</div>
-          <div style="font-size: 13px; opacity: .9;">Indicative only, based on a 12–28% reduction in supply cost</div>
-        </div>
-        <a class="btn btn-primary" href="#lead">Send your bill</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="center-text">
-      <span class="eyebrow">FAQ</span>
-      <h2 style="margin-top: 14px;" class="max-72">Questions <span class="ed">owners ask us first.</span></h2>
-    </div>
-
-    <div class="faq">
-      <details open>
-        <summary>How do you get paid?</summary>
-        <p>The supplier you choose pays us a per-kWh fee out of their margin — disclosed in your contract. You pay nothing out of pocket, and our recommendation is the same regardless of which supplier you pick. We're independent.</p>
-      </details>
-      <details>
-        <summary>Are you a supplier or a broker?</summary>
-        <p>A broker. We don't generate or sell electricity ourselves. We shop your account across 90+ retail energy suppliers in the BOX network — including Constellation, NRG/Direct Energy, AEP Energy, Engie, Shell Energy, and TXU — and bring you their best competing offers.</p>
-      </details>
-      <details>
-        <summary>Will my service be interrupted when I switch?</summary>
-        <p>No. Your local utility still delivers the power and reads your meter. We're swapping the supplier behind the meter, which happens at your next billing cycle with zero on-site change.</p>
-      </details>
-      <details>
-        <summary>What if I'm mid-contract?</summary>
-        <p>Send the bill anyway. We note your contract end date and shop inside your renewal window, so the new contract starts when the current one ends and you never break the one you're in. Some suppliers will also offer to "blend and extend" a current contract; we'll tell you plainly whether that's worth taking.</p>
-      </details>
-      <details>
-        <summary>Which states do you cover?</summary>
-        <p>Every US deregulated market — including TX, PA, NJ, NY, OH, IL, MD, MA, CT, DC, DE, ME, NH, RI, VA, and CA — plus deregulated gas markets across the country. If your business has sites in multiple states, we consolidate them under one agreement.</p>
-      </details>
-      <details>
-        <summary>How long does the process take?</summary>
-        <p>You spend about 5 minutes submitting your info. First competitive bids arrive after suppliers return pricing. When you pick a rate, you'll sign a Letter of Authorization and a one-page pricing contract — both take under 10 minutes. The switch happens on your next billing cycle, typically 2–4 weeks later.</p>
-      </details>
-    </div>
-
-    <div class="center-text" style="margin-top: 28px;">
-      <p style="color: var(--muted);">More questions? <a href="tel:+12144941627" style="color: var(--green); font-weight: 600;">(214) 494-1627</a> or <a href="faq" style="color: var(--ink); font-weight: 600;">view all FAQs →</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="final-cta">
-      <div>
-        <span class="eyebrow">Start here</span>
-        <h2 style="margin-top: 14px;">Power, done <span class="ed">right.</span> Start with one bill.</h2>
-        <p style="color: rgba(11,18,32,.78); margin-top: 12px;">Send your latest utility bill. Suppliers compete for your account, and we structure the contract to minimize what you pay. No fee, no obligation.</p>
-        <div class="actions" style="margin-top: 22px;">
-          <a class="btn btn-dark" href="#lead">Send your bill</a>
-          <a class="btn btn-ghost" href="#calc-preview">Run the calculator <span class="arrow">→</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ MOBILE ACTION BAR ============ -->
 <div class="mob-bar" id="mobBar" aria-hidden="true">
-  <a class="btn btn-primary" href="#lead" tabindex="-1">Send your bill</a>
+  <a class="btn btn-primary" href="#lead" tabindex="-1">Get a free quote</a>
   <a class="btn btn-ghost" href="tel:+12144941627" tabindex="-1">Call</a>
 </div>
+
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-foot">
@@ -1562,9 +1495,8 @@
       </div>
       <div><h4>Product</h4>
         <ul>
-          <li><a href="/#dash">Portfolio review</a></li>
-          <li><a href="/#calc-preview">Savings calculator</a></li>
-          <li><a href="#lead">Send your bill</a></li>
+          <li><a href="/#services-multi">Multi-location review</a></li>
+          <li><a href="#lead">Get a free quote</a></li>
           <li><a href="/#how">How it works</a></li>
           <li><a href="/sample-comparison">Sample comparison</a></li>
         </ul>
@@ -1672,6 +1604,7 @@
   (function(){
     const sliders = document.querySelectorAll('#sliderMock .slider-row');
     const big = document.getElementById('savingsBig');
+    if (!big) return;
     const state = { sites: 38, kwh: 14200000, rate: 11.8, term: 36 };
 
     function fmt$(n){ return '$' + Math.round(n).toLocaleString(); }
