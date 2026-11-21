@@ -407,7 +407,7 @@
 
 <!-- ============ TOP NAV ============ -->
 <div class="hx-util"><div class="wrap">
-  <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
+  <span class="pill-state" title="Average price to commercial customers, supply + delivery. Source: U.S. Energy Information Administration" data-price-ticker><span class="dot"></span> <span class="pt-t">Commercial electricity prices · EIA</span></span>
   <span class="hx-util-r"><a href="/referrals">Refer a client</a> &nbsp;·&nbsp; <a href="tel:+12144941627">(214) 494-1627</a></span>
 </div></div>
 <header class="topnav">
@@ -448,6 +448,7 @@
   <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Get a free quote</a>
 </nav>
 <script src="/pdr-nav.js?v=2" defer></script>
+<script src="/pdr-prices.js?v=1" defer></script>
 
 
 <!-- ============ HERO ============ -->
@@ -638,6 +639,9 @@
 </section>
 
 
+<!-- ============ MARKET PRICES ============ -->
+<section class="section"><div class="wrap"><div data-price-chart data-series="elec_com" data-area="DC" style="max-width:860px;margin:0 auto"></div></div></section>
+
 <!-- ============ LEAD FORM (reused component) ============ -->
 <section class="lead-section" id="lead">
   <div class="wrap">
@@ -813,6 +817,7 @@
     </div>
     <div data-light-ask></div>
     <script src="/pdr-light-ask.js?v=1" defer></script>
+    <script src="/pdr-billcheck.js?v=1" defer></script>
   </div>
 </section>
 
@@ -983,6 +988,8 @@
   }
 
   function prefillFromBill(data) {
+    // Instant bill check (pdr-billcheck.js) renders what was read.
+    window.dispatchEvent(new CustomEvent('pdr:bill', { detail: data || {} }));
     if (!data) return;
     const set = (id, v) => { if (v !== null && v !== undefined && v !== '') document.getElementById(id).value = v; };
     if (data.current_monthly_bill) {

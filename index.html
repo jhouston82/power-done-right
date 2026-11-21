@@ -909,7 +909,7 @@
 
 <!-- ============ TOP NAV ============ -->
 <div class="hx-util"><div class="wrap">
-  <span class="pill-state" title="Indicative market rates — not a live feed"><span class="dot"></span> INDICATIVE · ERCOT 7.32¢ · PJM 8.61¢</span>
+  <span class="pill-state" title="Average price to commercial customers, supply + delivery. Source: U.S. Energy Information Administration" data-price-ticker><span class="dot"></span> <span class="pt-t">Commercial electricity prices · EIA</span></span>
   <span class="hx-util-r"><a href="/referrals">Refer a client</a> &nbsp;·&nbsp; <a href="tel:+12144941627">(214) 494-1627</a></span>
 </div></div>
 <header class="topnav">
@@ -950,6 +950,7 @@
   <a class="btn btn-primary mob-cta" href="#lead" onclick="closeMobMenu()">Get a free quote</a>
 </nav>
 <script src="/pdr-nav.js?v=2" defer></script>
+<script src="/pdr-prices.js?v=1" defer></script>
 
 <!-- ============ HERO ============ -->
 <section class="hx-hero" id="top">
@@ -961,6 +962,16 @@
       <a class="hx-btn hx-btn-amber" href="#lead">Get a free quote</a>
       <a class="hx-btn hx-btn-line" href="tel:+12144941627">Call (214) 494-1627</a>
     </div>
+    <label class="drop-zone" id="dropZone" for="dropInput" style="max-width:560px; margin-top:26px;">
+      <span class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+      </span>
+      <span>
+        <span class="ttl">Drop your latest bill — see what it says in seconds</span>
+        <span class="meta">PDF or photo. We read your supply rate, usage and contract end date. Your bill stays confidential.</span>
+      </span>
+      <input type="file" id="dropInput" accept="application/pdf,image/*" hidden>
+    </label>
     <small>No fee to your business · No obligation to switch</small>
   </div>
 </section>
@@ -1177,6 +1188,18 @@
   </div>
 </section>
 
+
+<!-- ============ MARKET PRICES ============ -->
+<section class="hx-sec">
+  <div class="wrap">
+    <div class="hx-head">
+      <span class="eyebrow">Market prices</span>
+      <h2>Prices move. Your contract decides how much of it you feel.</h2>
+      <p>Average commercial electricity prices from the U.S. Energy Information Administration, refreshed as each month is published.</p>
+    </div>
+    <div data-price-chart data-series="elec_com" data-area="TX" style="max-width:860px;margin:0 auto"></div>
+  </div>
+</section>
 
 <!-- ============ TEXAS CITIES ============ -->
 <section class="hx-sec alt">
@@ -1438,6 +1461,7 @@
 
     <div data-light-ask></div>
     <script src="/pdr-light-ask.js?v=1" defer></script>
+    <script src="/pdr-billcheck.js?v=1" defer></script>
   </div>
 </section>
 
@@ -1696,6 +1720,8 @@
   }
 
   function prefillFromBill(data) {
+    // Instant bill check (pdr-billcheck.js) renders what was read.
+    window.dispatchEvent(new CustomEvent('pdr:bill', { detail: data || {} }));
     if (!data) return;
     const set = (id, v) => { if (v !== null && v !== undefined && v !== '') document.getElementById(id).value = v; };
     if (data.current_monthly_bill) {
