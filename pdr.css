@@ -276,3 +276,39 @@ h1 em, h2 em, .hero-h em, .cta-band-h em, .section-h em{ color: inherit; }
 .mob-markets .hx-col{ display:grid; grid-template-columns: 1fr 1fr; column-gap: 16px; }
 .mob-markets .hx-mh{ grid-column: 1 / -1; font-weight: 600; color: var(--muted); padding-top: 10px; }
 .mob-markets .hx-all{ grid-column: 1 / -1; }
+/* Texas delivery-charge tables (scripts/delivery-charges.py) */
+.tdu-key{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:12px; margin: 22px 0 6px; }
+.tdu-key > div{ border:1px solid var(--line); border-radius:12px; padding:14px 16px; background:#fff; font-size:15px; }
+.tdu-key .k{ display:block; font-size:12.5px; font-weight:600; color: var(--muted); margin-bottom:4px; }
+.tdu-key b{ font-size:22px; color: var(--navy); }
+.tdu-table{ width:100%; border-collapse:collapse; margin: 22px 0 8px; font-size:14px; background:#fff; }
+.tdu-table caption{ text-align:left; font-weight:700; font-size:15px; color: var(--ink); padding: 0 0 8px; }
+.tdu-table th, .tdu-table td{ text-align:left; padding: 9px 10px; border-bottom:1px solid var(--line); vertical-align: top; }
+.tdu-table thead th{ font-size:12.5px; font-weight:600; color: var(--muted); border-bottom:2px solid var(--line); }
+.tdu-table td.num{ white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tdu-table .src{ font-size:12.5px; color: var(--muted); }
+.tdu-table tfoot th, .tdu-table tfoot td{ font-weight:700; border-bottom:0; border-top:2px solid var(--navy); white-space: normal; }
+.tdu-notes{ font-size:13.5px; color: var(--muted); padding-left: 18px; margin: 10px 0; }
+.tdu-notes li{ margin: 4px 0; }
+.tdu-source, .prose .tdu-source{ font-size:13px; line-height:1.55; color: var(--muted); max-width:none; }
+@media (max-width: 640px){
+  .tdu-table thead{ display:none; }
+  .tdu-table, .tdu-table tbody, .tdu-table tr, .tdu-table td, .tdu-table tfoot, .tdu-table th{ display:block; width:auto; }
+  .tdu-table tr{ border-bottom:1px solid var(--line); padding: 8px 0; }
+  .tdu-table td, .tdu-table th{ border:0; padding: 2px 0; }
+  .tdu-table td.num{ white-space: normal; font-weight:600; }
+  .tdu-table tfoot tr{ border-top:2px solid var(--navy); }
+  .tdu-table caption{ display:block; width:100%; }
+}
+/* "Updated" line under hero ledes (scripts/stamp_updated.py) */
+.pg-updated{ font-size:13px; color: rgba(255,255,255,.62); margin: 10px 0 0; }
+.page-hero .pg-updated{ margin-top: 12px; }
+/* Industry deep-dive sections (restaurants, auto repair) */
+.ind-more .ind-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:16px; margin-top: 8px; }
+.ind-more .ind-item{ border:1px solid var(--line); border-radius:12px; padding:18px; background:#fff; }
+.ind-more h3{ font-size:17px; margin: 0 0 6px; color: var(--ink); }
+.ind-more p{ font-size:15px; line-height:1.6; color: var(--muted); margin: 0 0 10px; }
+.ind-more .ind-block{ max-width: 760px; margin-top: 28px; }
+.ind-more .ind-faq{ max-width: 760px; }
+.ind-more .ind-qa{ border-bottom:1px solid var(--line); padding: 14px 0; }
+.ind-more a{ color: var(--navy); text-decoration: underline; text-decoration-color: var(--amber); }

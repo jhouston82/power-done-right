@@ -1,6 +1,13 @@
 #!/bin/sh
-# Rebuild sitemap.xml so each page's <lastmod> is its true last change, and
-# include it in this commit. Enable once per clone:
+# 1. Re-stamp the "Updated" date on staged content pages (today only if their
+#    visible wording changed), and include the result in this commit.
+# 2. Rebuild sitemap.xml so each page's <lastmod> is its true last change.
+# Enable once per clone:
 #   git config core.hooksPath .githooks
+staged=$(git diff --cached --name-only --diff-filter=AM -- '*.html')
+if [ -n "$staged" ]; then
+  python3 scripts/stamp_updated.py $staged || exit 1
+  git add $staged
+fi
 python3 scripts/build-sitemap.py || exit 1
 git add sitemap.xml
