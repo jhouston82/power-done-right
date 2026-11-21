@@ -260,3 +260,11 @@ h1 em, h2 em, .hero-h em, .cta-band-h em, .section-h em{ color: inherit; }
 .hx-menu .hx-mh{ font-size:12px; font-weight:700; color: var(--muted); padding: 8px 12px 4px; }
 @media (max-width: 1080px){ .hx-dd > button{ padding: 10px 7px; } }
 .mob-menu .hx-mh{ font-size:12px; font-weight:700; color: var(--ink); padding: 14px 0 2px; }
+/* Markets mega-menu: every market page, in three columns */
+.hx-menu.mega{ left: 50%; transform: translateX(-50%); min-width: 0; width: max-content; grid-template-columns: repeat(3, minmax(170px, auto)); gap: 4px 8px; }
+.hx-dd:hover > .hx-menu.mega, .hx-dd:focus-within > .hx-menu.mega, .hx-dd.open > .hx-menu.mega{ display:grid; }
+.hx-menu.mega a{ padding: 6px 12px; }
+.hx-menu .hx-all{ font-weight: 600; }
+.mob-markets .hx-col{ display:grid; grid-template-columns: 1fr 1fr; column-gap: 16px; }
+.mob-markets .hx-mh{ grid-column: 1 / -1; font-weight: 600; color: var(--muted); padding-top: 10px; }
+.mob-markets .hx-all{ grid-column: 1 / -1; }
