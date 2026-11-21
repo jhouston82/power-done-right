@@ -260,6 +260,8 @@ h1 em, h2 em, .hero-h em, .cta-band-h em, .section-h em{ color: inherit; }
 .hx-dd:hover > .hx-menu, .hx-dd:focus-within > .hx-menu, .hx-dd.open > .hx-menu{ visibility:visible; opacity:1; transform: translateY(0); z-index: 51;
   /* opening: fade and rise in right away */
   transition: opacity .2s ease, transform .2s ease, visibility 0s; }
+/* moving to a different heading closes the previous menu at once; the grace period only applies when the mouse leaves the nav */
+.nav-links:hover > .hx-dd:not(:hover) > .hx-menu{ transition: none; visibility:hidden; opacity:0; }
 .hx-menu a{ display:block; padding: 9px 12px; border-radius:8px; font-size:14px; color: var(--ink) !important; transition: background .12s ease; }
 .hx-menu a:hover{ background: var(--paper-2); }
 .hx-menu .hx-mh{ font-size:12px; font-weight:700; color: var(--muted); padding: 8px 12px 4px; }
