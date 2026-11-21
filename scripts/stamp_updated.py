@@ -95,8 +95,9 @@ def apply(s, day, path):
     s = s[: m.end()] + p + s[m.end():]
     canon = re.search(r'<link rel="canonical" href="([^"]+)"', s)
     url = canon.group(1) if canon else BASE + "/" + path[:-5]
-    ld = ('\n<script type="application/ld+json" id="pdr-updated">'
+    ld = ('<script type="application/ld+json" id="pdr-updated">'
           f'{{"@context":"https://schema.org","@type":"WebPage","url":"{url}","dateModified":"{day}"}}</script>')
+    s = re.sub(r"\s*</head>", "\n</head>", s, count=1)  # normalise, so re-stamping is idempotent
     i = s.index("</head>")
     return s[:i] + ld + "\n" + s[i:]
 
